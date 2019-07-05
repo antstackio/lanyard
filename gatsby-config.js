@@ -13,6 +13,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        typeName: `Json`,
+        name: `data`,
+        path: `${__dirname}/src/data`,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
