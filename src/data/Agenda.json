@@ -1,0 +1,71 @@
+[
+  {
+    "tracks": [
+      {
+        "name": "beginner",
+        "position": 1
+      },
+      {
+        "name": "intermidiate",
+        "position": 2
+      },
+      {
+        "name": "advanced",
+        "position": 3
+      },
+      {
+        "name": "diversity",
+        "position": 4
+      }
+    ],
+    "events": [
+      {
+        "id": "event1",
+        "eventType": "other",
+        "room": "chennai",
+        "selectedFlag": "default",
+        "time": {
+          "start": 1562553000,
+          "end": 1562556600
+        },
+        "slot": 1,
+        "title": "registartion",
+        "tracks": [1, 2, 3]
+      },
+      {
+        "id": "event2",
+        "eventType": "break",
+        "room": "delhi",
+        "selectedFlag": "default",
+        "time": {
+          "start": 1562556600,
+          "end": 1562560200
+        },
+        "slot": 2,
+        "title": "Tea Break",
+        "tracks": [1, 2, 3]
+      },
+      {
+        "id": "event3",
+        "eventType": "talk",
+        "room": "bombay",
+        "selectedFlag": "not_selected",
+        "time": {
+          "start": 1562560200,
+          "end": 1562563800
+        },
+        "slot": 3,
+        "title": "welcome to Tommorow Land",
+        "tracks": [1],
+        "speakers": [
+          {
+            "name": "Prashanth HN",
+            "profile_picture": "http://ishis.com/in.jpg",
+            "designation": "CTO",
+            "link": "hnp.dev"
+          }
+        ]
+      }
+    ]
+  }
+]
