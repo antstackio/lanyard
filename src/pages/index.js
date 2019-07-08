@@ -1,12 +1,57 @@
 import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { useStaticQuery, graphql } from "gatsby"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-  </Layout>
-)
+import HomePage from "./HomePage"
+
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query QueryJSON {
+      allAgendaJson {
+        nodes {
+          events {
+            id
+            speakers {
+              designation
+              name
+              link
+              profile_picture
+            }
+            time {
+              end
+              start
+            }
+            title
+            tracks
+            eventType
+            room
+            selectedFlag
+            slot
+          }
+          id
+          tracks {
+            name
+            position
+          }
+        }
+      }
+    }
+  `)
+
+  const { tracks, events } = data.allAgendaJson.nodes[0]
+
+  if (localStorage.getItem("tracks") === null) {
+    localStorage.setItem("tracks", JSON.stringify(tracks))
+  }
+
+  if (localStorage.getItem("events") === null) {
+    localStorage.setItem("events", JSON.stringify(events))
+  }
+
+  return (
+    <>
+      <HomePage />
+    </>
+  )
+}
+
 export default IndexPage
