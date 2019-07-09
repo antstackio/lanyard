@@ -1,1 +1,0 @@
-[{ "value": "a" }, { "value": "b" }, { "value": "c" }]
