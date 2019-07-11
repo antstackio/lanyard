@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
 
+import { Link } from "gatsby"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -11,14 +13,12 @@ const HomePage = () => {
   }, [])
 
   const selectEvent = selectedEvent => {
-    console.log("Click Triggered: HomePage -> selectedEvent", selectedEvent)
     const eventsChanged = events.map(event => {
       if (event.id === selectedEvent.id) {
         event.selectedFlag = "selected"
       }
       return event
     })
-    console.log("TCL: HomePage -> event", eventsChanged)
     localStorage.setItem("events", JSON.stringify(eventsChanged))
     setEvents(eventsChanged)
   }
@@ -26,8 +26,10 @@ const HomePage = () => {
   return (
     <Layout>
       <SEO title="Home" />
+      <p>
+        <Link to="/Demo">Demo Page</Link>
+      </p>
       {events.map(event => {
-        console.log("TCL: HomePage -> event", event)
         return (
           <li key={event.id}>
             {event.id} - {event.title} , {event.selectedFlag} <br />

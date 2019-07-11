@@ -5,6 +5,7 @@ module.exports = {
     author: `StackTinkers`,
   },
   plugins: [
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
