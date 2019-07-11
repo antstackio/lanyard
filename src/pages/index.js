@@ -13,8 +13,8 @@ const IndexPage = () => {
             speakers {
               designation
               name
-              link
-              profile_picture
+              externalLink
+              profilePicture
             }
             time {
               end
@@ -23,7 +23,6 @@ const IndexPage = () => {
             title
             tracks
             eventType
-            room
             selectedFlag
             slot
           }
