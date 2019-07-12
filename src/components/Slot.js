@@ -74,11 +74,26 @@ const slot_action = css`
         text-align: center;    margin-top: 10px;
     margin-bottom: -30px;
 `
-
+const slot_track = css`
+    color: ${Variables.dark_base_color} !important;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    bottom: 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    transform: rotate(-180deg);
+    writing-mode: vertical-lr;
+`
 
 const Slot = ({ eventData, selectEvent}) => {
     return (
         <li css={[slot_item, eventData.selectedFlag === "selected" ? slotSelected : null]} className={eventData.selectedFlag}>
+            {eventData.tracks.length < 4 ? (<div css={slot_track}> Track - {eventData.tracks[0]}</div>) : null
+            }
+
             <div css={slot_time}>
                 {console.log(eventData)}
                 <small>{timeFormat(eventData.time.start)} - {timeFormat(eventData.time.end)}</small>
