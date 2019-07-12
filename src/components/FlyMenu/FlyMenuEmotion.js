@@ -1,5 +1,6 @@
 import { css } from "@emotion/core";
 
+import { media, shadows } from "../jss/cvcss";
 import { WbVariables } from "../jss/variables";
 
 const fly_menu = css`
@@ -15,22 +16,23 @@ const fly_menu = css`
     opacity: 1;
     pointer-events: auto;
     transition: all 0.25s;
+    animation: fly 0.25s linear;
     .fly_content {
       height: 100%;
       width: 350px;
       background: #fff;
       transition: all 0.25s;
       overflow: auto;
-      animation: fly 0.15s linear;
       position: relative;
-      overflow: hidden;
       display: flex;
-        border-radius: 0 50px 50px 0;
-      @include respondToBelow(sm) {
+      flex-direction: column;
+      max-height: 100%;
+      overflow: auto;
+      ${media.xs} {
         width: 75%;
       }
 
-      @include respondToBelow(xs) {
+      ${media.mn} {
         width: 90%;
       }
       .header {
@@ -40,7 +42,7 @@ const fly_menu = css`
         position: sticky;
         top: 0;
         z-index: 9;
-        @include blue_shadow;
+         ${shadows.solid_shadow};
         &.trans{
           background: transparent;
         }
@@ -55,25 +57,20 @@ const fly_menu = css`
       }
     }
     &.right {
+      animation: fly_right 0.25s linear;
       .fly_content {
-        border-radius: 50px 0 0 50px;
-        animation: fly_right 0.15s linear;
         margin-right: 0;
         margin-left: auto;
-        transform: translateX(0%);
       }
     }
 
     &.top {
       align-items: flex-start;
+      animation: fly_top 0.25s linear;
       .fly_content {
-        animation: fly_top 0.15s linear;
         margin: 0;
         height: auto;
         width: 100%;
-        transform: translateY(0%);
-        border-radius: 0 0 50px 50px;
-        overflow: hidden;
         align-self: flex-start;
         display: flex;
         flex-direction: column;
@@ -81,51 +78,48 @@ const fly_menu = css`
     }
      &.bottom {
       align-items: flex-start;
+      animation: fly_bottom 0.25s linear;
       .fly_content {
         margin: 0;
         height: auto;
         width: 100%;
-        transform: translateY(0%);
-        border-radius: 50px 50px 0 0;
-        overflow: hidden;
         align-self: flex-end;
         display: flex;
         flex-direction: column;
-        animation: fly_botom 0.15s linear;
       }
     }
   }
   @keyframes fly {
     from {
-      transform: translateX(-100%);
+      padding-right: 100vw;
     }
     to {
-      transform: translateX(0);
+      padding-right: 0;
     }
   }
   @keyframes fly_right {
     from {
-      transform: translateX(100%);
+      padding-left: 100vw;
     }
     to {
-      transform: translateX(0);
+      padding-left: 0;
     }
   }
 
   @keyframes fly_top {
     from {
-      transform: translateY(-100%);
+      padding-bottom: 100vh;
     }
     to {
-      transform: translateY(0);
+      padding-bottom: 0;
     }
   }
   @keyframes fly_bottom {
     from {
-      transform: translateY(100%);
+      padding-top: 100vh;
     }
     to {
-      transform: translateY(0);
+      padding-top: 0;
     }
   }
 `

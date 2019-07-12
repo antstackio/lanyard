@@ -2,6 +2,8 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import  "../css/site.css";
 import HomePage from "./HomePage";
+import { Global, css } from "@emotion/core";
+import Reset from "../components/jss/Reset";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -47,9 +49,12 @@ const IndexPage = () => {
   }
 
   return (
-    <>
+    <React.Fragment>
+      <Global
+        styles={Reset}
+      />
       <HomePage />
-    </>
+    </React.Fragment>
   )
 }
 
