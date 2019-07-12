@@ -2,6 +2,9 @@ import React from "react"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
+import { px_bg } from "../components/jss/cvcss"
+
+
 const Container = styled.div`
   margin: 3rem auto;
   max-width: 600px;
@@ -49,6 +52,13 @@ const Excerpt = styled.p`
 // Using css prop provides a concise and flexible API to style the components. //
 const underline = css`
   text-decoration: underline;
+  &:before{
+    content: 'red';
+    color:red;
+  }
+  span{
+    color: blue;
+  }
 `
 
 const User = props => (
@@ -63,18 +73,20 @@ const User = props => (
 
 const Demo = () => (
   <Container>
-    <h1 css={underline}>About Emotion</h1>
-    <p>Emotion is uber cool</p>
-    <User
-      username="Jane Doe"
-      avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-      excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    />
-    <User
-      username="Bob Smith"
-      avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
-      excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    />
+    <div css={px_bg} className="inv">
+      <h1 css={underline}><span>yo</span>About Emotion</h1>
+      <p>Emotion is uber cool</p>
+      <User
+        username="Jane Doe"
+        avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
+        excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      />
+      <User
+        username="Bob Smith"
+        avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
+        excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      />
+    </div>
   </Container>
 )
 
