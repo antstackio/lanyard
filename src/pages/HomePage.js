@@ -61,7 +61,7 @@ const agendaTitle = css`
     font-size: 25px;
     font-weight: bold;
     text-align: center;
-    padding: ${Variables.gutter_width_more};
+    padding: ${Variables.gutter_width};
 `
 const agenda_list = css`
   padding-right: ${Variables.gutter_width_xs};

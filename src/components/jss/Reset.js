@@ -108,7 +108,6 @@ article,
 }
 small {
   font-size: 80%;
-  color: var(--muted_color);
 }
 
 

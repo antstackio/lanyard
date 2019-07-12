@@ -52,7 +52,7 @@ const slotSelected = css`
 `
 
 const slot_time = css`
-    color: #333;
+    color: ${Variables.muted_color};
 `
 
 const slot_title = css`
