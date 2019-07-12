@@ -4,8 +4,7 @@ import React from "react"
 import FlyMenu from "../FlyMenu/FlyMenu"
 import menu from "../../images/menu.svg"
 
-const Header = ({ siteTitle }) => (
-
+const Nav = ({ siteTitle }) => (
 
   <FlyMenu className="navbar_wrapper" trig_title={<span><img src={menu} alt="logo"/></span>} title="Menu">
     <Link
@@ -31,12 +30,12 @@ const Header = ({ siteTitle }) => (
     </FlyMenu>
 )
 
-Header.propTypes = {
+Nav.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+Nav.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default Nav
