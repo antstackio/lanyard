@@ -33,16 +33,16 @@ class FlyMenu extends Component {
 
   openFly() {
     this.setState({ status: true });
-    document.body.style.overflow = "hidden";
+    document.body.classList.add('scroll_lock');
   }
 
   closeFly(props) {
     if (this.props.open) {
       props.close();
-      document.body.style.overflow = "auto";
+      document.body.classList.remove('scroll_lock');
     } else {
       this.setState({ status: false });
-      document.body.style.overflow = "auto";
+      document.body.classList.remove('scroll_lock');
     }
   }
 
@@ -61,9 +61,10 @@ class FlyMenu extends Component {
             }
           >
             <div className="fly_content" ref={this.container}>
-              <div className="header">
+              <div className={`header ${this.props.trig_title ? "trans" : "solid"}`}>
                 <span className="heading-ttl">{this.props.title}</span>
                 <span
+                  className={this.props.trig_title ? "solid" : ""}
                   css={close_icon}
                   onClick={() => this.closeFly(this.props)}
                 >

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 
 import { Link } from "gatsby"
 
+import EventCard from "../components/EventCard/EventCard"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -26,9 +27,7 @@ const HomePage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <p>
-        <Link to="/Demo">Demo Page</Link>
-      </p>
+      <EventCard />
       {events.map(event => {
         return (
           <li key={event.id}>

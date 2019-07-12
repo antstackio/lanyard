@@ -118,12 +118,11 @@ export const close_icon = css`
     opacity: 1;
   }
   &.solid{
-     &:before,
+    &:before,
     &:after {
       background: ${WbVariables.dark_base_color};
     }
-}
-
+  }
 `
 
 export const button_style = css`
@@ -225,6 +224,7 @@ export const button_style = css`
 export const px_bg = css`
   color: ${WbVariables.dark_base_color};
   position: relative;
+  overflow: hidden;
   >*{
     position: relative;
     z-index: 999;
@@ -238,14 +238,13 @@ export const px_bg = css`
     top: 0;
     background-image: url(${swirl_bg});    background-size: 100%;
     background-repeat: no-repeat;
-    background-position: top -80px right;
+    background-position: top -50px right;
     pointer-events: none;
   }
 
   &.inv {
     &:before {
       transform: rotateX(180deg);
-    background-position: bottom 80px right;
     }
   }
 `;
