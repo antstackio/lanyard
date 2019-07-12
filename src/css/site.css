@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900|Ubuntu+Mono:400,700&display=swap&subset=devanagari");
 :root {
   --text_primary_color: #333333;
   --dark_base_color: #1ac084;
@@ -31,8 +32,17 @@
 }
 body {
   background-color: var(--black_bg);
+  font-family: "Poppins", sans-serif;
 }
 body.scroll_lock {
   height: 100vh;
   overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu Mono", monospace;
 }

@@ -8,9 +8,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { css } from "@emotion/core";
 import Nav from "./Nav/Nav"
 import "./layout.css"
+
+const lanyard_page = css`{
+  height: 100vh;
+  padding-bottom: 20vh;
+}`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,7 +29,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div class="lanyard_page">
+    <div css={lanyard_page}>
       <Nav siteTitle={data.site.siteMetadata.title} />
       <div
       >
