@@ -65,7 +65,7 @@ const agendaTitle = css`
 `
 const agenda_list = css`
   padding-right: ${Variables.gutter_width_xs};
-  padding-left: ${Variables.gutter_width_more};
+  padding-left: 35px;
   position: relative;
   &:before{
     content: '';
@@ -73,7 +73,7 @@ const agenda_list = css`
     top: 0;
     bottom: 0;
     border-left: dashed ${Variables.dark_base_color} 1px;
-    left: 25px;
+    left: 10px;
   }
 `
 
