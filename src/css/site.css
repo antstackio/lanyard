@@ -38,6 +38,9 @@ body.scroll_lock {
   height: 100vh;
   overflow: hidden;
 }
+body.scroll_lock #fly_menu {
+  z-index: 999999 !important;
+}
 
 h1,
 h2,
