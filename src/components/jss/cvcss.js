@@ -123,19 +123,19 @@ export const close_icon = css`
   }
 `
 
-export const button_style = css`
+export const button = css`
   border: 0;
-  line-height: 45px;
-  height: 45px;
+  line-height: 35px;
+  height: 35px;
   padding: 0 15px;
   color: #fff;
   cursor: pointer;
   text-align: center;
-  font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   display: inline-block;
   background: ${Variables.dark_base_color};
   transition: all 0.25s ease;
+  border-radius: 30px;
   ${shadows.blue_shadow}
   &:hover {
     transform: translateY(-2px);
