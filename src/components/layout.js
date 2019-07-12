@@ -14,7 +14,7 @@ import "./layout.css"
 
 const lanyard_page = css`{
   height: 100vh;
-  padding-bottom: 20vh;
+  padding-bottom: 15vh;
 }`
 
 const Layout = ({ children }) => {
@@ -31,8 +31,7 @@ const Layout = ({ children }) => {
   return (
     <div css={lanyard_page}>
       <Nav siteTitle={data.site.siteMetadata.title} />
-      <div
-      >
+      <div className="children">
         <main>{children}</main>
       </div>
     </div>

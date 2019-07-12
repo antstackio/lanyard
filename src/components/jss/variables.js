@@ -1,5 +1,5 @@
 
-export const WbVariables = {
+const Variables = {
   text_primary_color: `#333333`,
   dark_base_color: `#1AC084`,
   light_bc: `#90DBC0`,
@@ -14,7 +14,6 @@ export const WbVariables = {
   faded_color: `#bbbbbb`,
   rc_main: `#d32f2f`,
   light_bg: `#f7f7f7`,
-  //english font
   font_primary: `"Roboto", sans-serif`,
 
   wb_grad: ` -webkit-linear-gradient(135deg, #1AC084, #2BA77A)`,
@@ -32,3 +31,6 @@ export const WbVariables = {
   gutter_width_xs: `15px`,
 
 };
+
+
+export default Variables

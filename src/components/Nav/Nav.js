@@ -6,14 +6,17 @@ import { css } from "@emotion/core"
 import FlyMenu from "../FlyMenu/FlyMenu"
 import menu from "../../images/menu.svg"
 import logo from "../../images/logo.svg"
-import { WbVariables } from "../jss/variables";
+import Variables  from "../jss/Variables";
 
 const nav_bar = css`
 #fly_menu{
-  position: fixed;
-  z-index: 999;
-  bottom: 15px;
-  left: 15px;
+ position: fixed;
+    z-index: 999;
+    bottom: 0;
+    left: 15px;
+    height: 15vh;
+    display: flex;
+    align-items: center;
   > span{
     height: 30px;
     width: 30px;
@@ -26,6 +29,7 @@ const nav_bar = css`
     }
   }
   .fly_content{
+        border-radius: 50px 50px 0 0;
     .header{
       background: #f7f7f7;
       order: 1;
@@ -58,7 +62,7 @@ background: #fff;
     a{
       display: block;
       padding: 15px 25px;
-      color: ${WbVariables.dark_base_color};
+      color: ${Variables.dark_base_color};
       text-decoration : none;
     }
     &:last-child{

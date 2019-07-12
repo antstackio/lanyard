@@ -1,6 +1,6 @@
 import { css } from "@emotion/core";
 import swirl_bg  from "../../images/swirl_bg.svg"
-import { WbVariables } from "./variables";
+import Variables from "./Variables";
 
 
 export const media = {
@@ -53,13 +53,13 @@ export const shadows = {
   )}`,
 
   blue_shadow: `0 4px 20px 0 ${rgba("#000", 0.14)},
-          0 7px 10px -5px ${rgba(WbVariables.dark_base_color, 0.4)}`,
+          0 7px 10px -5px ${rgba(Variables.dark_base_color, 0.4)}`,
 
   red_shadow: `0 4px 20px 0 ${rgba("#000", 0.14)},
-          0 7px 10px -5px ${rgba(WbVariables.wb_red, 0.4)}`,
+          0 7px 10px -5px ${rgba(Variables.wb_red, 0.4)}`,
 
   green_shadow: `0 4px 20px 0 ${rgba("#000", 0.14)},
-          0 7px 10px -5px ${rgba(WbVariables.wb_green, 0.4)}`
+          0 7px 10px -5px ${rgba(Variables.wb_green, 0.4)}`
 };
 
 
@@ -118,7 +118,7 @@ export const close_icon = css`
   &.solid{
     &:before,
     &:after {
-      background: ${WbVariables.dark_base_color};
+      background: ${Variables.dark_base_color};
     }
   }
 `
@@ -134,7 +134,7 @@ export const button_style = css`
   font-weight: 600;
   font-size: 16px;
   display: inline-block;
-  background: ${WbVariables.dark_base_color};
+  background: ${Variables.dark_base_color};
   transition: all 0.25s ease;
   ${shadows.blue_shadow}
   &:hover {
@@ -169,8 +169,8 @@ export const button_style = css`
   }
   &.plain {
     background: #fff;
-    color: ${WbVariables.dark_base_color};
-    border: solid 1px ${WbVariables.dark_base_color};
+    color: ${Variables.dark_base_color};
+    border: solid 1px ${Variables.dark_base_color};
     box-shadow: none;
     &:hover {
       box-shadow: none;
@@ -183,14 +183,14 @@ export const button_style = css`
   }
   &.white {
     background: #fff;
-    color: ${WbVariables.dark_base_color};
+    color: ${Variables.dark_base_color};
     border: solid 1px #fff;
   }
   &[disabled] {
     pointer-events: none;
     background: #eee !important;
     box-shadow: none;
-    color: ${WbVariables.muted_color} !important;
+    color: ${Variables.muted_color} !important;
     cursor: default;
   }
   &.icon-grp {
@@ -220,7 +220,7 @@ export const button_style = css`
 
 
 export const px_bg = css`
-  color: ${WbVariables.dark_base_color};
+  color: ${Variables.dark_base_color};
   position: relative;
   overflow: hidden;
   >*{
@@ -248,7 +248,7 @@ export const px_bg = css`
 `;
 
 export const solid = css`
-  color: ${WbVariables.dark_base_color};
+  color: ${Variables.dark_base_color};
 `;
 
 export const trig_pop = css`
@@ -293,31 +293,31 @@ export const wb_alert = css`
   font-size: 12px;
   padding: 5px 15px;
   line-height: 1.5;
-  color: ${WbVariables.wb_orange};
-  background: lighten(${WbVariables.wb_orange}, 30%);
-  border: solid 1px lighten(${WbVariables.wb_orange}, 25%);
+  color: ${Variables.wb_orange};
+  background: lighten(${Variables.wb_orange}, 30%);
+  border: solid 1px lighten(${Variables.wb_orange}, 25%);
   display: block;
   width: 100%;
   border-radius: 7px;
   &.wb-success {
-    color: ${WbVariables.wb_green};
-    background: lighten(${WbVariables.wb_green}, 40%);
-    border: solid 1px lighten(${WbVariables.wb_green}, 25%);
+    color: ${Variables.wb_green};
+    background: lighten(${Variables.wb_green}, 40%);
+    border: solid 1px lighten(${Variables.wb_green}, 25%);
   }
   &.wb-error {
-    color: ${WbVariables.wb_red};
-    background: lighten(${WbVariables.wb_red}, 40%);
-    border: solid 1px lighten(${WbVariables.wb_red}, 30%);
+    color: ${Variables.wb_red};
+    background: lighten(${Variables.wb_red}, 40%);
+    border: solid 1px lighten(${Variables.wb_red}, 30%);
   }
   &.wb-info {
-    color: ${WbVariables.wb_blue};
-    background: lighten(${WbVariables.wb_blue}, 40%);
-    border: solid 1px lighten(${WbVariables.wb_blue}, 25%);
+    color: ${Variables.wb_blue};
+    background: lighten(${Variables.wb_blue}, 40%);
+    border: solid 1px lighten(${Variables.wb_blue}, 25%);
   }
   &.wb-warning {
-    color: ${WbVariables.wb_orange};
-    background: lighten(${WbVariables.wb_orange}, 30%);
-    border: solid 1px lighten(${WbVariables.wb_orange}, 25%);
+    color: ${Variables.wb_orange};
+    background: lighten(${Variables.wb_orange}, 30%);
+    border: solid 1px lighten(${Variables.wb_orange}, 25%);
   }
   &.lg {
     font-size: 18px;
@@ -373,14 +373,14 @@ export const no_select = css`
 `;
 
 export const disabled = css`
-  background: ${WbVariables.page_bg_color};
+  background: ${Variables.page_bg_color};
   pointer-events: none;
-  color: ${WbVariables.muted_color};
+  color: ${Variables.muted_color};
   opacity: 0.5;
 `;
 
 export const tag = css`
-  background: ${WbVariables.light_bg};
+  background: ${Variables.light_bg};
   display: inline-block;
   margin: 5px 10px;
   padding: 5px 10px;
@@ -442,7 +442,7 @@ export const stikcy_container = css`
 export const main_text = css`
   font-weight: bold;
   font-size: 50px;
-  margin-top: ${WbVariables.gutter_width};
+  margin-top: ${Variables.gutter_width};
 `;
 
 export const white = css`
