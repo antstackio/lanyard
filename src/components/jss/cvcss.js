@@ -1,7 +1,5 @@
 import { css } from "@emotion/core";
 import swirl_bg  from "../../images/swirl_bg.svg"
-
-
 import { WbVariables } from "./variables";
 
 

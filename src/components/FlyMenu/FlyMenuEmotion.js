@@ -23,6 +23,9 @@ const fly_menu = css`
       overflow: auto;
       animation: fly 0.15s linear;
       position: relative;
+      overflow: hidden;
+      display: flex;
+        border-radius: 0 50px 50px 0;
       @include respondToBelow(sm) {
         width: 75%;
       }
@@ -53,6 +56,7 @@ const fly_menu = css`
     }
     &.right {
       .fly_content {
+        border-radius: 50px 0 0 50px;
         animation: fly_right 0.15s linear;
         margin-right: 0;
         margin-left: auto;
@@ -68,6 +72,26 @@ const fly_menu = css`
         height: auto;
         width: 100%;
         transform: translateY(0%);
+        border-radius: 0 0 50px 50px;
+        overflow: hidden;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+     &.bottom {
+      align-items: flex-start;
+      .fly_content {
+        margin: 0;
+        height: auto;
+        width: 100%;
+        transform: translateY(0%);
+        border-radius: 50px 50px 0 0;
+        overflow: hidden;
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        animation: fly_botom 0.15s linear;
       }
     }
   }
@@ -91,6 +115,14 @@ const fly_menu = css`
   @keyframes fly_top {
     from {
       transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  @keyframes fly_bottom {
+    from {
+      transform: translateY(100%);
     }
     to {
       transform: translateY(0);
