@@ -1,7 +1,7 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-
-import HomePage from "./HomePage"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import  "../css/site.css";
+import HomePage from "./HomePage";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`

@@ -4,7 +4,7 @@ export const WbVariables = {
   dark_base_color: `#1AC084`,
   light_bc: `#90DBC0`,
   dark_base_color_2: `#2BA77A`,
-  black_bg: `#263238`,
+  black_bg: `#1E2A39`,
   border_color: `#ddd`,
   button_color: `#1AC084`,
   page_bg_color: `#eeeeee`,

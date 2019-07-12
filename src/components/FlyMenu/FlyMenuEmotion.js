@@ -38,6 +38,9 @@ const fly_menu = css`
         top: 0;
         z-index: 9;
         @include blue_shadow;
+        &.trans{
+          background: transparent;
+        }
       }
       ul.nav {
         li {
@@ -56,6 +59,17 @@ const fly_menu = css`
         transform: translateX(0%);
       }
     }
+
+    &.top {
+      align-items: flex-start;
+      .fly_content {
+        animation: fly_top 0.15s linear;
+        margin: 0;
+        height: auto;
+        width: 100%;
+        transform: translateY(0%);
+      }
+    }
   }
   @keyframes fly {
     from {
@@ -71,6 +85,15 @@ const fly_menu = css`
     }
     to {
       transform: translateX(0);
+    }
+  }
+
+  @keyframes fly_top {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
     }
   }
 `
