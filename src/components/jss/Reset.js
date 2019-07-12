@@ -1,6 +1,5 @@
-import {
-    css
-} from "@emotion/core";
+import {css} from "@emotion/core"
+
 const Reset = css `
     div,
     span,
@@ -107,7 +106,10 @@ article,
     section {
     display:block;
 }
-
+small {
+  font-size: 80%;
+  color: var(--muted_color);
+}
 
 
 ol,

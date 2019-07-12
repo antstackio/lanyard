@@ -6,7 +6,7 @@ import { css } from "@emotion/core"
 import FlyMenu from "../FlyMenu/FlyMenu"
 import menu from "../../images/menu.svg"
 import logo from "../../images/logo.svg"
-import { WbVariables } from "../jss/variables";
+import Variables  from "../jss/Variables";
 
 const nav_bar = css`
 #fly_menu{
@@ -62,7 +62,7 @@ background: #fff;
     a{
       display: block;
       padding: 15px 25px;
-      color: ${WbVariables.dark_base_color};
+      color: ${Variables.dark_base_color};
       text-decoration : none;
     }
     &:last-child{

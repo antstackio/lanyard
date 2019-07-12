@@ -1,5 +1,4 @@
 import { css } from "@emotion/core";
-import WbVariables from "../jss/variables";
 import { shadows} from "../jss/cvcss";
 
 const eventCard = css`

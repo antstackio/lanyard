@@ -1,7 +1,7 @@
 import { css } from "@emotion/core";
 
 import { media, shadows } from "../jss/cvcss";
-import { WbVariables } from "../jss/variables";
+import Variables from "../jss/Variables";
 
 const fly_menu = css`
   .fly_wrap {
@@ -37,7 +37,7 @@ const fly_menu = css`
       }
       .header {
         padding: 15px;
-        background: ${WbVariables.dark_base_color};
+        background: ${Variables.dark_base_color};
         color: #fff;
         position: sticky;
         top: 0;
