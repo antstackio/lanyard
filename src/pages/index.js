@@ -1,9 +1,10 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { Global } from "@emotion/core"
+
 import "../css/site.css"
-import HomePage from "./HomePage"
-import { Global, css } from "@emotion/core"
 import Reset from "../components/jss/Reset"
+import HomePage from "./HomePage"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -38,29 +39,23 @@ const IndexPage = () => {
     }
   `)
 
+  function SetLocalStorage(key, value) {
+    // Donot remove "typeof" : https://github.com/gatsbyjs/gatsby/issues/14480#issuecomment-497983196
+    if (typeof window !== "undefined" && localStorage.getItem(key) === null) {
+      localStorage.setItem(key, JSON.stringify(value))
+    }
+  }
+
   const { tracks, events } = data.allAgendaJson.nodes[0]
 
-  // Donot remove "typeof" : https://github.com/gatsbyjs/gatsby/issues/14480#issuecomment-497983196
+  SetLocalStorage("tracks", tracks)
+  SetLocalStorage("events", events)
 
-  if (
-    typeof window !== "undefined" &&
-    localStorage.getItem("tracks") === null
-  ) {
-    localStorage.setItem("tracks", JSON.stringify(tracks))
-  }
-
-  if (
-    typeof window !== "undefined" &&
-    localStorage.getItem("events") === null
-  ) {
-    localStorage.setItem("events", JSON.stringify(events))
-  }
-  // typeof window !== 'undefined' && # your localStorage
   return (
-    <React.Fragment>
+    <Fragment>
       <Global styles={Reset} />
       <HomePage />
-    </React.Fragment>
+    </Fragment>
   )
 }
 
