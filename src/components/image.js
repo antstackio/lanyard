@@ -61,3 +61,5 @@
 //     }}
 //   />
 // )
+
+// https://noahgilmore.com/blog/easy-gatsby-image-components/
