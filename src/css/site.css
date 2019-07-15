@@ -1,22 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900|Ubuntu+Mono:400,700&display=swap&subset=devanagari");
 :root {
   --text_primary_color: #333333;
-  --dark_base_color: #1ac084;
+  --dark_base_color: #ff9900;
   --light_bc: #90dbc0;
-  --dark_base_color_2: #2ba77a;
+  --dark_base_color_2: #ffc400;
   --black_bg: #1e2a39;
   --border_color: #ddd;
-  --button_color: #1ac084;
+  --button_color: #ff9900;
   --page_bg_color: #eeeeee;
   --link_color: #000000;
-  --header_color: #1ac084;
+  --header_color: #ff9900;
   --muted_color: #999999;
   --faded_color: #bbbbbb;
   --rc_main: #d32f2f;
   --light_bg: #f7f7f7;
   --font_primary: "Roboto" sans-serif;
 
-  --wb_grad: -webkit-linear-gradient(135deg, #1ac084, #2ba77a);
+  --wb_grad: -webkit-linear-gradient(135deg, #ff9900, #ffc400);
   --inset: inset 0 0 15px 0 rgba(0, 0, 0, 0.1);
   --shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 6px 10px -4px rgba(0, 0, 0, 0.2);
   --cubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -31,7 +31,7 @@
   --gutter_width_xs: 15px;
 }
 body {
-  background-color: var(--black_bg);
+  background-color: var(--black_bg) !important;
   font-family: "Poppins", sans-serif;
 }
 body.scroll_lock {

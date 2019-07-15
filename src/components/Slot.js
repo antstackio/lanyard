@@ -9,14 +9,25 @@ const slot_item = css`
   background: #fff;
   border-radius: 5px;
   position: relative;
-  margin-bottom: 30px;
-  &.default {
-    margin-bottom: 10px;
-  }
   &:before {
     content: "";
     position: absolute;
-    left: -14px;
+    left: -15px;
+    height: 0;
+    width: 0;
+    top: 15px;
+    margin: auto;
+    border: solid 8px transparent;
+    border-right-color: #fff;
+  }
+`
+const slot_dot = css`
+  margin-bottom: 10px;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: -15px;
     height: 0;
     width: 0;
     top: 15px;
@@ -34,6 +45,40 @@ const slot_item = css`
     top: 15px;
     margin: auto;
     background: ${Variables.dark_base_color};
+  }
+`
+
+const slot_track_flex = css`
+  display: flex;
+  overflow-x: auto;
+  overflow-y: visible;
+   max-width: calc(100% + 60px);
+    margin-left: -45px;
+    padding-left: 45px;
+    width: calc(100% + 60px) !important;
+    padding-bottom: 25px;
+    margin-bottom: 5px;
+  > div{
+    order: 2;
+    min-width: 75%;
+    margin-right: 30px;
+    padding-bottom: 25px;
+    &:before {
+      content: none;
+    }
+    &.selected{
+      order: 1;
+      position: relative;
+      &:before {
+        content: "";
+      }
+    }
+  }
+   &:before {
+    left: 30px;
+  }
+  &:after {
+    left: 13px;
   }
 `
 
@@ -73,7 +118,10 @@ const slot_speakers = css`
 const slot_action = css`
   text-align: center;
   margin-top: 10px;
-  margin-bottom: -30px;
+  position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -20px;
 `
 const slot_track = css`
   color: ${Variables.dark_base_color} !important;
@@ -89,39 +137,43 @@ const slot_track = css`
   writing-mode: vertical-lr;
 `
 
+
 const Slot = ({ eventData, selectEvent }) => {
   return (
     <li
-      css={[
-        slot_item,
-        eventData.selectedFlag === "selected" ? slotSelected : null,
-      ]}
-      className={eventData.selectedFlag}
+    css={[slot_dot,eventData.tracks.length > 1 ? slot_track_flex : null]}
     >
-      {eventData.tracks.length < 4 ? (
-        <div css={slot_track}> Track - {eventData.tracks[0]}</div>
-      ) : null}
-
-      <div css={slot_time}>
-        {console.log(eventData)}
-        <small>
-          {timeFormat(eventData.time.start)} - {timeFormat(eventData.time.end)}
-        </small>
-      </div>
-      <div css={slot_title}>{eventData.title}</div>
-      <div css={slot_speakers}>
-        {eventData.speakers &&
-          eventData.speakers.map(speaker => <small>{speaker.name}</small>)}
-      </div>
-      {eventData.selectedFlag !== "default" ? (
-        <div css={slot_action}>
-          {eventData.eventType == "talk" && (
-            <button css={button} onClick={() => selectEvent(eventData)}>
-              Add to Schedule
-            </button>
-          )}
+      {eventData.tracks.map((track, index)=>(
+        <div key={index}  css={[
+          slot_item,
+          track.selectedFlag === "selected" ? slotSelected : null,
+        ]}
+        className={track.selectedFlag}>
+          {eventData.tracks.length > 1 ? (
+            <div css={slot_track}> Track - {index+1}</div>
+          ) : null}
+          <div css={slot_time}>
+            <small>
+              {timeFormat(eventData.timeStart)} - {timeFormat(eventData.timeEnd)}
+              <div css={slot_title}>{track.title}</div>
+            </small>
+          </div>
+          <div css={slot_speakers}>
+            {track.speakers &&
+              track.speakers.map((speaker, idx) => <small key={idx}>{speaker.name}</small>)}
+          </div>
+           {track.selectedFlag !== "default" ? (
+            <div css={slot_action}>
+              {eventData.eventType == "talk" && (
+                <button css={button} onClick={() => selectEvent(track)}>
+                  Add to Schedule
+                </button>
+              )}
+            </div>
+          ) : null}
         </div>
-      ) : null}
+      ))}
+
     </li>
   )
 }

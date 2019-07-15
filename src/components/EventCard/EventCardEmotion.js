@@ -3,8 +3,8 @@ import { shadows} from "../jss/cvcss";
 import Variables from "../jss/Variables";
 
 export const eventCard = css`
-  height: 85vh;
-  background: #fff;
+height: 85vh;
+background: #fff;
   box-shadow: ${shadows.theme_shadow};
   border-radius: 0 0 50px 50px;
   padding:  ${Variables.gutter_width};
@@ -13,6 +13,9 @@ export const eventCard = css`
   justify-content: flex-end;
   &:not(.inv){
     padding-top: 100px;
+  }
+  &.inv{
+    justify-content: flex-start;
   }
 `
 export const event_logo = css`
