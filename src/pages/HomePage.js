@@ -21,9 +21,18 @@ const agenda_card = css`
     height: 15vh;
     display: flex;
     align-items: center;
+    .trig-ttl{
+      text-align: center;
+      text-transform: uppercase;
+      color: #fff;
+      img{
+        margin-bottom: 5px;
+        height: 30px;
+      }
+    }
     > span {
-      height: 30px;
-      width: 30px;
+      height: 50px;
+      width: 75px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -80,17 +89,21 @@ const HomePage = () => {
   const [events, setEvents] = useState([])
 
   useEffect(() => {
-    setEvents(JSON.parse(localStorage.getItem("events")))
+    setEvents(JSON.parse(localStorage.getItem("slots")))
   }, [])
 
   const selectEvent = selectedEvent => {
     const eventsChanged = events.map(event => {
-      if (event.id === selectedEvent.id) {
-        event.selectedFlag = "selected"
-      }
+      event.tracks.map(tevnt => {
+        tevnt.selectedFlag = "notSelected"
+        if (tevnt.id === selectedEvent.id) {
+          tevnt.selectedFlag = "selected"
+        }
+        return tevnt
+      })
       return event
     })
-    localStorage.setItem("events", JSON.stringify(eventsChanged))
+    localStorage.setItem("slots", JSON.stringify(eventsChanged))
     setEvents(eventsChanged)
   }
 
@@ -103,7 +116,7 @@ const HomePage = () => {
           stayOnClick
           direction="bottom"
           className="agenda"
-          trig_title={<img src={agenda} alt="logo" title="Agenda" />}
+          trig_title={<span className="trig-ttl"><img src={agenda} alt="logo" title="Agenda" /><span>Agenda</span></span>}
         >
           <Link css={agendaTitle} to="/">
             Agenda

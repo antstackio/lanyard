@@ -11,28 +11,23 @@ const IndexPage = () => {
     query QueryJSON {
       allAgendaJson {
         nodes {
-          events {
-            id
-            speakers {
-              designation
-              name
-              externalLink
-              profilePicture
-            }
-            time {
-              end
-              start
-            }
-            title
-            tracks
+          slots {
             eventType
-            selectedFlag
-            slot
-          }
-          id
-          tracks {
-            name
-            position
+            timeEnd
+            timeStart
+            tracks {
+              feedBack
+              id
+              selectedFlag
+              speakers {
+                designation
+                externalLink
+                name
+                profilePicture
+              }
+              title
+              trackLength
+            }
           }
         }
       }
@@ -43,13 +38,10 @@ const IndexPage = () => {
     // Donot remove "typeof" : https://github.com/gatsbyjs/gatsby/issues/14480#issuecomment-497983196
     if (typeof window !== "undefined" && localStorage.getItem(key) === null) {
       localStorage.setItem(key, JSON.stringify(value))
-    }
   }
-
-  const { tracks, events } = data.allAgendaJson.nodes[0]
-
-  SetLocalStorage("tracks", tracks)
-  SetLocalStorage("events", events)
+  }
+  const { slots } = data.allAgendaJson.nodes[0];
+  SetLocalStorage("slots", slots)
 
   return (
     <Fragment>

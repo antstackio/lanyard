@@ -42,9 +42,9 @@ class CountDown extends Component {
       <div css={c_timer}>
         {Object.keys(timeLeft).map(item => (
           <div key={item} css={c_days}>
-            {timeLeft[item] && (
+            {timeLeft[item] !== null ? (
               <span className={`anim-${timeLeft[item]}`}>{timeLeft[item]}</span>
-            )}
+            ) : null}
             <small>{item}</small>
           </div>
         ))}

@@ -103,6 +103,9 @@ export const close_icon = css`
     width: 50%;
     transition: all 0.25s;
     opacity: 0;
+    width: 75%;
+    height: 4px;
+    box-shadow: 0 0 4px rgba(0,0,0,.5);
     ${media.above_sm}{
       background: red;
     }
@@ -229,6 +232,7 @@ export const px_bg = css`
   }
   &:before {
     content: "";
+    transition: all .25s;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -238,12 +242,6 @@ export const px_bg = css`
     background-repeat: no-repeat;
     background-position: top -50px right;
     pointer-events: none;
-  }
-
-  &.inv {
-    &:before {
-      transform: rotateX(180deg);
-    }
   }
 `;
 

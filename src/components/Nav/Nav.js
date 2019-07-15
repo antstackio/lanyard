@@ -17,9 +17,18 @@ const nav_bar = css`
     height: 15vh;
     display: flex;
     align-items: center;
+    .trig-ttl{
+      text-align: center;
+          text-transform: uppercase;
+      color: #fff;
+      img{
+        margin-bottom: 5px;
+        height: 30px;
+      }
+    }
   > span{
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,7 +90,7 @@ background: #fff;
 
 const Nav = ({ siteTitle }) => (
   <div css={nav_bar}>
-    <FlyMenu direction="bottom" className="navbar_wrapper" trig_title={<img src={menu} alt="logo"/>}>
+    <FlyMenu direction="bottom" className="navbar_wrapper" trig_title={<span className="trig-ttl"><img src={menu} alt="logo"/><span>Menu</span></span>}>
         <Link
           css={lanyard_logo}
           to="/"
