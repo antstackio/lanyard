@@ -2,7 +2,14 @@ import { css } from "@emotion/core"
 
 import { shadows, media } from "../jss/cvcss"
 import Variables from "../jss/Variables"
+
 import check_in from "../../images/check_in.svg"
+import tea_break from "../../images/tea_break.svg"
+import lunch_break from "../../images/lunch_break.svg"
+import networking from "../../images/networking.svg"
+import def from "../../images/default.svg"
+import welcome from "../../images/welcome.svg"
+import end from "../../images/end.svg"
 
 export const eventCard = css`
   height: 85vh;
@@ -81,31 +88,67 @@ export const contentCard = css`
   color: ${Variables.text_primary_color};
   border-left: 5px solid ${Variables.dark_base_color};
   box-shadow: ${shadows.blue_shadow};
+  a{
+    text-decoration: none;
+        color: #666;
+    font-size: 12px;
+    line-height: 0;
+  }
   .illust{
     margin: -15px 0 15px;
     height: 200px;
+    ${media.xs}{
+      height: 100px;
+    }
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(${check_in});
+    &.check_in{
+      background-image: url(${check_in});
+    }
+
+    &.tea_break{
+      background-image: url(${tea_break});
+    }
+
+    &.lunch_break{
+      background-image: url(${lunch_break});
+    }
+
+    &.networking{
+      background-image: url(${networking});
+    }
+
+    &.default{
+      background-image: url(${def});
+    }
+
+    &.welcome{
+      background-image: url(${welcome});
+    }
+
+    &.closing{
+      background-image: url(${end});
+    }
   }
 `
 
 export const card_now_text = css`
-  font-weight: 200;
-  font-size: 18px;
+  font-size: 14px;
   color: ${Variables.muted_color};
   text-transform: uppercase;
 `
 
 export const card_event_title = css`
-  margin: 15px auto 25px;
-  font-size: 16px;
+  margin: 10px auto 15px;
+  font-size: 14px;
+  line-height: 1.3;
   color: ${Variables.dark_base_color};
-  text-transform: uppercase;
   small {
+    display: block;
+    margin-top: 7px;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12px;
   color: ${Variables.muted_color};
   }
 `
