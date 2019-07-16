@@ -6,6 +6,7 @@ import { button } from "./jss/cvcss"
 import { timeFormat } from "../helpers/TimeStamp"
 
 const Slot = ({ eventData, selectEvent }) => {
+  const slot_id = eventData.slotId
   return (
     <li css={[slot_dot, eventData.tracks.length > 1 ? slot_track_flex : null]}>
       {eventData.tracks.map((track, index) => (
@@ -33,15 +34,15 @@ const Slot = ({ eventData, selectEvent }) => {
                 <small key={idx}>{speaker.name}</small>
               ))}
           </div>
-          {track.selectedFlag !== "default" ? (
-            <div css={slot_action}>
-              {eventData.eventType == "talk" && (
-                <button css={button} onClick={() => selectEvent(track)}>
-                  Add to Schedule
-                </button>
-              )}
-            </div>
-          ) : null}
+          {/* {track.selectedFlag !== "default" ? ( */}
+          <div css={slot_action}>
+            {eventData.eventType == "talk" && (
+              <button css={button} onClick={() => selectEvent(track, slot_id)}>
+                Add to Schedule
+              </button>
+            )}
+          </div>
+          {/* ) : null} */}
         </div>
       ))}
     </li>
