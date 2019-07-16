@@ -56,7 +56,7 @@ const HomePage = () => {
             {events.map(event => {
               return (
                 <Slot
-                  key={event.id}
+                  key={event.timeStart}
                   eventData={event}
                   selectEvent={event => selectEvent(event)}
                 />

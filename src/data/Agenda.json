@@ -4,8 +4,9 @@
       {
         "eventType": "other",
         "room": null,
-        "timeStart": 1562553000,
-        "timeEnd": 1562556600,
+        "slotId": "slot-1",
+        "timeStart": 1563292200000,
+        "timeEnd": 1563292260000,
         "tracks": [
           {
             "id": "event1",
@@ -19,8 +20,9 @@
       {
         "eventType": "other",
         "room": null,
-        "timeStart": 1562553000,
-        "timeEnd": 1562556600,
+        "slotId": "slot-2",
+        "timeStart": 1563292260000,
+        "timeEnd": 1563292320000,
         "tracks": [
           {
             "id": "event2",
@@ -34,8 +36,9 @@
       {
         "eventType": "other",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-3",
+        "timeStart": 1563292320000,
+        "timeEnd": 1563292380000,
         "tracks": [
           {
             "id": "event3",
@@ -57,8 +60,9 @@
       {
         "eventType": "other",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-4",
+        "timeStart": 1563292380000,
+        "timeEnd": 1563292440000,
         "tracks": [
           {
             "id": "event4",
@@ -86,15 +90,16 @@
       {
         "eventType": "other",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-5",
+        "timeStart": 1563292440000,
+        "timeEnd": 1563292500000,
         "tracks": [
           {
             "id": "event5",
             "selectedFlag": "default",
             "trackLength": 4,
             "feedBack": false,
-            "title": "Voice User Interfaces - How designing for the ear differs from designing for screens",
+            "title": "Building Voice Enabled Experiences with Alexa",
             "speakers": [
               {
                 "name": "Sohan Maheshwar",
@@ -109,8 +114,9 @@
       {
         "eventType": "other",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-6",
+        "timeStart": 1563292500000,
+        "timeEnd": 1563292560000,
         "tracks": [
           {
             "id": "event6",
@@ -132,8 +138,9 @@
       {
         "eventType": "break",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-7",
+        "timeStart": 1563292560000,
+        "timeEnd": 1563292620000,
         "tracks": [
           {
             "id": "event7",
@@ -146,8 +153,9 @@
       {
         "eventType": "talk",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-8",
+        "timeStart": 1563292620000,
+        "timeEnd": 1563292680000,
         "tracks": [
           {
             "id": "event8",
@@ -214,8 +222,9 @@
       {
         "eventType": "talk",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-9",
+        "timeStart": 1563292680000,
+        "timeEnd": 1563292740000,
         "tracks": [
           {
             "id": "event12",
@@ -288,8 +297,9 @@
       {
         "eventType": "talk",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-10",
+        "timeStart": 1563292740000,
+        "timeEnd": 1563292800000,
         "tracks": [
           {
             "id": "event16",
@@ -374,8 +384,9 @@
       {
         "eventType": "break",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-11",
+        "timeStart": 1563292800000,
+        "timeEnd": 1563292860000,
         "tracks": [
           {
             "id": "event20",
@@ -388,8 +399,9 @@
       {
         "eventType": "talk",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-12",
+        "timeStart": 1563292860000,
+        "timeEnd": 1563292920000,
         "tracks": [
           {
             "id": "event21",
@@ -462,14 +474,16 @@
       {
         "eventType": "talk",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-13",
+        "timeStart": 1563292920000,
+        "timeEnd": 1563292980000,
         "tracks": [
           {
             "id": "event25",
             "selectedFlag": "notSelected",
             "trackLength": 1,
             "feedBack": false,
+            "title": "Building Digital Human by using AWS Sumerian.",
             "speakers": [
               {
                 "name": "Ilanchezhian Ganesamurthy",
@@ -529,8 +543,9 @@
       {
         "eventType": "break",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-14",
+        "timeStart": 1563292980000,
+        "timeEnd": 1563293040000,
         "tracks": [
           {
             "id": "event29",
@@ -543,8 +558,9 @@
       {
         "eventType": "talk",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-15",
+        "timeStart": 1563293040000,
+        "timeEnd": 1563293100000,
         "tracks": [
           {
             "id": "event30",
@@ -611,8 +627,9 @@
       {
         "eventType": "talk",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-16",
+        "timeStart": 1563293100000,
+        "timeEnd": 1563293160000,
         "tracks": [
           {
             "id": "event34",
@@ -685,8 +702,9 @@
       {
         "eventType": "break",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-17",
+        "timeStart": 1563293160000,
+        "timeEnd": 1563293220000,
         "tracks": [
           {
             "id": "event38",
@@ -699,8 +717,9 @@
       {
         "eventType": "break",
         "room": null,
-        "timeStart": 1562560200,
-        "timeEnd": 1562563800,
+        "slotId": "slot-18",
+        "timeStart": 1563293220000,
+        "timeEnd": 1563293280000,
         "tracks": [
           {
             "id": "event39",

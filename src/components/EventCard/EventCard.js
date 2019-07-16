@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react"
+import Link from "gatsby"
 import _ from "lodash"
 import {
   eventCard,
@@ -16,24 +17,37 @@ import {
 import { px_bg } from "../jss/cvcss"
 import CountDown from "./CountDown"
 import event_logo_img from "../../images/aws_logo.svg"
+import { timeFormat } from "../../helpers/TimeStamp"
 
 const EventCard = () => {
-  const [started, setStarted] = useState(true)
-  const [time, setTime] = useState(10)
+  const [started, setStarted] = useState(null)
   const [eventName, setEventName] = useState(null)
-  const [events, setEvents] = useState([])
+  const [eventTime, setEventTime] = useState(null)
+  const [slots, setSlots] = useState([])
 
   useEffect(() => {
-    setEvents(JSON.parse(localStorage.getItem("events")))
+    setSlots(JSON.parse(localStorage.getItem("slots")))
   }, [])
 
   function setTimingFunction() {
-    setTimeout(() => {
-      if (_.filter(events, { timeStart: _.now() }).length) {
-        setEventName(_.filter(events, { timeStart: _.now() }))
+    setInterval(() => {
+      if(slots.length){
+        if((_.now()+ 19800000) > slots[0].timeStart ){
+          setStarted(true)
+          setEventTime(slots[0].timeStart)
+        }
+        else{
+          setStarted(false)
+          setEventTime(slots[0].timeStart)
+        }
       }
-      setTime(time + 1)
+      slots.map((slot)=>{
+        if(slot.timeStart <= (_.now() + 19800000) && slot.timeEnd >= (_.now() + 19800000)){
+          setEventName(slot);
+        }
+      })
     }, 1000)
+    console.log(slots);
   }
 
   setTimingFunction()
@@ -53,36 +67,30 @@ const EventCard = () => {
               </p>
             </div>
           </div>
-          <div css={contentSwipe}>
-            <div css={contentCard}>
-              <h4 css={card_now_text}>Now</h4>
-              <h2 css={card_event_title}>
-                Registration<br></br>
-                <small>from 08:00 AM</small>
-              </h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi.
-              </p>
-              <h5 css={card_end_time}>Ends at 09:00 AM</h5>
-            </div>
-            <div css={contentCard}>
-              <h4 css={card_now_text}>Now</h4>
-              <h2 css={card_event_title}>
-                Registration<br></br>
-                <small>from 08:00 AM</small>
-              </h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi.
-              </p>
-              <h5 css={card_end_time}>Ends at 09:00 AM</h5>
-            </div>
-          </div>
+            {eventName ? (
+              <div css={contentSwipe} className={eventName.tracks.length > 1 ? "multiple" : "single"}>
+                {eventName.tracks.map((track, index) => (
+                    <div css={contentCard} key={index}>
+                      <h4 css={card_now_text}>Now {eventName.tracks.length > 1 && `Track - ${index + 1}`}</h4>
+                      <h2 css={card_event_title}>
+                        {track.title}<br></br>
+                        <small>from {timeFormat(eventName.timeStart)}</small>
+                      </h2>
+                      {track.speakers && track.speakers.length && (
+                        <div className="speaker">
+                            {track.speakers.map((speaker, idx)=>(
+                              <React.Fragment key={idx}>
+                                <p>{speaker.name}</p>
+                                <p><a href={speaker.externalLink}>{speaker.designation}</a></p>
+                              </React.Fragment>
+                            ))}
+                        </div>
+                      )}
+                      <h5 css={card_end_time}>Ends at {timeFormat(eventName.timeEnd)}</h5>
+                    </div>
+                )) }
+              </div>)
+            : null}
         </div>
       ) : (
         <div css={[eventCard, px_bg]}>
@@ -96,7 +104,7 @@ const EventCard = () => {
             </p>
           </div>
           <div css={event_timer}>
-            <CountDown startingTime={1564214400000} />
+            <CountDown startingTime={eventTime} />
           </div>
         </div>
       )}

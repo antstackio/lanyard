@@ -86,15 +86,15 @@ export const card_now_text = css`
   font-weight: 200;
   font-size: 25px;
   color: ${Variables.muted_color};
-  text-transform: uppdercase;
+  text-transform: uppercase;
 `
 
 export const card_event_title = css`
   margin: 15px auto 25px;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 16px;
   color: ${Variables.dark_base_color};
-  text-transform: uppdercase;
+  text-transform: uppercase;
   small {
     font-weight: normal;
     font-size: 14px;
@@ -112,18 +112,20 @@ export const card_end_time = css`
 `
 export const contentSwipe = css`
    {
-    display: flex;
-    max-width: calc(100% + 50px);
-    overflow: auto;
-    width: calc(100% + 50px);
-    margin-left: -25px;
-    padding: 15px 0 30px;
-    > div {
-      margin-left: 20px;
-      min-width: 60%;
-      ${media.xs} {
-        min-width: 80%;
-        margin-top: 25px;
+     &.multiple{
+      margin-left: -25px;
+      padding: 15px 0 30px;
+      display: flex;
+      overflow: auto;
+      max-width: calc(100% + 50px);
+      width: calc(100% + 50px);
+      > div {
+        margin-left: 20px;
+        min-width: 60%;
+        ${media.xs} {
+          min-width: 80%;
+          margin-top: 25px;
+        }
       }
     }
   }

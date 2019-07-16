@@ -9,28 +9,28 @@ import HomePage from "./HomePage"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query QueryJSON {
-      allAgendaJson {
-        nodes {
-          slots {
-            eventType
-            timeEnd
-            timeStart
-            tracks {
-              feedBack
-              id
-              selectedFlag
-              speakers {
-                designation
-                externalLink
-                name
-                profilePicture
-              }
-              title
-              trackLength
-            }
+       allAgendaJson {
+    nodes {
+      slots {
+        eventType
+        timeEnd
+        timeStart
+        tracks {
+          feedBack
+          id
+          selectedFlag
+          speakers {
+            designation
+            externalLink
+            name
+            profilePicture
           }
+          title
+          trackLength
         }
       }
+    }
+  }
     }
   `)
 
