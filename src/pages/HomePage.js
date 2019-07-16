@@ -7,10 +7,71 @@ import agenda from "../images/agenda.svg"
 import EventCard from "../components/EventCard/EventCard"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
 import FlyMenu from "../components/FlyMenu/FlyMenu"
 import Slot from "../components/Slot"
 import Variables from "../components/jss/Variables"
+
+const HomePage = () => {
+  const [events, setEvents] = useState([])
+
+  useEffect(() => {
+    setEvents(JSON.parse(localStorage.getItem("slots")))
+  }, [])
+
+  const selectEvent = selectedEvent => {
+    const eventsChanged = events.map(event => {
+      event.tracks.map(tevnt => {
+        tevnt.selectedFlag = "notSelected"
+        if (tevnt.id === selectedEvent.id) {
+          tevnt.selectedFlag = "selected"
+        }
+        return tevnt
+      })
+      return event
+    })
+    localStorage.setItem("slots", JSON.stringify(eventsChanged))
+    setEvents(eventsChanged)
+  }
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <EventCard />
+      <div css={agenda_card}>
+        <FlyMenu
+          stayOnClick
+          direction="bottom"
+          className="agenda"
+          trig_title={
+            <span className="trig-ttl">
+              <img src={agenda} alt="logo" title="Agenda" />
+              <span>Agenda</span>
+            </span>
+          }
+        >
+          <Link css={agendaTitle} to="/">
+            Agenda
+          </Link>
+          <ul css={agenda_list}>
+            {events.map(event => {
+              return (
+                <Slot
+                  key={event.id}
+                  eventData={event}
+                  selectEvent={event => selectEvent(event)}
+                />
+              )
+            })}
+          </ul>
+        </FlyMenu>
+      </div>
+    </Layout>
+  )
+}
+
+export default HomePage
+
+//Styling
 
 const agenda_card = css`
   .agenda {
@@ -21,11 +82,11 @@ const agenda_card = css`
     height: 15vh;
     display: flex;
     align-items: center;
-    .trig-ttl{
+    .trig-ttl {
       text-align: center;
       text-transform: uppercase;
       color: #fff;
-      img{
+      img {
         margin-bottom: 5px;
         height: 30px;
       }
@@ -84,58 +145,3 @@ const agenda_list = css`
     left: 10px;
   }
 `
-
-const HomePage = () => {
-  const [events, setEvents] = useState([])
-
-  useEffect(() => {
-    setEvents(JSON.parse(localStorage.getItem("slots")))
-  }, [])
-
-  const selectEvent = selectedEvent => {
-    const eventsChanged = events.map(event => {
-      event.tracks.map(tevnt => {
-        tevnt.selectedFlag = "notSelected"
-        if (tevnt.id === selectedEvent.id) {
-          tevnt.selectedFlag = "selected"
-        }
-        return tevnt
-      })
-      return event
-    })
-    localStorage.setItem("slots", JSON.stringify(eventsChanged))
-    setEvents(eventsChanged)
-  }
-
-  return (
-    <Layout>
-      <SEO title="Home" />
-      <EventCard />
-      <div css={agenda_card}>
-        <FlyMenu
-          stayOnClick
-          direction="bottom"
-          className="agenda"
-          trig_title={<span className="trig-ttl"><img src={agenda} alt="logo" title="Agenda" /><span>Agenda</span></span>}
-        >
-          <Link css={agendaTitle} to="/">
-            Agenda
-          </Link>
-          <ul css={agenda_list}>
-            {events.map(event => {
-              return (
-                <Slot
-                  key={event.id}
-                  eventData={event}
-                  selectEvent={event => selectEvent(event)}
-                />
-              )
-            })}
-          </ul>
-        </FlyMenu>
-      </div>
-    </Layout>
-  )
-}
-
-export default HomePage

@@ -1,4 +1,3 @@
-
 const Variables = {
   text_primary_color: `#333333`,
   dark_base_color: `#FF9900`,
@@ -29,8 +28,6 @@ const Variables = {
   gutter_width: `25px`,
   gutter_width_more: `50px`,
   gutter_width_xs: `15px`,
-
-};
-
+}
 
 export default Variables
