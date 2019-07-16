@@ -13,6 +13,7 @@ const IndexPage = () => {
         nodes {
           slots {
             eventType
+            img
             slotId
             timeEnd
             timeStart

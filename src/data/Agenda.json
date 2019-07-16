@@ -3,10 +3,11 @@
     "slots": [
       {
         "eventType": "other",
+        "img": "check-in",
         "room": null,
         "slotId": "slot-1",
-        "timeStart": 1563292200000,
-        "timeEnd": 1563292260000,
+        "timeStart": 1563285900000,
+        "timeEnd": 1563289499000,
         "tracks": [
           {
             "trackId": "event1",
@@ -19,10 +20,11 @@
       },
       {
         "eventType": "other",
+        "img": "welcome",
         "room": null,
         "slotId": "slot-2",
-        "timeStart": 1563292260000,
-        "timeEnd": 1563292320000,
+        "timeStart": 1563289500000,
+        "timeEnd": 1563293099000,
         "tracks": [
           {
             "trackId": "event2",
@@ -35,10 +37,11 @@
       },
       {
         "eventType": "other",
+        "img": "default",
         "room": null,
         "slotId": "slot-3",
-        "timeStart": 1563292320000,
-        "timeEnd": 1563292380000,
+        "timeStart": 1563293100000,
+        "timeEnd": 1563296699000,
         "tracks": [
           {
             "trackId": "event3",
@@ -59,10 +62,11 @@
       },
       {
         "eventType": "other",
+        "img": "default",
         "room": null,
         "slotId": "slot-4",
-        "timeStart": 1563292380000,
-        "timeEnd": 1563292440000,
+        "timeStart": 1563296700000,
+        "timeEnd": 1563300299000,
         "tracks": [
           {
             "trackId": "event4",
@@ -89,10 +93,11 @@
       },
       {
         "eventType": "other",
+        "img": "default",
         "room": null,
         "slotId": "slot-5",
-        "timeStart": 1563292440000,
-        "timeEnd": 1563292500000,
+        "timeStart": 1563300300000,
+        "timeEnd": 1563303899000,
         "tracks": [
           {
             "trackId": "event5",
@@ -113,10 +118,11 @@
       },
       {
         "eventType": "other",
+        "img": "default",
         "room": null,
         "slotId": "slot-6",
-        "timeStart": 1563292500000,
-        "timeEnd": 1563292560000,
+        "timeStart": 1563303900000,
+        "timeEnd": 1563307499000,
         "tracks": [
           {
             "trackId": "event6",
@@ -137,10 +143,11 @@
       },
       {
         "eventType": "break",
+        "img": "tea_break",
         "room": null,
         "slotId": "slot-7",
-        "timeStart": 1563292560000,
-        "timeEnd": 1563292620000,
+        "timeStart": 1563307500000,
+        "timeEnd": 1563311099000,
         "tracks": [
           {
             "trackId": "event7",
@@ -154,8 +161,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-8",
-        "timeStart": 1563292620000,
-        "timeEnd": 1563292680000,
+        "timeStart": 1563311100000,
+        "timeEnd": 1563314699000,
         "tracks": [
           {
             "trackId": "event8",
@@ -223,8 +230,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-9",
-        "timeStart": 1563292680000,
-        "timeEnd": 1563292740000,
+        "timeStart": 1563314700000,
+        "timeEnd": 1563318299000,
         "tracks": [
           {
             "trackId": "event12",
@@ -298,8 +305,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-10",
-        "timeStart": 1563292740000,
-        "timeEnd": 1563292800000,
+        "timeStart": 1563318300000,
+        "timeEnd": 1563321899000,
         "tracks": [
           {
             "trackId": "event16",
@@ -383,10 +390,11 @@
       },
       {
         "eventType": "break",
+        "img": "lunch_break",
         "room": null,
         "slotId": "slot-11",
-        "timeStart": 1563292800000,
-        "timeEnd": 1563292860000,
+        "timeStart": 1563321900000,
+        "timeEnd": 1563325499000,
         "tracks": [
           {
             "trackId": "event20",
@@ -400,8 +408,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-12",
-        "timeStart": 1563292860000,
-        "timeEnd": 1563292920000,
+        "timeStart": 1563325500000,
+        "timeEnd": 1563329099000,
         "tracks": [
           {
             "trackId": "event21",
@@ -475,8 +483,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-13",
-        "timeStart": 1563292920000,
-        "timeEnd": 1563292980000,
+        "timeStart": 1563329100000,
+        "timeEnd": 1563332699000,
         "tracks": [
           {
             "trackId": "event25",
@@ -542,10 +550,11 @@
       },
       {
         "eventType": "break",
+        "img": "tea_break",
         "room": null,
         "slotId": "slot-14",
-        "timeStart": 1563292980000,
-        "timeEnd": 1563293040000,
+        "timeStart": 1563332700000,
+        "timeEnd": 1563336299000,
         "tracks": [
           {
             "trackId": "event29",
@@ -559,8 +568,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-15",
-        "timeStart": 1563293040000,
-        "timeEnd": 1563293100000,
+        "timeStart": 1563336300000,
+        "timeEnd": 1563339899000,
         "tracks": [
           {
             "trackId": "event30",
@@ -628,8 +637,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-16",
-        "timeStart": 1563293100000,
-        "timeEnd": 1563293160000,
+        "timeStart": 1563339900000,
+        "timeEnd": 1563343499000,
         "tracks": [
           {
             "trackId": "event34",
@@ -701,10 +710,11 @@
       },
       {
         "eventType": "break",
+        "img": "networking",
         "room": null,
         "slotId": "slot-17",
-        "timeStart": 1563293160000,
-        "timeEnd": 1563293220000,
+        "timeStart": 1563343500000,
+        "timeEnd": 1563347099000,
         "tracks": [
           {
             "trackId": "event38",
@@ -716,10 +726,11 @@
       },
       {
         "eventType": "break",
+        "img": "closing",
         "room": null,
         "slotId": "slot-18",
-        "timeStart": 1563293220000,
-        "timeEnd": 1563293280000,
+        "timeStart": 1563347100000,
+        "timeEnd": 1563350699000,
         "tracks": [
           {
             "trackId": "event39",
