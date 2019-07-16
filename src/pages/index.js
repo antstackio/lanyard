@@ -38,9 +38,11 @@ const IndexPage = () => {
     // Donot remove "typeof" : https://github.com/gatsbyjs/gatsby/issues/14480#issuecomment-497983196
     if (typeof window !== "undefined" && localStorage.getItem(key) === null) {
       localStorage.setItem(key, JSON.stringify(value))
+    }
   }
-  }
-  const { slots } = data.allAgendaJson.nodes[0];
+
+  const { slots } = data.allAgendaJson.nodes[0]
+
   SetLocalStorage("slots", slots)
 
   return (

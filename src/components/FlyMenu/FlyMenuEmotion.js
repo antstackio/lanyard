@@ -1,7 +1,7 @@
-import { css } from "@emotion/core";
+import { css } from "@emotion/core"
 
-import { media, shadows } from "../jss/cvcss";
-import Variables from "../jss/Variables";
+import { media, shadows } from "../jss/cvcss"
+import Variables from "../jss/Variables"
 
 const fly_menu = css`
   .fly_wrap {
@@ -42,8 +42,8 @@ const fly_menu = css`
         position: sticky;
         top: 0;
         z-index: 9;
-         ${shadows.solid_shadow};
-        &.trans{
+        ${shadows.solid_shadow};
+        &.trans {
           background: transparent;
         }
       }
@@ -76,7 +76,7 @@ const fly_menu = css`
         flex-direction: column;
       }
     }
-     &.bottom {
+    &.bottom {
       align-items: flex-start;
       animation: fly_bottom 0.25s linear;
       .fly_content {
@@ -124,4 +124,4 @@ const fly_menu = css`
   }
 `
 
-export default fly_menu;
+export default fly_menu

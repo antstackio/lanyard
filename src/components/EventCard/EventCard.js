@@ -7,38 +7,37 @@ import {
   event_timer,
   logoHeader,
   contentCard,
-card_now_text,
-card_event_title,
-card_end_time,
-contentSwipe
+  card_now_text,
+  card_event_title,
+  card_end_time,
+  contentSwipe,
 } from "./EventCardEmotion"
+
 import { px_bg } from "../jss/cvcss"
 import CountDown from "./CountDown"
 import event_logo_img from "../../images/aws_logo.svg"
 
-
 const EventCard = () => {
   const [started, setStarted] = useState(true)
-  const [time, setTime] = useState(10);
-  const [eventName, setEventName] = useState(null);
-
+  const [time, setTime] = useState(10)
+  const [eventName, setEventName] = useState(null)
   const [events, setEvents] = useState([])
 
   useEffect(() => {
     setEvents(JSON.parse(localStorage.getItem("events")))
   }, [])
 
-  function myFunction() {
-    setTimeout(function(){
-      if(_.filter(events, {'timeStart': _.now()}).length){
-        setEventName(_.filter(events, {'timeStart': _.now()}));
+  function setTimingFunction() {
+    setTimeout(() => {
+      if (_.filter(events, { timeStart: _.now() }).length) {
+        setEventName(_.filter(events, { timeStart: _.now() }))
       }
-      console.log();
-
-      setTime(time+1);
-    }, 1000);
+      setTime(time + 1)
+    }, 1000)
   }
-  myFunction();
+
+  setTimingFunction()
+
   return (
     <Fragment>
       {started ? (
@@ -55,16 +54,32 @@ const EventCard = () => {
             </div>
           </div>
           <div css={contentSwipe}>
-              <div css={contentCard}>
+            <div css={contentCard}>
               <h4 css={card_now_text}>Now</h4>
-              <h2 css={card_event_title}>Registration<br></br><small>from 08:00 AM</small></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+              <h2 css={card_event_title}>
+                Registration<br></br>
+                <small>from 08:00 AM</small>
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi.
+              </p>
               <h5 css={card_end_time}>Ends at 09:00 AM</h5>
             </div>
             <div css={contentCard}>
               <h4 css={card_now_text}>Now</h4>
-              <h2 css={card_event_title}>Registration<br></br><small>from 08:00 AM</small></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+              <h2 css={card_event_title}>
+                Registration<br></br>
+                <small>from 08:00 AM</small>
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi.
+              </p>
               <h5 css={card_end_time}>Ends at 09:00 AM</h5>
             </div>
           </div>

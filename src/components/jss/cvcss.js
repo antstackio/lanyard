@@ -1,7 +1,6 @@
-import { css } from "@emotion/core";
-import swirl_bg  from "../../images/swirl_bg.svg"
-import Variables from "./Variables";
-
+import { css } from "@emotion/core"
+import swirl_bg from "../../images/swirl_bg.svg"
+import Variables from "./Variables"
 
 export const media = {
   mn: `@media only screen and (max-width: 360px)`,
@@ -23,28 +22,26 @@ export const media = {
   hi_res: `@media (min-width: 1199px) and (max-width: 1650px)`,
 }
 
-
-
 export const hexToRgb = hex => {
-  var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-  hex = hex.replace(shorthandRegex, function (m, r, g, b) {
-    return r + r + g + g + b + b;
-  });
+  var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
+  hex = hex.replace(shorthandRegex, function(m, r, g, b) {
+    return r + r + g + g + b + b
+  })
 
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
   return result
     ? {
-      r: parseInt(result[1], 16),
-      g: parseInt(result[2], 16),
-      b: parseInt(result[3], 16)
-    }
-    : null;
-};
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16),
+      }
+    : null
+}
 
 export const rgba = (hex, alpha) => {
-  const color = hexToRgb(hex);
-  return `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha})`;
-};
+  const color = hexToRgb(hex)
+  return `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha})`
+}
 
 export const shadows = {
   theme_shadow: `0 4px 20px 0 ${rgba("#000", 0.14)}, 0 7px 10px -5px ${rgba(
@@ -59,9 +56,8 @@ export const shadows = {
           0 7px 10px -5px ${rgba(Variables.wb_red, 0.4)}`,
 
   green_shadow: `0 4px 20px 0 ${rgba("#000", 0.14)},
-          0 7px 10px -5px ${rgba(Variables.wb_green, 0.4)}`
-};
-
+          0 7px 10px -5px ${rgba(Variables.wb_green, 0.4)}`,
+}
 
 export const clearfix = css`
   &:before {
@@ -105,8 +101,8 @@ export const close_icon = css`
     opacity: 0;
     width: 75%;
     height: 4px;
-    box-shadow: 0 0 4px rgba(0,0,0,.5);
-    ${media.above_sm}{
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    ${media.above_sm} {
       background: red;
     }
   }
@@ -118,7 +114,7 @@ export const close_icon = css`
     transform: rotate(-45deg);
     opacity: 1;
   }
-  &.solid{
+  &.solid {
     &:before,
     &:after {
       background: ${Variables.dark_base_color};
@@ -144,7 +140,7 @@ export const button = css`
     transform: translateY(-2px);
   }
   &:active {
-  ${shadows.theme_shadow}
+    ${shadows.theme_shadow}
     transform: translate(0);
     transition: none;
   }
@@ -221,46 +217,46 @@ export const button = css`
   }
 `
 
-
 export const px_bg = css`
   color: ${Variables.dark_base_color};
   position: relative;
   overflow: hidden;
-  >*{
+  > * {
     position: relative;
     z-index: 999;
   }
   &:before {
     content: "";
-    transition: all .25s;
+    transition: all 0.25s;
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    background-image: url(${swirl_bg});    background-size: 100%;
+    background-image: url(${swirl_bg});
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: top -50px right;
     pointer-events: none;
   }
-   &.inv {
+  &.inv {
     &:before {
       transform: rotateX(180deg) rotateY(180deg);
     }
   }
-`;
+`
 
 export const solid = css`
   color: ${Variables.dark_base_color};
-`;
+`
 
 export const trig_pop = css`
   cursor: pointer;
-`;
+`
 
 export const text_center = css`
   text-align: center;
-`;
+`
 
 export const circles = css`
   margin-left: 15px;
@@ -269,27 +265,27 @@ export const circles = css`
     line-height: 1.5;
     margin-bottom: 7px;
   }
-`;
+`
 
 export const visible_xs = css`
-  ${media.above_lg}  {
+  ${media.above_lg} {
     display: none !important;
   }
 
-  ${media.sm}{
+  ${media.sm} {
     display: block !important;
   }
-`;
+`
 
 export const hidden_xs = css`
-   ${media.sm} {
+  ${media.sm} {
     display: none !important;
   }
-`;
+`
 
 export const hide = css`
   display: none !important;
-`;
+`
 
 export const wb_alert = css`
   margin: 5px 0 0;
@@ -364,7 +360,7 @@ export const wb_alert = css`
       transform: rotate(-45deg);
     }
   }
-`;
+`
 
 export const no_select = css`
   -webkit-touch-callout: none; /* iOS Safari */
@@ -373,14 +369,14 @@ export const no_select = css`
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none;
-`;
+`
 
 export const disabled = css`
   background: ${Variables.page_bg_color};
   pointer-events: none;
   color: ${Variables.muted_color};
   opacity: 0.5;
-`;
+`
 
 export const tag = css`
   background: ${Variables.light_bg};
@@ -388,7 +384,7 @@ export const tag = css`
   margin: 5px 10px;
   padding: 5px 10px;
   border-radius: 6px;
-`;
+`
 export const info_card = css`
   .right {
     text-align: right;
@@ -397,7 +393,7 @@ export const info_card = css`
     position: relative;
     z-index: 9999;
   }
-`;
+`
 
 export const timestamp = css`
   .dateFormat-wrap {
@@ -418,7 +414,7 @@ export const timestamp = css`
   .time {
     white-space: nowrap;
   }
-`;
+`
 
 export const stikcy_container = css`
   display: flex;
@@ -440,14 +436,14 @@ export const stikcy_container = css`
       top: 0;
     }
   }
-`;
+`
 
 export const main_text = css`
   font-weight: bold;
   font-size: 50px;
   margin-top: ${Variables.gutter_width};
-`;
+`
 
 export const white = css`
   color: #fff;
-`;
+`
