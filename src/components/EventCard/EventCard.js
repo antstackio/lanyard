@@ -74,12 +74,14 @@ const EventCard = () => {
               <div css={contentSwipe} className={currentEvent.tracks.length > 1 ? "multiple" : "single"}>
                 {currentEvent.tracks.map((track, index) => (
                     <div css={contentCard} key={index}>
-                      <h4 css={card_now_text}>Now {currentEvent.tracks.length > 1 && `Track - ${index + 1}`}</h4>
+                      {currentEvent.tracks.length > 1 ? (
+                        <h4 css={card_now_text}>{`Track - ${index + 1}`}</h4>
+                      ) : null}
                       <h2 css={card_event_title}>
                         {track.title}<br></br>
                         <small>from {timeFormat(currentEvent.timeStart)}</small>
                       </h2>
-                      {currentEvent.eventType !== "talk" ? (<div className={`illust ${currentEvent.img}`}></div>) : null}
+                      {currentEvent.eventType !== "talk" ? (<div className={`illust  ${currentEvent.img}`}></div>) : null}
                       {track.speakers && track.speakers.length && (
                         <div className="speaker">
                             {track.speakers.map((speaker, idx)=>(
