@@ -8,7 +8,7 @@ import {close_icon} from '../jss/cvcss';
 class FlyMenu extends Component {
   state = {
     status: false,
-    props: this.props
+    props: this.props,
   };
 
   container = React.createRef();
@@ -48,7 +48,7 @@ class FlyMenu extends Component {
 
   render() {
     return (
-      <nav className={this.props.className} css={fly_menu} id="fly_menu">
+      <nav className={`${this.props.className} ${this.state.status ? "opened" : "closed"}`} css={fly_menu} id="fly_menu">
         {this.props.trig_title ? (
           <span onClick={() => this.openFly()}>{this.props.trig_title}</span>
         ) : null}

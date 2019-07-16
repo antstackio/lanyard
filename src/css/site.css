@@ -38,7 +38,7 @@ body.scroll_lock {
   height: 100vh;
   overflow: hidden;
 }
-body.scroll_lock #fly_menu {
+body.scroll_lock #fly_menu.opened {
   z-index: 999999 !important;
 }
 
