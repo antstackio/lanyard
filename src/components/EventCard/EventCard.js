@@ -5,6 +5,12 @@ import {
   event_logo,
   event_title,
   event_timer,
+  logoHeader,
+  contentCard,
+card_now_text,
+card_event_title,
+card_end_time,
+contentSwipe
 } from "./EventCardEmotion"
 import { px_bg } from "../jss/cvcss"
 import CountDown from "./CountDown"
@@ -36,8 +42,32 @@ const EventCard = () => {
   return (
     <Fragment>
       {started ? (
-        <div css={[eventCard, px_bg]}>
-          {eventName && eventName[0] && (<span>{eventName[0].id}</span>)}
+        <div css={[eventCard, px_bg]} className="inv">
+          <div css={logoHeader}>
+            <div css={event_logo}>
+              <img src={event_logo_img} alt="event_logo" />
+            </div>
+            <div css={event_title}>
+              <p>
+                AWS Community Day <br />
+                <small>Bengaluru - 2019</small>
+              </p>
+            </div>
+          </div>
+          <div css={contentSwipe}>
+              <div css={contentCard}>
+              <h4 css={card_now_text}>Now</h4>
+              <h2 css={card_event_title}>Registration<br></br><small>from 08:00 AM</small></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+              <h5 css={card_end_time}>Ends at 09:00 AM</h5>
+            </div>
+            <div css={contentCard}>
+              <h4 css={card_now_text}>Now</h4>
+              <h2 css={card_event_title}>Registration<br></br><small>from 08:00 AM</small></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+              <h5 css={card_end_time}>Ends at 09:00 AM</h5>
+            </div>
+          </div>
         </div>
       ) : (
         <div css={[eventCard, px_bg]}>

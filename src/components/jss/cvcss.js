@@ -243,6 +243,11 @@ export const px_bg = css`
     background-position: top -50px right;
     pointer-events: none;
   }
+   &.inv {
+    &:before {
+      transform: rotateX(180deg) rotateY(180deg);
+    }
+  }
 `;
 
 export const solid = css`
