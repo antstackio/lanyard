@@ -241,7 +241,7 @@ export const px_bg = css`
   }
   &.inv {
     &:before {
-      transform: rotateX(180deg) rotateY(180deg);
+      transform: rotateX(180deg) rotateY(180deg) translateY(-62px);
     }
   }
 `

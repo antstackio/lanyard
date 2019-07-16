@@ -20,8 +20,9 @@ import event_logo_img from "../../images/aws_logo.svg"
 import { timeFormat } from "../../helpers/TimeStamp"
 
 const EventCard = () => {
-  const [started, setStarted] = useState(null)
-  const [eventName, setEventName] = useState(null)
+  const [eventStarted, setEventStarted] = useState(null)
+  const [currentEvent, setCurrentEvent] = useState(null)
+  const [nextEvent, setNextEvent] = useState(null)
   const [eventTime, setEventTime] = useState(null)
   const [slots, setSlots] = useState([])
 
@@ -32,29 +33,31 @@ const EventCard = () => {
   function setTimingFunction() {
     setInterval(() => {
       if(slots.length){
-        if((_.now()+ 19800000) > slots[0].timeStart ){
-          setStarted(true)
-          setEventTime(slots[0].timeStart)
+        setEventTime(slots[0].timeStart)
+        if((_.now()) > slots[0].timeStart && (_.now()) < slots[slots.length-1].timeEnd ){
+          setEventStarted("started")
+        }
+        else if((_.now()) > slots[slots.length-1].timeEnd){
+          setEventStarted("ended")
         }
         else{
-          setStarted(false)
-          setEventTime(slots[0].timeStart)
+          setEventStarted("notStarted")
         }
       }
-      slots.map((slot)=>{
-        if(slot.timeStart <= (_.now() + 19800000) && slot.timeEnd >= (_.now() + 19800000)){
-          setEventName(slot);
+      slots.map((slot, i)=>{
+        if(slot.timeStart <= (_.now() ) && slot.timeEnd >= (_.now() )){
+          setCurrentEvent(slot);
+          setNextEvent(slots[i + 1]);
         }
       })
     }, 1000)
-    console.log(slots);
   }
 
   setTimingFunction()
-
+  console.log(nextEvent);
   return (
     <Fragment>
-      {started ? (
+      {eventStarted === "started" ? (
         <div css={[eventCard, px_bg]} className="inv">
           <div css={logoHeader}>
             <div css={event_logo}>
@@ -67,15 +70,16 @@ const EventCard = () => {
               </p>
             </div>
           </div>
-            {eventName ? (
-              <div css={contentSwipe} className={eventName.tracks.length > 1 ? "multiple" : "single"}>
-                {eventName.tracks.map((track, index) => (
+            {currentEvent ? (
+              <div css={contentSwipe} className={currentEvent.tracks.length > 1 ? "multiple" : "single"}>
+                {currentEvent.tracks.map((track, index) => (
                     <div css={contentCard} key={index}>
-                      <h4 css={card_now_text}>Now {eventName.tracks.length > 1 && `Track - ${index + 1}`}</h4>
+                      <h4 css={card_now_text}>Now {currentEvent.tracks.length > 1 && `Track - ${index + 1}`}</h4>
                       <h2 css={card_event_title}>
                         {track.title}<br></br>
-                        <small>from {timeFormat(eventName.timeStart)}</small>
+                        <small>from {timeFormat(currentEvent.timeStart)}</small>
                       </h2>
+                      {currentEvent.eventType !== "talk" ? (<div className={`illust ${currentEvent.img}`}></div>) : null}
                       {track.speakers && track.speakers.length && (
                         <div className="speaker">
                             {track.speakers.map((speaker, idx)=>(
@@ -86,14 +90,14 @@ const EventCard = () => {
                             ))}
                         </div>
                       )}
-                      <h5 css={card_end_time}>Ends at {timeFormat(eventName.timeEnd)}</h5>
+                      <h5 css={card_end_time}>Ends at {timeFormat(currentEvent.timeEnd)}</h5>
                     </div>
                 )) }
               </div>)
             : null}
         </div>
-      ) : (
-        <div css={[eventCard, px_bg]}>
+      ) : null}
+      {eventStarted === "notStarted" ? (<div css={[eventCard, px_bg]}>
           <div css={event_logo}>
             <img src={event_logo_img} alt="event_logo" />
           </div>
@@ -106,8 +110,20 @@ const EventCard = () => {
           <div css={event_timer}>
             <CountDown startingTime={eventTime} />
           </div>
-        </div>
-      )}
+        </div>) : null}
+      {eventStarted === "ended" ? (
+        <div css={[eventCard, px_bg]} className="inv">
+          <div css={event_logo}>
+            <img src={event_logo_img} alt="event_logo" />
+          </div>
+          <div css={event_title}>
+            <p>
+              AWS Community Day <br />
+              <small>Bengaluru - 2019</small>
+            </p>
+          </div>
+          <h1>Tada</h1>
+        </div>) : null}
     </Fragment>
   )
 }

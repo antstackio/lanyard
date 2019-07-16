@@ -2,6 +2,7 @@ import { css } from "@emotion/core"
 
 import { shadows, media } from "../jss/cvcss"
 import Variables from "../jss/Variables"
+import check_in from "../../images/check_in.svg"
 
 export const eventCard = css`
   height: 85vh;
@@ -79,25 +80,33 @@ export const contentCard = css`
   padding: 15px;
   color: ${Variables.text_primary_color};
   border-left: 5px solid ${Variables.dark_base_color};
-  box-shadow: ${shadows.theme_shadow};
+  box-shadow: ${shadows.blue_shadow};
+  .illust{
+    margin: -15px 0 15px;
+    height: 200px;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${check_in});
+  }
 `
 
 export const card_now_text = css`
   font-weight: 200;
-  font-size: 25px;
+  font-size: 18px;
   color: ${Variables.muted_color};
   text-transform: uppercase;
 `
 
 export const card_event_title = css`
   margin: 15px auto 25px;
-  font-weight: 600;
   font-size: 16px;
   color: ${Variables.dark_base_color};
   text-transform: uppercase;
   small {
     font-weight: normal;
     font-size: 14px;
+  color: ${Variables.muted_color};
   }
 `
 
@@ -108,7 +117,7 @@ export const card_end_time = css`
   }
   font-weight: normal;
   font-size: 14px;
-  color: ${Variables.dark_base_color};
+  color: ${Variables.muted_color};
 `
 export const contentSwipe = css`
    {
