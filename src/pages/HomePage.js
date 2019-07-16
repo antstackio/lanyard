@@ -18,11 +18,11 @@ const HomePage = () => {
     setEvents(JSON.parse(localStorage.getItem("slots")))
   }, [])
 
-  const selectEvent = selectedEvent => {
+  const selectEvent = (selectedEvent, SlotId) => {
     const eventsChanged = events.map(event => {
       event.tracks.map(tevnt => {
         tevnt.selectedFlag = "notSelected"
-        if (tevnt.id === selectedEvent.id) {
+        if (tevnt.trackId === selectedEvent.trackId) {
           tevnt.selectedFlag = "selected"
         }
         return tevnt
