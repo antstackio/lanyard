@@ -46,15 +46,13 @@ const SlotCard = ({ eventData, selectTrack }) => {
                 <small key={idx}>{speaker.name}</small>
               ))}
           </div>
-          {/* {track.selectedFlag !== "default" ? ( */}
           <div css={slot_action}>
             {eventData.eventType == "talk" && (
               <button css={button} onClick={() => selectTrack(track, slot_id)}>
-                Add to Schedule
+                {track.selectedFlag === "notSelected" ? "Add to Schedule" : "Remove from Schedule"}
               </button>
             )}
           </div>
-          {/* ) : null} */}
         </div>
       ))}
       </div>
