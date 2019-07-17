@@ -8,29 +8,49 @@ import EventCard from "../components/EventCard/EventCard"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import FlyMenu from "../components/FlyMenu/FlyMenu"
-import Slot from "../components/Slot"
+import SlotCard from "../components/SlotCard"
 import Variables from "../components/jss/Variables"
 
 const HomePage = () => {
-  const [events, setEvents] = useState([])
+  const [slots, setSlots] = useState([])
 
   useEffect(() => {
-    setEvents(JSON.parse(localStorage.getItem("slots")))
+    setSlots(JSON.parse(localStorage.getItem("slots")))
   }, [])
 
-  const selectEvent = (selectedEvent, SlotId) => {
-    const eventsChanged = events.map(event => {
+  const selectTrack = (selectedTrack, slotId) => {
+    // const filteredSlot = _.filter(slots, { slotId })
+    // console.log("Console: filteredSlot", filteredSlot)
+    // console.log("Console: selectedTrack", selectedTrack)
+    // console.log(slots)
+    // const selectedSlot = filteredSlot.map(event => {
+
+    // })
+    // const UpdatedSlots = slots.map(slot => {
+    //   slot.tracks.map(track => {
+    //     track.selectedFlag = "notSelected"
+    //     if (track.trackId === selectedTrack.trackId) {
+    //       track.selectedFlag = "selected"
+    //     }
+    //     return track
+    //   })
+    //   return event
+    // })
+    const eventsChanged = slots.map(event => {
       event.tracks.map(tevnt => {
         tevnt.selectedFlag = "notSelected"
-        if (tevnt.trackId === selectedEvent.trackId) {
+        if (tevnt.trackId === selectedTrack.trackId) {
           tevnt.selectedFlag = "selected"
         }
+        console.log("Console: tevnt", tevnt)
         return tevnt
       })
+      console.log("Console: event", event)
       return event
     })
-    localStorage.setItem("slots", JSON.stringify(eventsChanged))
-    setEvents(eventsChanged)
+    console.log(eventsChanged)
+    // localStorage.setItem("slots", JSON.stringify(eventsChanged))
+    // setEvents(eventsChanged)
   }
 
   return (
@@ -53,12 +73,12 @@ const HomePage = () => {
             Agenda
           </Link>
           <ul css={agenda_list}>
-            {events.map(event => {
+            {slots.map(slot => {
               return (
-                <Slot
-                  key={event.timeStart}
-                  eventData={event}
-                  selectEvent={event => selectEvent(event)}
+                <SlotCard
+                  key={slot.timeStart}
+                  eventData={slot}
+                  selectTrack={(slot, slotId) => selectTrack(slot, slotId)}
                 />
               )
             })}
