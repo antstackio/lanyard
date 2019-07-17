@@ -136,7 +136,7 @@ const agenda_card = css`
         top: auto !important;
         .solid {
           top: auto;
-          bottom: 5px;
+          bottom: 25px;
           right: 10px;
         }
       }

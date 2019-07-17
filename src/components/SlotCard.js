@@ -1,25 +1,37 @@
 import React from "react"
 import { css } from "@emotion/core"
 
+import check_in from "../images/check_in.svg"
+import tea_break from "../images/tea_break.svg"
+import lunch_break from "../images/lunch_break.svg"
+import networking from "../images/networking.svg"
+import def from "../images/default.svg"
+import welcome from "../images/welcome.svg"
+import end from "../images/end.svg"
+
 import Variables from "./jss/Variables"
-import { button } from "./jss/cvcss"
+import { button, media } from "./jss/cvcss"
 import { timeFormat } from "../helpers/TimeStamp"
 
 const SlotCard = ({ eventData, selectTrack }) => {
   const slot_id = eventData.slotId
   return (
-    <li css={[slot_dot, eventData.tracks.length > 1 ? slot_track_flex : null]}>
+     <li css={[slot_dot, slot_item]}>
+      <div css={eventData.tracks.length > 1 ? slot_track_flex : null}>
       {eventData.tracks.map((track, index) => (
         <div
           key={index}
           css={[
-            slot_item,
             track.selectedFlag === "selected" ? slotSelected : null,
           ]}
           className={track.selectedFlag}
         >
           {eventData.tracks.length > 1 ? (
             <div css={slot_track}> Track - {index + 1}</div>
+          ) : null}
+
+          {eventData.img ? (
+            <div css={slot_illust} className={`${eventData.img}`}></div>
           ) : null}
           <div css={slot_time}>
             <small>
@@ -34,6 +46,7 @@ const SlotCard = ({ eventData, selectTrack }) => {
                 <small key={idx}>{speaker.name}</small>
               ))}
           </div>
+          {/* {track.selectedFlag !== "default" ? ( */}
           <div css={slot_action}>
             {eventData.eventType == "talk" && (
               <button css={button} onClick={() => selectTrack(track, slot_id)}>
@@ -41,8 +54,10 @@ const SlotCard = ({ eventData, selectTrack }) => {
               </button>
             )}
           </div>
+          {/* ) : null} */}
         </div>
       ))}
+      </div>
     </li>
   )
 }
@@ -96,20 +111,17 @@ const slot_dot = css`
 `
 
 const slot_track_flex = css`
-  display: flex;
-  overflow-x: auto;
-  overflow-y: visible;
-  max-width: calc(100% + 60px);
-  margin-left: -45px;
-  padding-left: 45px;
-  width: calc(100% + 60px) !important;
-  padding-bottom: 25px;
-  margin-bottom: 5px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: visible;
   > div {
+    padding: 10px;
     order: 2;
     min-width: 75%;
-    margin-right: 30px;
-    padding-bottom: 25px;
+    margin-right: 15px;
+    position: relative;
+    border: solid 1px ${Variables.dark_base_color};
+        padding-bottom: 70px;
     &:before {
       content: none;
     }
@@ -134,7 +146,7 @@ const slotSelected = css`
   &:before {
     border-right-color: ${Variables.dark_base_color};
   }
-  * {
+  *{
     color: #fff !important;
   }
   button {
@@ -164,22 +176,63 @@ const slot_speakers = css`
 `
 const slot_action = css`
   text-align: center;
-  margin-top: 10px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -20px;
+     position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    button{
+      width: 100%;
+    }
 `
 const slot_track = css`
   color: ${Variables.dark_base_color} !important;
-  position: absolute;
-  top: 0;
-  left: -20px;
-  bottom: 0;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  transform: rotate(-180deg);
-  writing-mode: vertical-lr;
+`
+
+const slot_illust = css`
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: .5;
+    overflow: hidden;
+    &:before{
+      content: '';
+      display: block;
+      height: 75px;
+      width: 75px;
+      ${media.xs}{
+        height: 50px;
+        width: 50px;
+      }
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &.check-in:before{
+      background-image: url(${check_in});
+    }
+
+    &.tea_break:before{
+      background-image: url(${tea_break});
+    }
+
+    &.lunch_break:before{
+      background-image: url(${lunch_break});
+    }
+
+    &.networking:before{
+      background-image: url(${networking});
+    }
+
+    &.default:before{
+      background-image: url(${def});
+    }
+
+    &.welcome:before{
+      background-image: url(${welcome});
+      transform: rotate(-20deg);
+    }
+
+    &.closing:before{
+      background-image: url(${end});
+    }
 `

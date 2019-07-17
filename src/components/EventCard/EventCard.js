@@ -92,7 +92,7 @@ const EventCard = () => {
                             ))}
                         </div>
                       )}
-                      <h5 css={card_end_time}>Ends at {timeFormat(currentEvent.timeEnd)}</h5>
+                      <h5 css={card_end_time}>Ends at {timeFormat(currentEvent.timeEnd + 1000)}</h5>
                     </div>
                 )) }
               </div>)
