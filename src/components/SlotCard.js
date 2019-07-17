@@ -5,7 +5,7 @@ import Variables from "./jss/Variables"
 import { button } from "./jss/cvcss"
 import { timeFormat } from "../helpers/TimeStamp"
 
-const Slot = ({ eventData, selectEvent }) => {
+const SlotCard = ({ eventData, selectTrack }) => {
   const slot_id = eventData.slotId
   return (
     <li css={[slot_dot, eventData.tracks.length > 1 ? slot_track_flex : null]}>
@@ -34,22 +34,20 @@ const Slot = ({ eventData, selectEvent }) => {
                 <small key={idx}>{speaker.name}</small>
               ))}
           </div>
-          {/* {track.selectedFlag !== "default" ? ( */}
           <div css={slot_action}>
             {eventData.eventType == "talk" && (
-              <button css={button} onClick={() => selectEvent(track, slot_id)}>
+              <button css={button} onClick={() => selectTrack(track, slot_id)}>
                 Add to Schedule
               </button>
             )}
           </div>
-          {/* ) : null} */}
         </div>
       ))}
     </li>
   )
 }
 
-export default Slot
+export default SlotCard
 
 //Styling
 
