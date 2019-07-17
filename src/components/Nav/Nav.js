@@ -1,11 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import PropTypes from "prop-types"
 import { css } from "@emotion/core"
 
-import FlyMenu from "../FlyMenu/FlyMenu"
 import menu from "../../images/menu.svg"
 import logo from "../../images/logo.svg"
+import agenda from "../../images/agenda.svg"
+import FlyMenu from "../FlyMenu/FlyMenu"
 import Variables from "../jss/Variables"
 
 const Nav = ({ siteTitle }) => (
@@ -39,6 +40,7 @@ const Nav = ({ siteTitle }) => (
         </li>
       </ul>
     </FlyMenu>
+    {/* <button onClick={() => navigate("/AgendaPage")}>Goto AgendaPage</button> */}
   </div>
 )
 
