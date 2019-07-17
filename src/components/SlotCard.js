@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import { css } from "@emotion/core"
 
 import check_in from "../images/check_in.svg"
@@ -15,11 +15,17 @@ import { timeFormat } from "../helpers/TimeStamp"
 
 const SlotCard = ({ eventData, selectTrack }) => {
   const slot_id = eventData.slotId
+  const scrollDiv = React.createRef();
+
+  function handleClick(track, slot_id) {
+    selectTrack(track, slot_id)
+    scrollDiv.current.scrollLeft = 0;
+  };
+
   function slotClassName(slot) {
     if(slot.tracks){
       return slot.tracks.map((slt, i)=>{
         if(slt.selectedFlag === "selected"){
-          console.log(i);
           return `selected-${i+1}`
         }
       })
@@ -27,8 +33,14 @@ const SlotCard = ({ eventData, selectTrack }) => {
   }
 
   return (
-     <li css={[slot_dot, slot_item]}>
-      <div css={eventData.tracks.length > 1 ? slot_track_flex : null} track-select={slotClassName(eventData) ? slotClassName(eventData) : " "}>
+    <li css={[slot_dot, slot_item]}>
+       <div css={slot_time}>
+            <small>
+              {timeFormat(eventData.timeStart)} -{" "}
+              {timeFormat(eventData.timeEnd)}
+            </small>
+          </div>
+      <div ref={scrollDiv} css={eventData.tracks.length > 1 ? slot_track_flex : slot_wrap} track-select={slotClassName(eventData) ? slotClassName(eventData) : " "}>
       {eventData.tracks.map((track, index) => (
         <div
           key={index}
@@ -44,13 +56,8 @@ const SlotCard = ({ eventData, selectTrack }) => {
           {eventData.img ? (
             <div css={slot_illust} className={`${eventData.img}`}></div>
           ) : null}
-          <div css={slot_time}>
-            <small>
-              {timeFormat(eventData.timeStart)} -{" "}
-              {timeFormat(eventData.timeEnd)}
+
               <div css={slot_title}>{track.title}</div>
-            </small>
-          </div>
           <div css={slot_speakers}>
             {track.speakers &&
               track.speakers.map((speaker, idx) => (
@@ -59,7 +66,7 @@ const SlotCard = ({ eventData, selectTrack }) => {
           </div>
           <div css={slot_action}>
             {eventData.eventType == "talk" && (
-              <button css={button} onClick={() => selectTrack(track, slot_id)}>
+              <button css={button} onClick={() => handleClick(track, slot_id)}>
                 {track.selectedFlag === "notSelected" ? "Add to Schedule" : "Remove from Schedule"}
               </button>
             )}
@@ -118,6 +125,10 @@ const slot_dot = css`
     background: ${Variables.dark_base_color};
   }
 `
+const slot_wrap = css`
+  padding-right : 50px;
+`
+
 
 const slot_track_flex = css`
   display: flex;
@@ -127,16 +138,24 @@ const slot_track_flex = css`
     padding: 10px;
     min-width: 75%;
     margin-right: 15px;
+    margin-top: 15px;
     position: relative;
-    border: solid 1px ${Variables.dark_base_color};
+    border: solid 1px ${Variables.border_color};
     background: #fff;
     padding-bottom: 70px;
-    transition: all .25s;
+    transition: all .5s;
     &:before {
       content: none;
     }
     &.selected {
       position: relative;
+      > div{
+        & ~ div {
+          border-top: solid 1px rgba(255,255,255,.25);
+          margin-top: 10px;
+          padding-top: 10px;
+        }
+      }
       &:before {
         content: "";
       }
@@ -184,6 +203,7 @@ const slot_track_flex = css`
 
 const slotSelected = css`
   background: ${Variables.dark_base_color} !important;
+    border: solid 1px ${Variables.dark_base_color} !important;
   &:before {
     border-right-color: ${Variables.dark_base_color};
   }
@@ -197,16 +217,26 @@ const slotSelected = css`
 `
 
 const slot_time = css`
-  color: ${Variables.muted_color};
+  color: ${Variables.dark_base_color};
+  ${media.xs}{
+    font-size: 12px;
+  }
 `
 
 const slot_title = css`
   margin-top: 7px;
+  color: ${Variables.muted_color};
+  ${media.xs}{
+    font-size: 14px;
+  }
 `
 const slot_speakers = css`
   margin-top: 7px;
+  color: ${Variables.text_primary_color};
+  ${media.xs}{
+    font-size: 12px;
+  }
   small {
-    color: ${Variables.dark_base_color};
     display: flex;
     &:before {
       content: "--";
@@ -221,15 +251,21 @@ const slot_action = css`
     left: 10px;
     right: 10px;
     bottom: 10px;
+    border-top: none !important;
     button{
       width: 100%;
+      background: transparent;
+      border: solid 1px ${Variables.dark_base_color};
+      color: ${Variables.dark_base_color};
       ${media.xs}{
         font-size: 12px;
       }
     }
 `
 const slot_track = css`
-  color: ${Variables.dark_base_color} !important;
+  ${media.xs}{
+    font-size: 12px;
+  }
 `
 
 
@@ -245,8 +281,8 @@ const slot_illust = css`
       height: 75px;
       width: 75px;
       ${media.xs}{
-        height: 50px;
-        width: 50px;
+        height: 65px;
+        width: 65px;
       }
       background-size: auto 100%;
       background-repeat: no-repeat;
