@@ -6,6 +6,8 @@ import SEO from "../components/seo"
 import SlotCard from "../components/SlotCard"
 import Variables from "../components/jss/Variables"
 
+import {close_icon} from '../components/jss/cvcss';
+
 const AgendaPage = () => {
   const [slots, setSlots] = useState([])
 
@@ -46,6 +48,7 @@ const AgendaPage = () => {
     <div css={agenda_card}>
       <SEO title="Agenda" />
       <span css={agendaTitle}>Agenda</span>
+      <span onClick={() => navigate("/")} css={[close_icon, agendaClose]}>close</span>
       <ul css={agenda_list}>
         {slots.map(slot => {
           return (
@@ -65,7 +68,28 @@ export default AgendaPage
 
 //Styling
 
+const agendaClose = css`
+      position: fixed;
+    right: 15px;
+    bottom: 15px;
+    top: auto;
+    height: 50px;
+    width: 50px;
+    &:before,&:after{
+      background: ${Variables.dark_base_color};
+    }
+`
+
 const agenda_card = css`
+  animation : scrollUp .35s ease-out;
+  @keyframes scrollUp{
+    from{
+      margin-top: 100vh;
+    }
+    to{
+      margin-top: 0;
+    }
+  }
   .agenda {
     position: fixed;
     z-index: 999;

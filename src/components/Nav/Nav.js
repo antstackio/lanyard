@@ -3,6 +3,7 @@ import { Link, navigate } from "gatsby"
 import PropTypes from "prop-types"
 import { css } from "@emotion/core"
 
+
 import menu from "../../images/menu.svg"
 import logo from "../../images/logo.svg"
 import agenda from "../../images/agenda.svg"
@@ -40,7 +41,7 @@ const Nav = ({ siteTitle }) => (
         </li>
       </ul>
     </FlyMenu>
-    {/* <button onClick={() => navigate("/AgendaPage")}>Goto AgendaPage</button> */}
+        <span css={agenda_trig} onClick={() => navigate("/AgendaPage")}><img src={agenda} alt="goToAgenda"></img> Agenda</span>
   </div>
 )
 
@@ -55,6 +56,22 @@ Nav.defaultProps = {
 export default Nav
 
 //Styling
+const agenda_trig = css`
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    right: 15px;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+    img{
+          margin-bottom: 5px;
+    height: 30px;
+    }
+`
 
 const nav_bar = css`
   #fly_menu {
