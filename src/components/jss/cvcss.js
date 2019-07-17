@@ -124,8 +124,8 @@ export const close_icon = css`
 
 export const button = css`
   border: 0;
-  line-height: 35px;
-  height: 35px;
+  line-height: 45px;
+  height: 45px;
   padding: 0 15px;
   color: #fff;
   cursor: pointer;
