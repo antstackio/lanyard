@@ -15,9 +15,20 @@ import { timeFormat } from "../helpers/TimeStamp"
 
 const SlotCard = ({ eventData, selectTrack }) => {
   const slot_id = eventData.slotId
+  function slotClassName(slot) {
+    if(slot.tracks){
+      return slot.tracks.map((slt, i)=>{
+        if(slt.selectedFlag === "selected"){
+          console.log(i);
+          return `selected-${i+1}`
+        }
+      })
+    }
+  }
+
   return (
      <li css={[slot_dot, slot_item]}>
-      <div css={eventData.tracks.length > 1 ? slot_track_flex : null}>
+      <div css={eventData.tracks.length > 1 ? slot_track_flex : null} track-select={slotClassName(eventData) ? slotClassName(eventData) : " "}>
       {eventData.tracks.map((track, index) => (
         <div
           key={index}
@@ -109,28 +120,60 @@ const slot_dot = css`
 `
 
 const slot_track_flex = css`
-    display: flex;
-    overflow-x: auto;
-    overflow-y: visible;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: visible;
   > div {
     padding: 10px;
-    order: 2;
     min-width: 75%;
     margin-right: 15px;
     position: relative;
     border: solid 1px ${Variables.dark_base_color};
-        padding-bottom: 70px;
+    background: #fff;
+    padding-bottom: 70px;
+    transition: all .25s;
     &:before {
       content: none;
     }
     &.selected {
-      order: 1;
       position: relative;
       &:before {
         content: "";
       }
     }
   }
+
+  &[track-select*="selected-2"]{
+    > div:nth-child(1){
+      transform: translateX(calc(100% + 15px) );
+    }
+    > div:nth-child(2){
+      transform: translateX(calc(-100% - 15px) );
+    }
+  }
+
+  &[track-select*="selected-3"]{
+    > div:nth-child(1), > div:nth-child(2){
+      transform: translateX(calc(100% + 15px) );
+    }
+    > div:nth-child(3){
+      transform: translateX(calc(-100% * 2 - 15px * 2) );
+    }
+  }
+
+  &[track-select*="selected-4"]{
+    >div{
+      &:nth-child(1), &:nth-child(2) &:nth-child(3){
+        transform: translateX(calc(100% + 15px) );
+      }
+      &:nth-child(4){
+        transform: translateX(calc(-100% * 3 - 15px * 3) );
+      }
+    }
+  }
+
+
+
   &:before {
     left: 30px;
   }
@@ -140,7 +183,7 @@ const slot_track_flex = css`
 `
 
 const slotSelected = css`
-  background: ${Variables.dark_base_color};
+  background: ${Variables.dark_base_color} !important;
   &:before {
     border-right-color: ${Variables.dark_base_color};
   }
@@ -180,11 +223,15 @@ const slot_action = css`
     bottom: 10px;
     button{
       width: 100%;
+      ${media.xs}{
+        font-size: 12px;
+      }
     }
 `
 const slot_track = css`
   color: ${Variables.dark_base_color} !important;
 `
+
 
 const slot_illust = css`
     position: absolute;

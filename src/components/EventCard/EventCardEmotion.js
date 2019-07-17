@@ -12,7 +12,7 @@ import welcome from "../../images/welcome.svg"
 import end from "../../images/end.svg"
 
 export const eventCard = css`
-  height: 85vh;
+  height: calc(85vh - 50px);
   background: #fff;
   box-shadow: ${shadows.theme_shadow};
   border-radius: 0 0 50px 50px;
