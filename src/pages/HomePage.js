@@ -18,39 +18,36 @@ const HomePage = () => {
     setSlots(JSON.parse(localStorage.getItem("slots")))
   }, [])
 
-  const selectTrack = (selectedTrack, slotId) => {
-    // const filteredSlot = _.filter(slots, { slotId })
-    // console.log("Console: filteredSlot", filteredSlot)
-    // console.log("Console: selectedTrack", selectedTrack)
-    // console.log(slots)
-    // const selectedSlot = filteredSlot.map(event => {
-
-    // })
-    // const UpdatedSlots = slots.map(slot => {
-    //   slot.tracks.map(track => {
-    //     track.selectedFlag = "notSelected"
-    //     if (track.trackId === selectedTrack.trackId) {
-    //       track.selectedFlag = "selected"
-    //     }
-    //     return track
-    //   })
-    //   return event
-    // })
-    const eventsChanged = slots.map(event => {
-      event.tracks.map(tevnt => {
-        tevnt.selectedFlag = "notSelected"
-        if (tevnt.trackId === selectedTrack.trackId) {
-          tevnt.selectedFlag = "selected"
+  //Filter out the sletected track and change the flag to "selected" and others to "notSelected"
+  function UpdatedTracks(filteredSlot, selectedTrack){
+    return filteredSlot.tracks.map(track =>{
+      if(track.trackId === selectedTrack.trackId){
+        if(track.selectedFlag === "notSelected"){
+          track["selectedFlag"] = "selected"
         }
-        console.log("Console: tevnt", tevnt)
-        return tevnt
-      })
-      console.log("Console: event", event)
-      return event
+        else{
+          track["selectedFlag"] = "notSelected"
+        };
+      }
+      else{
+        track["selectedFlag"] = "notSelected"
+      };
+      return track
     })
-    console.log(eventsChanged)
-    // localStorage.setItem("slots", JSON.stringify(eventsChanged))
-    // setEvents(eventsChanged)
+  }
+
+//Update the localStorage
+  function selectTrack(selectedTrack, slotId) {
+    const filteredSlot = _.filter(slots, { slotId })[0];
+    const UpdatedSlots = slots.map(slot => {
+      if(slot === filteredSlot){
+       slot["tracks"] = UpdatedTracks(filteredSlot, selectedTrack);
+      }
+      return slot
+    })
+
+    localStorage.setItem("slots", JSON.stringify(UpdatedSlots))
+    setSlots(UpdatedSlots)
   }
 
   return (
@@ -58,6 +55,7 @@ const HomePage = () => {
       <SEO title="Home" />
       <EventCard />
       <div css={agenda_card}>
+
         <FlyMenu
           stayOnClick
           direction="bottom"
