@@ -9,7 +9,15 @@ import Layout from "../components/layout"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-    query QueryJSON {
+    query MyQuery {
+      allVolunteersJson {
+        nodes {
+          volunteers {
+            external_link
+            name
+          }
+        }
+      }
       allAgendaJson {
         nodes {
           slots {
@@ -45,8 +53,10 @@ const IndexPage = () => {
   }
 
   const { slots } = data.allAgendaJson.nodes[0]
+  const { volunteers } = data.allVolunteersJson.nodes[0]
 
   SetLocalStorage("slots", slots)
+  SetLocalStorage("volunteers", volunteers)
 
   return (
     <Layout location={location}>
