@@ -75,36 +75,29 @@ const EventCard = () => {
             </div>
           </div>
             {currentEvent ? (
-              <div css={contentSwipe} className={currentEvent.tracks.length > 1 ? "multiple" : "single"}>
+              <div css={contentSwipe} className={`${currentEvent.eventType === "break" ? "break" : "def"} ${currentEvent.tracks.length > 1 ? "multiple" : "single"}`}>
                 {currentEvent.tracks.map((track, index) => (
-                    <div css={contentCard} key={index}>
+                    <div css={contentCard} className={track.selectedFlag === "selected" ? track.selectedFlag : ' ' } key={index}>
                       {currentEvent.tracks.length > 1 ? (
-                        <h4 css={card_now_text}>{`Track - ${index + 1}`}</h4>
+                        <h4 css={card_now_text} className="card_now_text">{`Track - ${index + 1}`} {track.selectedFlag === "selected" ? "is in your schedule" : null }</h4>
                       ) : null}
-                      <h2 css={card_event_title}>
-                        {track.title}<br></br>
-                        <small>from {timeFormat(currentEvent.timeStart)}</small>
+                      <h2 css={card_event_title} className="card_event_title">
+                        <p>{track.title}</p>
+                        <small>{timeFormat(currentEvent.timeStart)}</small>
                       </h2>
                       {currentEvent.eventType !== "talk" ? (<div className={`illust  ${currentEvent.img}`}></div>) : null}
 
-                      {track.speakers && track.speakers.length && (
-                        <React.Fragment>
-
-                        {track.speakers.map((speaker, idx)=>(
-                            <div css={car_speakers} className="speaker" key={idx}>
-                                <div >
-                                  <div css={profile_img}><img src={speaker.profilePicture} alt={speaker.name} /></div>
-                                </div>
-                                <div>
-                                  <p>{speaker.name}</p>
-                                  <p><a href={speaker.externalLink}>{speaker.designation}</a></p>
-                                </div>
-                              </div>
-                            ))}
-                            </React.Fragment>
-                      )}
-                      <div css={card_last_Row}>
-                        <h5 css={card_end_time}>Ends at {timeFormat(currentEvent.timeEnd + 1000)}</h5>
+                      <div css={car_speakers}  className="car_speakers" className="speaker" >
+                        {track.speakers && track.speakers.length && (
+                          <React.Fragment>
+                            {track.speakers.map((speaker, idx)=>(
+                                <div css={profile_img}  className="profile_img" key={idx}><img src={speaker.profilePicture} alt={speaker.name} /></div>
+                                ))}
+                          </React.Fragment>
+                        )}
+                      </div>
+                      <div css={card_last_Row} className="card_last_Row">
+                        <h5 css={card_end_time} className="card_end_time">Ends at {timeFormat(currentEvent.timeEnd + 1000)}</h5>
                             {currentEvent.eventType !== "break" ? (<span css={button} className="small plain">
                             Feedback
                           </span>) : null}

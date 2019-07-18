@@ -35,6 +35,7 @@ export const eventCard = css`
       margin-top: 10px;
     }
   }
+
 `
 export const event_logo = css`
   img {
@@ -53,14 +54,7 @@ export const event_timer = css`
     transform-origin: left bottom;
     animation: scalease .25s ease-in-out;
   }
-  @keyframes scalease{
-    from{
-      transform: scale(0)
-    }
-    to{
-      transform: scale(1)
-    }
-  }
+
 `
 export const c_timer = css`
   display: flex;
@@ -107,8 +101,9 @@ export const contentCard = css`
   margin-top: 25px;
   padding: 15px;
   color: ${Variables.text_primary_color};
-  border-left: 5px solid ${Variables.dark_base_color};
   box-shadow: ${shadows.blue_shadow};
+  border-radius: 0 25px 25px 0;
+  animation: scalease .25s ease-in-out;
   a{
     text-decoration: none;
         color: #666;
@@ -152,25 +147,83 @@ export const contentCard = css`
       background-image: url(${end});
     }
   }
+   &.selected{
+   order: 1 !important;
+    background: ${Variables.dark_base_color};
+    .card_now_text, h5{
+      color: #fff;
+    }
+    .profile_img {
+      background: ${Variables.dark_base_color};
+      border-color: #fff;
+    }
+    .card_event_title{
+      background: ${Variables.black_bg};
+    }
+     > h2{
+       background: #fff;
+     }
+  }
 `
 
 export const card_now_text = css`
   font-size: 14px;
   color: ${Variables.muted_color};
-  text-transform: uppercase;
 `
 
 export const card_event_title = css`
   margin: 10px auto 15px;
   font-size: 14px;
-  line-height: 1.3;
-  color: ${Variables.dark_base_color};
+  line-height: 1.5;
+  background: #FF9900;
+  color: #fff;
+  padding: 7px;
+  position: relative;
+  margin: 10px -15px 10px;
+  padding-bottom: 50px;
+  ${media.xs}{
+    padding-bottom: 35px;
+  }
+
+  .break &{
+    color: #FF9900;
+    background: #fff;
+    margin: 10px 0 50px;
+
+    small{
+      color: rgba(255, 153, 0, .5);
+      right: 0;
+      left: 0;
+      text-align: center;
+    }
+    p{
+      height: auto;
+      text-align: center;
+      font-size: 25px;
+      font-weight: 700;
+    }
+  }
+  >p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1.5rem;
+    height: 4.5rem;
+  }
   small {
     display: block;
-    margin-top: 7px;
-    font-weight: normal;
-    font-size: 12px;
-  color: ${Variables.muted_color};
+    text-align: right;
+    font-weight: bold;
+    font-size: 35px;
+    ${media.xs}{
+      font-size: 25px;
+    }
+    color: rgba(255,255,255,.5);
+    position: absolute;
+    right: 6px;
+    bottom: 0;
   }
 `
 
@@ -188,6 +241,10 @@ export const card_last_Row =css`
   align-items: center;
   justify-content:space-between;
   margin-top: 50px;
+  .break &{
+
+      justify-content: center;
+    }
   ${media.xs}{
     margin-top: 25px;
   }
@@ -208,6 +265,7 @@ export const contentSwipe = css`
       > div {
         margin-left: 20px;
         min-width: 60%;
+        order: 2;
         ${media.xs} {
           min-width: 80%;
           margin-top: 25px;
@@ -220,10 +278,13 @@ export const contentSwipe = css`
 export const car_speakers = css `
   display: flex;
   align-items: center;
+      max-width: 100%;
+    overflow: auto;
 `
 
 export const profile_img = css `
-    width: 50px;
+    width: 75px;
+    minwidth: 75px;
     background: #fff;
     margin-right: 10px;
     border-radius: 50%;
