@@ -2,12 +2,12 @@
   {
     "slots": [
       {
-        "eventType": "other",
+        "eventType": "break",
         "img": "check-in",
         "room": null,
         "slotId": "slot-1",
-        "timeStart": 1563285900000,
-        "timeEnd": 1563289499000,
+        "timeStart": 1563447319000,
+        "timeEnd": 1563447918000,
         "tracks": [
           {
             "trackId": "event1",
@@ -19,12 +19,12 @@
         ]
       },
       {
-        "eventType": "other",
+        "eventType": "break",
         "img": "welcome",
         "room": null,
         "slotId": "slot-2",
-        "timeStart": 1563289500000,
-        "timeEnd": 1563293099000,
+        "timeStart": 1563447919000,
+        "timeEnd": 1563448518000,
         "tracks": [
           {
             "trackId": "event2",
@@ -40,8 +40,8 @@
         "img": "default",
         "room": null,
         "slotId": "slot-3",
-        "timeStart": 1563293100000,
-        "timeEnd": 1563296699000,
+        "timeStart": 1563448519000,
+        "timeEnd": 1563449118000,
         "tracks": [
           {
             "trackId": "event3",
@@ -52,7 +52,7 @@
             "speakers": [
               {
                 "name": "Gerard Sans",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Developer Advocate, AWS",
                 "externalLink": "https://www.linkedin.com/in/gerard-sans/"
               }
@@ -65,8 +65,8 @@
         "img": "default",
         "room": null,
         "slotId": "slot-4",
-        "timeStart": 1563296700000,
-        "timeEnd": 1563300299000,
+        "timeStart": 1563449119000,
+        "timeEnd": 1563449718000,
         "tracks": [
           {
             "trackId": "event4",
@@ -77,13 +77,13 @@
             "speakers": [
               {
                 "name": "Prasanna Raghavendra",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "R&D Director, JFrog India",
                 "externalLink": "https://www.linkedin.com/in/prasannaraghavendra/"
               },
               {
                 "name": "Seshu Reddy",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "SRE, JFrog India",
                 "externalLink": "https://www.linkedin.com/in/seshu-reddy-01a5715/"
               }
@@ -96,8 +96,8 @@
         "img": "default",
         "room": null,
         "slotId": "slot-5",
-        "timeStart": 1563300300000,
-        "timeEnd": 1563303899000,
+        "timeStart": 1563449719000,
+        "timeEnd": 1563450318000,
         "tracks": [
           {
             "trackId": "event5",
@@ -108,7 +108,7 @@
             "speakers": [
               {
                 "name": "Sohan Maheshwar",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Alexa Evangelist | Developer Evangelist at Amazon",
                 "externalLink": "https://www.linkedin.com/in/sohanmaheshwar/"
               }
@@ -121,8 +121,8 @@
         "img": "default",
         "room": null,
         "slotId": "slot-6",
-        "timeStart": 1563303900000,
-        "timeEnd": 1563307499000,
+        "timeStart": 1563450319000,
+        "timeEnd": 1563450918000,
         "tracks": [
           {
             "trackId": "event6",
@@ -133,7 +133,7 @@
             "speakers": [
               {
                 "name": "Kiran Darisi",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Co-Founder and Distinguished Engineer at Freshworks",
                 "externalLink": "https://www.linkedin.com/in/kirandarisi/"
               }
@@ -146,8 +146,8 @@
         "img": "tea_break",
         "room": null,
         "slotId": "slot-7",
-        "timeStart": 1563307500000,
-        "timeEnd": 1563311099000,
+        "timeStart": 1563450919000,
+        "timeEnd": 1563451518000,
         "tracks": [
           {
             "trackId": "event7",
@@ -161,8 +161,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-8",
-        "timeStart": 1563311100000,
-        "timeEnd": 1563314699000,
+        "timeStart": 1563451519000,
+        "timeEnd": 1563452118000,
         "tracks": [
           {
             "trackId": "event8",
@@ -173,7 +173,7 @@
             "speakers": [
               {
                 "name": "Palanisamy Chellappan",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Enterprise Architect, Brillio",
                 "externalLink": "https://www.linkedin.com/in/palanisamy/"
               }
@@ -188,7 +188,7 @@
             "speakers": [
               {
                 "name": "Aravind Putrevu",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Developer Advocate, Elastic",
                 "externalLink": "https://www.linkedin.com/in/aravindputrevu/"
               }
@@ -203,7 +203,7 @@
             "speakers": [
               {
                 "name": "Andrew Martin",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Senior Cloud Engineer, Slack",
                 "externalLink": null
               }
@@ -218,7 +218,7 @@
             "speakers": [
               {
                 "name": "Diana Cruz Solash",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "VP Inclusion and Diversity, Infor",
                 "externalLink": "https://www.linkedin.com/in/diana-cruz-solash-4452336/"
               }
@@ -230,8 +230,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-9",
-        "timeStart": 1563314700000,
-        "timeEnd": 1563318299000,
+        "timeStart": 1563452119000,
+        "timeEnd": 1563452718000,
         "tracks": [
           {
             "trackId": "event12",
@@ -242,7 +242,7 @@
             "speakers": [
               {
                 "name": "Saifur Rahman Mohsin",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Developer, Web, Mobile and Voice Driven Apps",
                 "externalLink": "https://www.linkedin.com/in/saifurrahmanmohsin/"
               }
@@ -257,7 +257,7 @@
             "speakers": [
               {
                 "name": "Krishna Chaitanya Sadhu",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Architect, Infor India Pvt Ltd.",
                 "externalLink": "https://www.linkedin.com/in/krishna-chaitanya-sadhu-38487532/"
               }
@@ -272,7 +272,7 @@
             "speakers": [
               {
                 "name": "Gangireddy D",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "SRE, Knolskape",
                 "externalLink": "https://www.linkedin.com/in/gangireddy-danamreddy-465675148/"
               }
@@ -287,13 +287,13 @@
             "speakers": [
               {
                 "name": "Shwetha Lakshman Rao",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Sr. MTS , VMware software India & City Director - Women Who Code Bangalore",
                 "externalLink": "https://www.linkedin.com/in/shwetha-lakshman-rao-a4a59015/"
               },
               {
                 "name": "Moderated by Bhuvaneswari Subramani",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "AWS re:Invent Diversity Scholarship Recipient",
                 "externalLink": "https://www.linkedin.com/in/bhuvanas/"
               }
@@ -305,8 +305,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-10",
-        "timeStart": 1563318300000,
-        "timeEnd": 1563321899000,
+        "timeStart": 1563452719000,
+        "timeEnd": 1563453318000,
         "tracks": [
           {
             "trackId": "event16",
@@ -317,7 +317,7 @@
             "speakers": [
               {
                 "name": "Sekhar Rangam",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Manager - Sr. Technical Architect, BRIDGEi2i Analytics Solutions",
                 "externalLink": "https://www.linkedin.com/in/sekharrangam/"
               }
@@ -332,13 +332,13 @@
             "speakers": [
               {
                 "name": "Prashanth HN",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Co-Founder, WheelsBox.com",
                 "externalLink": "https://www.linkedin.com/in/hnprashanth/"
               },
               {
                 "name": "Aditya Reddy",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Software Developer, Branch Insurance",
                 "externalLink": "https://www.linkedin.com/in/adithyakreddy/"
               }
@@ -353,7 +353,7 @@
             "speakers": [
               {
                 "name": "Divya Krishnamurthi",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Practice Manager, Akamai Technologies",
                 "externalLink": "https://www.linkedin.com/in/divyakrishnamurthi/"
               }
@@ -368,19 +368,19 @@
             "speakers": [
               {
                 "name": "Kokilavani Kathiresan",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Software Developer, Intuit",
                 "externalLink": "https://www.linkedin.com/in/kokilavani-kathiresan/"
               },
               {
                 "name": "Ravikumar Kota",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Software Developer, Intuit",
                 "externalLink": null
               },
               {
                 "name": "Shailja Agarwala",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Software Developer, Intuit",
                 "externalLink": "https://www.linkedin.com/in/shailja-agarwala-4a588185/"
               }
@@ -393,8 +393,8 @@
         "img": "lunch_break",
         "room": null,
         "slotId": "slot-11",
-        "timeStart": 1563321900000,
-        "timeEnd": 1563325499000,
+        "timeStart": 1563453319000,
+        "timeEnd": 1563453918000,
         "tracks": [
           {
             "trackId": "event20",
@@ -408,8 +408,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-12",
-        "timeStart": 1563325500000,
-        "timeEnd": 1563329099000,
+        "timeStart": 1563453919000,
+        "timeEnd": 1563454518000,
         "tracks": [
           {
             "trackId": "event21",
@@ -420,7 +420,7 @@
             "speakers": [
               {
                 "name": "Paul Rajesh",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Director India Sales, Sumo Logic",
                 "externalLink": "https://www.linkedin.com/in/paulrajesh/"
               }
@@ -450,7 +450,7 @@
             "speakers": [
               {
                 "name": "Boyan Dimitrov",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "AWS Community Hero, Germany",
                 "externalLink": "https://aws.amazon.com/developer/community/heroes/boyan-dimitrov/"
               }
@@ -465,13 +465,13 @@
             "speakers": [
               {
                 "name": "Pranesh Vittal",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Database Architect, Medlife.com",
                 "externalLink": "https://www.linkedin.com/in/praneshvittal/"
               },
               {
                 "name": "Prasanna Desai",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Senior Build And Release Engineer, Medlife.com",
                 "externalLink": "https://www.linkedin.com/in/prasanna-desai-6b785562/"
               }
@@ -483,8 +483,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-13",
-        "timeStart": 1563329100000,
-        "timeEnd": 1563332699000,
+        "timeStart": 1563454519000,
+        "timeEnd": 1563455118000,
         "tracks": [
           {
             "trackId": "event25",
@@ -495,7 +495,7 @@
             "speakers": [
               {
                 "name": "Ilanchezhian Ganesamurthy",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Coorganizer AWS User Group, Chennai",
                 "externalLink": "https://www.linkedin.com/in/ilanchezhian/"
               }
@@ -510,7 +510,7 @@
             "speakers": [
               {
                 "name": "Akash Agrawal",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "GDE in cloud",
                 "externalLink": "https://www.linkedin.com/in/akash-agrawal-58a97813/"
               }
@@ -525,7 +525,7 @@
             "speakers": [
               {
                 "name": "Ajeet Singh Raina",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Docker Captain and Docker Bangalore Community Leader",
                 "externalLink": "https://www.linkedin.com/in/ajeetsraina/"
               }
@@ -540,7 +540,7 @@
             "speakers": [
               {
                 "name": "Manik Jindal",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Computer Scientist, Adobe",
                 "externalLink": "https://www.linkedin.com/in/themanikjindal/"
               }
@@ -553,8 +553,8 @@
         "img": "tea_break",
         "room": null,
         "slotId": "slot-14",
-        "timeStart": 1563332700000,
-        "timeEnd": 1563336299000,
+        "timeStart": 1563455119000,
+        "timeEnd": 1563455718000,
         "tracks": [
           {
             "trackId": "event29",
@@ -568,8 +568,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-15",
-        "timeStart": 1563336300000,
-        "timeEnd": 1563339899000,
+        "timeStart": 1563455719000,
+        "timeEnd": 1563456318000,
         "tracks": [
           {
             "trackId": "event30",
@@ -580,7 +580,7 @@
             "speakers": [
               {
                 "name": "Naresha K",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Organiser, Bangalore Groovy User Group",
                 "externalLink": "https://www.linkedin.com/in/nareshak/"
               }
@@ -595,7 +595,7 @@
             "speakers": [
               {
                 "name": "Neependra Khare",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Founder and Principal Consultant, CloudYuga Technologies",
                 "externalLink": "https://www.linkedin.com/in/neependra/"
               }
@@ -610,7 +610,7 @@
             "speakers": [
               {
                 "name": "Guruprasad Holla",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Founder, Quiznext",
                 "externalLink": "https://www.linkedin.com/in/gprasadholla/"
               }
@@ -625,7 +625,7 @@
             "speakers": [
               {
                 "name": "Amar Prusty",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Cloud-Data Center Consultant Architect, DXC Technology",
                 "externalLink": "https://www.linkedin.com/in/amar-prusty-07913028/"
               }
@@ -637,8 +637,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-16",
-        "timeStart": 1563339900000,
-        "timeEnd": 1563343499000,
+        "timeStart": 1563456319000,
+        "timeEnd": 1563456918000,
         "tracks": [
           {
             "trackId": "event34",
@@ -649,7 +649,7 @@
             "speakers": [
               {
                 "name": "Srushith Repakula",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Head of Engineering, KonfHub",
                 "externalLink": "https://www.linkedin.com/in/srushith/"
               }
@@ -664,13 +664,13 @@
             "speakers": [
               {
                 "name": "Dilip Kola",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Co-Founder & CTO, Tensult",
                 "externalLink": "https://www.linkedin.com/in/dilip-kola-904b1515/"
               },
               {
                 "name": "Anirudh Baskaran",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Co-Founder & CEO, Tensult",
                 "externalLink": "https://www.linkedin.com/in/anirudhbaskaran/"
               }
@@ -685,7 +685,7 @@
             "speakers": [
               {
                 "name": "Denis D'Souza",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "DevOps Engineer, Moonfrog Labs",
                 "externalLink": "https://www.linkedin.com/in/denis-dsouza/"
               }
@@ -700,7 +700,7 @@
             "speakers": [
               {
                 "name": "Vijayanirmala",
-                "profilePicture": "Picture link",
+                "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Technical Lead - Cloud DevOps Solutions Engineering, Sonata Software",
                 "externalLink": "https://www.linkedin.com/in/vijayanirmalagopal-5a54159a/"
               }
@@ -713,8 +713,8 @@
         "img": "networking",
         "room": null,
         "slotId": "slot-17",
-        "timeStart": 1563343500000,
-        "timeEnd": 1563347099000,
+        "timeStart": 1563456919000,
+        "timeEnd": 1563457518000,
         "tracks": [
           {
             "trackId": "event38",
@@ -729,8 +729,8 @@
         "img": "closing",
         "room": null,
         "slotId": "slot-18",
-        "timeStart": 1563347100000,
-        "timeEnd": 1563350699000,
+        "timeStart": 1563457519000,
+        "timeEnd": 1563458118000,
         "tracks": [
           {
             "trackId": "event39",

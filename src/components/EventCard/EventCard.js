@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react"
-import Link from "gatsby"
 import _ from "lodash"
+import Loader from "../Loader"
+
 import {
   eventCard,
   event_logo,
@@ -12,9 +13,12 @@ import {
   card_event_title,
   card_end_time,
   contentSwipe,
+  card_last_Row,
+  car_speakers,
+profile_img
 } from "./EventCardEmotion"
 
-import { px_bg } from "../jss/cvcss"
+import { px_bg,button } from "../jss/cvcss"
 import CountDown from "./CountDown"
 import event_logo_img from "../../images/aws_logo.svg"
 import { timeFormat } from "../../helpers/TimeStamp"
@@ -56,9 +60,9 @@ const EventCard = () => {
   setTimingFunction()
   console.log(nextEvent);
   return (
-    <Fragment>
+    <div css={[eventCard, px_bg]} className={eventStarted !== "notStarted" ? "blurry" : " "}>
       {eventStarted === "started" ? (
-        <div css={[eventCard, px_bg]} className="inv">
+        <Fragment>
           <div css={logoHeader}>
             <div css={event_logo}>
               <img src={event_logo_img} alt="event_logo" />
@@ -82,24 +86,35 @@ const EventCard = () => {
                         <small>from {timeFormat(currentEvent.timeStart)}</small>
                       </h2>
                       {currentEvent.eventType !== "talk" ? (<div className={`illust  ${currentEvent.img}`}></div>) : null}
+
                       {track.speakers && track.speakers.length && (
-                        <div className="speaker">
-                            {track.speakers.map((speaker, idx)=>(
-                              <React.Fragment key={idx}>
-                                <p>{speaker.name}</p>
-                                <p><a href={speaker.externalLink}>{speaker.designation}</a></p>
-                              </React.Fragment>
+                        <React.Fragment>
+
+                        {track.speakers.map((speaker, idx)=>(
+                            <div css={car_speakers} className="speaker" key={idx}>
+                                <div >
+                                  <div css={profile_img}><img src={speaker.profilePicture} alt={speaker.name} /></div>
+                                </div>
+                                <div>
+                                  <p>{speaker.name}</p>
+                                  <p><a href={speaker.externalLink}>{speaker.designation}</a></p>
+                                </div>
+                              </div>
                             ))}
-                        </div>
+                            </React.Fragment>
                       )}
-                      <h5 css={card_end_time}>Ends at {timeFormat(currentEvent.timeEnd + 1000)}</h5>
+                      <div css={card_last_Row}>
+                        <h5 css={card_end_time}>Ends at {timeFormat(currentEvent.timeEnd + 1000)}</h5>
+                            {currentEvent.eventType !== "break" ? (<span css={button} className="small plain">
+                            Feedback
+                          </span>) : null}
+                      </div>
                     </div>
                 )) }
               </div>)
             : null}
-        </div>
-      ) : null}
-      {eventStarted === "notStarted" ? (<div css={[eventCard, px_bg]}>
+        </Fragment>
+      ) : eventStarted === "notStarted" ? (<Fragment>
           <div css={event_logo}>
             <img src={event_logo_img} alt="event_logo" />
           </div>
@@ -112,9 +127,8 @@ const EventCard = () => {
           <div css={event_timer}>
             <CountDown startingTime={eventTime} />
           </div>
-        </div>) : null}
-      {eventStarted === "ended" ? (
-        <div css={[eventCard, px_bg]} className="inv">
+        </Fragment>) : eventStarted === "ended" ? (
+        <Fragment>
           <div css={event_logo}>
             <img src={event_logo_img} alt="event_logo" />
           </div>
@@ -125,8 +139,10 @@ const EventCard = () => {
             </p>
           </div>
           <h1>Tada</h1>
-        </div>) : null}
-    </Fragment>
+        </Fragment>) : <Loader/>}
+
+
+    </div>
   )
 }
 
