@@ -260,27 +260,26 @@ export const card_last_Row =css`
 
 export const contentSwipe = css`
   flex-grow: 1;
-   {
-     &.multiple{
-      margin-left: -25px;
-      padding: 15px 0 30px;
-      display: flex;
-      overflow: auto;
-      max-width: calc(100% + 50px);
-      width: calc(100% + 50px);
-      > div {
-        margin-left: 20px;
-        min-width: 60%;
-        order: 2;
-        padding-bottom: 100px;
-        position: relative;
-        ${media.xs} {
-          min-width: 80%;
-          margin-top: 25px;
-        }
-      }
+  &.multiple{
+  margin-left: -25px;
+  padding: 15px 0 30px;
+  display: flex;
+  overflow: auto;
+  max-width: calc(100% + 50px);
+  width: calc(100% + 50px);
+  > div {
+    margin-left: 20px;
+    min-width: 60%;
+    order: 2;
+    padding-bottom: 100px;
+    position: relative;
+    ${media.xs} {
+      min-width: 80%;
+      margin-top: 25px;
     }
   }
+}
+
 `
 
 export const car_speakers = css `
