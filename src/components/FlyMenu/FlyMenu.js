@@ -1,25 +1,25 @@
-import React, { Component } from "react";
-import fly_menu from './FlyMenuEmotion';
+import React, { Component } from "react"
+import fly_menu from "./FlyMenuEmotion"
 
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
-import {close_icon} from '../jss/cvcss';
+import { close_icon } from "../jss/cvcss"
 
 class FlyMenu extends Component {
   state = {
     status: false,
     props: this.props,
-  };
+  }
 
-  container = React.createRef();
+  container = React.createRef()
 
   componentDidMount() {
-    document.addEventListener("mousedown", this.handleClickOutside);
+    document.addEventListener("mousedown", this.handleClickOutside)
   }
 
   componentWillUnmount() {
-    document.body.style.overflow = "auto";
-    document.removeEventListener("mousedown", this.handleClickOutside);
+    document.body.style.overflow = "auto"
+    document.removeEventListener("mousedown", this.handleClickOutside)
   }
 
   handleClickOutside = event => {
@@ -27,28 +27,34 @@ class FlyMenu extends Component {
       this.container.current &&
       !this.container.current.contains(event.target)
     ) {
-      this.closeFly(this.state.props);
+      this.closeFly(this.state.props)
     }
-  };
+  }
 
   openFly() {
-    this.setState({ status: true });
-    document.body.classList.add('scroll_lock');
+    this.setState({ status: true })
+    document.body.classList.add("scroll_lock")
   }
 
   closeFly(props) {
     if (this.props.open) {
-      props.close();
-      document.body.classList.remove('scroll_lock');
+      props.close()
+      document.body.classList.remove("scroll_lock")
     } else {
-      this.setState({ status: false });
-      document.body.classList.remove('scroll_lock');
+      this.setState({ status: false })
+      document.body.classList.remove("scroll_lock")
     }
   }
 
   render() {
     return (
-      <nav className={`${this.props.className} ${this.state.status ? "opened" : "closed"}`} css={fly_menu} id="fly_menu">
+      <nav
+        className={`${this.props.className} ${
+          this.state.status ? "opened" : "closed"
+        }`}
+        css={fly_menu}
+        id="fly_menu"
+      >
         {this.props.trig_title ? (
           <span onClick={() => this.openFly()}>{this.props.trig_title}</span>
         ) : null}
@@ -61,7 +67,11 @@ class FlyMenu extends Component {
             }
           >
             <div className="fly_content" ref={this.container}>
-              <div className={`header ${this.props.trig_title ? "trans" : "solid"}`}>
+              <div
+                className={`header ${
+                  this.props.trig_title ? "trans" : "solid"
+                }`}
+              >
                 <span className="heading-ttl">{this.props.title}</span>
                 <span
                   className={this.props.trig_title ? "solid" : ""}
@@ -75,7 +85,7 @@ class FlyMenu extends Component {
                 <div
                   onClick={() => {
                     if (!this.props.stayOnClick) {
-                      this.closeFly(this.props);
+                      this.closeFly(this.props)
                     }
                   }}
                 >
@@ -88,7 +98,7 @@ class FlyMenu extends Component {
                       key={i}
                       onClick={() => {
                         if (!this.props.stayOnClick) {
-                          this.closeFly(this.props);
+                          this.closeFly(this.props)
                         }
                       }}
                     >
@@ -101,8 +111,8 @@ class FlyMenu extends Component {
           </div>
         ) : null}
       </nav>
-    );
+    )
   }
 }
 
-export default FlyMenu;
+export default FlyMenu

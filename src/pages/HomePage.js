@@ -1,15 +1,17 @@
-import React from "react"
+import React, { Fragment } from "react"
 
 import EventCard from "../components/EventCard/EventCard"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Nav from "../components/Nav/Nav"
 
 const HomePage = () => {
+  console.log("Inside HomPage")
   return (
-    <Layout>
+    <Fragment>
+      <Nav />
       <SEO title="Home" />
       <EventCard />
-    </Layout>
+    </Fragment>
   )
 }
 
