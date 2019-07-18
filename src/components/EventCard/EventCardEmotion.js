@@ -20,11 +20,20 @@ export const eventCard = css`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  overflow: auto !important;
   &:not(.inv) {
     padding-top: 100px;
   }
   &.inv {
     justify-content: flex-start;
+  }
+  .speaker{
+    p ~ p{
+      line-height: 1;
+    }
+    ~ .speaker{
+      margin-top: 10px;
+    }
   }
 `
 export const event_logo = css`
@@ -40,6 +49,18 @@ export const event_title = css`
 `
 export const event_timer = css`
   margin-bottom: 25px;
+  *{
+    transform-origin: left bottom;
+    animation: scalease .25s ease-in-out;
+  }
+  @keyframes scalease{
+    from{
+      transform: scale(0)
+    }
+    to{
+      transform: scale(1)
+    }
+  }
 `
 export const c_timer = css`
   display: flex;
@@ -103,7 +124,7 @@ export const contentCard = css`
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
-    &.check_in{
+    &.check-in{
       background-image: url(${check_in});
     }
 
@@ -162,6 +183,19 @@ export const card_end_time = css`
   font-size: 14px;
   color: ${Variables.muted_color};
 `
+export const card_last_Row =css`
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  margin-top: 50px;
+  ${media.xs}{
+    margin-top: 25px;
+  }
+  > *{
+    margin: 0 !important;
+  }
+`
+
 export const contentSwipe = css`
    {
      &.multiple{
@@ -181,4 +215,21 @@ export const contentSwipe = css`
       }
     }
   }
+`
+
+export const car_speakers = css `
+  display: flex;
+  align-items: center;
+`
+
+export const profile_img = css `
+    width: 50px;
+    background: #fff;
+    margin-right: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    border: dashed 1px ${Variables.dark_base_color};
+    img{
+      border-radius: 50%;
+    }
 `

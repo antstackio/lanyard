@@ -244,6 +244,14 @@ export const px_bg = css`
       transform: rotateX(180deg) rotateY(180deg) translateY(-62px);
     }
   }
+  &.blurry{
+        justify-content: flex-start;
+    padding: 25px;
+    &:before{
+    opacity: .25;
+
+    }
+  }
 `
 
 export const solid = css`
