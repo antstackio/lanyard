@@ -1,10 +1,11 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Global } from "@emotion/core"
 
 import "../css/site.css"
 import Reset from "../components/jss/Reset"
 import HomePage from "./HomePage"
+import Layout from "../components/layout"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -48,10 +49,10 @@ const IndexPage = () => {
   SetLocalStorage("slots", slots)
 
   return (
-    <Fragment>
+    <Layout location={location}>
       <Global styles={Reset} />
       <HomePage />
-    </Fragment>
+    </Layout>
   )
 }
 

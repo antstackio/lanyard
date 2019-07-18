@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import SlotCard from "../components/SlotCard"
 import Variables from "../components/jss/Variables"
 
-import {close_icon} from '../components/jss/cvcss';
+import { close_icon } from "../components/jss/cvcss"
 
 const AgendaPage = () => {
   const [slots, setSlots] = useState([])
@@ -49,7 +49,9 @@ const AgendaPage = () => {
       <SEO title="Agenda" />
       <div css={agendaHeader}>
         <span css={agendaTitle}>Agenda</span>
-        <span onClick={() => navigate("/")} css={[close_icon, agendaClose]}>close</span>
+        <span onClick={() => navigate("/")} css={[close_icon, agendaClose]}>
+          close
+        </span>
       </div>
       <ul css={agenda_list}>
         {slots.map(slot => {
@@ -71,39 +73,32 @@ export default AgendaPage
 //Styling
 
 const agendaClose = css`
-         right: 10px;
-    top: 0;
-    position: absolute;
-    margin: auto;
-    bottom: 0;
-    &:before,&:after{
-      background: ${Variables.dark_base_color};
-    }
+  right: 10px;
+  top: 0;
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  &:before,
+  &:after {
+    background: ${Variables.dark_base_color};
+  }
 `
 const agendaHeader = css`
-display: flex;
-align-items: center;
-justify-content: center;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 9999;
-    background: ${Variables.black_bg};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+  background: ${Variables.black_bg};
 `
 
 const agenda_card = css`
-  animation : scrollUp .35s ease-out;
   padding-top: 80px;
   padding-bottom: 100px;
-  @keyframes scrollUp{
-    from{
-      margin-top: 100vh;
-    }
-    to{
-      margin-top: 0;
-    }
-  }
+
   .agenda {
     position: fixed;
     z-index: 999;
@@ -161,10 +156,10 @@ const agendaTitle = css`
   font-weight: bold;
   text-align: center;
   padding: 0 ${Variables.gutter_width};
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 const agenda_list = css`
   padding-right: ${Variables.gutter_width_xs};
