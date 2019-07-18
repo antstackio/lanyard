@@ -15,7 +15,7 @@ import {
   contentSwipe,
   card_last_Row,
   car_speakers,
-profile_img
+card_profile
 } from "./EventCardEmotion"
 
 import { px_bg,button } from "../jss/cvcss"
@@ -79,11 +79,10 @@ const EventCard = () => {
                 {currentEvent.tracks.map((track, index) => (
                     <div css={contentCard} className={track.selectedFlag === "selected" ? track.selectedFlag : ' ' } key={index}>
                       {currentEvent.tracks.length > 1 ? (
-                        <h4 css={card_now_text} className="card_now_text">{`Track - ${index + 1}`} {track.selectedFlag === "selected" ? "is in your schedule" : null }</h4>
+                        <h4 css={card_now_text} className="card_now_text"><span>{`Track - ${index + 1}`}</span> {track.selectedFlag === "selected" ? <small>This is in your schedule</small> : null }</h4>
                       ) : null}
                       <h2 css={card_event_title} className="card_event_title">
                         <p>{track.title}</p>
-                        <small>{timeFormat(currentEvent.timeStart)}</small>
                       </h2>
                       {currentEvent.eventType !== "talk" ? (<div className={`illust  ${currentEvent.img}`}></div>) : null}
 
@@ -91,7 +90,7 @@ const EventCard = () => {
                         {track.speakers && track.speakers.length && (
                           <React.Fragment>
                             {track.speakers.map((speaker, idx)=>(
-                                <div css={profile_img}  className="profile_img" key={idx}><img src={speaker.profilePicture} alt={speaker.name} /></div>
+                                <div css={card_profile}  className="card_profile" key={idx}><span>{speaker.name}</span><br></br><small>{speaker.designation}</small></div>
                                 ))}
                           </React.Fragment>
                         )}
