@@ -55,3 +55,12 @@ h5,
 h6 {
   font-family: "Ubuntu Mono", monospace;
 }
+
+@keyframes scalease {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
