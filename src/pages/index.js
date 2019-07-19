@@ -32,7 +32,8 @@ const IndexPage = () => {
               speakers {
                 designation
                 externalLink
-                name
+                firstName
+                lastName
                 profilePicture
               }
               title

@@ -92,8 +92,8 @@ const EventCard = () => {
                         {track.speakers && track.speakers.length && (
                           <React.Fragment>
                             {track.speakers.map((speaker, idx)=>(
-                                <div css={card_profile}  className="card_profile" key={idx}><span>{speaker.name}</span><br></br><small>{speaker.designation}</small></div>
-                                ))}
+                                <div css={card_profile}  className="card_profile" key={idx}><span className="profimg"><img src={speaker.profilePicture} alt={speaker.firstName}/></span> <span>{speaker.firstName}</span></div>
+                            ))}
                           </React.Fragment>
                         )}
                       </div>
