@@ -247,6 +247,9 @@ export const px_bg = css`
   &.blurry{
         justify-content: flex-start;
     padding: 25px;
+    ${media.mn}{
+      padding: 15px;
+    }
     &:before{
     opacity: .25;
 

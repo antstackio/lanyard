@@ -23,39 +23,43 @@ const Nav = () => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
-    <div css={nav_bar}>
-      <FlyMenu
-        direction="bottom"
-        className="navbar_wrapper"
-        trig_title={
-          <span className="trig-ttl">
-            <img src={menu} alt="logo" />
-            <span>Menu</span>
-          </span>
-        }
-      >
-        <Link css={lanyard_logo} to="/">
-          {siteTitle}
-        </Link>
-        <ul css={sub_menu}>
-          <li className="faq ico large">
-            <Link to="/">Volunteers</Link>
-          </li>
-          <li className="contact ico large">
-            <Link to="/">Speakers</Link>
-          </li>
-          <hr></hr>
-          <li className="about ico large">
-            <Link to="/">About Lanyard</Link>
-          </li>
-          <li className="about ico large">
-            <Link to="/">Help us Improve</Link>
-          </li>
-        </ul>
-      </FlyMenu>
-      <span css={agenda_trig} onClick={() => navigate("/AgendaPage")}>
-        <img src={agenda} alt="goToAgenda"></img> Agenda
-      </span>
+    <div>
+      <div css={nav_bar}>
+        <FlyMenu
+          direction="bottom"
+          className="navbar_wrapper"
+          trig_title={
+            <span className="trig-ttl">
+              <img src={menu} alt="logo" />
+              <span>Menu</span>
+            </span>
+          }
+        >
+          <Link css={lanyard_logo} to="/">
+            {siteTitle}
+          </Link>
+          <ul css={sub_menu}>
+            <li className="faq ico large">
+              <Link to="/">Volunteers</Link>
+            </li>
+            <li className="contact ico large">
+              <Link to="/">Speakers</Link>
+            </li>
+            <hr></hr>
+            <li className="about ico large">
+              <Link to="/">About Lanyard</Link>
+            </li>
+            <li className="about ico large">
+              <Link to="/">Help us Improve</Link>
+            </li>
+          </ul>
+        </FlyMenu>
+        <span css={agenda_trig} onClick={() => navigate("/AgendaPage")}>
+          <img src={agenda} alt="goToAgenda"></img> Agenda
+        </span>
+
+      </div>
+      <p css={copyRight}><small>Powered by Lanyard &copy; 2019 all rights reserved.</small></p>
     </div>
   )
 }
@@ -63,6 +67,20 @@ const Nav = () => {
 export default Nav
 
 //Styling
+
+const copyRight = css `
+    color: rgba(255, 255, 255, .25);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    ${media.xs}{
+      small{
+        font-size: 12px;
+      }
+    }
+`
 const agenda_trig = css`
   display: flex;
   align-items: center;

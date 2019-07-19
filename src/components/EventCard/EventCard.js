@@ -28,6 +28,7 @@ const EventCard = () => {
   const [currentEvent, setCurrentEvent] = useState(null)
   const [nextEvent, setNextEvent] = useState(null)
   const [eventTime, setEventTime] = useState(null)
+  const [fullTitle, setFullTitle] = useState(false)
   const [slots, setSlots] = useState([])
 
   useEffect(() => {
@@ -80,10 +81,10 @@ const EventCard = () => {
                     <div css={contentCard} className={track.selectedFlag === "selected" ? track.selectedFlag : ' ' } key={index}>
                       <div>
                       {currentEvent.tracks.length > 1 ? (
-                        <h4 css={card_now_text} className="card_now_text"><span>{`Track - ${index + 1}`}</span> {track.selectedFlag === "selected" ? <small>This is in your schedule</small> : null }</h4>
+                        <h4 css={card_now_text} className="card_now_text" ><span>{`Track - ${index + 1}`}</span> {track.selectedFlag === "selected" ? <small>This is in your schedule</small> : null }</h4>
                       ) : null}
-                      <h2 css={card_event_title} className="card_event_title">
-                        <p>{track.title}</p>
+                      <h2 css={card_event_title} className={`card_event_title ${fullTitle ? "open" : "close"}`} onClick={()=>setFullTitle(!fullTitle)}>
+                        <p >{track.title}</p>
                       </h2>
                       {currentEvent.eventType !== "talk" ? (<div className={`illust  ${currentEvent.img}`}></div>) : null}
 
