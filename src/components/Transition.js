@@ -28,7 +28,7 @@ const trGrp = css`
   height: 100vh;
   flex-direction: column;
   > div:first-child{
-    max-height: calc(85vh - 50px);
+    height: calc(85vh - 50px);
   }
 `
 

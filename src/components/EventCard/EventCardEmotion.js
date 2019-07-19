@@ -12,7 +12,6 @@ import welcome from "../../images/welcome.svg"
 import end from "../../images/end.svg"
 
 export const eventCard = css`
-  height: 100%;
   background: #fff;
   box-shadow: ${shadows.theme_shadow};
   border-radius: 0 0 50px 50px;
@@ -93,19 +92,24 @@ export const logoHeader = css`
     width: 60px !important;
     height: auto !important;
     margin-right: 15px;
+    ${media.mn}{
+      width: 45px !important;
+    }
   }
 `
 
 export const contentCard = css`
-  height: calc(100% - 70px);
+  min-height: calc(100% - 30px);
   background: #fff;
   margin-top: 25px;
-  padding: 0 15px 60px;
+  padding: 1px 15px 15px;
   color: ${Variables.text_primary_color};
   box-shadow: ${shadows.blue_shadow};
   border-radius: 0 25px 25px 0;
   animation: scalease .25s ease-in-out;
-      box-sizing: content-box;
+  position: relative;
+      display: flex;
+    flex-direction: column;
   .break &{
     border-radius: 25px;
   }
@@ -121,7 +125,7 @@ export const contentCard = css`
     ${media.xs}{
       height: 100px;
       .break &{
-        height: 200px;
+        height: 150px;
         ${media.mn}{
           height: 100px;
         }
@@ -231,8 +235,10 @@ export const card_event_title = css`
     line-height: 1.5em;
     max-height: 3em;
     transition: all .25s;
-    &:hover{
-      max-height: 10em;
+  }
+  &.open{
+    >p{
+      max-height: 15em;
       display: block;
     }
   }
@@ -264,10 +270,7 @@ export const card_last_Row =css`
   display: flex;
   align-items: center;
   justify-content:space-between;
-   position: absolute;
-  left: 15px;
-  bottom: 15px;
-  right: 15px;
+      margin-top: auto;
   .break &{
       justify-content: center;
     }
@@ -302,7 +305,6 @@ export const contentSwipe = css`
 export const car_speakers = css `
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   span{
     margin-top: 7px;
@@ -333,6 +335,10 @@ export const card_profile = css `
     ${media.above_xs}{
       height: 100px;
       width: 100px;
+    }
+    ${media.mn}{
+      height: 50px;
+      width: 50px;
     }
     img{
       border-radius: 50%;
