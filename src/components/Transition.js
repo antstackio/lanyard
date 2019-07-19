@@ -3,6 +3,9 @@ import {
   TransitionGroup,
   Transition as ReactTransition,
 } from "react-transition-group"
+import { css } from "@emotion/core"
+
+
 const timeout = 0
 const getTransitionStyles = {
   entering: {
@@ -19,6 +22,16 @@ const getTransitionStyles = {
     opacity: 0,
   },
 }
+
+const trGrp = css`
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  > div:first-child{
+    max-height: calc(85vh - 50px);
+  }
+`
+
 class Transition extends React.PureComponent {
   render() {
     const { children, location } = this.props
@@ -33,6 +46,7 @@ class Transition extends React.PureComponent {
         >
           {status => (
             <div
+              css={trGrp}
               style={{
                 ...getTransitionStyles[status],
               }}

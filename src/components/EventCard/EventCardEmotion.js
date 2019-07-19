@@ -12,7 +12,7 @@ import welcome from "../../images/welcome.svg"
 import end from "../../images/end.svg"
 
 export const eventCard = css`
-  height: calc(85vh - 50px);
+  height: 100%;
   background: #fff;
   box-shadow: ${shadows.theme_shadow};
   border-radius: 0 0 50px 50px;
@@ -100,7 +100,7 @@ export const contentCard = css`
   height: calc(100% - 25px);
   background: #fff;
   margin-top: 25px;
-  padding: 15px;
+  padding: 0 15px 60px;
   color: ${Variables.text_primary_color};
   box-shadow: ${shadows.blue_shadow};
   border-radius: 0 25px 25px 0;
@@ -115,14 +115,18 @@ export const contentCard = css`
     line-height: 0;
   }
   .illust{
-    margin: -15px 0 15px;
+    margin: 0 0 25px;
     height: 200px;
     ${media.xs}{
       height: 100px;
       .break &{
         height: 200px;
+        ${media.mn}{
+          height: 100px;
+        }
       }
     }
+
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -180,17 +184,23 @@ export const card_now_text = css`
   display: flex;
   align-items: center;
   justify-content:space-between;
+  padding: 10px 0;
 `
 
 export const card_event_title = css`
   margin: 10px auto 15px;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 18px;
+  ${media.xs}{
+    font-size: 16px;
+  }
+  ${media.mn}{
+    font-size: 14px;
+  }
   background: #FF9900;
   color: #fff;
   padding: 7px;
   position: relative;
-  margin: 10px -15px 10px;
+  margin: 0 -15px 10px;
   .break &{
     color: #FF9900;
     background: #fff;
@@ -215,8 +225,13 @@ export const card_event_title = css`
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    line-height: 1.5rem;
-    height: 3rem;
+    line-height: 1.5em;
+    height: 3em;
+    transition: all .25s;
+    &:hover{
+      max-height: 10em;
+      display: block;
+    }
   }
   small {
     display: block;

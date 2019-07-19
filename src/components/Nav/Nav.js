@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, navigate, useStaticQuery, graphql } from "gatsby"
 import { css } from "@emotion/core"
+import { media } from "../jss/cvcss"
 
 import menu from "../../images/menu.svg"
 import logo from "../../images/logo.svg"
@@ -63,38 +64,55 @@ export default Nav
 
 //Styling
 const agenda_trig = css`
-  position: fixed;
-  z-index: 999;
-  bottom: 0;
-  right: 15px;
-  height: 15vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   flex-direction: column;
+  height: 50px;
+  width: 75px;
+  text-transform: uppercase;
+  ${media.xs}{
+    font-size: 14px;
+  }
   img {
     margin-bottom: 5px;
     height: 30px;
+    ${media.xs}{
+      height: 25px;
+
+    }
+    ${media.mn}{
+      height: 20px;
+    }
   }
 `
 
 const nav_bar = css`
+  height: 15vh;
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
   #fly_menu {
-    position: fixed;
-    z-index: 999;
-    bottom: 0;
-    left: 15px;
-    height: 15vh;
     display: flex;
     align-items: center;
     .trig-ttl {
       text-align: center;
       text-transform: uppercase;
       color: #fff;
+      ${media.xs}{
+        font-size: 14px;
+      }
       img {
         margin-bottom: 5px;
         height: 30px;
+        ${media.xs}{
+          height: 25px;
+
+        }
+        ${media.mn}{
+          height: 20px;
+        }
       }
     }
     > span {
