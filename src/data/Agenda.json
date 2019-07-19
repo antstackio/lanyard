@@ -51,7 +51,8 @@
             "title": "Keynote: Embracing Full-stack Serverless. A new paradigm",
             "speakers": [
               {
-                "name": "Gerard Sans",
+                "firstName": "Gerard",
+                "lastName": "Sans",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Developer Advocate, AWS",
                 "externalLink": "https://www.linkedin.com/in/gerard-sans/"
@@ -76,13 +77,15 @@
             "title": "Tips and Tricks for Running Your SaaS Business on AWS: Lessons Learned from JFrog",
             "speakers": [
               {
-                "name": "Prasanna Raghavendra",
+                "firstName": "Prasanna",
+                "lastName": "Raghavendra",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "R&D Director, JFrog India",
                 "externalLink": "https://www.linkedin.com/in/prasannaraghavendra/"
               },
               {
-                "name": "Seshu Reddy",
+                "firstName": "Seshu",
+                "lastName": "Reddy",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "SRE, JFrog India",
                 "externalLink": "https://www.linkedin.com/in/seshu-reddy-01a5715/"
@@ -107,7 +110,8 @@
             "title": "Building Voice Enabled Experiences with Alexa",
             "speakers": [
               {
-                "name": "Sohan Maheshwar",
+                "firstName": "Sohan",
+                "lastName": "Maheshwar",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Alexa Evangelist | Developer Evangelist at Amazon",
                 "externalLink": "https://www.linkedin.com/in/sohanmaheshwar/"
@@ -132,7 +136,8 @@
             "title": "How Freshworks reduced blast radius and improved uptime at 500k requests per minute",
             "speakers": [
               {
-                "name": "Kiran Darisi",
+                "firstName": "Kiran",
+                "lastName": "Darisi",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Co-Founder and Distinguished Engineer at Freshworks",
                 "externalLink": "https://www.linkedin.com/in/kirandarisi/"
@@ -172,7 +177,8 @@
             "title": "Serverless Architecture : The future of Cloud Computing",
             "speakers": [
               {
-                "name": "Palanisamy Chellappan",
+                "firstName": "Palanisamy",
+                "lastName": "Chellappan",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Enterprise Architect, Brillio",
                 "externalLink": "https://www.linkedin.com/in/palanisamy/"
@@ -187,7 +193,8 @@
             "title": "Building a search experience live with App Search",
             "speakers": [
               {
-                "name": "Aravind Putrevu",
+                "firstName": "Aravind",
+                "lastName": "Putrevu",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Developer Advocate, Elastic",
                 "externalLink": "https://www.linkedin.com/in/aravindputrevu/"
@@ -202,7 +209,8 @@
             "title": "From One to Many: Slack's transition away from a single AWS account",
             "speakers": [
               {
-                "name": "Andrew Martin",
+                "firstName": "Andrew",
+                "lastName": "Martin",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Senior Cloud Engineer, Slack",
                 "externalLink": null
@@ -217,7 +225,8 @@
             "title": "Diversity Program: Practical tactics for achieving full potential in your career",
             "speakers": [
               {
-                "name": "Diana Cruz Solash",
+                "firstName": "Diana Cruz ",
+                "lastName": "Solash",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "VP Inclusion and Diversity, Infor",
                 "externalLink": "https://www.linkedin.com/in/diana-cruz-solash-4452336/"
@@ -241,7 +250,8 @@
             "title": "Building voice-driven apps for Alexa",
             "speakers": [
               {
-                "name": "Saifur Rahman Mohsin",
+                "firstName": "Saifur Rahman",
+                "lastName": "Mohsin",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Developer, Web, Mobile and Voice Driven Apps",
                 "externalLink": "https://www.linkedin.com/in/saifurrahmanmohsin/"
@@ -256,7 +266,8 @@
             "title": "What's New - 'An AWS server-less backed platform for latest news on product releases.'",
             "speakers": [
               {
-                "name": "Krishna Chaitanya Sadhu",
+                "firstName": "Krishna Chaitanya",
+                "lastName": "Sadhu",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Architect, Infor India Pvt Ltd.",
                 "externalLink": "https://www.linkedin.com/in/krishna-chaitanya-sadhu-38487532/"
@@ -271,7 +282,8 @@
             "title": "Lot of learns from on-prem migration to AWS",
             "speakers": [
               {
-                "name": "Gangireddy D",
+                "firstName": "Gangireddy D",
+                "lastName": "Gangireddy D",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "SRE, Knolskape",
                 "externalLink": "https://www.linkedin.com/in/gangireddy-danamreddy-465675148/"
@@ -286,13 +298,15 @@
             "title": "Diversity Program: Exploring opportunities with communities for a successful career",
             "speakers": [
               {
-                "name": "Shwetha Lakshman Rao",
+                "firstName": "Shwetha ",
+                "lastName": "Lakshman Rao",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Sr. MTS , VMware software India & City Director - Women Who Code Bangalore",
                 "externalLink": "https://www.linkedin.com/in/shwetha-lakshman-rao-a4a59015/"
               },
               {
-                "name": "Moderated by Bhuvaneswari Subramani",
+                "firstName": "Bhuvaneswari",
+                "lastName": "Subramani",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "AWS re:Invent Diversity Scholarship Recipient",
                 "externalLink": "https://www.linkedin.com/in/bhuvanas/"
@@ -316,7 +330,8 @@
             "title": "Plant Monitoring & Automatically Water System using AWS IoT.",
             "speakers": [
               {
-                "name": "Sekhar Rangam",
+                "firstName": "Sekhar",
+                "lastName": "Rangam",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Manager - Sr. Technical Architect, BRIDGEi2i Analytics Solutions",
                 "externalLink": "https://www.linkedin.com/in/sekharrangam/"
@@ -331,13 +346,15 @@
             "title": "Refactoring to Serverless -- Translating common application architecture patterns to serverless on AWS.",
             "speakers": [
               {
-                "name": "Prashanth HN",
+                "firstName": "Prashanth",
+                "lastName": "HN",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Co-Founder, WheelsBox.com",
                 "externalLink": "https://www.linkedin.com/in/hnprashanth/"
               },
               {
-                "name": "Aditya Reddy",
+                "firstName": "Aditya",
+                "lastName": "Reddy",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Software Developer, Branch Insurance",
                 "externalLink": "https://www.linkedin.com/in/adithyakreddy/"
@@ -352,7 +369,8 @@
             "title": "Lets Talk AI with the Avengers - Building a Conversational AI Assistant with AWS Lambda and Google Home.",
             "speakers": [
               {
-                "name": "Divya Krishnamurthi",
+                "firstName": "Divya",
+                "lastName": "Krishnamurthi",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Practice Manager, Akamai Technologies",
                 "externalLink": "https://www.linkedin.com/in/divyakrishnamurthi/"
@@ -367,19 +385,22 @@
             "title": "Building Efficient, Scalable and Resilient Front-end logging service with AWS.",
             "speakers": [
               {
-                "name": "Kokilavani Kathiresan",
+                "firstName": "Kokilavani",
+                "lastName": "Kathiresan",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Software Developer, Intuit",
                 "externalLink": "https://www.linkedin.com/in/kokilavani-kathiresan/"
               },
               {
-                "name": "Ravikumar Kota",
+                "firstName": "Ravikumar",
+                "lastName": "Kota",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Software Developer, Intuit",
                 "externalLink": null
               },
               {
-                "name": "Shailja Agarwala",
+                "firstName": "Shailja",
+                "lastName": "Agarwala",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Software Developer, Intuit",
                 "externalLink": "https://www.linkedin.com/in/shailja-agarwala-4a588185/"
@@ -419,7 +440,8 @@
             "title": "Leveraging Machine Learning to Reduce Mean Time to Identify and Resolve Issues when handling Systems/Applications at Scale.",
             "speakers": [
               {
-                "name": "Paul Rajesh",
+                "firstName": "Paul",
+                "lastName": "Rajesh",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Director India Sales, Sumo Logic",
                 "externalLink": "https://www.linkedin.com/in/paulrajesh/"
@@ -434,7 +456,8 @@
             "title": "Making Lambda simpler for data scientists.",
             "speakers": [
               {
-                "name": "Nabarun Pal",
+                "firstName": "Nabarun",
+                "lastName": "Pal",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Software Developer, Intuit",
                 "externalLink": "https://www.linkedin.com/in/palnabarun/"
@@ -449,7 +472,8 @@
             "title": "Complex architectures for authentication and authorization on AWS.",
             "speakers": [
               {
-                "name": "Boyan Dimitrov",
+                "firstName": "Boyan",
+                "lastName": "Dimitrov",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "AWS Community Hero, Germany",
                 "externalLink": "https://aws.amazon.com/developer/community/heroes/boyan-dimitrov/"
@@ -464,13 +488,15 @@
             "title": "Our journey with AWS from 0(ZERO) orders to 6 digit mark.",
             "speakers": [
               {
-                "name": "Pranesh Vittal",
+                "firstName": "Pranesh",
+                "lastName": "Vittal",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Database Architect, Medlife.com",
                 "externalLink": "https://www.linkedin.com/in/praneshvittal/"
               },
               {
-                "name": "Prasanna Desai",
+                "firstName": "Prasanna",
+                "lastName": "Desai",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Senior Build And Release Engineer, Medlife.com",
                 "externalLink": "https://www.linkedin.com/in/prasanna-desai-6b785562/"
@@ -494,7 +520,8 @@
             "title": "Building Digital Human by using AWS Sumerian.",
             "speakers": [
               {
-                "name": "Ilanchezhian Ganesamurthy",
+                "firstName": "Ilanchezhian",
+                "lastName": "Ganesamurthy",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Coorganizer AWS User Group, Chennai",
                 "externalLink": "https://www.linkedin.com/in/ilanchezhian/"
@@ -509,7 +536,8 @@
             "title": "Kubernetes on AWS (using Amazon EKS).",
             "speakers": [
               {
-                "name": "Akash Agrawal",
+                "firstName": "Akash",
+                "lastName": "Agrawal",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "GDE in cloud",
                 "externalLink": "https://www.linkedin.com/in/akash-agrawal-58a97813/"
@@ -524,7 +552,8 @@
             "title": "Simplifying Real Time Data Analytics with Docker, IoT & AWS Rekognition Service.",
             "speakers": [
               {
-                "name": "Ajeet Singh Raina",
+                "firstName": "Ajeet Singh",
+                "lastName": "Raina",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Docker Captain and Docker Bangalore Community Leader",
                 "externalLink": "https://www.linkedin.com/in/ajeetsraina/"
@@ -539,7 +568,8 @@
             "title": "Lessons learnt building a Distributed Linked List on S3.",
             "speakers": [
               {
-                "name": "Manik Jindal",
+                "firstName": "Manik",
+                "lastName": "Jindal",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Computer Scientist, Adobe",
                 "externalLink": "https://www.linkedin.com/in/themanikjindal/"
@@ -579,7 +609,8 @@
             "title": "Leveraging Micronaut on AWS Lambda.",
             "speakers": [
               {
-                "name": "Naresha K",
+                "firstName": "Naresha",
+                "lastName": "K",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Organiser, Bangalore Groovy User Group",
                 "externalLink": "https://www.linkedin.com/in/nareshak/"
@@ -594,7 +625,8 @@
             "title": "Security Best Practices for Kubernetes.",
             "speakers": [
               {
-                "name": "Neependra Khare",
+                "firstName": "Neependra",
+                "lastName": "Khare",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Founder and Principal Consultant, CloudYuga Technologies",
                 "externalLink": "https://www.linkedin.com/in/neependra/"
@@ -609,7 +641,8 @@
             "title": "Adopting Serverless Culture: Taking your team to v2.0 of your serverless product",
             "speakers": [
               {
-                "name": "Guruprasad Holla",
+                "firstName": "Guruprasad",
+                "lastName": "Holla",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Founder, Quiznext",
                 "externalLink": "https://www.linkedin.com/in/gprasadholla/"
@@ -624,7 +657,8 @@
             "title": "Cloud Security",
             "speakers": [
               {
-                "name": "Amar Prusty",
+                "firstName": "Amar",
+                "lastName": "Prusty",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Cloud-Data Center Consultant Architect, DXC Technology",
                 "externalLink": "https://www.linkedin.com/in/amar-prusty-07913028/"
@@ -648,7 +682,8 @@
             "title": "Become Thanos of the LambdaLand: Wield all the Infinity Stones.",
             "speakers": [
               {
-                "name": "Srushith Repakula",
+                "firstName": "Srushith",
+                "lastName": "Repakula",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Head of Engineering, KonfHub",
                 "externalLink": "https://www.linkedin.com/in/srushith/"
@@ -663,13 +698,15 @@
             "title": "Infrastructure Provisioning and Automation for Large Enterprises.",
             "speakers": [
               {
-                "name": "Dilip Kola",
+                "firstName": "Dilip",
+                "lastName": "Kola",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Co-Founder & CTO, Tensult",
                 "externalLink": "https://www.linkedin.com/in/dilip-kola-904b1515/"
               },
               {
-                "name": "Anirudh Baskaran",
+                "firstName": "Anirudh",
+                "lastName": "Baskaran",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Co-Founder & CEO, Tensult",
                 "externalLink": "https://www.linkedin.com/in/anirudhbaskaran/"
@@ -684,7 +721,8 @@
             "title": "Log Analytics with ELK Stack (Architecture for aggressive cost optimisation and infinite data scale).",
             "speakers": [
               {
-                "name": "Denis D'Souza",
+                "firstName": "Denis",
+                "lastName": "D'Souza",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "DevOps Engineer, Moonfrog Labs",
                 "externalLink": "https://www.linkedin.com/in/denis-dsouza/"
@@ -699,7 +737,8 @@
             "title": "AWS Secrets for Best Practices.",
             "speakers": [
               {
-                "name": "Vijayanirmala",
+                "firstName": "Vijaya Nirmala",
+                "lastName": "Gopal",
                 "profilePicture": "https://communityday.awsugblr.in/images/speakers/prashanth_hn.jpg",
                 "designation": "Technical Lead - Cloud DevOps Solutions Engineering, Sonata Software",
                 "externalLink": "https://www.linkedin.com/in/vijayanirmalagopal-5a54159a/"

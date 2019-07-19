@@ -97,7 +97,7 @@ export const logoHeader = css`
 `
 
 export const contentCard = css`
-  height: calc(100% - 25px);
+  height: calc(100% - 70px);
   background: #fff;
   margin-top: 25px;
   padding: 0 15px 60px;
@@ -105,6 +105,7 @@ export const contentCard = css`
   box-shadow: ${shadows.blue_shadow};
   border-radius: 0 25px 25px 0;
   animation: scalease .25s ease-in-out;
+      box-sizing: content-box;
   .break &{
     border-radius: 25px;
   }
@@ -190,15 +191,17 @@ export const card_now_text = css`
 export const card_event_title = css`
   margin: 10px auto 15px;
   font-size: 18px;
+  padding: 15px;
   ${media.xs}{
+  padding: 10px;
     font-size: 16px;
   }
   ${media.mn}{
+  padding: 7px;
     font-size: 14px;
   }
   background: #FF9900;
   color: #fff;
-  padding: 7px;
   position: relative;
   margin: 0 -15px 10px;
   .break &{
@@ -226,7 +229,7 @@ export const card_event_title = css`
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     line-height: 1.5em;
-    height: 3em;
+    max-height: 3em;
     transition: all .25s;
     &:hover{
       max-height: 10em;
@@ -286,11 +289,10 @@ export const contentSwipe = css`
     margin-left: 20px;
     min-width: 60%;
     order: 2;
-    padding-bottom: 100px;
     position: relative;
     ${media.xs} {
       min-width: 80%;
-      margin-top: 25px;
+      margin-top: 10px;
     }
   }
 }
@@ -298,15 +300,42 @@ export const contentSwipe = css`
 `
 
 export const car_speakers = css `
-small{
-  margin-top: 7px;
-      line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  span{
+    margin-top: 7px;
+    line-height: 1.5;
     display: inline-block;
-}
+    text-align: center;
+    ${media.above_xs}{
+      font-size: 20px;
+    }
+  }
 `
 
 export const card_profile = css `
-  display: list-item;
-  list-style-type: circle;
-  margin-left: 15px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  padding:5px;
+  width: 50%;
+  .profimg{
+    height: 75px;
+    width: 75px;
+    border: dashed 1px ${Variables.dark_base_color};
+    padding: 5px;
+    background: #fff;
+    border-radius: 50%;
+    margin-bottom: 7px;
+    ${media.above_xs}{
+      height: 100px;
+      width: 100px;
+    }
+    img{
+      border-radius: 50%;
+    }
+  }
 `

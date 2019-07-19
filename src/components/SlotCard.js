@@ -61,7 +61,7 @@ const SlotCard = ({ eventData, selectTrack }) => {
           <div css={slot_speakers}>
             {track.speakers &&
               track.speakers.map((speaker, idx) => (
-                <small key={idx}>{speaker.name}</small>
+                <small key={idx}>{speaker.firstName} {speaker.lastName}</small>
               ))}
           </div>
           <div css={slot_action}>
