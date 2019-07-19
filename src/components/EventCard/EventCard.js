@@ -78,6 +78,7 @@ const EventCard = () => {
               <div css={contentSwipe} className={`${currentEvent.eventType === "break" ? "break" : "def"} ${currentEvent.tracks.length > 1 ? "multiple" : "single"}`}>
                 {currentEvent.tracks.map((track, index) => (
                     <div css={contentCard} className={track.selectedFlag === "selected" ? track.selectedFlag : ' ' } key={index}>
+                      <div>
                       {currentEvent.tracks.length > 1 ? (
                         <h4 css={card_now_text} className="card_now_text"><span>{`Track - ${index + 1}`}</span> {track.selectedFlag === "selected" ? <small>This is in your schedule</small> : null }</h4>
                       ) : null}
@@ -86,6 +87,7 @@ const EventCard = () => {
                       </h2>
                       {currentEvent.eventType !== "talk" ? (<div className={`illust  ${currentEvent.img}`}></div>) : null}
 
+                        </div>
                       <div css={car_speakers}  className="car_speakers" className="speaker" >
                         {track.speakers && track.speakers.length && (
                           <React.Fragment>
