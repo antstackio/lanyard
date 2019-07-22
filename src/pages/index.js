@@ -55,9 +55,11 @@ const IndexPage = () => {
 
   const { slots } = data.allAgendaJson.nodes[0]
   const { volunteers } = data.allVolunteersJson.nodes[0]
+  const user = { email: "" }
 
   SetLocalStorage("slots", slots)
   SetLocalStorage("volunteers", volunteers)
+  SetLocalStorage("user", user)
 
   return (
     <Layout location={location}>
