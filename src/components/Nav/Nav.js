@@ -39,18 +39,18 @@ const Nav = () => {
         </Link>
         <ul css={sub_menu}>
           <li className="faq ico large">
-            <Link to="/">Volunteers</Link>
+            <Link to="/Volunteers">Volunteers</Link>
           </li>
           <li className="contact ico large">
-            <Link to="/">Sponsers</Link>
+            <Link to="/Sponsers">Sponsers</Link>
           </li>
 
           <li className="contact ico large">
-            <Link to="/">Feedback</Link>
+            <Link to="/Feedback">Feedback</Link>
           </li>
           <hr></hr>
           <li className="about ico large">
-            <Link to="/">About Lanyard</Link>
+            <Link to="/AboutLanyard">About Lanyard</Link>
           </li>
           <li className="about ico large">
             <Link to="/">Help us Improve</Link>
