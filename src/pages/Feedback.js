@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, Fragment, useEffect } from "react"
 import { Link, navigate } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
@@ -11,11 +11,17 @@ import star_off from "../images/star-off.svg"
 
 const Feedback = () => {
   const [rating, setRating] = useState(null)
+  const [email, setEmail] = useState("")
+  const [comment, setComment] = useState("")
+
+  useEffect(() => {
+    setEmail(JSON.parse(localStorage.getItem("user")).email)
+  }, [])
 
   const ratingProvider = () => {
     const values = [1, 2, 3, 4, 5]
     return (
-      <>
+      <Fragment>
         {values.map((ratingNum, index) => {
           if (ratingNum <= rating) {
             return (
@@ -35,8 +41,16 @@ const Feedback = () => {
             )
           }
         })}
-      </>
+      </Fragment>
     )
+  }
+
+  const onsubmit = () => {
+    localStorage.setItem("user", JSON.stringify({ email }))
+    console.log(rating)
+    console.log(email)
+    console.log(comment)
+    return null
   }
 
   return (
@@ -53,10 +67,19 @@ const Feedback = () => {
             <div>{ratingProvider()}</div>
           </div>
           <div css={form_row}>
-            <input placeholder="Enter Email" type="text" />
+            <input
+              placeholder="Enter Email"
+              type="text"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+            />
           </div>
           <div css={form_row}>
-            <textarea placeholder="Remarks" />
+            <textarea
+              placeholder="Remarks"
+              value={comment}
+              onChange={e => setComment(e.target.value)}
+            />
           </div>
           <div css={form_row}>
             <div css={checkbox}>
@@ -77,7 +100,9 @@ const Feedback = () => {
               </small>
             </label>
             <div>
-              <button css={button}>Submit</button>
+              <button css={button} onClick={onsubmit}>
+                Submit
+              </button>
             </div>
           </div>
         </div>
