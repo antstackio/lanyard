@@ -108,8 +108,9 @@ export const contentCard = css`
   border-radius: 0 25px 25px 0;
   animation: scalease .25s ease-in-out;
   position: relative;
-      display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   .break &{
     border-radius: 25px;
   }
@@ -224,6 +225,10 @@ export const card_event_title = css`
       font-size: 25px;
       font-weight: 700;
       line-height: 2rem;
+      padding-right: 0;
+      &:before{
+        content: none;
+      }
     }
   }
   >p{
@@ -235,11 +240,32 @@ export const card_event_title = css`
     line-height: 1.5em;
     max-height: 3em;
     transition: all .25s;
+    padding-right: 50px;
+    position: relative;
+    &:before{
+      content: '';
+        top: -7px;
+        right: 10px;
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        border: solid 2px;
+        border-right: 0;
+        border-top: 0;
+        transform: rotate(-45deg);
+        bottom: 0;
+        margin: auto;
+        transition: all .25s;
+    }
   }
   &.open{
     >p{
       max-height: 15em;
       display: block;
+      &:before{
+        top: 7px;
+        transform: rotate(135deg);
+      }
     }
   }
   small {
@@ -258,10 +284,8 @@ export const card_event_title = css`
 `
 
 export const card_end_time = css`
-  margin-top: 50px;
-  ${media.xs} {
-    margin-top: 25px;
-  }
+  margin: 10px 0 0;
+  text-align: center;
   font-weight: normal;
   font-size: 14px;
   color: ${Variables.muted_color};
@@ -269,8 +293,7 @@ export const card_end_time = css`
 export const card_last_Row =css`
   display: flex;
   align-items: center;
-  justify-content:space-between;
-      margin-top: auto;
+  justify-content:center;
   .break &{
       justify-content: center;
     }
@@ -306,6 +329,7 @@ export const car_speakers = css `
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
   span{
     margin-top: 7px;
     line-height: 1.5;
@@ -336,12 +360,17 @@ export const card_profile = css `
       height: 100px;
       width: 100px;
     }
-    ${media.mn}{
-      height: 50px;
-      width: 50px;
-    }
     img{
       border-radius: 50%;
     }
   }
 `
+export const rating =css `{
+  img{
+    height: 25px;
+    display: inline-block;
+    ~ img{
+      margin-left: 5px;
+    }
+  }
+}`

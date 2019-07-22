@@ -15,10 +15,13 @@ import {
   contentSwipe,
   card_last_Row,
   car_speakers,
-card_profile
+card_profile,
+rating
 } from "./EventCardEmotion"
 
-import { px_bg,button } from "../jss/cvcss"
+import { px_bg } from "../jss/cvcss"
+import star_on  from "../../images/star-on.svg"
+import star_off  from "../../images/star-off.svg"
 import CountDown from "./CountDown"
 import event_logo_img from "../../images/aws_logo.svg"
 import { timeFormat } from "../../helpers/TimeStamp"
@@ -30,6 +33,7 @@ const EventCard = () => {
   const [eventTime, setEventTime] = useState(null)
   const [fullTitle, setFullTitle] = useState(false)
   const [slots, setSlots] = useState([])
+  const [stars, setStars] = useState([1,2,3,4,5])
 
   useEffect(() => {
     setSlots(JSON.parse(localStorage.getItem("slots")))
@@ -76,6 +80,7 @@ const EventCard = () => {
             </div>
           </div>
             {currentEvent ? (
+              <Fragment>
               <div css={contentSwipe} className={`${currentEvent.eventType === "break" ? "break" : "def"} ${currentEvent.tracks.length > 1 ? "multiple" : "single"}`}>
                 {currentEvent.tracks.map((track, index) => (
                     <div css={contentCard} className={track.selectedFlag === "selected" ? track.selectedFlag : ' ' } key={index}>
@@ -86,28 +91,34 @@ const EventCard = () => {
                       <h2 css={card_event_title} className={`card_event_title ${fullTitle ? "open" : "close"}`} onClick={()=>setFullTitle(!fullTitle)}>
                         <p >{track.title}</p>
                       </h2>
-                      {currentEvent.eventType !== "talk" ? (<div className={`illust  ${currentEvent.img}`}></div>) : null}
 
                         </div>
-                      <div css={car_speakers}  className="car_speakers" className="speaker" >
+                      {currentEvent.eventType !== "talk" ? (<div className={`illust  ${currentEvent.img}`}></div>) : null}
                         {track.speakers && track.speakers.length && (
-                          <React.Fragment>
+                          <div css={car_speakers}  className="car_speakers" className="speaker" >
                             {track.speakers.map((speaker, idx)=>(
                                 <div css={card_profile}  className="card_profile" key={idx}><span className="profimg"><img src={speaker.profilePicture} alt={speaker.firstName}/></span> <span>{speaker.firstName}</span></div>
                             ))}
-                          </React.Fragment>
+                          </div>
                         )}
-                      </div>
+
+                            {currentEvent.eventType !== "break" ? (
                       <div css={card_last_Row} className="card_last_Row">
-                        <h5 css={card_end_time} className="card_end_time">Ends at {timeFormat(currentEvent.timeEnd + 1000)}</h5>
-                            {currentEvent.eventType !== "break" ? (<span css={button} className="small plain">
-                            Feedback
-                          </span>) : null}
+                          <span css={rating} className="stars">
+                              {stars.map((star)=>(
+
+                                <img src={star_off} key={star} />
+                              )
+                              )}
+                          </span>
                       </div>
+                          ) : null}
                     </div>
                 )) }
-              </div>)
+              </div>
+             <h5 css={card_end_time} className="card_end_time">Ends at {timeFormat(currentEvent.timeEnd + 1000)}</h5></Fragment>)
             : null}
+
         </Fragment>
       ) : eventStarted === "notStarted" ? (<Fragment>
           <div css={event_logo}>
