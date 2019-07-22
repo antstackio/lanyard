@@ -22,7 +22,7 @@ export default Loader;
 // styling
 
 const flexo = css`
-position: absolute;
+position: absolute !important;
     left: 0;
     right: 0;
     top: 0;
