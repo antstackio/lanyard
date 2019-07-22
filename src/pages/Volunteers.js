@@ -8,9 +8,7 @@ import Variables from "../components/jss/Variables"
 
 import { close_icon } from "../components/jss/cvcss"
 
-import FeedbackForm from "../components/FeedbackForm"
-
-const VolunteersPage = () => {
+const Volunteers = () => {
   const [volunteers, setVolunteers] = useState([])
 
   useEffect(() => {
@@ -18,29 +16,28 @@ const VolunteersPage = () => {
   }, [])
 
   return (
-    // <Container>
-    //   <SEO title="Agenda" />
-    //   <Header>
-    //     <Title>Volunteers</Title>
-    //     <span onClick={() => navigate("/")} css={[close_icon, CloseIcon]}>
-    //       close
-    //     </span>
-    //   </Header>
-    //   <VolunteersList>
-    //     {volunteers.map((volunteer, i) => {
-    //       return (
-    //         <VolunteerItem key={i}>
-    //           <span>{volunteer.name}</span>
-    //         </VolunteerItem>
-    //       )
-    //     })}
-    //   </VolunteersList>
-    // </Container>
-    <FeedbackForm />
+    <Container>
+      <SEO title="Agenda" />
+      <Header>
+        <Title>Volunteers</Title>
+        <span onClick={() => navigate("/")} css={[close_icon, CloseIcon]}>
+          close
+        </span>
+      </Header>
+      <VolunteersList>
+        {volunteers.map((volunteer, i) => {
+          return (
+            <VolunteerItem key={i}>
+              <span>{volunteer.name}</span>
+            </VolunteerItem>
+          )
+        })}
+      </VolunteersList>
+    </Container>
   )
 }
 
-export default VolunteersPage
+export default Volunteers
 
 //Styling
 

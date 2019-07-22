@@ -1,19 +1,17 @@
-import React, { useState, useEffect } from "react"
-
+import React, { useState } from "react"
 import { Link, navigate } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
-import { button, form_row, checkbox } from "./jss/cvcss"
+
+import { button, form_row, checkbox, close_icon } from "../components/jss/cvcss"
+import Variables from "../components/jss/Variables"
+
 import star_on from "../images/star-on.svg"
 import star_off from "../images/star-off.svg"
 
-import SEO from "../components/seo"
-import Variables from "../components/jss/Variables"
-
-import { close_icon } from "../components/jss/cvcss"
-
-const FeedbackForm = () => {
+const Feedback = () => {
   const [rating, setRating] = useState(null)
+
   const ratingProvider = () => {
     const values = [1, 2, 3, 4, 5]
     return (
@@ -46,7 +44,7 @@ const FeedbackForm = () => {
       <form css={Form}>
         <Header>
           <Title>FeedBack</Title>
-          <span navigate={"/"} css={[close_icon, CloseIcon]}>
+          <span onClick={() => navigate("/")} css={[close_icon, CloseIcon]}>
             close
           </span>
         </Header>
@@ -88,7 +86,7 @@ const FeedbackForm = () => {
   )
 }
 
-export default FeedbackForm
+export default Feedback
 
 //Styling
 
