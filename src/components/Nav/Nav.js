@@ -42,7 +42,11 @@ const Nav = () => {
             <Link to="/">Volunteers</Link>
           </li>
           <li className="contact ico large">
-            <Link to="/">Speakers</Link>
+            <Link to="/">Sponsers</Link>
+          </li>
+
+          <li className="contact ico large">
+            <Link to="/">Feedback</Link>
           </li>
           <hr></hr>
           <li className="about ico large">
@@ -72,17 +76,16 @@ const agenda_trig = css`
   height: 50px;
   width: 75px;
   text-transform: uppercase;
-  ${media.xs}{
+  ${media.xs} {
     font-size: 14px;
   }
   img {
     margin-bottom: 5px;
     height: 30px;
-    ${media.xs}{
+    ${media.xs} {
       height: 25px;
-
     }
-    ${media.mn}{
+    ${media.mn} {
       height: 20px;
     }
   }
@@ -90,7 +93,7 @@ const agenda_trig = css`
 
 const nav_bar = css`
   height: 15vh;
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   #fly_menu {
@@ -100,17 +103,16 @@ const nav_bar = css`
       text-align: center;
       text-transform: uppercase;
       color: #fff;
-      ${media.xs}{
+      ${media.xs} {
         font-size: 14px;
       }
       img {
         margin-bottom: 5px;
         height: 30px;
-        ${media.xs}{
+        ${media.xs} {
           height: 25px;
-
         }
-        ${media.mn}{
+        ${media.mn} {
           height: 20px;
         }
       }
