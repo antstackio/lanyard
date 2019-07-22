@@ -133,7 +133,15 @@ const slot_wrap = css`
 const slot_track_flex = css`
   display: flex;
   overflow-x: auto;
-  overflow-y: visible;
+     margin-right: -9px;
+    max-width: calc(100% + 9px);
+    overflow-y: visible;
+    width: calc(100% + 9px);
+    &:after {
+    content: '';
+    min-width: 1px;
+    order: 3;
+  }
   > div {
     padding: 10px;
     min-width: 75%;

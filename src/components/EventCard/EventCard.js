@@ -89,7 +89,7 @@ const EventCard = () => {
                         <h4 css={card_now_text} className="card_now_text" ><span>{`Track - ${index + 1}`}</span> {track.selectedFlag === "selected" ? <small>This is in your schedule</small> : null }</h4>
                       ) : null}
                       <h2 css={card_event_title} className={`card_event_title ${fullTitle ? "open" : "close"}`} onClick={()=>setFullTitle(!fullTitle)}>
-                        <p >{track.title}</p>
+                        <p>{track.title}</p>
                       </h2>
 
                         </div>

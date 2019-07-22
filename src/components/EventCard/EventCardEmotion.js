@@ -121,6 +121,9 @@ export const contentCard = css`
     line-height: 0;
   }
   .illust{
+    .break &{
+      flex-grow: 1;
+    }
     margin: 0 0 25px;
     height: 200px;
     ${media.xs}{
@@ -132,7 +135,6 @@ export const contentCard = css`
         }
       }
     }
-
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -225,10 +227,6 @@ export const card_event_title = css`
       font-size: 25px;
       font-weight: 700;
       line-height: 2rem;
-      padding-right: 0;
-      &:before{
-        content: none;
-      }
     }
   }
   >p{
@@ -240,23 +238,9 @@ export const card_event_title = css`
     line-height: 1.5em;
     max-height: 3em;
     transition: all .25s;
-    padding-right: 50px;
+  min-height: 55px;
     position: relative;
-    &:before{
-      content: '';
-        top: -7px;
-        right: 10px;
-        position: absolute;
-        height: 10px;
-        width: 10px;
-        border: solid 2px;
-        border-right: 0;
-        border-top: 0;
-        transform: rotate(-45deg);
-        bottom: 0;
-        margin: auto;
-        transition: all .25s;
-    }
+
   }
   &.open{
     >p{
@@ -305,12 +289,17 @@ export const card_last_Row =css`
 export const contentSwipe = css`
   flex-grow: 1;
   &.multiple{
-  margin-left: -25px;
+  margin-left: -15px;
   padding: 15px 0 30px;
   display: flex;
   overflow: auto;
-  max-width: calc(100% + 50px);
-  width: calc(100% + 50px);
+      max-width: calc(100% + 30px);
+    width: calc(100% + 30px);
+  &:after {
+    content: '';
+    min-width: 25px;
+    order: 3;
+  }
   > div {
     margin-left: 20px;
     min-width: 60%;
