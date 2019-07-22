@@ -458,3 +458,14 @@ export const main_text = css`
 export const white = css`
   color: #fff;
 `
+export const form_row = css`
+margin-bottom: 25px;
+  &.flexo{
+    display: flex;
+  }
+  >.key{
+    display: block;
+margin-bottom: 7px;
+    color: ${Variables.muted_color};
+  }
+`

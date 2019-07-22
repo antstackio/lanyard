@@ -16,10 +16,11 @@ import {
   card_last_Row,
   car_speakers,
 card_profile,
-rating
+ratingCard,
+feedBack
 } from "./EventCardEmotion"
 
-import { px_bg } from "../jss/cvcss"
+import { px_bg, form_row } from "../jss/cvcss"
 import star_on  from "../../images/star-on.svg"
 import star_off  from "../../images/star-off.svg"
 import CountDown from "./CountDown"
@@ -34,10 +35,33 @@ const EventCard = () => {
   const [fullTitle, setFullTitle] = useState(false)
   const [slots, setSlots] = useState([])
   const [stars, setStars] = useState([1,2,3,4,5])
+  const [rating, setRating] = useState(null);
 
   useEffect(() => {
     setSlots(JSON.parse(localStorage.getItem("slots")))
   }, [])
+
+   const ratingProvider = () => {
+    const values = [1, 2, 3, 4, 5];
+    return (
+      <>
+        {values.map((ratingNum, index) => {
+          if (ratingNum <= rating) {
+            return (
+              <img src={star_on} onClick={() => setRating(ratingNum)} key={index} />
+            );
+          } else {
+            return (
+              <img src={star_off}
+                onClick={() => setRating(ratingNum)}
+                key={index}
+              />
+            );
+          }
+        })}
+      </>
+    );
+  };
 
   function setTimingFunction() {
     setInterval(() => {
@@ -104,12 +128,10 @@ const EventCard = () => {
 
                             {currentEvent.eventType !== "break" ? (
                       <div css={card_last_Row} className="card_last_Row">
-                          <span css={rating} className="stars">
+                          <span css={ratingCard} className="stars">
                               {stars.map((star)=>(
-
                                 <img src={star_off} key={star} />
-                              )
-                              )}
+                              ))}
                           </span>
                       </div>
                           ) : null}
@@ -144,7 +166,18 @@ const EventCard = () => {
               <small>Bengaluru - 2019</small>
             </p>
           </div>
-          <h1>Tada</h1>
+          <div css={feedBack}>
+            <div css={form_row}>
+              <label className="key">Rating</label>
+              <div>
+                {ratingProvider()}
+              </div>
+            </div>
+            <div css={form_row}>
+              <textarea placeholder="Remarks"/>
+            </div>
+
+          </div>
         </Fragment>) : <Loader/>}
 
 
