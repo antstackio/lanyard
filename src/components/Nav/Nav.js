@@ -67,6 +67,8 @@ const Nav = () => {
 export default Nav
 
 //Styling
+
+//Styling
 const agenda_trig = css`
   display: flex;
   align-items: center;
@@ -147,6 +149,9 @@ const nav_bar = css`
 const lanyard_logo = css`
   font-size: 0;
   height: 100px;
+  ${media.mn}{
+    height: 75px;
+  }
   background: url(${logo}) center no-repeat;
   background-size: auto 60%;
   display: block;
@@ -162,6 +167,9 @@ const sub_menu = css`
     a {
       display: block;
       padding: 15px 25px;
+      ${media.mn}{
+        padding: 10px 25px;
+      }
       color: ${Variables.dark_base_color};
       text-decoration: none;
     }
@@ -170,7 +178,10 @@ const sub_menu = css`
     }
   }
   hr {
-    margin: 0;
+    margin: 90px 0 0;
+    ${media.mn}{
+      margin: 50px 0 0;
+    }
     & ~ li {
       background: #f7f7f7;
     }

@@ -363,6 +363,9 @@ export const rating = css`
 export const largeRating = css`
   img {
     width: 50px;
+    ${media.mn}{
+      width: 35px;
+    }
     ~ img {
       margin-left: 10px;
     }
@@ -377,5 +380,10 @@ export const end_info = css`
     font-size: 18px;
     margin-top: 50px;
     margin-bottom: 50px;
+    ${media.mn}{
+      font-size: 16px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
   }
 `
