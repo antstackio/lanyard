@@ -135,7 +135,8 @@ export const button = css`
   background: ${Variables.dark_base_color};
   transition: all 0.25s ease;
   border-radius: 30px;
-  ${shadows.blue_shadow}
+  box-shadow: ${shadows.blue_shadow};
+  width: 100%;
   &:hover {
     transform: translateY(-2px);
   }
@@ -244,15 +245,14 @@ export const px_bg = css`
       transform: rotateX(180deg) rotateY(180deg) translateY(-62px);
     }
   }
-  &.blurry{
-        justify-content: flex-start;
+  &.blurry {
+    justify-content: flex-start;
     padding: 25px;
-    ${media.mn}{
+    ${media.mn} {
       padding: 15px;
     }
-    &:before{
-    opacity: .25;
-
+    &:before {
+      opacity: 0.25;
     }
   }
 `
@@ -459,13 +459,78 @@ export const white = css`
   color: #fff;
 `
 export const form_row = css`
-margin-bottom: 25px;
-  &.flexo{
+  margin-bottom: 20px;
+  &.flexo {
     display: flex;
   }
-  >.key{
+  > .key {
     display: block;
-margin-bottom: 7px;
+    margin-bottom: 7px;
     color: ${Variables.muted_color};
+  }
+`
+export const checkbox = css`
+  text-align: left;
+  label {
+    cursor: pointer;
+    input {
+      position: absolute;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+      visibility: hidden;
+      display: none;
+      & + span {
+        display: flex;
+        align-items: center;
+        position: relative;
+        font-size: 13px;
+        .check {
+          position: relative;
+          content: "";
+          min-width: 20px;
+          height: 20px;
+          margin-right: 15px;
+          background: ${Variables.light_bg};
+          border: ${Variables.border_color} solid 1px;
+          &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            width: 100%;
+            background: ${Variables.light_bg};
+            z-index: 2;
+            transition: all 0.25s;
+          }
+          &:after {
+            content: "";
+            left: 2px;
+            top: -3px;
+            right: 0;
+            bottom: 0;
+            background: transparent;
+            z-index: 1;
+            height: 4px;
+            width: 10px;
+            border: solid 2px ${Variables.dark_base_color};
+            position: absolute;
+            border-top: 0;
+            border-right: 0;
+            transform: rotate(-45deg);
+            margin: auto;
+          }
+        }
+      }
+      &:checked + span {
+        small {
+          border-color: ${Variables.dark_base_color};
+          &:before {
+            width: 0;
+          }
+        }
+      }
+    }
   }
 `

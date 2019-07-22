@@ -87,13 +87,14 @@ textarea {
   display: block;
   width: 100%;
   max-width: 100%;
-  border-radius: 0;
-  background-color: #fff;
+  border-radius: 30px;
+  background-color: #f7f7f7;
   box-sizing: border-box;
   font-size: 16px !important;
   outline: none;
 }
 
 textarea {
+  padding: 15px !important;
   height: 100px;
 }
