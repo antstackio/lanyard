@@ -64,3 +64,36 @@ h6 {
     transform: scale(1);
   }
 }
+
+.input,
+.Select-control,
+.Select-input input,
+input[disabled],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px 15px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  height: 45px;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  font-size: 16px !important;
+  outline: none;
+}
+
+textarea {
+  height: 100px;
+}

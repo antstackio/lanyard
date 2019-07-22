@@ -354,7 +354,7 @@ export const card_profile = css `
     }
   }
 `
-export const rating =css `{
+export const rating = css`
   img{
     height: 25px;
     display: inline-block;
@@ -362,4 +362,16 @@ export const rating =css `{
       margin-left: 5px;
     }
   }
-}`
+`
+
+
+export  const feedBack = css `
+  text-align:center;
+  img{
+    display: inline-block;
+    height: 25px;
+    ~ img{
+      margin-left: 7px;
+    }
+  }
+`
