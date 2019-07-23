@@ -367,26 +367,8 @@ export const card_profile = css`
     }
   }
 `
-export const rating = css`
-  img {
-    height: 25px;
-    display: inline-block;
-    ~ img {
-      margin-left: 5px;
-    }
-  }
-`
-export const largeRating = css`
-  img {
-    width: 50px;
-    ${media.mn}{
-      width: 35px;
-    }
-    ~ img {
-      margin-left: 10px;
-    }
-  }
-`
+
+
 export const end_info = css`
   text-align: center;
   label {
