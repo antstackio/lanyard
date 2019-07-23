@@ -20,6 +20,18 @@ const IndexPage = () => {
           }
         }
       }
+      allSponsersJson {
+        nodes {
+          sponsers {
+            brands {
+              sponserName
+              webLink
+              webLogo
+            }
+            tierName
+          }
+        }
+      }
       allAgendaJson {
         nodes {
           slots {
@@ -57,10 +69,12 @@ const IndexPage = () => {
 
   const { slots } = data.allAgendaJson.nodes[0]
   const { volunteers } = data.allVolunteersJson.nodes[0]
+  const { sponsers } = data.allSponsersJson.nodes[0]
   const user = { email: "" }
 
   SetLocalStorage("slots", slots)
   SetLocalStorage("volunteers", volunteers)
+  SetLocalStorage("sponsers", sponsers)
   SetLocalStorage("user", user)
   SetLocalStorage("user", user)
   SetLocalStorage("feedback", {})

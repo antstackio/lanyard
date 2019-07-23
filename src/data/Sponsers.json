@@ -1,0 +1,136 @@
+[
+  {
+    "sponsers": [
+      {
+        "tierName": "platinum",
+        "brands": [
+          {
+            "sponserName": "Jfrog",
+            "webLink": "https://jfrog.com/",
+            "webLogo": "jfrog.jpg"
+          },
+          {
+            "sponserName": "Amazon Alexa",
+            "webLink": "https://developer.amazon.com/alexa",
+            "webLogo": "alexa.jpg"
+          },
+          {
+            "sponserName": "Freshworks",
+            "webLink": "https://www.freshworks.com",
+            "webLogo": "freshworks.jpg"
+          }
+        ]
+      },
+      {
+        "tierName": "gold",
+        "brands": [
+          {
+            "sponserName": "Elastic",
+            "webLink": "https://elastic.co",
+            "webLogo": "elastic.jpg"
+          },
+          {
+            "sponserName": "Postman",
+            "webLink": "https://getpostman.com",
+            "webLogo": "postman.jpg"
+          },
+          {
+            "sponserName": "Epsilon",
+            "webLink": "https://india.epsilon.com",
+            "webLogo": "epsilon.jpg"
+          }
+        ]
+      },
+      {
+        "tierName": "silver",
+        "brands": [
+          {
+            "sponserName": "Sumo Logic",
+            "webLink": "https://sumologic.com",
+            "webLogo": "sumologic.jpg"
+          },
+          {
+            "sponserName": "Jetbrains",
+            "webLink": "https://jetbrains.com",
+            "webLogo": "jetbrains.jpg"
+          },
+          {
+            "sponserName": "Powerup",
+            "webLink": "https://powerupcloud.com",
+            "webLogo": "powerup.jpg"
+          },
+          {
+            "sponserName": "Tensult",
+            "webLink": "https://tensult.com",
+            "webLogo": "tensult.jpg"
+          },
+          {
+            "sponserName": "Cloudyuga.guru",
+            "webLink": "https://cloudyuga.guru",
+            "webLogo": "cloudyuga.jpg"
+          },
+          {
+            "sponserName": "Hasura",
+            "webLink": "https://hasura.io/",
+            "webLogo": "hasura.jpg"
+          }
+        ]
+      },
+      {
+        "tierName": "community",
+        "brands": [
+          {
+            "sponserName": "Woman Who Code Bangalore",
+            "webLink": "https://www.womenwhocode.com/bangalore",
+            "webLogo": "wwc.jpg"
+          },
+          {
+            "sponserName": "WheelsBox.com",
+            "webLink": "https://wheelsbox.com/",
+            "webLogo": "wheelsbox.jpg"
+          },
+          {
+            "sponserName": "Indian Startups ",
+            "webLink": "https://www.meetup.com/indianstartupsbangalore/",
+            "webLogo": "indianstartups.jpg"
+          },
+          {
+            "sponserName": "Wone Creations",
+            "webLink": "https://www.wonecreations.com/",
+            "webLogo": "wone.jpg"
+          },
+          {
+            "sponserName": "Konfhub",
+            "webLink": "https://konfhub.com/",
+            "webLogo": "konfhub.jpg"
+          },
+          {
+            "sponserName": "Fame Technologies",
+            "webLink": "http://www.fametechnologies.in/",
+            "webLogo": "fame.jpg"
+          },
+          {
+            "sponserName": "Developer Circles",
+            "webLink": "https://www.facebook.com/groups/DevCBengaluru/",
+            "webLogo": "fbdcblr.jpg"
+          },
+          {
+            "sponserName": "Go Clouds",
+            "webLink": "https://www.goclouds.com/",
+            "webLogo": "goclouds.jpg"
+          },
+          {
+            "sponserName": "KnowledgeHut",
+            "webLink": "https://www.knowledgehut.com/",
+            "webLogo": "knowledgehut.jpg"
+          },
+          {
+            "sponserName": "EFY Group",
+            "webLink": "https://efy.in/",
+            "webLogo": "efy.jpg"
+          }
+        ]
+      }
+    ]
+  }
+]
