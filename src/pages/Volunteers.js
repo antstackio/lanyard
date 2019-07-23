@@ -1,19 +1,27 @@
 import React, { useState, useEffect } from "react"
-import { navigate } from "gatsby"
+import { navigate, Link } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
-
 import SEO from "../components/seo"
 import Variables from "../components/jss/Variables"
-
 import { close_icon } from "../components/jss/cvcss"
 
 const Volunteers = () => {
+  console.log(images);
   const [volunteers, setVolunteers] = useState([])
 
   useEffect(() => {
     setVolunteers(JSON.parse(localStorage.getItem("volunteers")))
   }, [])
+
+  function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+  }
+
+  const images = importAll(require.context('../images/vols', false, /\.(png|jpe?g|svg)$/));
+  console.log(images);
 
   return (
     <Container>
@@ -28,9 +36,9 @@ const Volunteers = () => {
         {volunteers.map((volunteer, i) => {
           return (
             <VolunteerItem key={i}>
-              <span>{volunteer.name}</span>
-            </VolunteerItem>
-          )
+              {console.log(volunteer.profImage)}
+              <a href={volunteer.profLink}><span css={volImage}><img src={images[volunteer.profImage]} alt={volunteer.profImage} /></span><span css={volName}>{volunteer.firstName} {volunteer.lastName}</span></a>
+            </VolunteerItem>)
         })}
       </VolunteersList>
     </Container>
@@ -94,8 +102,27 @@ const VolunteersList = styled.ul`
 const VolunteerItem = styled.li`
   padding: 10px;
   background: #fff;
-  border-radius: 5px;
+  border-radius: 50px;
   position: relative;
   list-style-type: none;
   margin-bottom: 10px;
+  a{
+    display: flex;
+  text-decoration: none;
+    color: ${Variables.dark_base_color};
+    align-items: center;
+  }
+`
+const volImage = css`
+  height: 50px;
+  width: 50px;
+  margin-right:25px;
+img{
+  max-width: 100%;
+  border-radius: 50%;
+}
+`
+
+const volName = css`
+  font-size: 18px;
 `
