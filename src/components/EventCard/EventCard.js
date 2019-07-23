@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react"
 
-import { navigate } from "gatsby"
+import RatingStars from "../RatingStars"
 import _ from "lodash"
 import Loader from "../Loader"
 import {
@@ -17,14 +17,10 @@ import {
   card_last_Row,
   car_speakers,
   card_profile,
-  ratingCard,
-  largeRating,
   end_info,
   next_list
 } from "./EventCardEmotion"
 
-import star_on from "../../images/star-on.svg"
-import star_off from "../../images/star-off.svg"
 
 import { px_bg, form_row } from "../jss/cvcss"
 import CountDown from "./CountDown"
@@ -38,7 +34,6 @@ const EventCard = () => {
   const [eventTime, setEventTime] = useState(null)
   const [fullTitle, setFullTitle] = useState(false)
   const [slots, setSlots] = useState([])
-  const [stars, setStars] = useState([1, 2, 3, 4, 5])
 
   useEffect(() => {
     setSlots(JSON.parse(localStorage.getItem("slots")))
@@ -154,11 +149,7 @@ const EventCard = () => {
 
                     {currentEvent.eventType !== "break" ? (
                       <div css={card_last_Row} className="card_last_Row">
-                        <span css={ratingCard} className="stars">
-                          {stars.map(star => (
-                            <img src={star_off} key={star} />
-                          ))}
-                        </span>
+                        <RatingStars/>
                       </div>
                     ) : null}
 
@@ -211,15 +202,7 @@ const EventCard = () => {
             <label>
               Event has ended. Help us improve by providing feedback
             </label>
-            <span
-              navigate={"/"}
-              css={[ratingCard, largeRating]}
-              className="stars"
-            >
-              {stars.map(star => (
-                <img src={star_off} key={star} />
-              ))}
-            </span>
+            <RatingStars large/>
           </div>
         </Fragment>
       ) : (

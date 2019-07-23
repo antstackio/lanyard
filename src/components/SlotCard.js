@@ -1,5 +1,8 @@
-import React, {useEffect} from "react"
+import React, {useEffect, Fragment} from "react"
 import { css } from "@emotion/core"
+import _ from "lodash";
+
+import RatingStars from "./RatingStars"
 
 import check_in from "../images/check_in.svg"
 import tea_break from "../images/tea_break.svg"
@@ -64,6 +67,12 @@ const SlotCard = ({ eventData, selectTrack }) => {
                 <small key={idx}>{speaker.firstName} {speaker.lastName}</small>
               ))}
           </div>
+          { eventData.eventType !== "break" && eventData.timeEnd <= _.now() ? (
+            <Fragment>
+              <br/>
+              <RatingStars/>
+            </Fragment>
+          ):null}
           <div css={slot_action}>
             {eventData.eventType == "talk" && (
               <button css={button} onClick={() => handleClick(track, slot_id)}>
