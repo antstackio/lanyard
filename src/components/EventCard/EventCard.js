@@ -152,11 +152,6 @@ const EventCard = () => {
                       </div>
                     )}
 
-                    {currentEvent.eventType !== "break" && (_.now() > (currentEvent.timeEnd - 600000))  ? (
-                      <div css={card_last_Row} className="card_last_Row">
-                        <RatingStars />
-                      </div>
-                    ) : null}
                   </div>
                 ))}
               </div>
