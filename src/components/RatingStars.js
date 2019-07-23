@@ -1,23 +1,38 @@
-import React, {useState} from 'react';
+import React, { useState } from "react"
 import { css } from "@emotion/core"
-import {media} from "./jss/cvcss"
+import { navigate } from "gatsby"
+
+import { media } from "./jss/cvcss"
 import Variables from "./jss/Variables"
 
 import star_off from "../images/star-off.svg"
+import star_on from "../images/star-on.svg"
 
-const RatingStars = ({large}) => {
-
+const RatingStars = ({ large }) => {
   const [stars, setStars] = useState([1, 2, 3, 4, 5])
-    return (
-      <span css={[ratingCard, large ? largeRating : null]} className="stars">
-        {stars.map(star => (
-            <img src={star_off} key={star} />
-        ))}
-    </span>
-    );
-};
+  const [selectedStar, setSelectedStar] = useState(null)
 
-export default RatingStars;
+  function onClickStars(star) {
+    setSelectedStar(star)
+    setTimeout(() => {
+      navigate("/Feedback", { state: { star } })
+    }, 200)
+  }
+
+  return (
+    <span css={[ratingCard, large ? largeRating : null]} className="stars">
+      {stars.map(star => (
+        <img
+          src={star <= selectedStar ? star_on : star_off}
+          key={star}
+          onClick={() => onClickStars(star)}
+        />
+      ))}
+    </span>
+  )
+}
+
+export default RatingStars
 
 const ratingCard = css`
   img {
@@ -31,7 +46,7 @@ const ratingCard = css`
 const largeRating = css`
   img {
     width: 50px;
-    ${media.mn}{
+    ${media.mn} {
       width: 35px;
     }
     ~ img {

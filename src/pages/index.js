@@ -62,6 +62,8 @@ const IndexPage = () => {
   SetLocalStorage("slots", slots)
   SetLocalStorage("volunteers", volunteers)
   SetLocalStorage("user", user)
+  SetLocalStorage("user", user)
+  SetLocalStorage("feedback", {})
 
   return (
     <Layout location={location}>
