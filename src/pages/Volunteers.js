@@ -7,7 +7,6 @@ import Variables from "../components/jss/Variables"
 import { close_icon } from "../components/jss/cvcss"
 
 const Volunteers = () => {
-  console.log(images);
   const [volunteers, setVolunteers] = useState([])
 
   useEffect(() => {
@@ -21,7 +20,6 @@ const Volunteers = () => {
   }
 
   const images = importAll(require.context('../images/vols', false, /\.(png|jpe?g|svg)$/));
-  console.log(images);
 
   return (
     <Container>
@@ -36,7 +34,6 @@ const Volunteers = () => {
         {volunteers.map((volunteer, i) => {
           return (
             <VolunteerItem key={i}>
-              {console.log(volunteer.profImage)}
               <a target={volunteer.profLink ? "_blank" : null} href={volunteer.profLink ? volunteer.profLink : null}><span css={volImage}><img src={images[volunteer.profImage]} alt={volunteer.profImage} /></span><span css={volName}>{volunteer.firstName} {volunteer.lastName}</span></a>
             </VolunteerItem>)
         })}

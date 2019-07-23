@@ -35,6 +35,15 @@ const EventCard = () => {
   const [fullTitle, setFullTitle] = useState(false)
   const [slots, setSlots] = useState([])
 
+  function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+  }
+
+  const images = importAll(require.context('../../images/speakers', false, /\.(png|jpe?g|svg)$/));
+
+
   useEffect(() => {
     setSlots(JSON.parse(localStorage.getItem("slots")))
   }, [])
@@ -136,10 +145,7 @@ const EventCard = () => {
                             key={idx}
                           >
                             <span className="profimg">
-                              <img
-                                src={speaker.profilePicture}
-                                alt={speaker.firstName}
-                              />
+                              <img src={images[speaker.profilePicture]} alt={speaker.profilePicture} />
                             </span>{" "}
                             <span>{speaker.firstName}</span>
                           </div>
