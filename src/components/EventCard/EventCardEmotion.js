@@ -16,9 +16,9 @@ export const eventCard = css`
   box-shadow: ${shadows.theme_shadow};
   border-radius: 0 0 50px 50px;
   padding: ${Variables.gutter_width};
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-end; */
   overflow: auto !important;
   &:not(.inv) {
     padding-top: 100px;
@@ -76,7 +76,6 @@ export const c_days = css`
 
 export const logoHeader = css`
   display: flex;
-
   justify-content: center;
   align-items: center;
   p {
@@ -97,7 +96,6 @@ export const logoHeader = css`
 `
 
 export const contentCard = css`
-  min-height: calc(100% - 30px);
   background: #fff;
   margin-top: 25px;
   padding: 1px 15px 15px;
@@ -109,6 +107,7 @@ export const contentCard = css`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   .break & {
     border-radius: 25px;
   }
@@ -226,6 +225,8 @@ export const card_event_title = css`
       font-size: 25px;
       font-weight: 700;
       line-height: 2rem;
+      display: flex;
+      align-items: center;
     }
   }
   > p {
@@ -239,6 +240,10 @@ export const card_event_title = css`
     transition: all 0.25s;
     min-height: 55px;
     position: relative;
+    justify-content: center;
+    ${media.mn}{
+      min-height: 40px;
+    }
   }
   &.open {
     > p {
@@ -276,21 +281,39 @@ export const card_last_Row = css`
   display: flex;
   align-items: center;
   justify-content: center;
+      margin: 15px 0;
   .break & {
     justify-content: center;
+  }
+  .stars{
+    img{
+        height: 35px;
+    }
   }
   > * {
     margin: 0 !important;
   }
 `
+export const next_list =css`
+  margin: 20px 0;
+  color: ${Variables.text_primary_color};
+  li{
+    margin-left: 20px;
+    b{
+      font-weight: 600;
+    }
+    &:not(:first-of-type){
+      list-style-type: circle;
+    }
+  }
+`
 
 export const contentSwipe = css`
-  flex-grow: 1;
   &.multiple {
     margin-left: -15px;
     padding: 15px 0 30px;
     display: flex;
-    overflow: auto;
+    overflow-x: auto;
     max-width: calc(100% + 30px);
     width: calc(100% + 30px);
     &:after {
@@ -321,9 +344,6 @@ export const car_speakers = css`
     line-height: 1.5;
     display: inline-block;
     text-align: center;
-    ${media.above_xs} {
-      font-size: 20px;
-    }
   }
 `
 
@@ -342,10 +362,6 @@ export const card_profile = css`
     background: #fff;
     border-radius: 50%;
     margin-bottom: 7px;
-    ${media.above_xs} {
-      height: 100px;
-      width: 100px;
-    }
     img {
       border-radius: 50%;
     }

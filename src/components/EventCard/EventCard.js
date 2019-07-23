@@ -20,6 +20,7 @@ import {
   ratingCard,
   largeRating,
   end_info,
+  next_list
 } from "./EventCardEmotion"
 
 import star_on from "../../images/star-on.svg"
@@ -160,12 +161,23 @@ const EventCard = () => {
                         </span>
                       </div>
                     ) : null}
+
                   </div>
                 ))}
               </div>
               <h5 css={card_end_time} className="card_end_time">
-                Ends at {timeFormat(currentEvent.timeEnd + 1000)}
+                From {timeFormat(currentEvent.timeStart)} to {timeFormat(currentEvent.timeEnd + 1000)}
               </h5>
+              {nextEvent && nextEvent.tracks.length ? (
+                <ul css={next_list}>
+                  <li>Up Next : </li>
+                  {nextEvent.tracks.map((ntrack, index) => (
+                    <li key={index}>
+                      <small>{nextEvent.tracks.length > 1 ? (<b>Track - {index + 1} : </b>) : null}{ntrack.title}</small>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </Fragment>
           ) : null}
         </Fragment>

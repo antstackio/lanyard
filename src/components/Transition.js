@@ -27,7 +27,7 @@ const trGrp = css`
   display: flex;
   height: 100vh;
   flex-direction: column;
-  > div:first-child{
+  > div:first-of-type{
     height: calc(85vh - 50px);
   }
 `
