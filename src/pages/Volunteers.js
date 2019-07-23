@@ -37,7 +37,7 @@ const Volunteers = () => {
           return (
             <VolunteerItem key={i}>
               {console.log(volunteer.profImage)}
-              <a href={volunteer.profLink}><span css={volImage}><img src={images[volunteer.profImage]} alt={volunteer.profImage} /></span><span css={volName}>{volunteer.firstName} {volunteer.lastName}</span></a>
+              <a target={volunteer.profLink ? "_blank" : null} href={volunteer.profLink ? volunteer.profLink : null}><span css={volImage}><img src={images[volunteer.profImage]} alt={volunteer.profImage} /></span><span css={volName}>{volunteer.firstName} {volunteer.lastName}</span></a>
             </VolunteerItem>)
         })}
       </VolunteersList>
