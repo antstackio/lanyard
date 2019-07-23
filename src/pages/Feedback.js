@@ -9,14 +9,18 @@ import Variables from "../components/jss/Variables"
 import star_on from "../images/star-on.svg"
 import star_off from "../images/star-off.svg"
 
-const Feedback = props => {
+const Feedback = ({ location }) => {
   const [rating, setRating] = useState(null)
   const [email, setEmail] = useState("")
-  const [comment, setComment] = useState("")
+  const [remark, setRemark] = useState("")
+  const [lsFeedBack, setLsFeedBack] = useState("")
+
+  const { star, track } = location.state
 
   useEffect(() => {
     setEmail(JSON.parse(localStorage.getItem("user")).email)
-    if (props.location) setRating(props.location.state.star)
+    setLsFeedBack(JSON.parse(localStorage.getItem("feedback")))
+    if (location) setRating(star)
   }, [])
 
   const ratingProvider = () => {
@@ -47,10 +51,14 @@ const Feedback = props => {
   }
 
   const onsubmit = () => {
-    // localStorage.setItem("user", JSON.stringify({ email }))
-    console.log(rating)
-    console.log(email)
-    console.log(comment)
+    let remarks = "no Remarks"
+    if (remark !== "") remarks = remark
+
+    const feedback = lsFeedBack
+    lsFeedBack[track.trackId] = { rating, remarks, title: track.title }
+
+    localStorage.setItem("user", JSON.stringify({ email }))
+    localStorage.setItem("feedback", JSON.stringify(feedback))
     return null
   }
 
@@ -99,8 +107,8 @@ const Feedback = props => {
           <div css={form_row}>
             <textarea
               placeholder="Remarks"
-              value={comment}
-              onChange={e => setComment(e.target.value)}
+              value={remark}
+              onChange={e => setRemark(e.target.value)}
             />
           </div>
           <div css={form_row}>
@@ -135,6 +143,7 @@ export default Feedback
 
 const Container = styled.div`
   padding-top: 80px;
+  height: calc(100vh - 50px);
 `
 
 const Header = styled.div`

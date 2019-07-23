@@ -8,14 +8,14 @@ import Variables from "./jss/Variables"
 import star_off from "../images/star-off.svg"
 import star_on from "../images/star-on.svg"
 
-const RatingStars = ({ large }) => {
+const RatingStars = ({ large, track }) => {
   const [stars, setStars] = useState([1, 2, 3, 4, 5])
   const [selectedStar, setSelectedStar] = useState(null)
 
   function onClickStars(star) {
     setSelectedStar(star)
     setTimeout(() => {
-      navigate("/Feedback", { state: { star } })
+      navigate("/Feedback", { state: { star, track } })
     }, 200)
   }
 
