@@ -3,7 +3,6 @@ import { css } from "@emotion/core"
 import { navigate } from "gatsby"
 
 import { media } from "./jss/cvcss"
-import Variables from "./jss/Variables"
 
 import star_off from "../images/star-off.svg"
 import star_on from "../images/star-on.svg"
@@ -45,9 +44,9 @@ const ratingCard = css`
 `
 const largeRating = css`
   img {
-    width: 50px;
+    height: 50px;
     ${media.mn} {
-      width: 35px;
+      height: 35px;
     }
     ~ img {
       margin-left: 10px;
