@@ -34,9 +34,9 @@ const Nav = () => {
           </span>
         }
       >
-        <Link css={lanyard_logo} to="/">
+        <a css={lanyard_logo} target="_blank" href="https://github.com/hnprashanth/lanyard">
           {siteTitle}
-        </Link>
+        </a>
         <ul css={sub_menu}>
           <li className="faq ico large">
             <Link to="/Volunteers">Volunteers</Link>
@@ -48,13 +48,13 @@ const Nav = () => {
           <li className="contact ico large">
             <Link to="/Feedback">Feedback</Link>
           </li>
-          <hr></hr>
+          {/* <hr></hr>
           <li className="about ico large">
             <Link to="/AboutLanyard">About Lanyard</Link>
           </li>
           <li className="about ico large">
             <Link to="/">Help us Improve</Link>
-          </li>
+          </li> */}
         </ul>
       </FlyMenu>
       <span css={agenda_trig} onClick={() => navigate("/AgendaPage")}>
@@ -133,7 +133,6 @@ const nav_bar = css`
     .fly_content {
       border-radius: 50px 50px 0 0;
       .header {
-        background: #f7f7f7;
         order: 1;
         .solid {
           top: auto;
@@ -147,15 +146,24 @@ const nav_bar = css`
 `
 
 const lanyard_logo = css`
+    text-decoration: none;
   font-size: 0;
   height: 100px;
   ${media.mn}{
     height: 75px;
   }
-  background: url(${logo}) center no-repeat;
+  background: url(${logo}) top 75% center no-repeat;
   background-size: auto 60%;
   display: block;
   margin: 15px 0;
+  &:before{
+        content: "Powered by";
+    display: block;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    color: ${Variables.dark_base_color};
+  }
 `
 
 const sub_menu = css`
