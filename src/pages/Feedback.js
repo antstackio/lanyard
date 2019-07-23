@@ -9,13 +9,14 @@ import Variables from "../components/jss/Variables"
 import star_on from "../images/star-on.svg"
 import star_off from "../images/star-off.svg"
 
-const Feedback = () => {
+const Feedback = props => {
   const [rating, setRating] = useState(null)
   const [email, setEmail] = useState("")
   const [comment, setComment] = useState("")
 
   useEffect(() => {
     setEmail(JSON.parse(localStorage.getItem("user")).email)
+    if (props.location) setRating(props.location.state.star)
   }, [])
 
   const ratingProvider = () => {
@@ -46,16 +47,37 @@ const Feedback = () => {
   }
 
   const onsubmit = () => {
-    localStorage.setItem("user", JSON.stringify({ email }))
+    // localStorage.setItem("user", JSON.stringify({ email }))
     console.log(rating)
     console.log(email)
     console.log(comment)
     return null
   }
 
+  const renderButton = () => {
+    if (!email || !rating) {
+      return (
+        <button css={button} disabled>
+          Submit
+        </button>
+      )
+    } else {
+      return (
+        <button css={button} onClick={onsubmit}>
+          Submit
+        </button>
+      )
+    }
+  }
+
   return (
     <Container>
-      <form css={Form}>
+      <form
+        css={Form}
+        onSubmit={e => {
+          e.preventDefault()
+        }}
+      >
         <Header>
           <Title>FeedBack</Title>
           <span onClick={() => navigate("/")} css={[close_icon, CloseIcon]}>
@@ -99,11 +121,7 @@ const Feedback = () => {
                 <Link to="/">Terms & conditions</Link>{" "}
               </small>
             </label>
-            <div>
-              <button css={button} onClick={onsubmit}>
-                Submit
-              </button>
-            </div>
+            <div>{renderButton()}</div>
           </div>
         </div>
       </form>
@@ -168,9 +186,13 @@ const feedBack = css`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  overflow: auto;
+  a {
+    color: ${Variables.dark_base_color};
+  }
   > div:last-child {
-    margin-top: 25px;
+    margin-top: auto;
+    margin-bottom: 0;
   }
   img {
     display: inline-block;

@@ -18,9 +18,8 @@ import {
   car_speakers,
   card_profile,
   end_info,
-  next_list
+  next_list,
 } from "./EventCardEmotion"
-
 
 import { px_bg, form_row } from "../jss/cvcss"
 import CountDown from "./CountDown"
@@ -64,7 +63,7 @@ const EventCard = () => {
   }
 
   setTimingFunction()
-  console.log(nextEvent)
+
   return (
     <div
       css={[eventCard, px_bg]}
@@ -149,22 +148,27 @@ const EventCard = () => {
 
                     {currentEvent.eventType !== "break" ? (
                       <div css={card_last_Row} className="card_last_Row">
-                        <RatingStars/>
+                        <RatingStars />
                       </div>
                     ) : null}
-
                   </div>
                 ))}
               </div>
               <h5 css={card_end_time} className="card_end_time">
-                From {timeFormat(currentEvent.timeStart)} to {timeFormat(currentEvent.timeEnd + 1000)}
+                From {timeFormat(currentEvent.timeStart)} to{" "}
+                {timeFormat(currentEvent.timeEnd + 1000)}
               </h5>
               {nextEvent && nextEvent.tracks.length ? (
                 <ul css={next_list}>
                   <li>Up Next : </li>
                   {nextEvent.tracks.map((ntrack, index) => (
                     <li key={index}>
-                      <small>{nextEvent.tracks.length > 1 ? (<b>Track - {index + 1} : </b>) : null}{ntrack.title}</small>
+                      <small>
+                        {nextEvent.tracks.length > 1 ? (
+                          <b>Track - {index + 1} : </b>
+                        ) : null}
+                        {ntrack.title}
+                      </small>
                     </li>
                   ))}
                 </ul>
@@ -202,7 +206,7 @@ const EventCard = () => {
             <label>
               Event has ended. Help us improve by providing feedback
             </label>
-            <RatingStars large/>
+            <RatingStars large />
           </div>
         </Fragment>
       ) : (
