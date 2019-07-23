@@ -1,7 +1,7 @@
 const Variables = {
   text_primary_color: `#333333`,
   dark_base_color: `#FF9900`,
-  light_bc: `#90DBC0`,
+  light_bc: `#f5ddb9`,
   dark_base_color_2: `#FFC400`,
   black_bg: `#1E2A39`,
   border_color: `#ddd`,
