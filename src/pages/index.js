@@ -13,8 +13,10 @@ const IndexPage = () => {
       allVolunteersJson {
         nodes {
           volunteers {
-            external_link
-            name
+            profLink
+            firstName
+            lastName
+            profImage
           }
         }
       }

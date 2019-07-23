@@ -2,28 +2,112 @@
   {
     "volunteers": [
       {
-        "name": "Rahul S Sawant",
-        "external_link": "https://www.twitter.com/Raalzz"
+        "firstName": "Jeevan",
+        "lastName": "Dongre",
+        "profLink": "https://twitter.com/jeevandongre",
+        "profImage": "jeevan.jpg"
       },
       {
-        "name": "Praveen Kumar",
-        "external_link": "https://www.twitter.com/Raalzz"
+        "firstName": "Sathyajith",
+        "lastName": "Bhat",
+        "profLink": "https://twitter.com/sathyabhat",
+        "profImage": "sathya.png"
       },
       {
-        "name": "Prashanth HN",
-        "external_link": "https://www.twitter.com/Raalzz"
+        "firstName": "Bhuvaneswari",
+        "lastName": "Subramani",
+        "profLink": "https://twitter.com/installjournal",
+        "profImage": "bhuvaneswari.jpg"
       },
       {
-        "name": "Krishna Muddi",
-        "external_link": "https://www.twitter.com/Raalzz"
+        "firstName": "Prashanth",
+        "lastName": "HN",
+        "profLink": "https://twitter.com/prashanth",
+        "profImage": "prashanth.png"
       },
       {
-        "name": "Gladwin Bosco",
-        "external_link": "https://www.twitter.com/Raalzz"
+        "firstName": "Runcy",
+        "lastName": "Oommen",
+        "profLink": "https://twitter.com/runcyoommen",
+        "profImage": "runcy.jpg"
       },
       {
-        "name": "Latif Hussain",
-        "external_link": "https://www.twitter.com/Raalzz"
+        "firstName": "Gaurav",
+        "lastName": "Kamboj",
+        "profLink": "https://twitter.com/OyeHooye",
+        "profImage": "gaurav.jpg"
+      },
+      {
+        "firstName": "Hari",
+        "lastName": "Kiran",
+        "profLink": "https://twitter.com/g_harikiran",
+        "profImage": "hari.jpg"
+      },
+      {
+        "firstName": "Ganesh",
+        "lastName": "Samarthyam",
+        "profLink": "https://twitter.com/GSamarthyam",
+        "profImage": "ganesh.jpg"
+      },
+      {
+        "firstName": "Krishna",
+        "lastName": "Muddi",
+        "profLink": "",
+        "profImage": "krishna.jpg"
+      },
+      {
+        "firstName": "Praveen",
+        "lastName": "Gorakala",
+        "profLink": "https://twitter.com/onlyveen",
+        "profImage": "veen.jpg"
+      },
+      {
+        "firstName": "Rahul",
+        "lastName": "Sawant",
+        "profLink": "https://twitter.com/Raalzz",
+        "profImage": "rahul.jpg"
+      },
+      {
+        "firstName": "Akhil",
+        "lastName": "VC",
+        "profLink": "https://twitter.com/akhilvc10",
+        "profImage": "akhil.jpg"
+      },
+      {
+        "firstName": "Mayank",
+        "lastName": "Pahwa",
+        "profLink": "",
+        "profImage": "mayank.jpg"
+      },
+      {
+        "firstName": "Sahil",
+        "lastName": "Sharma",
+        "profLink": "https://twitter.com/gh05t_r00t",
+        "profImage": "sahil.jpg"
+      },
+      {
+        "firstName": "Piyush",
+        "lastName": "Jalan",
+        "profLink": "https://twitter.com/piyushjalan93",
+        "profImage": "piyush.jpg"
+      },
+      {
+        "firstName": "Harsha",
+        "lastName": "Ramakrishna",
+        "profLink": "",
+        "profImage": "harsha.jpg"
+      },
+      {
+        "firstName": "Kaivalya",
+        "lastName": "Shah",
+        "profLink": "https://twitter.com/hramakr",
+        "profImage": "kaivalya.jpg"
+      },
+      {
+        "firstName": "Gladwin",
+        "lastName": "Bosco",
+        "profLink": "https://twitter.com/GladwinBosco",
+        "profImage": "glady.jpg"
       }
     ]
   }
