@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { css } from "@emotion/core"
 import { navigate } from "gatsby"
 
@@ -9,13 +9,29 @@ import star_on from "../images/star-on.svg"
 
 const RatingStars = ({ large, track }) => {
   const [stars, setStars] = useState([1, 2, 3, 4, 5])
+  const [feedback, setFeedback] = useState(null)
+
   const [selectedStar, setSelectedStar] = useState(null)
 
+ useEffect(() => {
+    const fdbk = JSON.parse(localStorage.getItem("feedback"))
+    if(fdbk){
+      setFeedback(fdbk)
+      if(fdbk[track.trackId]){
+        setSelectedStar(fdbk[track.trackId].rating);
+      }
+    }
+  }, [])
+
   function onClickStars(star) {
-    setSelectedStar(star)
-    setTimeout(() => {
-      navigate("/Feedback", { state: { star, track } })
-    }, 200)
+    if(feedback){
+      if(!feedback[track.trackId]){
+        setSelectedStar(star)
+        setTimeout(() => {
+          navigate("/Feedback", { state: { star, track } })
+        }, 200)
+      }
+    }
   }
 
   return (

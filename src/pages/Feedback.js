@@ -57,6 +57,8 @@ const Feedback = ({ location }) => {
     const feedback = lsFeedBack
     lsFeedBack[track.trackId] = { rating, remarks, title: track.title }
 
+    //update the dynamoDB and call below local storage functions in callback
+
     localStorage.setItem("user", JSON.stringify({ email }))
     localStorage.setItem("feedback", JSON.stringify(feedback))
     return null
@@ -88,11 +90,12 @@ const Feedback = ({ location }) => {
       >
         <Header>
           <Title>FeedBack</Title>
-          <span onClick={() => navigate("/")} css={[close_icon, CloseIcon]}>
+          <span onClick={() => navigate("/AgendaPage")} css={[close_icon, CloseIcon]}>
             close
           </span>
         </Header>
         <div css={feedBack}>
+          <div css={eventTitle}><small>{track.title}</small></div>
           <div css={form_row}>
             <div>{ratingProvider()}</div>
           </div>
@@ -143,7 +146,7 @@ export default Feedback
 
 const Container = styled.div`
   padding-top: 80px;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 50px) !important;
 `
 
 const Header = styled.div`
@@ -188,6 +191,11 @@ const Form = css`
   color: #fff;
   margin: 15px;
   height: 100%;
+`
+
+const eventTitle = css`
+  margin-bottom: 20px;
+  padding: 0 20px;
 `
 
 const feedBack = css`
