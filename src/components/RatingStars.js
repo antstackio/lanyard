@@ -10,7 +10,7 @@ import star_on from "../images/star-on.svg"
 const RatingStars = ({ large, track }) => {
   const [stars, setStars] = useState([1, 2, 3, 4, 5])
   const [feedback, setFeedback] = useState(null)
-
+  const [feedbackProvided, setFeedbackProvided] = useState(false)
   const [selectedStar, setSelectedStar] = useState(null)
 
  useEffect(() => {
@@ -19,39 +19,40 @@ const RatingStars = ({ large, track }) => {
       setFeedback(fdbk)
       if(fdbk[track.trackId]){
         setSelectedStar(fdbk[track.trackId].rating);
+        setFeedbackProvided(true)
+      }
+      else{
+        setFeedbackProvided(false)
       }
     }
     else{
       setFeedback(fdbk)
       if(fdbk["eventFeedback"]){
         setSelectedStar(fdbk["eventFeedback"].rating);
+        setFeedbackProvided(true)
+      }
+      else{
+        setFeedbackProvided(false)
       }
     }
   }, [])
 
   function onClickStars(star) {
-    if(track){
-      if(feedback){
-        if(!feedback[track.trackId]){
-          setSelectedStar(star)
-          setTimeout(() => {
-            navigate("/Feedback", { state: { star, track } })
-          }, 200)
-        }
-      }
-    }
-    else{
+    console.log(feedbackProvided)
+    if(!feedbackProvided){
       setSelectedStar(star)
       setTimeout(() => {
-        navigate("/Feedback", { state: { star, track: { title: "Event Feedback", trackId :  "eventFeedback"} } })
+        navigate("/Feedback", { state: { star, track } })
       }, 200)
     }
   }
 
   return (
     <span css={[ratingCard, large ? largeRating : null]} className="stars">
+      {feedbackProvided ? (<p css={feedbacktext}>Your feedback</p>) : null}
       {stars.map(star => (
         <img
+          className={feedbackProvided ? 'smallStar' : ' '}
           src={star <= selectedStar ? star_on : star_off}
           key={star}
           onClick={() => onClickStars(star)}
@@ -70,6 +71,10 @@ const ratingCard = css`
     ~ img {
       margin-left: 5px;
     }
+    &.smallStar{
+      height: 20px;
+      filter: grayscale();
+    }
   }
 `
 const largeRating = css`
@@ -81,5 +86,13 @@ const largeRating = css`
     ~ img {
       margin-left: 10px;
     }
+    &.smallStar{
+      height: 30px !important;
+    }
   }
+`
+const feedbacktext = css`
+  margin: 0;
+  font-size: 10px;
+  color: #999;
 `
