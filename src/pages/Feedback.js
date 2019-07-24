@@ -36,7 +36,9 @@ const Feedback = ({ location }) => {
     if (!validateEmail(email)) {
       setEmailError("please enter correct email id")
     } else {
-      onsubmit();
+      if(confirm("Do u want to continue? Submitted feedback cannot be edited. Check before proceeding.")) {
+        onsubmit();
+      }
     }
   }
 
