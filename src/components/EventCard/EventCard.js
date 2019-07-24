@@ -63,7 +63,7 @@ const EventCard = () => {
         }
       }
       slots.map((slot, i) => {
-        if (slot.timeStart <= _.now() && slot.timeEnd >= _.now()) {
+        if (slot.timeStart <= _.now() && slots[i + 1].timeStart >= _.now()) {
           setCurrentEvent(slot)
           setNextEvent(slots[i + 1])
         }
@@ -157,7 +157,7 @@ const EventCard = () => {
               </div>
               <h5 css={card_end_time} className="card_end_time">
                 From {timeFormat(currentEvent.timeStart)} to{" "}
-                {timeFormat(currentEvent.timeEnd + 1000)}
+                {timeFormat(currentEvent.timeEnd)}
               </h5>
               {nextEvent && nextEvent.tracks.length ? (
                 <ul css={next_list}>
