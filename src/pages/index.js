@@ -44,6 +44,7 @@ const IndexPage = () => {
             slotId
             timeEnd
             timeStart
+            slotFeedBack
             tracks {
               feedBack
               selectedFlag

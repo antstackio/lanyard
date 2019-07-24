@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from "react"
+import React, { Fragment } from "react"
 import { css } from "@emotion/core"
 import _ from "lodash"
 
