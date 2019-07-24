@@ -148,7 +148,7 @@ const Feedback = ({ location }) => {
       >
         <Header>
           <Title>FeedBack</Title>
-          <span onClick={() => navigate("/AgendaPage")} css={[close_icon, CloseIcon]}>
+          <span onClick={() => navigate(previousPath.replace(origin,""))} css={[close_icon, CloseIcon]}>
             close
           </span>
         </Header>
@@ -265,7 +265,7 @@ const eventTitle = css`
 
 const feedBack = css`
   text-align: center;
-  height: 100%;
+  height: calc(100% - 50px);
   display: flex;
   flex-direction: column;
   overflow: auto;

@@ -180,6 +180,9 @@ const slot_track_flex = css`
           padding-top: 10px;
         }
       }
+      img{
+        filter: brightness(0);
+      }
       &:before {
         content: "";
       }
