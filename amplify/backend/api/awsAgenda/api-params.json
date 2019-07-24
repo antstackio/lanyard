@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "awsAgenda",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "awsAgenda",
+    "apiName": "awsAgenda",
+    "functionArns": [
+        {
+            "lambdaFunction": "awsAgenda"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "lanyard-dev-20190723185008-authRole",
+        "unAuthRoleName": "lanyard-dev-20190723185008-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "awsAgenda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
