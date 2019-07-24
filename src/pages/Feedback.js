@@ -22,6 +22,7 @@ const Feedback = ({ location }) => {
   const [slots, setSlots] = useState([])
 
   const { star, track, selectedSlot } = location.state
+  console.log(location.state);
 
   useEffect(() => {
     setEmail(JSON.parse(localStorage.getItem("user")).email)
@@ -100,6 +101,7 @@ const Feedback = ({ location }) => {
     })
     updateSelectedSlot.slotFeedBack = true
     updateSelectedSlot.tracks[track_index].feedBack = true
+    updateSelectedSlot.tracks[track_index].selectedFlag = "selected"
     return updateSelectedSlot
   }
 
@@ -120,7 +122,7 @@ const Feedback = ({ location }) => {
     setSuccess(true)
 
     setTimeout(() => {
-      navigate("/")
+      navigate(previousPath.replace(origin, ""))
     }, 1000)
 
     return null

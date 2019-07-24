@@ -63,7 +63,14 @@ const EventCard = () => {
         }
       }
       slots.map((slot, i) => {
-        if (slot.timeStart <= _.now() && slots[i + 1].timeStart >= _.now()) {
+        let tEnd;
+        if(slots[i + 1]){
+          tEnd = slots[i + 1].timeStart
+        }
+        else{
+          tEnd = slot.timeStart
+        }
+        if (slot.timeStart <= _.now() && tEnd >= _.now()) {
           setCurrentEvent(slot)
           setNextEvent(slots[i + 1])
         }

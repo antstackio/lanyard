@@ -13,7 +13,7 @@ const RatingStars = ({ large, track, slot }) => {
   const [feedbackProvided, setFeedbackProvided] = useState(false)
   const [selectedStar, setSelectedStar] = useState(null)
 
-  // console.log(slot)
+  console.log(slot)
 
   useEffect(() => {
     const fdbk = JSON.parse(localStorage.getItem("feedback"))
