@@ -1,0 +1,7 @@
+{
+    "tableName": "agendaFeedback",
+    "partitionKeyName": "track_id",
+    "partitionKeyType": "S",
+    "sortKeyName": "created_at",
+    "sortKeyType": "N"
+}

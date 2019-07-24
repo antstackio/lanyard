@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "lanyard-dev-20190723185008-authRole",
+            "UnauthRoleArn": "arn:aws:iam::684655758166:role/lanyard-dev-20190723185008-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::684655758166:role/lanyard-dev-20190723185008-authRole",
+            "Region": "ap-south-1",
+            "DeploymentBucketName": "lanyard-dev-20190723185008-deployment",
+            "UnauthRoleName": "lanyard-dev-20190723185008-unauthRole",
+            "StackName": "lanyard-dev-20190723185008",
+            "StackId": "arn:aws:cloudformation:ap-south-1:684655758166:stack/lanyard-dev-20190723185008/a0fa51b0-ad4c-11e9-9edc-0a00a26756d4"
+        }
+    }
+}
