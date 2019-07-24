@@ -40,10 +40,20 @@ const RatingStars = ({ large, track }) => {
   function onClickStars(star) {
     console.log(feedbackProvided)
     if(!feedbackProvided){
-      setSelectedStar(star)
-      setTimeout(() => {
-        navigate("/Feedback", { state: { star, track } })
-      }, 200)
+      if(track){
+        if(!feedback[track.trackId]){
+          setSelectedStar(star)
+          setTimeout(() => {
+            navigate("/Feedback", { state: { star, track } })
+          }, 200)
+        }
+      }
+      else{
+        setSelectedStar(star)
+        setTimeout(() => {
+          navigate("/Feedback", { state: { star, track: { title: "Event Feedback", trackId :  "eventFeedback"} } })
+        }, 200)
+      }
     }
   }
 
