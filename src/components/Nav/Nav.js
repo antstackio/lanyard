@@ -46,7 +46,7 @@ const Nav = () => {
           </li>
 
           <li className="contact ico large">
-            <Link to="/Feedback">Feedback</Link>
+            <Link to="/Feedback" state={{ track: { title: "Event Feedback" } }}>Feedback</Link>
           </li>
           {/* <hr></hr>
           <li className="about ico large">

@@ -8,6 +8,7 @@
         "slotId": "slot-1",
         "timeStart": 1563885000000,
         "timeEnd": 1563885749000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event1",
@@ -25,6 +26,7 @@
         "slotId": "slot-2",
         "timeStart": 1563885750000,
         "timeEnd": 1563886499000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event2",
@@ -42,6 +44,7 @@
         "slotId": "slot-3",
         "timeStart": 1563886500000,
         "timeEnd": 1563887249000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event3",
@@ -68,6 +71,7 @@
         "slotId": "slot-4",
         "timeStart": 1563887250000,
         "timeEnd": 1563887999000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event4",
@@ -101,6 +105,7 @@
         "slotId": "slot-5",
         "timeStart": 1563888000000,
         "timeEnd": 1563888749000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event5",
@@ -127,6 +132,7 @@
         "slotId": "slot-6",
         "timeStart": 1563888750000,
         "timeEnd": 1563889499000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event6",
@@ -153,6 +159,7 @@
         "slotId": "slot-7",
         "timeStart": 1563889500000,
         "timeEnd": 1563890249000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event7",
@@ -168,6 +175,7 @@
         "slotId": "slot-8",
         "timeStart": 1563890250000,
         "timeEnd": 1563890999000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event8",
@@ -241,6 +249,7 @@
         "slotId": "slot-9",
         "timeStart": 1563891000000,
         "timeEnd": 1563891749000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event12",
@@ -321,6 +330,7 @@
         "slotId": "slot-10",
         "timeStart": 1563891750000,
         "timeEnd": 1563892499000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event16",
@@ -416,6 +426,7 @@
         "slotId": "slot-11",
         "timeStart": 1563892500000,
         "timeEnd": 1563893249000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event20",
@@ -431,6 +442,7 @@
         "slotId": "slot-12",
         "timeStart": 1563893250000,
         "timeEnd": 1563893999000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event21",
@@ -511,6 +523,7 @@
         "slotId": "slot-13",
         "timeStart": 1563894000000,
         "timeEnd": 1563894749000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event25",
@@ -585,6 +598,7 @@
         "slotId": "slot-14",
         "timeStart": 1563894750000,
         "timeEnd": 1563895499000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event29",
@@ -600,6 +614,7 @@
         "slotId": "slot-15",
         "timeStart": 1563895500000,
         "timeEnd": 1563896249000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event30",
@@ -673,6 +688,7 @@
         "slotId": "slot-16",
         "timeStart": 1563896250000,
         "timeEnd": 1563896999000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event34",
@@ -754,6 +770,7 @@
         "slotId": "slot-17",
         "timeStart": 1563897000000,
         "timeEnd": 1563897749000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event38",
@@ -770,6 +787,7 @@
         "slotId": "slot-18",
         "timeStart": 1563897750000,
         "timeEnd": 1563898499000,
+        "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event39",

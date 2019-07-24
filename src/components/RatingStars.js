@@ -15,22 +15,36 @@ const RatingStars = ({ large, track }) => {
 
  useEffect(() => {
     const fdbk = JSON.parse(localStorage.getItem("feedback"))
-    if(fdbk){
+    if(track){
       setFeedback(fdbk)
       if(fdbk[track.trackId]){
         setSelectedStar(fdbk[track.trackId].rating);
       }
     }
+    else{
+      setFeedback(fdbk)
+      if(fdbk["eventFeedback"]){
+        setSelectedStar(fdbk["eventFeedback"].rating);
+      }
+    }
   }, [])
 
   function onClickStars(star) {
-    if(feedback){
-      if(!feedback[track.trackId]){
-        setSelectedStar(star)
-        setTimeout(() => {
-          navigate("/Feedback", { state: { star, track } })
-        }, 200)
+    if(track){
+      if(feedback){
+        if(!feedback[track.trackId]){
+          setSelectedStar(star)
+          setTimeout(() => {
+            navigate("/Feedback", { state: { star, track } })
+          }, 200)
+        }
       }
+    }
+    else{
+      setSelectedStar(star)
+      setTimeout(() => {
+        navigate("/Feedback", { state: { star, track: { title: "Event Feedback", trackId :  "eventFeedback"} } })
+      }, 200)
     }
   }
 
