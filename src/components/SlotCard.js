@@ -73,7 +73,7 @@ const SlotCard = ({ eventData, selectTrack }) => {
             {eventData.eventType !== "break" && eventData.timeEnd <= _.now() ? (
               <Fragment>
                 <br />
-                <RatingStars track={track} />
+                <RatingStars track={track} slot={eventData} />
               </Fragment>
             ) : null}
             <div css={slot_action}>
@@ -180,7 +180,7 @@ const slot_track_flex = css`
           padding-top: 10px;
         }
       }
-      img{
+      img {
         filter: brightness(0);
       }
       &:before {

@@ -7,50 +7,55 @@ import { media } from "./jss/cvcss"
 import star_off from "../images/star-off.svg"
 import star_on from "../images/star-on.svg"
 
-const RatingStars = ({ large, track }) => {
+const RatingStars = ({ large, track, slot }) => {
   const [stars, setStars] = useState([1, 2, 3, 4, 5])
   const [feedback, setFeedback] = useState(null)
   const [feedbackProvided, setFeedbackProvided] = useState(false)
   const [selectedStar, setSelectedStar] = useState(null)
 
- useEffect(() => {
+  // console.log(slot)
+
+  useEffect(() => {
     const fdbk = JSON.parse(localStorage.getItem("feedback"))
-    if(track){
+    if (track) {
       setFeedback(fdbk)
-      if(fdbk[track.trackId]){
-        setSelectedStar(fdbk[track.trackId].rating);
+      if (fdbk[track.trackId]) {
+        setSelectedStar(fdbk[track.trackId].rating)
         setFeedbackProvided(true)
-      }
-      else{
+      } else {
         setFeedbackProvided(false)
       }
-    }
-    else{
+    } else {
       setFeedback(fdbk)
-      if(fdbk["eventFeedback"]){
-        setSelectedStar(fdbk["eventFeedback"].rating);
+      if (fdbk["eventFeedback"]) {
+        setSelectedStar(fdbk["eventFeedback"].rating)
         setFeedbackProvided(true)
-      }
-      else{
+      } else {
         setFeedbackProvided(false)
       }
     }
   }, [])
 
   function onClickStars(star) {
-    if(!feedbackProvided){
-      if(track){
-        if(!feedback[track.trackId]){
+    if (!feedbackProvided) {
+      if (track) {
+        if (!feedback[track.trackId]) {
           setSelectedStar(star)
           setTimeout(() => {
-            navigate("/Feedback", { state: { star, track } })
+            navigate("/Feedback", {
+              state: { star, track, selectedSlot: slot },
+            })
           }, 200)
         }
-      }
-      else{
+      } else {
         setSelectedStar(star)
         setTimeout(() => {
-          navigate("/Feedback", { state: { star, track: { title: "Event Feedback", trackId :  "eventFeedback"} } })
+          navigate("/Feedback", {
+            state: {
+              star,
+              track: { title: "Event Feedback", trackId: "eventFeedback" },
+            },
+          })
         }, 200)
       }
     }
@@ -58,10 +63,10 @@ const RatingStars = ({ large, track }) => {
 
   return (
     <span css={[ratingCard, large ? largeRating : null]} className="stars">
-      {feedbackProvided ? (<p css={feedbacktext}>Your feedback</p>) : null}
+      {feedbackProvided ? <p css={feedbacktext}>Your feedback</p> : null}
       {stars.map(star => (
         <img
-          className={feedbackProvided ? 'smallStar' : ' '}
+          className={feedbackProvided ? "smallStar" : " "}
           src={star <= selectedStar ? star_on : star_off}
           key={star}
           onClick={() => onClickStars(star)}
@@ -80,7 +85,7 @@ const ratingCard = css`
     ~ img {
       margin-left: 5px;
     }
-    &.smallStar{
+    &.smallStar {
       height: 20px;
       filter: grayscale();
     }
@@ -95,7 +100,7 @@ const largeRating = css`
     ~ img {
       margin-left: 10px;
     }
-    &.smallStar{
+    &.smallStar {
       height: 30px !important;
     }
   }
