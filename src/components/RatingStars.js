@@ -38,7 +38,6 @@ const RatingStars = ({ large, track }) => {
   }, [])
 
   function onClickStars(star) {
-    console.log(feedbackProvided)
     if(!feedbackProvided){
       if(track){
         if(!feedback[track.trackId]){
