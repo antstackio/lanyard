@@ -2,6 +2,7 @@ import React, { useState, Fragment, useEffect } from "react"
 import { Link, navigate } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
+import {API} from "aws-amplify"
 
 import { button, form_row, checkbox, close_icon } from "../components/jss/cvcss"
 import Variables from "../components/jss/Variables"
@@ -66,7 +67,7 @@ const Feedback = ({ location }) => {
     )
   }
 
-  const onsubmit = () => {
+  const onsubmit = async () => {
     let remarks = "no Remarks"
     if (remark !== "") remarks = remark
 
@@ -75,9 +76,27 @@ const Feedback = ({ location }) => {
 
 
     //update the dynamoDB and call below local storage functions in callback
+    const data = {
+      body: {
+        track_id: track.trackId,
+        created_at: Date.now(),
+        remarks,
+        rating,
+        title: track.title,
+        speakers: track.speakers,
+        user_email: email || "not provided",
+        contact_me: contactMe
+      }
+    };
+    await API.post("awsAgenda", "/items", data)
+      .then(response => {
+        localStorage.setItem("user", JSON.stringify({ email }))
+        localStorage.setItem("feedback", JSON.stringify(feedback))
+      })
+      .catch(error => {
+        console.log(error);
+      })
 
-    localStorage.setItem("user", JSON.stringify({ email }))
-    localStorage.setItem("feedback", JSON.stringify(feedback))
 
     setSuccess(true)
     setTimeout(() => {
@@ -107,12 +126,12 @@ const Feedback = ({ location }) => {
     <Container>
       {success ? (
         <div css={successText}>
-          <div class="success-checkmark">
-            <div class="check-icon">
-              <span class="icon-line line-tip"></span>
-              <span class="icon-line line-long"></span>
-              <div class="icon-circle"></div>
-              <div class="icon-fix"></div>
+          <div className="success-checkmark">
+            <div className="check-icon">
+              <span className="icon-line line-tip"></span>
+              <span className="icon-line line-long"></span>
+              <div className="icon-circle"></div>
+              <div className="icon-fix"></div>
             </div>
           </div>
             <h1>Submitted</h1>
