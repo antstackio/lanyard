@@ -88,7 +88,7 @@ const IndexPage = () => {
 
   return (
     <ErrorBoundary>
-      <Layout location={location}>
+      <Layout >
         <Global styles={Reset} />
         <HomePage />
       </Layout>
