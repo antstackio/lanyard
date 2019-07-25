@@ -124,10 +124,9 @@ const Feedback = ({ state, fromHomePage }) => {
       localStorage.setItem("feedback", JSON.stringify(feedback))
 
       setSuccess(true)
-
-      setTimeout(() => {
-        navigate(previousPath.replace(origin, ""))
-      }, 1000)
+setTimeout(() => {
+    nvgt()
+  }, 1000)
 
       return null
     }
