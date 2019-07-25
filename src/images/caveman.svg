@@ -1,0 +1,68 @@
+<svg width="202" height="284" viewBox="0 0 202 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M117 227H127V269C127 270.636 126.215 272.088 125 273H72.083C72.0283 272.675 72 272.341 72 272C72 268.686 74.6865 266 78 266C79.7549 266 81.3345 266.754 82.4316 267.955C84.2856 259.405 91.8945 253 101 253C107.718 253 113.622 256.486 117 261.749V227Z" fill="#A56532"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M140 227H150V269C150 270.636 149.215 272.088 148 273H95.083C95.0283 272.675 95 272.341 95 272C95 268.686 97.6865 266 101 266C102.755 266 104.334 266.754 105.432 267.955C107.286 259.405 114.895 253 124 253C130.718 253 136.622 256.486 140 261.749V227Z" fill="url(#paint0_linear)"/>
+<rect y="68.9879" width="47.7626" height="173" rx="23.8813" transform="rotate(-37.5306 0 68.9879)" fill="#DA8541"/>
+<rect y="68.9879" width="47.7626" height="173" rx="23.8813" transform="rotate(-37.5306 0 68.9879)" fill="#DA8541"/>
+<rect y="68.9879" width="112.058" height="40.3703" rx="20.1852" transform="rotate(-37.5306 0 68.9879)" fill="#DA8541"/>
+<rect y="68.9879" width="112.058" height="40.3703" rx="20.1852" transform="rotate(-37.5306 0 68.9879)" fill="#DA8541"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="70" y="101" width="132" height="132">
+<circle cx="136" cy="167" r="66" fill="#2E2E2E"/>
+</mask>
+<g mask="url(#mask0)">
+<circle cx="136" cy="167" r="66" fill="#FFC400"/>
+<circle cx="136" cy="115" r="14" fill="#464646"/>
+<circle cx="136" cy="115" r="14" fill="#464646"/>
+<circle cx="106" cy="167" r="9" fill="#464646"/>
+<circle cx="106" cy="167" r="9" fill="#464646"/>
+<circle cx="113" cy="217" r="23" fill="#464646"/>
+<circle cx="113" cy="217" r="23" fill="#464646"/>
+<circle cx="167" cy="194" r="15" fill="#464646"/>
+<circle cx="167" cy="194" r="15" fill="#464646"/>
+<circle cx="187" cy="144" r="23" fill="#464646"/>
+<circle cx="187" cy="144" r="23" fill="#464646"/>
+</g>
+<rect x="160.925" y="109.22" width="3.77726" height="13.6139" rx="1.88863" transform="rotate(-123.894 160.925 109.22)" fill="#FFDC22"/>
+<rect x="160.925" y="109.22" width="3.77726" height="13.6139" rx="1.88863" transform="rotate(-123.894 160.925 109.22)" fill="#FFDC22"/>
+<rect x="163.146" y="108.392" width="3.77726" height="12.8004" rx="1.88863" transform="rotate(-173.005 163.146 108.392)" fill="#FFDC22"/>
+<rect x="163.146" y="108.392" width="3.77726" height="12.8004" rx="1.88863" transform="rotate(-173.005 163.146 108.392)" fill="#FFDC22"/>
+<rect x="76.3613" y="176.213" width="3.77726" height="13.6139" rx="1.88863" transform="rotate(96.2579 76.3613 176.213)" fill="#FFDC22"/>
+<rect x="76.3613" y="176.213" width="3.77726" height="13.6139" rx="1.88863" transform="rotate(96.2579 76.3613 176.213)" fill="#FFDC22"/>
+<rect x="74.1304" y="175.414" width="3.77726" height="12.8004" rx="1.88863" transform="rotate(47.1463 74.1304 175.414)" fill="#FFDC22"/>
+<rect x="74.1304" y="175.414" width="3.77726" height="12.8004" rx="1.88863" transform="rotate(47.1463 74.1304 175.414)" fill="#FFDC22"/>
+<rect x="135.238" y="49.5232" width="4.19904" height="15.134" rx="2.09952" transform="rotate(-108.514 135.238 49.5232)" fill="#1D1A19"/>
+<rect x="137.862" y="49.2903" width="4.19904" height="14.2297" rx="2.09952" transform="rotate(-157.626 137.862 49.2903)" fill="#1D1A19"/>
+<rect x="132.777" y="155.642" width="3.77726" height="13.6139" rx="1.88863" transform="rotate(-16.0497 132.777 155.642)" fill="#1D1A19"/>
+<rect x="132.885" y="158.009" width="3.77726" height="12.8004" rx="1.88863" transform="rotate(-65.1613 132.885 158.009)" fill="#1D1A19"/>
+<rect x="90.5278" y="151.766" width="3.77726" height="13.6139" rx="1.88863" transform="rotate(55.4711 90.5278 151.766)" fill="#1D1A19"/>
+<rect x="88.3169" y="152.618" width="3.77726" height="12.8004" rx="1.88863" transform="rotate(6.35945 88.3169 152.618)" fill="#1D1A19"/>
+<rect x="82.5459" y="116.011" width="3.77726" height="13.6139" rx="1.88863" transform="rotate(141.597 82.5459 116.011)" fill="#1D1A19"/>
+<rect x="81.5459" y="113.862" width="3.77726" height="12.8004" rx="1.88863" transform="rotate(92.4857 81.5459 113.862)" fill="#1D1A19"/>
+<rect x="79" y="38" width="69" height="131" rx="30" fill="#1D1A19"/>
+<rect x="83" y="103" width="20" height="46" rx="10" transform="rotate(-90 83 103)" fill="#DA8541"/>
+<rect x="98" y="86" width="13" height="28" rx="6.5" fill="#EAA166"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M134 101H137C140.866 101 144 97.866 144 94C144 90.134 140.866 87 137 87H134V101Z" fill="#DA8541"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M134 96H135C136.657 96 138 94.6569 138 93C138 91.3431 136.657 90 135 90H134V96Z" fill="#9B6336"/>
+<circle cx="91" cy="92" r="3" fill="white"/>
+<circle cx="91.5" cy="92.5" r="1.5" fill="#0E3441"/>
+<circle r="3" transform="matrix(-1 0 0 1 119 92)" fill="white"/>
+<circle r="1.5" transform="matrix(-1 0 0 1 118.5 92.5)" fill="#0E3441"/>
+<circle cx="117.5" cy="130.5" r="12.5" fill="#E95151"/>
+<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="105" y="118" width="25" height="25">
+<circle cx="117.5" cy="130.5" r="12.5" fill="#E95151"/>
+</mask>
+<g mask="url(#mask1)">
+<rect x="107" y="121.135" width="4.36157" height="8.72313" rx="2.18078" transform="rotate(-29.3134 107 121.135)" fill="white"/>
+<rect x="112" y="118.135" width="4.36157" height="8.72313" rx="2.18078" transform="rotate(-29.3134 112 118.135)" fill="white"/>
+</g>
+<circle cx="121.5" cy="140.5" r="12.5" fill="#1D1A19"/>
+<rect x="47.7324" y="32.3208" width="51.8675" height="50.7419" rx="25.371" transform="rotate(-37.5306 47.7324 32.3208)" fill="#DA8541"/>
+<rect x="47.7324" y="32.3208" width="51.8675" height="50.7419" rx="25.371" transform="rotate(-37.5306 47.7324 32.3208)" fill="#DA8541"/>
+<rect x="154" y="111" width="48" height="173" rx="24" fill="#DA8541"/>
+<rect x="154" y="111" width="48" height="173" rx="24" fill="#DA8541"/>
+<defs>
+<linearGradient id="paint0_linear" x1="103" y1="273" x2="150" y2="269.5" gradientUnits="userSpaceOnUse">
+<stop offset="0.777894" stop-color="#DA8541"/>
+<stop offset="1" stop-color="#B5713A"/>
+</linearGradient>
+</defs>
+</svg>
