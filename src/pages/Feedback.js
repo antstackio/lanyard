@@ -21,14 +21,18 @@ const Feedback = ({ location }) => {
   const [success, setSuccess] = useState(false)
   const [slots, setSlots] = useState([])
 
-  const { star, track, selectedSlot } = location.state
-  console.log(location.state);
+  if (!location.state) {
+    navigate("/")
+    return null
+  }
+
+  const { track, selectedSlot } = location.state
 
   useEffect(() => {
     setEmail(JSON.parse(localStorage.getItem("user")).email)
     setLsFeedBack(JSON.parse(localStorage.getItem("feedback")))
     setSlots(JSON.parse(localStorage.getItem("slots")))
-    if (location) setRating(star)
+    if (location) setRating(location.state.star)
   }, [])
 
   function validateEmail(email) {
@@ -88,9 +92,13 @@ const Feedback = ({ location }) => {
       },
     }
 
-    // await API.post("awsAgenda", "/items", data)
-    //   .then(() => {updateLS(remarks)})
-    //   .catch(error => {console.log(error)})
+    await API.post("awsAgenda", "/items", data)
+      .then(() => {
+        updateLS(remarks)
+      })
+      .catch(error => {
+        console.log(error)
+      })
     updateLS(remarks)
   }
 

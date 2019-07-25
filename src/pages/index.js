@@ -7,9 +7,11 @@ import Reset from "../components/jss/Reset"
 import HomePage from "./HomePage"
 import Layout from "../components/layout"
 
-import Amplify from "aws-amplify";
-import awsconfig from "../aws-exports";
-Amplify.configure(awsconfig);
+import Amplify from "aws-amplify"
+import awsconfig from "../aws-exports"
+Amplify.configure(awsconfig)
+
+import ErrorBoundary from "../components/ErrorBoundary"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -85,10 +87,12 @@ const IndexPage = () => {
   SetLocalStorage("feedback", {})
 
   return (
-    <Layout location={location}>
-      <Global styles={Reset} />
-      <HomePage />
-    </Layout>
+    <ErrorBoundary>
+      <Layout location={location}>
+        <Global styles={Reset} />
+        <HomePage />
+      </Layout>
+    </ErrorBoundary>
   )
 }
 
