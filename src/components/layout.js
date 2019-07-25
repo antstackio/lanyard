@@ -2,15 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { css } from "@emotion/core"
 
-import Transition from "./Transition"
+// import Transition from "./Transition"
 
 const Layout = ({ children, location }) => (
-  <div css={lanyard_page}>
-    <div className="children">
-      <main>
-        <Transition location={location.pathname}>{children}</Transition>
-      </main>
-    </div>
+  <div css={lanyard_page} id="lanyard_page">
+        {children}
   </div>
 )
 
@@ -23,8 +19,12 @@ export default Layout
 //Styling
 
 const lanyard_page = css`
-   {
-    height: 100vh;
-    padding-bottom: 15vh;
+#lanyard_page{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  > div:first-of-type{
+    height: calc(85vh - 50px);
   }
+}
 `

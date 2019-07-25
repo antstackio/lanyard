@@ -1,17 +1,20 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, Fragment } from "react"
 import { css } from "@emotion/core"
-import { navigate } from "gatsby"
 
 import { media } from "./jss/cvcss"
 
 import star_off from "../images/star-off.svg"
 import star_on from "../images/star-on.svg"
+import Feedback from "../components/Feedback";
 
 const RatingStars = ({ large, track, slot, overAllFeedback }) => {
   const [stars, setStars] = useState([1, 2, 3, 4, 5])
   const [feedback, setFeedback] = useState(null)
   const [feedbackProvided, setFeedbackProvided] = useState(false)
+
   const [selectedStar, setSelectedStar] = useState(null)
+  const [selectedSlot, setSelectedSlot] = useState(null)
+  const [fdbk, setFdbk] = useState(null)
 
 
   useEffect(() => {
@@ -40,28 +43,22 @@ const RatingStars = ({ large, track, slot, overAllFeedback }) => {
       if (track) {
         if (!feedback[track.trackId]) {
           setSelectedStar(star)
+          setSelectedSlot(slot)
           setTimeout(() => {
-            navigate("/Feedback", {
-              state: { star, track, selectedSlot: slot },
-            })
+            setFdbk(0)
           }, 200)
         }
       } else {
         setSelectedStar(star)
         setTimeout(() => {
-          navigate("/Feedback", {
-            state: {
-              star,
-              track: { title: "Event Feedback", trackId: "eventFeedback" },
-              overAllFeedback
-            },
-          })
-        }, 200)
+          setFdbk(1)
+          }, 200)
       }
     }
   }
 
   return (
+    <Fragment>
     <span css={[ratingCard, large ? largeRating : null]} className="stars">
       {feedbackProvided ? <p css={feedbacktext}>Your feedback</p> : null}
       {stars.map(star => (
@@ -73,6 +70,9 @@ const RatingStars = ({ large, track, slot, overAllFeedback }) => {
         />
       ))}
     </span>
+      {fdbk === 0 &&(<Feedback  state={{ selectedStar, track, selectedSlot: slot }}/>)}
+      {fdbk === 1 &&(<Feedback fromHomePage  state={{ selectedStar, track : {title: "Event Feedback", trackId: "eventFeedback"}, overAllFeedback }}/>)}
+    </Fragment>
   )
 }
 

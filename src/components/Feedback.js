@@ -5,13 +5,13 @@ import styled from "@emotion/styled"
 import { API } from "aws-amplify"
 import _ from "lodash"
 
-import { button, form_row, checkbox, close_icon } from "../components/jss/cvcss"
-import Variables from "../components/jss/Variables"
+import { button, form_row, checkbox, close_icon } from "./jss/cvcss"
+import Variables from "./jss/Variables"
 
 import star_on from "../images/star-on.svg"
 import star_off from "../images/star-off.svg"
 
-const Feedback = ({ location }) => {
+const Feedback = ({ state, fromHomePage }) => {
   const [rating, setRating] = useState(null)
   const [contactMe, setContactMe] = useState(true)
   const [email, setEmail] = useState("")
@@ -21,18 +21,19 @@ const Feedback = ({ location }) => {
   const [success, setSuccess] = useState(false)
   const [slots, setSlots] = useState([])
 
-  if (!location.state) {
-    navigate("/")
-    return null
-  }
+  // if (!location.state) {
+  //   navigate("/")
+  //   return null
+  // }
+  console.log(state)
 
-  const { track, selectedSlot, overAllFeedback } = location.state
+  const { track, selectedSlot, overAllFeedback } = state
 
   useEffect(() => {
     setEmail(JSON.parse(localStorage.getItem("user")).email)
     setLsFeedBack(JSON.parse(localStorage.getItem("feedback")))
     setSlots(JSON.parse(localStorage.getItem("slots")))
-    if (location) setRating(location.state.star)
+    if (state) setRating(state.selectedStar)
   }, [])
 
   function validateEmail(email) {
@@ -152,12 +153,20 @@ const Feedback = ({ location }) => {
     setSuccess(true)
 
     setTimeout(() => {
-      navigate(previousPath.replace(origin, ""))
-    }, 1000)
+    nvgt()
+  }, 1000)
 
     return null
   }
+function nvgt(){
 
+      if(fromHomePage){
+        navigate("/AgendaPage")
+      }
+      else{
+        navigate("/")
+      }
+}
   const renderButton = () => {
     if (!rating || !validateEmail(email)) {
       return (
@@ -198,7 +207,7 @@ const Feedback = ({ location }) => {
           <Header>
             <Title>FeedBack</Title>
             <span
-              onClick={() => navigate(previousPath.replace(origin, ""))}
+              onClick={() => nvgt()}
               css={[close_icon, CloseIcon]}
             >
               close
@@ -269,8 +278,15 @@ export default Feedback
 //Styling
 
 const Container = styled.div`
-  padding-top: 80px;
-  height: calc(100vh - 50px) !important;
+    padding-top: 80px;
+    height: 100vh !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    border: 0;
+    z-index: 999999;
+    background: #1E2A39;
 `
 
 const Header = styled.div`
@@ -324,10 +340,16 @@ const eventTitle = css`
 
 const feedBack = css`
   text-align: center;
-  height: calc(100% - 50px);
+  height: 100%;
   display: flex;
+  padding-bottom: 80px;
   flex-direction: column;
   overflow: auto;
+  input[type="checkbox"]{
+    & +span{
+      color: #fff;
+    }
+  }
   a {
     color: ${Variables.dark_base_color};
   }

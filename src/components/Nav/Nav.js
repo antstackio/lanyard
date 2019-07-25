@@ -58,19 +58,7 @@ const Nav = () => {
           <li className="contact ico large">
             <Link to="/Sponsers">Sponsers</Link>
           </li>
-        {lsSlots && !lsFeedBack.eventFeedback && (_.now() > lsSlots[lsSlots.length-1].timeEnd ) ?
-          ( <li className="contact ico large">
-            <Link to="/Feedback"
-                  state={
-                    {
-                      track: {
-                          title: "Event Feedback",
-                          trackId :  "eventFeedback"
-                        },
-                      overAllFeedback : true
-                      }
-                    }>Feedback</Link>
-          </li>): null}
+
 
           {/* <hr></hr>
           <li className="about ico large">
