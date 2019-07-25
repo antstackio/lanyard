@@ -26,7 +26,7 @@ const Feedback = ({ location }) => {
     return null
   }
 
-  const { track, selectedSlot } = location.state
+  const { track, selectedSlot, overAllFeedback } = location.state
 
   useEffect(() => {
     setEmail(JSON.parse(localStorage.getItem("user")).email)
@@ -43,8 +43,6 @@ const Feedback = ({ location }) => {
   function validateField() {
     if (!validateEmail(email)) {
       setEmailError("please enter correct email id")
-    } else {
-      onsubmit()
     }
   }
 
@@ -92,14 +90,14 @@ const Feedback = ({ location }) => {
       },
     }
 
+    // checkParentComponent(remarks)
     await API.post("awsAgenda", "/items", data)
       .then(() => {
-        updateLS(remarks)
+        checkParentComponent(remarks)
       })
       .catch(error => {
         console.log(error)
       })
-    updateLS(remarks)
   }
 
   function updateSelectedSlot() {
@@ -109,8 +107,32 @@ const Feedback = ({ location }) => {
     })
     updateSelectedSlot.slotFeedBack = true
     updateSelectedSlot.tracks[track_index].feedBack = true
-    updateSelectedSlot.tracks[track_index].selectedFlag = "selected"
+    if(updateSelectedSlot.tracks.length > 1){
+      updateSelectedSlot.tracks[track_index].selectedFlag = "selected"
+    }
     return updateSelectedSlot
+  }
+
+  function checkParentComponent(remarks){
+
+    if(overAllFeedback){
+      const feedback = lsFeedBack
+      lsFeedBack["eventFeedback"] = {rating, remarks, title: "Event Feedback"}
+
+      localStorage.setItem("user", JSON.stringify({ email }))
+      localStorage.setItem("feedback", JSON.stringify(feedback))
+
+      setSuccess(true)
+
+      setTimeout(() => {
+        navigate(previousPath.replace(origin, ""))
+      }, 1000)
+
+      return null
+    }
+    else{
+      updateLS(remarks)
+    }
   }
 
   function updateLS(remarks) {
@@ -137,7 +159,7 @@ const Feedback = ({ location }) => {
   }
 
   const renderButton = () => {
-    if (!email || !rating) {
+    if (!rating || !validateEmail(email)) {
       return (
         <button css={button} disabled>
           Submit
@@ -145,7 +167,7 @@ const Feedback = ({ location }) => {
       )
     } else {
       return (
-        <button css={button} onClick={validateField}>
+        <button css={button} onClick={onsubmit}>
           Submit
         </button>
       )
@@ -197,6 +219,7 @@ const Feedback = ({ location }) => {
                 onChange={e => {
                   setEmail(e.target.value)
                 }}
+                onBlur={validateField}
                 onFocus={() => {
                   setEmailError("")
                 }}

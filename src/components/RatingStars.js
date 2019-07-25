@@ -7,13 +7,12 @@ import { media } from "./jss/cvcss"
 import star_off from "../images/star-off.svg"
 import star_on from "../images/star-on.svg"
 
-const RatingStars = ({ large, track, slot }) => {
+const RatingStars = ({ large, track, slot, overAllFeedback }) => {
   const [stars, setStars] = useState([1, 2, 3, 4, 5])
   const [feedback, setFeedback] = useState(null)
   const [feedbackProvided, setFeedbackProvided] = useState(false)
   const [selectedStar, setSelectedStar] = useState(null)
 
-  console.log(slot)
 
   useEffect(() => {
     const fdbk = JSON.parse(localStorage.getItem("feedback"))
@@ -54,6 +53,7 @@ const RatingStars = ({ large, track, slot }) => {
             state: {
               star,
               track: { title: "Event Feedback", trackId: "eventFeedback" },
+              overAllFeedback
             },
           })
         }, 200)

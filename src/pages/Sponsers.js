@@ -25,7 +25,7 @@ const Sponsers = () => {
     <Container>
       <SEO title="Agenda" />
       <Header>
-        <Title>Sponsers</Title>
+        <Title>Sponsors</Title>
         <span onClick={() => navigate("/")} css={[close_icon, CloseIcon]}>
           close
         </span>
