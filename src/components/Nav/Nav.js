@@ -56,7 +56,7 @@ const Nav = () => {
             <Link to="/Volunteers">Volunteers</Link>
           </li>
           <li className="contact ico large">
-            <Link to="/Sponsers">Sponsers</Link>
+            <Link to="/Sponsers">Sponsors</Link>
           </li>
 
 
