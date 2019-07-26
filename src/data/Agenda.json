@@ -6,8 +6,8 @@
         "img": "check-in",
         "room": null,
         "slotId": "slot-1",
-        "timeStart": 1564126500000,
-        "timeEnd": 1564126620000,
+        "timeStart": 1564194600000,
+        "timeEnd": 1564197300000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -24,8 +24,8 @@
         "img": "welcome",
         "room": null,
         "slotId": "slot-2",
-        "timeStart": 1564126620000,
-        "timeEnd": 1564126740000,
+        "timeStart": 1564197300000,
+        "timeEnd": 1564198200000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -42,8 +42,8 @@
         "img": "default",
         "room": null,
         "slotId": "slot-3",
-        "timeStart": 1564126740000,
-        "timeEnd": 1564126860000,
+        "timeStart": 1564198200000,
+        "timeEnd": 1564200000000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -51,7 +51,7 @@
             "selectedFlag": "default",
             "trackLength": 4,
             "feedBack": false,
-            "title": "Keynote: Embracing Full-stack Serverless. A new paradigm",
+            "title": "Keynote: Embracing Full-stack Serverless. A New Paradigm",
             "speakers": [
               {
                 "firstName": "Gerard",
@@ -69,8 +69,8 @@
         "img": "default",
         "room": null,
         "slotId": "slot-4",
-        "timeStart": 1564126860000,
-        "timeEnd": 1564126980000,
+        "timeStart": 1564200000000,
+        "timeEnd": 1564201800000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -103,8 +103,8 @@
         "img": "default",
         "room": null,
         "slotId": "slot-5",
-        "timeStart": 1564126980000,
-        "timeEnd": 1564127100000,
+        "timeStart": 1564201800000,
+        "timeEnd": 1564203600000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -115,11 +115,11 @@
             "title": "Building Voice Enabled Experiences with Alexa",
             "speakers": [
               {
-                "firstName": "Sohan",
-                "lastName": "Maheshwar",
-                "profilePicture": "maheshwar_sohan.jpg",
-                "designation": "Alexa Evangelist | Developer Evangelist at Amazon",
-                "externalLink": "https://www.linkedin.com/in/sohanmaheshwar/"
+                "firstName": "Karthik",
+                "lastName": "Ragubathy",
+                "profilePicture": "karthik_ragubathy.jpg",
+                "designation": "Solutions Architect, Alexa Skills Kit",
+                "externalLink": "https://www.linkedin.com/in/pkarthikr/"
               }
             ]
           }
@@ -130,8 +130,8 @@
         "img": "default",
         "room": null,
         "slotId": "slot-6",
-        "timeStart": 1564127100000,
-        "timeEnd": 1564127220000,
+        "timeStart": 1564203600000,
+        "timeEnd": 1564205400000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -157,8 +157,8 @@
         "img": "tea_break",
         "room": null,
         "slotId": "slot-7",
-        "timeStart": 1564127220000,
-        "timeEnd": 1564127340000,
+        "timeStart": 1564205400000,
+        "timeEnd": 1564207200000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -173,8 +173,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-8",
-        "timeStart": 1564127340000,
-        "timeEnd": 1564127460000,
+        "timeStart": 1564207200000,
+        "timeEnd": 1564208400000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -247,8 +247,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-9",
-        "timeStart": 1564127460000,
-        "timeEnd": 1564127580000,
+        "timeStart": 1564209000000,
+        "timeEnd": 1564210200000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -291,8 +291,8 @@
             "title": "Lot of learns from on-prem migration to AWS",
             "speakers": [
               {
-                "firstName": "Gangireddy D",
-                "lastName": "Gangireddy D",
+                "firstName": "Gangireddy",
+                "lastName": "D",
                 "profilePicture": "gangireddy.jpg",
                 "designation": "SRE, Knolskape",
                 "externalLink": "https://www.linkedin.com/in/gangireddy-danamreddy-465675148/"
@@ -312,13 +312,6 @@
                 "profilePicture": "shwetha.jpg",
                 "designation": "Sr. MTS , VMware software India & City Director - Women Who Code Bangalore",
                 "externalLink": "https://www.linkedin.com/in/shwetha-lakshman-rao-a4a59015/"
-              },
-              {
-                "firstName": "Bhuvaneswari",
-                "lastName": "Subramani",
-                "profilePicture": "bhuvaneswari.jpg",
-                "designation": "AWS re:Invent Diversity Scholarship Recipient",
-                "externalLink": "https://www.linkedin.com/in/bhuvanas/"
               }
             ]
           }
@@ -328,8 +321,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-10",
-        "timeStart": 1564127580000,
-        "timeEnd": 1564127700000,
+        "timeStart": 1564210800000,
+        "timeEnd": 1564213200000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -424,8 +417,8 @@
         "img": "lunch_break",
         "room": null,
         "slotId": "slot-11",
-        "timeStart": 1564127700000,
-        "timeEnd": 1564127820000,
+        "timeStart": 1564213200000,
+        "timeEnd": 1564216800000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -440,8 +433,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-12",
-        "timeStart": 1564127820000,
-        "timeEnd": 1564127940000,
+        "timeStart": 1564216800000,
+        "timeEnd": 1564219200000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -471,7 +464,7 @@
                 "firstName": "Nabarun",
                 "lastName": "Pal",
                 "profilePicture": "nabarun_pal.jpg",
-                "designation": "Software Developer, Intuit",
+                "designation": "Platform Engineer, Rorodata",
                 "externalLink": "https://www.linkedin.com/in/palnabarun/"
               }
             ]
@@ -503,7 +496,7 @@
                 "firstName": "Pranesh",
                 "lastName": "Vittal",
                 "profilePicture": "pranesh_vittal.jpg",
-                "designation": "Database Architect, Medlife.com",
+                "designation": "Associate Director - Database & DevOps, Medlife.com",
                 "externalLink": "https://www.linkedin.com/in/praneshvittal/"
               },
               {
@@ -521,8 +514,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-13",
-        "timeStart": 1564127940000,
-        "timeEnd": 1564128060000,
+        "timeStart": 1564219800000,
+        "timeEnd": 1564222200000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -536,7 +529,7 @@
                 "firstName": "Ilanchezhian",
                 "lastName": "Ganesamurthy",
                 "profilePicture": "ilanchezhian.jpg",
-                "designation": "Coorganizer AWS User Group, Chennai",
+                "designation": "Enterprise Architect, EVRY",
                 "externalLink": "https://www.linkedin.com/in/ilanchezhian/"
               }
             ]
@@ -596,8 +589,8 @@
         "img": "tea_break",
         "room": null,
         "slotId": "slot-14",
-        "timeStart": 1564128060000,
-        "timeEnd": 1564128180000,
+        "timeStart": 1564222200000,
+        "timeEnd": 1564222800000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -612,8 +605,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-15",
-        "timeStart": 1564128180000,
-        "timeEnd": 1564128300000,
+        "timeStart": 1564222800000,
+        "timeEnd": 1564225200000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -686,8 +679,8 @@
         "eventType": "talk",
         "room": null,
         "slotId": "slot-16",
-        "timeStart": 1564128300000,
-        "timeEnd": 1564128420000,
+        "timeStart": 1564225800000,
+        "timeEnd": 1564228200000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -768,8 +761,8 @@
         "img": "networking",
         "room": null,
         "slotId": "slot-17",
-        "timeStart": 1564128420000,
-        "timeEnd": 1564128540000,
+        "timeStart": 1564228200000,
+        "timeEnd": 1564229700000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -785,8 +778,8 @@
         "img": "closing",
         "room": null,
         "slotId": "slot-18",
-        "timeStart": 1564128540000,
-        "timeEnd": 1564128660000,
+        "timeStart": 1564229700000,
+        "timeEnd": 1564231200000,
         "slotFeedBack": false,
         "tracks": [
           {
