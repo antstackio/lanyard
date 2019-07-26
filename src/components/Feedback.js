@@ -199,7 +199,7 @@ const Feedback = ({ state, fromHomePage }) => {
             <Header>
               <Title>FeedBack</Title>
               <span
-                onClick={() => navigate("/")}
+                onClick={() => navigate(previousPath.replace(origin, ""))}
                 css={[close_icon, CloseIcon]}
               >
                 close
