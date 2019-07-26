@@ -44,7 +44,7 @@ module.exports = {
         short_name: `Lanyard`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#FF9900`,
+        theme_color: `#1E2A39`,
         display: `standalone`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
