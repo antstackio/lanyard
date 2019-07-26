@@ -46,6 +46,11 @@ const Feedback = ({ state, fromHomePage }) => {
       setEmailError("please enter correct email id")
     }
   }
+  function submitConfirmation(){
+    if(confirm("Do u want to continue? Submitted feedback cannot be edited. Check before proceeding.")) {
+      onsubmit();
+    }
+  }
 
   const ratingProvider = () => {
     const values = [1, 2, 3, 4, 5]
@@ -108,29 +113,29 @@ const Feedback = ({ state, fromHomePage }) => {
     })
     updateSelectedSlot.slotFeedBack = true
     updateSelectedSlot.tracks[track_index].feedBack = true
-    if(updateSelectedSlot.tracks.length > 1){
+    if (updateSelectedSlot.tracks.length > 1) {
       updateSelectedSlot.tracks[track_index].selectedFlag = "selected"
     }
     return updateSelectedSlot
   }
 
-  function checkParentComponent(remarks){
+  function checkParentComponent(remarks) {
 
-    if(overAllFeedback){
+    if (overAllFeedback) {
       const feedback = lsFeedBack
-      lsFeedBack["eventFeedback"] = {rating, remarks, title: "Event Feedback"}
+      lsFeedBack["eventFeedback"] = { rating, remarks, title: "Event Feedback" }
 
       localStorage.setItem("user", JSON.stringify({ email }))
       localStorage.setItem("feedback", JSON.stringify(feedback))
 
       setSuccess(true)
-setTimeout(() => {
-    nvgt()
-  }, 1000)
+      setTimeout(() => {
+        nvgt()
+      }, 1000)
 
       return null
     }
-    else{
+    else {
       updateLS(remarks)
     }
   }
@@ -152,20 +157,20 @@ setTimeout(() => {
     setSuccess(true)
 
     setTimeout(() => {
-    nvgt()
-  }, 1000)
+      nvgt()
+    }, 1000)
 
     return null
   }
-function nvgt(){
+  function nvgt() {
 
-      if(fromHomePage){
-        navigate("/AgendaPage")
-      }
-      else{
-        navigate("/")
-      }
-}
+    if (fromHomePage) {
+      navigate("/AgendaPage")
+    }
+    else {
+      navigate("/")
+    }
+  }
   const renderButton = () => {
     if (!rating || !validateEmail(email)) {
       return (
@@ -175,7 +180,7 @@ function nvgt(){
       )
     } else {
       return (
-        <button css={button} onClick={onsubmit}>
+        <button css={button} onClick={submitConfirmation}>
           Submit
         </button>
       )
@@ -197,77 +202,77 @@ function nvgt(){
           <h1>Submitted</h1>
         </div>
       ) : (
-        <form
-          css={Form}
-          onSubmit={e => {
-            e.preventDefault()
-          }}
-        >
-          <Header>
-            <Title>FeedBack</Title>
-            <span
-              onClick={() => nvgt()}
-              css={[close_icon, CloseIcon]}
-            >
-              close
+          <form
+            css={Form}
+            onSubmit={e => {
+              e.preventDefault()
+            }}
+          >
+            <Header>
+              <Title>FeedBack</Title>
+              <span
+                onClick={() => nvgt()}
+                css={[close_icon, CloseIcon]}
+              >
+                close
             </span>
-          </Header>
-          <div css={feedBack}>
-            <div css={eventTitle}>
-              <small>{track.title}</small>
-            </div>
-            <div css={form_row}>
-              <div>{ratingProvider()}</div>
-            </div>
-            <div css={form_row}>
-              <input
-                placeholder="Enter Email"
-                type="text"
-                value={email}
-                onChange={e => {
-                  setEmail(e.target.value)
-                }}
-                onBlur={validateField}
-                onFocus={() => {
-                  setEmailError("")
-                }}
-              />
-              {emailError ? <span css={error}>{emailError}</span> : null}
-            </div>
-            <div css={form_row}>
-              <textarea
-                placeholder="Remarks"
-                value={remark}
-                onChange={e => setRemark(e.target.value)}
-              />
-            </div>
-            <div css={form_row}>
-              <div css={checkbox}>
-                <label>
-                  <input
-                    defaultChecked={contactMe}
-                    type="checkbox"
-                    onChange={() => setContactMe(!contactMe)}
-                  />
-                  <span>
-                    <small className="check"></small>Do you want AWS sales /
-                    experts to contact you?
+            </Header>
+            <div css={feedBack}>
+              <div css={eventTitle}>
+                <small>{track.title}</small>
+              </div>
+              <div css={form_row}>
+                <div>{ratingProvider()}</div>
+              </div>
+              <div css={form_row}>
+                <input
+                  placeholder="Enter Email"
+                  type="text"
+                  value={email}
+                  onChange={e => {
+                    setEmail(e.target.value)
+                  }}
+                  onBlur={validateField}
+                  onFocus={() => {
+                    setEmailError("")
+                  }}
+                />
+                {emailError ? <span css={error}>{emailError}</span> : null}
+              </div>
+              <div css={form_row}>
+                <textarea
+                  placeholder="Remarks"
+                  value={remark}
+                  onChange={e => setRemark(e.target.value)}
+                />
+              </div>
+              <div css={form_row}>
+                <div css={checkbox}>
+                  <label>
+                    <input
+                      defaultChecked={contactMe}
+                      type="checkbox"
+                      onChange={() => setContactMe(!contactMe)}
+                    />
+                    <span>
+                      <small className="check"></small>Do you want AWS sales /
+                      experts to contact you?
                   </span>
+                  </label>
+                </div>
+              </div>
+              <div css={form_row}>
+                <label className="key">
+                  <small>
+                    By clicking submit, you agree to our{" "}
+                    <Link to="/">Terms & conditions</Link>{" "}
+                  </small>
                 </label>
+                <div>{renderButton()}</div>
               </div>
             </div>
-            <div css={form_row}>
-              <label className="key">
-                <small>
-                  By clicking submit, you agree to our{" "}
-                  <Link to="/">Terms & conditions</Link>{" "}
-                </small>
-              </label>
-              <div>{renderButton()}</div>
-            </div>
-          </div>
-        </form>
-      )}
+          </form>
+        )}
     </Container>
   )
 }
