@@ -68,7 +68,7 @@ const EventCard = () => {
           tEnd = slots[i + 1].timeStart
         }
         else{
-          tEnd = slot.timeStart
+          tEnd = slot.timeEnd
         }
         if (slot.timeStart <= _.now() && tEnd >= _.now()) {
           setCurrentEvent(slot)
@@ -78,8 +78,10 @@ const EventCard = () => {
     }, 1000)
   }
 
+
   setTimingFunction()
 
+  console.log(currentEvent)
   return (
     <div
       css={[eventCard, px_bg]}
