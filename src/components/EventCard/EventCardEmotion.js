@@ -173,6 +173,7 @@ export const contentCard = css`
     .card_profile {
       background: ${Variables.black_bg};
       border-color: #fff;
+      color: #fff;
     }
     .card_event_title {
       background: #fff;
@@ -339,6 +340,8 @@ export const car_speakers = css`
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 0;
+  margin-bottom: auto;
   span {
     margin-top: 7px;
     line-height: 1.5;

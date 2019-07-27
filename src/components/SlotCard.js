@@ -180,12 +180,14 @@ const slot_track_flex = css`
     position: relative;
     border: solid 1px ${Variables.border_color};
     background: #fff;
+    order: 2;
     padding-bottom: 70px;
     transition: all 0.5s;
     &:before {
       content: none;
     }
     &.selected {
+      order: 1;
       position: relative;
       > div {
         & ~ div {
@@ -202,7 +204,7 @@ const slot_track_flex = css`
       }
     }
   }
-
+/*
   &[track-select*="selected-2"] {
     > div:nth-of-type(1) {
       transform: translateX(calc(100% + 15px));
@@ -232,7 +234,7 @@ const slot_track_flex = css`
         transform: translateX(calc(-100% * 3 - 15px * 3));
       }
     }
-  }
+  } */
 
   &:before {
     left: 30px;
