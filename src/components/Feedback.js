@@ -164,13 +164,13 @@ const Feedback = ({ state, fromHomePage }) => {
   }
   function nvgt() {
 
-    navigate("/Thankyou")
-    // if (fromHomePage) {
-    //   navigate("/AgendaPage")
-    // }
-    // else {
-    //   navigate("/")
-    // }
+    // navigate("/Thankyou")
+    if (fromHomePage) {
+      navigate("/AgendaPage")
+    }
+    else {
+      navigate("/")
+    }
   }
   const renderButton = () => {
     if (!rating || !validateEmail(email)) {
@@ -189,7 +189,7 @@ const Feedback = ({ state, fromHomePage }) => {
   }
 
   return (
-    <Container>
+    <Container className="form-container">
           <form
             css={Form}
             onSubmit={e => {
@@ -199,7 +199,7 @@ const Feedback = ({ state, fromHomePage }) => {
             <Header>
               <Title>FeedBack</Title>
               <span
-                onClick={() => navigate(previousPath.replace(origin, ""))}
+                onClick={() => nvgt()}
                 css={[close_icon, CloseIcon]}
               >
                 close
@@ -269,7 +269,9 @@ export default Feedback
 //Styling
 
 const Container = styled.div`
-    padding-top: 80px;
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
     height: 100vh !important;
     position: fixed;
     left: 0;
@@ -284,11 +286,7 @@ const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 9999;
+  position: relative;
   background: ${Variables.black_bg};
 `
 
@@ -320,8 +318,17 @@ const CloseIcon = css`
 
 const Form = css`
   color: #fff;
-  margin: 15px;
+  margin: 0 15px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  .key + button{
+        position: fixed;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    width: calc(100% - 20px);
+  }
 `
 
 const eventTitle = css`

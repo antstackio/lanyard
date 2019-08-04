@@ -196,8 +196,10 @@ const slot_track_flex = css`
           padding-top: 10px;
         }
       }
-      img{
-        filter: brightness(0);
+      > .stars{
+        >img{
+          filter: brightness(0);
+        }
       }
       &:before {
         content: "";
@@ -250,7 +252,8 @@ const slotSelected = css`
   &:before {
     border-right-color: ${Variables.dark_base_color};
   }
-  * {
+  > *:not(.form-container),
+  > *:not(.form-container) * {
     color: #fff !important;
   }
   button {
