@@ -1,12 +1,13 @@
+const config = require("./config/website")
+
 module.exports = {
   siteMetadata: {
-    title: `Lanyard`,
-    description: `The Agenda PWA for your Conference`,
+    title: config.siteTitle,
+    description: config.siteDescription,
     author: `StackTinkers`,
   },
   plugins: [
     `gatsby-plugin-emotion`,
-    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -40,17 +41,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Lanyard`,
-        short_name: `Lanyard`,
+        name: config.siteTitle,
+        short_name: config.siteTitleShort,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#1E2A39`,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
         display: `standalone`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
