@@ -4,110 +4,110 @@
       {
         "firstName": "Jeevan",
         "lastName": "Dongre",
-        "profLink": "https://twitter.com/jeevandongre",
-        "profImage": "jeevan.jpg"
+        "profileLink": "https://twitter.com/jeevandongre",
+        "profileImageFileName": "jeevan.jpg"
       },
       {
         "firstName": "Sathyajith",
         "lastName": "Bhat",
-        "profLink": "https://twitter.com/sathyabhat",
-        "profImage": "sathya.png"
+        "profileLink": "https://twitter.com/sathyabhat",
+        "profileImageFileName": "sathya.png"
       },
       {
         "firstName": "Bhuvaneswari",
         "lastName": "Subramani",
-        "profLink": "https://twitter.com/installjournal",
-        "profImage": "bhuvaneswari.jpg"
+        "profileLink": "https://twitter.com/installjournal",
+        "profileImageFileName": "bhuvaneswari.jpg"
       },
       {
         "firstName": "Prashanth",
         "lastName": "HN",
-        "profLink": "https://twitter.com/prashanth",
-        "profImage": "prashanth.png"
+        "profileLink": "https://twitter.com/prashanth",
+        "profileImageFileName": "prashanth.png"
       },
       {
         "firstName": "Runcy",
         "lastName": "Oommen",
-        "profLink": "https://twitter.com/runcyoommen",
-        "profImage": "runcy.jpg"
+        "profileLink": "https://twitter.com/runcyoommen",
+        "profileImageFileName": "runcy.jpg"
       },
       {
         "firstName": "Gaurav",
         "lastName": "Kamboj",
-        "profLink": "https://twitter.com/OyeHooye",
-        "profImage": "gaurav.jpg"
+        "profileLink": "https://twitter.com/OyeHooye",
+        "profileImageFileName": "gaurav.jpg"
       },
       {
         "firstName": "Hari",
         "lastName": "Kiran",
-        "profLink": "https://twitter.com/g_harikiran",
-        "profImage": "hari.jpg"
+        "profileLink": "https://twitter.com/g_harikiran",
+        "profileImageFileName": "hari.jpg"
       },
       {
         "firstName": "Ganesh",
         "lastName": "Samarthyam",
-        "profLink": "https://twitter.com/GSamarthyam",
-        "profImage": "ganesh.jpg"
+        "profileLink": "https://twitter.com/GSamarthyam",
+        "profileImageFileName": "ganesh.jpg"
       },
       {
         "firstName": "Krishna",
         "lastName": "Muddi",
-        "profLink": "",
-        "profImage": "krishna.jpg"
+        "profileLink": "",
+        "profileImageFileName": "krishna.jpg"
       },
       {
         "firstName": "Praveen",
         "lastName": "Gorakala",
-        "profLink": "https://twitter.com/onlyveen",
-        "profImage": "veen.jpg"
+        "profileLink": "https://twitter.com/onlyveen",
+        "profileImageFileName": "veen.jpg"
       },
       {
         "firstName": "Rahul",
         "lastName": "Sawant",
-        "profLink": "https://twitter.com/Raalzz",
-        "profImage": "rahul.jpg"
+        "profileLink": "https://twitter.com/Raalzz",
+        "profileImageFileName": "rahul.jpg"
       },
       {
         "firstName": "Akhil",
         "lastName": "VC",
-        "profLink": "https://twitter.com/akhilvc10",
-        "profImage": "akhil.jpg"
+        "profileLink": "https://twitter.com/akhilvc10",
+        "profileImageFileName": "akhil.jpg"
       },
       {
         "firstName": "Mayank",
         "lastName": "Pahwa",
-        "profLink": "",
-        "profImage": "mayank.jpg"
+        "profileLink": "",
+        "profileImageFileName": "mayank.jpg"
       },
       {
         "firstName": "Sahil",
         "lastName": "Sharma",
-        "profLink": "https://twitter.com/gh05t_r00t",
-        "profImage": "sahil.jpg"
+        "profileLink": "https://twitter.com/gh05t_r00t",
+        "profileImageFileName": "sahil.jpg"
       },
       {
         "firstName": "Piyush",
         "lastName": "Jalan",
-        "profLink": "https://twitter.com/piyushjalan93",
-        "profImage": "piyush.jpg"
+        "profileLink": "https://twitter.com/piyushjalan93",
+        "profileImageFileName": "piyush.jpg"
       },
       {
         "firstName": "Harsha",
         "lastName": "Ramakrishna",
-        "profLink": "https://twitter.com/hramakr",
-        "profImage": "harsha.jpg"
+        "profileLink": "https://twitter.com/hramakr",
+        "profileImageFileName": "harsha.jpg"
       },
       {
         "firstName": "Kaivalya",
         "lastName": "Shah",
-        "profLink": "",
-        "profImage": "kaivalya.jpg"
+        "profileLink": "",
+        "profileImageFileName": "kaivalya.jpg"
       },
       {
         "firstName": "Gladwin",
         "lastName": "Bosco",
-        "profLink": "https://twitter.com/GladwinBosco",
-        "profImage": "glady.jpg"
+        "profileLink": "https://twitter.com/GladwinBosco",
+        "profileImageFileName": "glady.jpg"
       }
     ]
   }
