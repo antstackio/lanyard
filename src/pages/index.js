@@ -16,16 +16,6 @@ import ErrorBoundary from "../components/ErrorBoundary"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
-      allVolunteersJson {
-        nodes {
-          volunteers {
-            profLink
-            firstName
-            lastName
-            profImage
-          }
-        }
-      }
       allSponsersJson {
         nodes {
           sponsers {
@@ -75,20 +65,17 @@ const IndexPage = () => {
   }
 
   const { slots } = data.allAgendaJson.nodes[0]
-  const { volunteers } = data.allVolunteersJson.nodes[0]
   const { sponsers } = data.allSponsersJson.nodes[0]
   const user = { email: "" }
 
   SetLocalStorage("slots", slots)
-  SetLocalStorage("volunteers", volunteers)
   SetLocalStorage("sponsers", sponsers)
-  SetLocalStorage("user", user)
   SetLocalStorage("user", user)
   SetLocalStorage("feedback", {})
 
   return (
     <ErrorBoundary>
-      <Layout >
+      <Layout>
         <Global styles={Reset} />
         <HomePage />
       </Layout>
