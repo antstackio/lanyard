@@ -58,5 +58,7 @@ To mark a slot as a non-talk slot, make slotType value to be "break". To merge t
 ###Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+[Code of Conduct](https://github.com/lanyard/lanyard/blob/master/CODE_OF_CONDUCT.md)
+
 ###License
 [MIT](https://choosealicense.com/licenses/mit/)
