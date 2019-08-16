@@ -1,65 +1,44 @@
-// import React from "react"
-// import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
-// const Image = ({ name }) => {
-//   const data = useStaticQuery(graphql`
-//     query {
-//       placeholderImage: file(relativePath: { eq: ${name} }) {
-//         childImageSharp {
-//           fluid(maxWidth: 300) {
-//             ...GatsbyImageSharpFluid
-//           }
-//         }
-//       }
-//     }
-//   `)
+// Note: You can change "images" to whatever you'd like.
 
-//   return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-// }
+const Image = props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        images: allFile {
+          edges {
+            node {
+              relativePath
+              name
+              childImageSharp {
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => {
+      const image = data.images.edges.find(n => {
+        return n.node.relativePath.includes(props.filename)
+      })
+      if (!image) {
+        return null
+      }
 
-// export default Image
-// //
-// //
-// //
+      //const imageSizes = image.node.childImageSharp.sizes; sizes={imageSizes}
+      return <Img alt={props.alt} fluid={image.node.childImageSharp.fluid} />
+    }}
+  />
+)
 
-// import Img from 'gatsby-image'
+export default Image
 
-// const Image = (props) => (
-//   <StaticQuery
-//     query={graphql`
-//       query {
-//         images: allFile {
-//           edges {
-//             node {
-//               relativePath
-//               name
-//               childImageSharp {
-//                 sizes(maxWidth: 600) {
-//                   ...GatsbyImageSharpSizes
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     `}
-
-//     render={(data) => {
-//       const image = data.images.edges.find(n => {
-//         return n.node.relativePath.includes(props.filename);
-//       });
-//       if (!image) { return null; }
-
-//       const imageSizes = image.node.childImageSharp.sizes;
-//       return (
-//         <Img
-//           alt={props.alt}
-//           sizes={imageSizes}
-//         />
-//       );
-//     }}
-//   />
-// )
-
-// https://noahgilmore.com/blog/easy-gatsby-image-components/
+{
+  /* <Image alt="Gatsby in Space" filename="gatsby-astronaut.png" /> */
+}
