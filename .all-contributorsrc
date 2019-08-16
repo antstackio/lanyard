@@ -1,0 +1,61 @@
+{
+  "projectName": "lanyard",
+  "projectOwner": "hnprashanth",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 50,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "hnprashanth",
+      "name": "Prashanth HN",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/379689?v=4",
+      "profile": "http://hnp.dev",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "Raalzz",
+      "name": "Raalzz",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/30571073?v=4",
+      "profile": "https://github.com/Raalzz",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "onlyveen",
+      "name": "Praveen Kumar Gorakala",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/8165238?v=4",
+      "profile": "http://creatorvisions.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "KrishnaMuddi",
+      "name": "krishnamuddi",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/30470613?v=4",
+      "profile": "https://github.com/KrishnaMuddi",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "vishwasnavadak",
+      "name": "Vishwas Navada K",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/13111030?v=4",
+      "profile": "https://vishwas.tech/",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}

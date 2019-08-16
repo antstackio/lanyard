@@ -1,4 +1,5 @@
 # Lanyard
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 
 Lanyard was originally created by us for our community event AWS Community Day. It became popular in the community because of ease of use and well thought-out inteface. Quickly other communities wanted to use this app & we helped them get up and running. This made us think there may be many more organizers who woould love to use something like Lanyard & hence we decided to open-source the project
 
@@ -73,3 +74,26 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ### License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://hnp.dev"><img src="https://avatars0.githubusercontent.com/u/379689?v=4" width="50px;" alt="Prashanth HN"/><br /><sub><b>Prashanth HN</b></sub></a><br /><a href="https://github.com/hnprashanth/lanyard/commits?author=hnprashanth" title="Code">💻</a> <a href="https://github.com/hnprashanth/lanyard/commits?author=hnprashanth" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Raalzz"><img src="https://avatars3.githubusercontent.com/u/30571073?v=4" width="50px;" alt="Raalzz"/><br /><sub><b>Raalzz</b></sub></a><br /><a href="https://github.com/hnprashanth/lanyard/commits?author=Raalzz" title="Code">💻</a></td>
+    <td align="center"><a href="http://creatorvisions.com"><img src="https://avatars0.githubusercontent.com/u/8165238?v=4" width="50px;" alt="Praveen Kumar Gorakala"/><br /><sub><b>Praveen Kumar Gorakala</b></sub></a><br /><a href="https://github.com/hnprashanth/lanyard/commits?author=onlyveen" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/KrishnaMuddi"><img src="https://avatars0.githubusercontent.com/u/30470613?v=4" width="50px;" alt="krishnamuddi"/><br /><sub><b>krishnamuddi</b></sub></a><br /><a href="https://github.com/hnprashanth/lanyard/commits?author=KrishnaMuddi" title="Code">💻</a></td>
+    <td align="center"><a href="https://vishwas.tech/"><img src="https://avatars3.githubusercontent.com/u/13111030?v=4" width="50px;" alt="Vishwas Navada K"/><br /><sub><b>Vishwas Navada K</b></sub></a><br /><a href="https://github.com/hnprashanth/lanyard/commits?author=vishwasnavadak" title="Documentation">📖</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
