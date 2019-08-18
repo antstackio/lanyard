@@ -16,18 +16,6 @@ import ErrorBoundary from "../components/ErrorBoundary"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
-      allSponsersJson {
-        nodes {
-          sponsers {
-            brands {
-              sponserName
-              webLink
-              webLogo
-            }
-            tierName
-          }
-        }
-      }
       allAgendaJson {
         nodes {
           slots {
@@ -58,18 +46,16 @@ const IndexPage = () => {
   `)
 
   function SetLocalStorage(key, value) {
-    // Donot remove "typeof" : https://github.com/gatsbyjs/gatsby/issues/14480#issuecomment-497983196
+    // Do not remove "typeof" : https://github.com/gatsbyjs/gatsby/issues/14480#issuecomment-497983196
     if (typeof window !== "undefined" && localStorage.getItem(key) === null) {
       localStorage.setItem(key, JSON.stringify(value))
     }
   }
 
   const { slots } = data.allAgendaJson.nodes[0]
-  const { sponsers } = data.allSponsersJson.nodes[0]
   const user = { email: "" }
 
   SetLocalStorage("slots", slots)
-  SetLocalStorage("sponsers", sponsers)
   SetLocalStorage("user", user)
   SetLocalStorage("feedback", {})
 
