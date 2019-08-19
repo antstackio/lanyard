@@ -6,18 +6,18 @@
         "brands": [
           {
             "sponserName": "Jfrog",
-            "webLink": "https://jfrog.com/",
-            "webLogo": "jfrog.jpg"
+            "sponserWebsiteLink": "https://jfrog.com/",
+            "sponserLogo": "jfrog.jpg"
           },
           {
             "sponserName": "Amazon Alexa",
-            "webLink": "https://developer.amazon.com/alexa",
-            "webLogo": "alexa.jpg"
+            "sponserWebsiteLink": "https://developer.amazon.com/alexa",
+            "sponserLogo": "alexa.jpg"
           },
           {
             "sponserName": "Freshworks",
-            "webLink": "https://www.freshworks.com",
-            "webLogo": "freshworks.jpg"
+            "sponserWebsiteLink": "https://www.freshworks.com",
+            "sponserLogo": "freshworks.jpg"
           }
         ]
       },
@@ -26,18 +26,18 @@
         "brands": [
           {
             "sponserName": "Elastic",
-            "webLink": "https://elastic.co",
-            "webLogo": "elastic.jpg"
+            "sponserWebsiteLink": "https://elastic.co",
+            "sponserLogo": "elastic.jpg"
           },
           {
             "sponserName": "Postman",
-            "webLink": "https://getpostman.com",
-            "webLogo": "postman.jpg"
+            "sponserWebsiteLink": "https://getpostman.com",
+            "sponserLogo": "postman.jpg"
           },
           {
             "sponserName": "Epsilon",
-            "webLink": "https://india.epsilon.com",
-            "webLogo": "epsilon.jpg"
+            "sponserWebsiteLink": "https://india.epsilon.com",
+            "sponserLogo": "epsilon.jpg"
           }
         ]
       },
@@ -46,33 +46,33 @@
         "brands": [
           {
             "sponserName": "Sumo Logic",
-            "webLink": "https://sumologic.com",
-            "webLogo": "sumologic.jpg"
+            "sponserWebsiteLink": "https://sumologic.com",
+            "sponserLogo": "sumologic.jpg"
           },
           {
             "sponserName": "Jetbrains",
-            "webLink": "https://jetbrains.com",
-            "webLogo": "jetbrains.jpg"
+            "sponserWebsiteLink": "https://jetbrains.com",
+            "sponserLogo": "jetbrains.jpg"
           },
           {
             "sponserName": "Powerup",
-            "webLink": "https://powerupcloud.com",
-            "webLogo": "powerup.jpg"
+            "sponserWebsiteLink": "https://powerupcloud.com",
+            "sponserLogo": "powerup.jpg"
           },
           {
             "sponserName": "Tensult",
-            "webLink": "https://tensult.com",
-            "webLogo": "tensult.jpg"
+            "sponserWebsiteLink": "https://tensult.com",
+            "sponserLogo": "tensult.jpg"
           },
           {
             "sponserName": "Cloudyuga.guru",
-            "webLink": "https://cloudyuga.guru",
-            "webLogo": "cloudyuga.jpg"
+            "sponserWebsiteLink": "https://cloudyuga.guru",
+            "sponserLogo": "cloudyuga.jpg"
           },
           {
             "sponserName": "Hasura",
-            "webLink": "https://hasura.io/",
-            "webLogo": "hasura.jpg"
+            "sponserWebsiteLink": "https://hasura.io/",
+            "sponserLogo": "hasura.jpg"
           }
         ]
       },
@@ -81,53 +81,53 @@
         "brands": [
           {
             "sponserName": "Woman Who Code Bangalore",
-            "webLink": "https://www.womenwhocode.com/bangalore",
-            "webLogo": "wwc.jpg"
+            "sponserWebsiteLink": "https://www.womenwhocode.com/bangalore",
+            "sponserLogo": "wwc.jpg"
           },
           {
             "sponserName": "WheelsBox.com",
-            "webLink": "https://wheelsbox.com/",
-            "webLogo": "wheelsbox.jpg"
+            "sponserWebsiteLink": "https://wheelsbox.com/",
+            "sponserLogo": "wheelsbox.jpg"
           },
           {
             "sponserName": "Indian Startups ",
-            "webLink": "https://www.meetup.com/indianstartupsbangalore/",
-            "webLogo": "indianstartups.jpg"
+            "sponserWebsiteLink": "https://www.meetup.com/indianstartupsbangalore/",
+            "sponserLogo": "indianstartups.jpg"
           },
           {
             "sponserName": "Wone Creations",
-            "webLink": "https://www.wonecreations.com/",
-            "webLogo": "wone.jpg"
+            "sponserWebsiteLink": "https://www.wonecreations.com/",
+            "sponserLogo": "wone.jpg"
           },
           {
             "sponserName": "Konfhub",
-            "webLink": "https://konfhub.com/",
-            "webLogo": "konfhub.jpg"
+            "sponserWebsiteLink": "https://konfhub.com/",
+            "sponserLogo": "konfhub.jpg"
           },
           {
             "sponserName": "Fame Technologies",
-            "webLink": "http://www.fametechnologies.in/",
-            "webLogo": "fame.jpg"
+            "sponserWebsiteLink": "http://www.fametechnologies.in/",
+            "sponserLogo": "fame.jpg"
           },
           {
             "sponserName": "Developer Circles",
-            "webLink": "https://www.facebook.com/groups/DevCBengaluru/",
-            "webLogo": "fbdcblr.jpg"
+            "sponserWebsiteLink": "https://www.facebook.com/groups/DevCBengaluru/",
+            "sponserLogo": "fbdcblr.jpg"
           },
           {
             "sponserName": "Go Clouds",
-            "webLink": "https://www.goclouds.com/",
-            "webLogo": "goclouds.jpg"
+            "sponserWebsiteLink": "https://www.goclouds.com/",
+            "sponserLogo": "goclouds.jpg"
           },
           {
             "sponserName": "KnowledgeHut",
-            "webLink": "https://www.knowledgehut.com/",
-            "webLogo": "knowledgehut.jpg"
+            "sponserWebsiteLink": "https://www.knowledgehut.com/",
+            "sponserLogo": "knowledgehut.jpg"
           },
           {
             "sponserName": "EFY Group",
-            "webLink": "https://efy.in/",
-            "webLogo": "efy.jpg"
+            "sponserWebsiteLink": "https://efy.in/",
+            "sponserLogo": "efy.jpg"
           }
         ]
       }

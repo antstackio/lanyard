@@ -1,25 +1,33 @@
-import React, { useState, useEffect,Fragment } from "react"
-import { navigate, Link } from "gatsby"
+import React, { Fragment } from "react"
+import { navigate } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import SEO from "../components/seo"
 import Variables from "../components/jss/Variables"
 import { close_icon } from "../components/jss/cvcss"
 
+import Image from "../components/Image"
+import { useStaticQuery, graphql } from "gatsby"
+
 const Sponsers = () => {
-  const [sponsers, setSponsers] = useState([])
+  const data = useStaticQuery(graphql`
+    query SponsersQuery {
+      allSponsersJson {
+        nodes {
+          sponsers {
+            brands {
+              sponserName
+              sponserWebsiteLink
+              sponserLogo
+            }
+            tierName
+          }
+        }
+      }
+    }
+  `)
 
-  useEffect(() => {
-    setSponsers(JSON.parse(localStorage.getItem("sponsers")))
-  }, [])
-
-  function importAll(r) {
-    let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-    return images;
-  }
-
-  const images = importAll(require.context('../images/spons', false, /\.(png|jpe?g|svg)$/));
+  const Sponsers = data.allSponsersJson.nodes[0].sponsers
 
   return (
     <Container>
@@ -31,12 +39,25 @@ const Sponsers = () => {
         </span>
       </Header>
       <SponsersList>
-        {sponsers.map((sponser, i) =>  (
-          <Fragment>
+        {Sponsers.map((sponser, i) => (
+          <Fragment key={i}>
             <h4>{sponser.tierName}</h4>
-            {sponser.brands.map((brand, i) =>  (
+            {sponser.brands.map((brand, i) => (
               <SponserItem key={i}>
-                <a target={brand.webLink ? "_blank" : null} href={brand.webLink ? brand.webLink : null}><span css={spoImage}><img src={images[brand.webLogo]} alt={brand.webLogo} /></span><span css={spoName}>{brand.sponserName}</span></a>
+                <a
+                  target={brand.sponserWebsiteLink ? "_blank" : null}
+                  href={
+                    brand.sponserWebsiteLink ? brand.sponserWebsiteLink : null
+                  }
+                >
+                  <span css={spoImage}>
+                    <Image
+                      filename={brand.sponserLogo}
+                      alt={brand.sponserLogo}
+                    />
+                  </span>
+                  <span css={spoName}>{brand.sponserName}</span>
+                </a>
               </SponserItem>
             ))}
           </Fragment>
@@ -100,7 +121,7 @@ const SponsersList = styled.ul`
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  h4{
+  h4 {
     width: 100%;
     padding: 0 5px;
     color: #fff;
@@ -110,15 +131,15 @@ const SponsersList = styled.ul`
     display: flex;
     align-items: center;
     font-family: inherit;
-    &:after{
-      content: '';
+    &:after {
+      content: "";
       flex: 1 0 0;
       height: 2px;
       background: #fff;
       margin-left: 10px;
     }
-     &:before{
-      content: '';
+    &:before {
+      content: "";
       flex: 1 0 0;
       height: 2px;
       background: #fff;
@@ -133,7 +154,7 @@ const SponserItem = styled.li`
   margin-bottom: 10px;
   width: 50%;
   padding: 0 5px;
-  a{
+  a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,7 +172,7 @@ const SponserItem = styled.li`
 const spoImage = css`
   padding: 0 10px;
   margin: 25px 0;
-  img{
+  img {
     max-width: 100%;
   }
 `
