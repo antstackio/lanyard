@@ -14,15 +14,15 @@
         },
     
     
-          "functionawsAgendaName": {
+          "functionlanyardName": {
             "Type": "String",
-            "Default": "functionawsAgendaName"
+            "Default": "functionlanyardName"
           },
         
           
-          "functionawsAgendaArn": {
+          "functionlanyardArn": {
             "Type": "String",
-            "Default": "functionawsAgendaArn"
+            "Default": "functionlanyardArn"
           }
         
           
@@ -42,16 +42,16 @@
     "Resources": {
         
         
-      "awsAgenda": {
+      "lanyard": {
         "Type": "AWS::ApiGateway::RestApi",
         "Properties": {
           "Description": "",
-          "Name": "awsAgenda",
+          "Name": "lanyard",
           "Body": {
             "swagger": "2.0",
             "info": {
               "version": "2018-05-24T17:52:00Z",
-              "title": "awsAgenda"
+              "title": "lanyard"
             },
             "host": {
                 "Fn::Join": [
@@ -173,7 +173,7 @@
                             
                             {
                                 
-                                "Ref": "functionawsAgendaArn"
+                                "Ref": "functionlanyardArn"
                             },
                             
                             "/invocations"
@@ -272,7 +272,7 @@
                           
                           {
                             
-                            "Ref": "functionawsAgendaArn"
+                            "Ref": "functionlanyardArn"
                           },
                           
                           "/invocations"
@@ -329,12 +329,12 @@
                   
         
         
-        "functionawsAgendaPermissionawsAgenda": {
+        "functionlanyardPermissionlanyard": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
                 "FunctionName": 
                     {
-                        "Ref":  "functionawsAgendaName"
+                        "Ref":  "functionlanyardName"
                     },
                     
                     "Action": "lambda:InvokeFunction",
@@ -353,7 +353,7 @@
                             },
                             ":",
                             {
-                                "Ref": "awsAgenda"
+                                "Ref": "lanyard"
                             },
                             "/*/*/*"
                         ]
@@ -364,7 +364,7 @@
         
         
         
-      "DeploymentAPIGWawsAgenda": {
+      "DeploymentAPIGWlanyard": {
         "Type": "AWS::ApiGateway::Deployment",
         "Properties": {
           "Description": "The Development stage deployment of your API.",
@@ -378,7 +378,7 @@
             ]
           },
           "RestApiId": {
-            "Ref": "awsAgenda"
+            "Ref": "lanyard"
           }
         }
       }
@@ -386,11 +386,11 @@
     "Outputs": {
         "RootUrl": {
             "Description": "Root URL of the API gateway",
-            "Value": {"Fn::Join": ["", ["https://", {"Ref": "awsAgenda"}, ".execute-api.", {"Ref": "AWS::Region"}, ".amazonaws.com/", {"Fn::If": ["ShouldNotCreateEnvResources","Prod", {"Ref": "env"} ]}]]}
+            "Value": {"Fn::Join": ["", ["https://", {"Ref": "lanyard"}, ".execute-api.", {"Ref": "AWS::Region"}, ".amazonaws.com/", {"Fn::If": ["ShouldNotCreateEnvResources","Prod", {"Ref": "env"} ]}]]}
         },
         "ApiName": {
           "Description": "API Friendly name",
-          "Value": "awsAgenda"
+          "Value": "lanyard"
         }
     }
   }

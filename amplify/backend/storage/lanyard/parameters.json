@@ -1,0 +1,7 @@
+{
+    "tableName": "lanyard",
+    "partitionKeyName": "track_id",
+    "partitionKeyType": "S",
+    "sortKeyName": "user_email",
+    "sortKeyType": "S"
+}
