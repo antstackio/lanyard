@@ -97,7 +97,7 @@ const Feedback = ({ state, fromHomePage }) => {
     }
 
     // checkParentComponent(remarks)
-    await API.post("awsAgenda", "/items", data)
+    await API.post("lanyard", "/items", data)
       .then(() => {
         checkParentComponent(remarks)
       })
