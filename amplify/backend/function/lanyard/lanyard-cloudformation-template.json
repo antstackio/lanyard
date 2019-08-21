@@ -5,13 +5,13 @@
 		"env": {
 			"Type": "String"
 		},
-		"storageawsAgendaName": {
+		"storagelanyardName": {
 			"Type": "String",
-			"Default": "storageawsAgendaName"
+			"Default": "storagelanyardName"
 		},
-		"storageawsAgendaArn": {
+		"storagelanyardArn": {
 			"Type": "String",
-			"Default": "storageawsAgendaArn"
+			"Default": "storagelanyardArn"
 		}
 	},
 	"Conditions": {
@@ -36,12 +36,12 @@
 				"FunctionName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"awsAgenda",
+						"lanyard",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"awsAgenda",
+									"lanyard",
 									"-",
 									{
 										"Ref": "env"
@@ -55,9 +55,6 @@
 					"Variables": {
 						"ENV": {
 							"Ref": "env"
-						},
-						"REGION": {
-							"Ref": "AWS::Region"
 						}
 					}
 				},
@@ -70,8 +67,8 @@
 				"Runtime": "nodejs8.10",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "lanyard-dev-20190723185008-deployment",
-					"S3Key": "amplify-builds/awsAgenda-1563953862-latest-build.zip"
+					"S3Bucket": "lanyard-dev-20190821130933-deployment",
+					"S3Key": "amplify-builds/lanyard-1566373512-latest-build.zip"
 				}
 			}
 		},
@@ -81,12 +78,12 @@
 				"RoleName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"lanyardLambdaRoleaf5db264",
+						"lanyardLambdaRoleac74ff8b",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"lanyardLambdaRoleaf5db264",
+									"lanyardLambdaRoleac74ff8b",
 									"-",
 									{
 										"Ref": "env"
@@ -165,7 +162,7 @@
 							],
 							"Resource": [
 								{
-									"Ref": "storageawsAgendaArn"
+									"Ref": "storagelanyardArn"
 								}
 							]
 						}

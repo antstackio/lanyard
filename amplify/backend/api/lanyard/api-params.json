@@ -2,29 +2,29 @@
     "paths": [
         {
             "name": "/items",
-            "lambdaFunction": "awsAgenda",
+            "lambdaFunction": "lanyard",
             "privacy": {
                 "open": true
             }
         }
     ],
-    "resourceName": "awsAgenda",
-    "apiName": "awsAgenda",
+    "resourceName": "lanyard",
+    "apiName": "lanyard",
     "functionArns": [
         {
-            "lambdaFunction": "awsAgenda"
+            "lambdaFunction": "lanyard"
         }
     ],
     "privacy": {
         "auth": 0,
         "unauth": 0,
-        "authRoleName": "lanyard-dev-20190723185008-authRole",
-        "unAuthRoleName": "lanyard-dev-20190723185008-unauthRole"
+        "authRoleName": "lanyard-dev-20190821130933-authRole",
+        "unAuthRoleName": "lanyard-dev-20190821130933-unauthRole"
     },
     "dependsOn": [
         {
             "category": "function",
-            "resourceName": "awsAgenda",
+            "resourceName": "lanyard",
             "attributes": [
                 "Name",
                 "Arn"

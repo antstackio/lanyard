@@ -1,19 +1,19 @@
 {
 	"storage": {
-		"awsAgenda": {
+		"lanyard": {
 			"service": "DynamoDB",
 			"providerPlugin": "awscloudformation"
 		}
 	},
 	"function": {
-		"awsAgenda": {
+		"lanyard": {
 			"service": "Lambda",
 			"providerPlugin": "awscloudformation",
 			"build": true,
 			"dependsOn": [
 				{
 					"category": "storage",
-					"resourceName": "awsAgenda",
+					"resourceName": "lanyard",
 					"attributes": [
 						"Name",
 						"Arn"
@@ -23,13 +23,13 @@
 		}
 	},
 	"api": {
-		"awsAgenda": {
+		"lanyard": {
 			"service": "API Gateway",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [
 				{
 					"category": "function",
-					"resourceName": "awsAgenda",
+					"resourceName": "lanyard",
 					"attributes": [
 						"Name",
 						"Arn"

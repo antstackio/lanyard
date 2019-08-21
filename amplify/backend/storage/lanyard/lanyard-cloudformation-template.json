@@ -1,0 +1,139 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "DynamoDB resource stack creation using Amplify CLI",
+    "Parameters": {
+        "partitionKeyName": {
+            "Type": "String"
+        },
+        "partitionKeyType": {
+            "Type": "String"
+        },
+        "env": {
+            "Type": "String"
+        },
+        
+        "sortKeyName": {
+            "Type": "String"
+        },
+        "sortKeyType": {
+            "Type": "String"
+        },
+        
+        "tableName": {
+            "Type": "String"
+        }
+    },
+    "Conditions": {
+        "ShouldNotCreateEnvResources": {
+            "Fn::Equals": [
+                {
+                    "Ref": "env"
+                },
+                "NONE"
+            ]
+        }
+    },
+    "Resources": {
+        "DynamoDBTable": {
+            "Type": "AWS::DynamoDB::Table",
+            "Properties": {
+                "AttributeDefinitions": [
+                  
+                  {
+                      "AttributeName": "track_id",
+                      "AttributeType": "S"
+                  }  , 
+                  
+                  {
+                      "AttributeName": "user_email",
+                      "AttributeType": "S"
+                  } 
+                  
+                ],
+                "KeySchema": [
+                  
+                  {
+                    "AttributeName": "track_id",
+                    "KeyType": "HASH"
+                  }  , 
+                  
+                  {
+                    "AttributeName": "user_email",
+                    "KeyType": "RANGE"
+                  } 
+                  
+                ],
+                "ProvisionedThroughput": {
+                    "ReadCapacityUnits": "5",
+                    "WriteCapacityUnits": "5"
+                },
+                "TableName": {
+                    "Fn::If": [
+                        "ShouldNotCreateEnvResources",
+                        {
+                           "Ref": "tableName"
+                        }, 
+                        {
+
+                            "Fn::Join": [
+                                "",
+                                [
+                                  {
+                                    "Ref": "tableName"
+                                  },
+                                  "-",
+                                  {
+                                    "Ref": "env"
+                                  }
+                                ]
+                            ]
+                        },       
+                    ]
+                }
+                
+            }
+        }
+    },
+    "Outputs": {
+        "Name": {
+            "Value": {
+                "Ref": "DynamoDBTable"
+            }
+        },
+        "Arn": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "DynamoDBTable",
+                    "Arn"
+                ]
+            }
+        },
+        "PartitionKeyName": {
+            "Value": {
+                "Ref": "partitionKeyName"
+            }
+        },
+        "PartitionKeyType": {
+            "Value": {
+                "Ref": "partitionKeyType"
+            }
+        },
+        
+        "SortKeyName": {
+            "Value": {
+                "Ref": "sortKeyName"
+            }
+        },
+        "SortKeyType": {
+            "Value": {
+                "Ref": "sortKeyType"
+            }
+        },
+        
+        "Region": {
+            "Value": {
+                "Ref": "AWS::Region"
+            }
+        }
+    }
+}
