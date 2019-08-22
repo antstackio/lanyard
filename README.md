@@ -28,7 +28,7 @@ No App Stores, No installation, just load the URL and tap "Add to Home Screen", 
 
 Having a decent network connectivity at the event is always a challenge. Lanyard takes advantage of local storage & once it's loaded, it can completely work offline (except for submitting feedback).
 
-### Kiosk Mode
+### Kiosk Mode (Coming Soon)
 
 As an organiser if you want to display agenda on a vertically mounted display, you could use Kiosk mode of Lanyard. Just like the normal version, it is time-aware and will always display currently running talk, it's plug & play! Kiosk mode also sports a QR code for people to scan and get this on their phone.
 
