@@ -69,7 +69,12 @@ Say you have an event which has 3 tracks (say Track1, Track2, Track3) & goes fro
 To mark a slot as a non-talk slot, make slotType value to be "break". To merge tracks for few talks/breaks, set trackLength appropriately. If you want to merge all 3 tracks like in example above, trackLength should be set to 3.
 
 ### Deploying
+
 Lanyard is configured with one-click deploy with AWS Amplify. All you need to do is click "Deploy on AWS", connect with Github, select your forked repo with your customisations and follow along. AWS Amplify will also deploy the required backend for the app, basically an API to capture event feedback. So it creates API Garetway -> Lambda -> DynamoDB setup for this & all the submitted feedback will be stored in DynamoDB for you to access later.
+
+### Hosted Solutions
+
+We will be launching our hosted solution on lanyard.app but in the meantime if you need us to get this up and running for your conference, get in touch at [connect@lanyard.app](mailto:connect@lanyard.app)
 
 ### Contributing
 
