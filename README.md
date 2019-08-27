@@ -4,7 +4,7 @@
 
 Lanyard was originally created by us for our community event AWS Community Day. It became popular in the community because of ease of use and well thought-out inteface. Quickly other communities wanted to use this app & we helped them get up and running. This made us think there may be many more organizers who woould love to use something like Lanyard & hence we decided to open-source the project
 
-[![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/lanyard/lanyard)
+[![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/antstackio/lanyard)
 
 ## Features:
 
