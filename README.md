@@ -32,6 +32,22 @@ Having a decent network connectivity at the event is always a challenge. Lanyard
 
 As an organiser if you want to display agenda on a vertically mounted display, you could use Kiosk mode of Lanyard. Just like the normal version, it is time-aware and will always display currently running talk, it's plug & play! Kiosk mode also sports a QR code for people to scan and get this on their phone.
 
+## Run Locally/Dev
+
+Clone this repository
+
+```
+git clone git@github.com:antstackio/lanyard.git
+cd lanyard
+```
+
+Install Dependencies & Run!
+
+```
+npm install
+npm run start
+```
+
 ## Configuration
 
 To customize this app for you conference, start with config/website.js & edit the details accordingly
