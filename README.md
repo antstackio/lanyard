@@ -4,7 +4,7 @@
 
 Lanyard was originally created by us for our community event AWS Community Day. It became popular in the community because of ease of use and well thought-out inteface. Quickly other communities wanted to use this app & we helped them get up and running. This made us think there may be many more organizers who woould love to use something like Lanyard & hence we decided to open-source the project
 
-[![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/lanyard/lanyard)
+[![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/antstackio/lanyard)
 
 ## Features:
 
@@ -28,9 +28,25 @@ No App Stores, No installation, just load the URL and tap "Add to Home Screen", 
 
 Having a decent network connectivity at the event is always a challenge. Lanyard takes advantage of local storage & once it's loaded, it can completely work offline (except for submitting feedback).
 
-### Kiosk Mode
+### Kiosk Mode (Coming Soon)
 
 As an organiser if you want to display agenda on a vertically mounted display, you could use Kiosk mode of Lanyard. Just like the normal version, it is time-aware and will always display currently running talk, it's plug & play! Kiosk mode also sports a QR code for people to scan and get this on their phone.
+
+## Run Locally/Dev
+
+Clone this repository
+
+```
+git clone git@github.com:antstackio/lanyard.git
+cd lanyard
+```
+
+Install Dependencies & Run!
+
+```
+npm install
+npm run start
+```
 
 ## Configuration
 
@@ -69,7 +85,12 @@ Say you have an event which has 3 tracks (say Track1, Track2, Track3) & goes fro
 To mark a slot as a non-talk slot, make slotType value to be "break". To merge tracks for few talks/breaks, set trackLength appropriately. If you want to merge all 3 tracks like in example above, trackLength should be set to 3.
 
 ### Deploying
+
 Lanyard is configured with one-click deploy with AWS Amplify. All you need to do is click "Deploy on AWS", connect with Github, select your forked repo with your customisations and follow along. AWS Amplify will also deploy the required backend for the app, basically an API to capture event feedback. So it creates API Garetway -> Lambda -> DynamoDB setup for this & all the submitted feedback will be stored in DynamoDB for you to access later.
+
+### Hosted Solutions
+
+We will be launching our hosted solution on lanyard.app but in the meantime if you need us to get this up and running for your conference, get in touch at [connect@lanyard.app](mailto:connect@lanyard.app)
 
 ### Contributing
 
