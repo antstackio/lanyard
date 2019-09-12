@@ -96,7 +96,7 @@ We will be launching our hosted solution on lanyard.app but in the meantime if y
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-[Code of Conduct](https://github.com/antstackio/lanyard/blob/master/CODE_OF_CONDUCT.md)
+[Code of Conduct](https://github.com/lanyard/lanyard/blob/master/CODE_OF_CONDUCT.md)
 
 ### License
 
@@ -111,11 +111,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="http://hnp.dev"><img src="https://avatars0.githubusercontent.com/u/379689?v=4" width="50px;" alt="Prashanth HN"/><br /><sub><b>Prashanth HN</b></sub></a><br /><a href="https://github.com/antstackio/lanyard/commits?author=hnprashanth" title="Code">💻</a> <a href="https://github.com/antstackio/lanyard/commits?author=hnprashanth" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/Raalzz"><img src="https://avatars3.githubusercontent.com/u/30571073?v=4" width="50px;" alt="Raalzz"/><br /><sub><b>Raalzz</b></sub></a><br /><a href="https://github.com/antstackio/lanyard/commits?author=Raalzz" title="Code">💻</a></td>
-    <td align="center"><a href="http://creatorvisions.com"><img src="https://avatars0.githubusercontent.com/u/8165238?v=4" width="50px;" alt="Praveen Kumar Gorakala"/><br /><sub><b>Praveen Kumar Gorakala</b></sub></a><br /><a href="https://github.com/antstackio/lanyard/commits?author=onlyveen" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/KrishnaMuddi"><img src="https://avatars0.githubusercontent.com/u/30470613?v=4" width="50px;" alt="krishnamuddi"/><br /><sub><b>krishnamuddi</b></sub></a><br /><a href="https://github.com/antstackio/lanyard/commits?author=KrishnaMuddi" title="Code">💻</a></td>
-    <td align="center"><a href="https://vishwas.tech/"><img src="https://avatars3.githubusercontent.com/u/13111030?v=4" width="50px;" alt="Vishwas Navada K"/><br /><sub><b>Vishwas Navada K</b></sub></a><br /><a href="https://github.com/antstackio/lanyard/commits?author=vishwasnavadak" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://hnp.dev"><img src="https://avatars0.githubusercontent.com/u/379689?v=4" width="50px;" alt="Prashanth HN"/><br /><sub><b>Prashanth HN</b></sub></a><br /><a href="https://github.com/hnprashanth/lanyard/commits?author=hnprashanth" title="Code">💻</a> <a href="https://github.com/hnprashanth/lanyard/commits?author=hnprashanth" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Raalzz"><img src="https://avatars3.githubusercontent.com/u/30571073?v=4" width="50px;" alt="Raalzz"/><br /><sub><b>Raalzz</b></sub></a><br /><a href="https://github.com/hnprashanth/lanyard/commits?author=Raalzz" title="Code">💻</a></td>
+    <td align="center"><a href="http://creatorvisions.com"><img src="https://avatars0.githubusercontent.com/u/8165238?v=4" width="50px;" alt="Praveen Kumar Gorakala"/><br /><sub><b>Praveen Kumar Gorakala</b></sub></a><br /><a href="https://github.com/hnprashanth/lanyard/commits?author=onlyveen" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/KrishnaMuddi"><img src="https://avatars0.githubusercontent.com/u/30470613?v=4" width="50px;" alt="krishnamuddi"/><br /><sub><b>krishnamuddi</b></sub></a><br /><a href="https://github.com/hnprashanth/lanyard/commits?author=KrishnaMuddi" title="Code">💻</a></td>
+    <td align="center"><a href="https://vishwas.tech/"><img src="https://avatars3.githubusercontent.com/u/13111030?v=4" width="50px;" alt="Vishwas Navada K"/><br /><sub><b>Vishwas Navada K</b></sub></a><br /><a href="https://github.com/hnprashanth/lanyard/commits?author=vishwasnavadak" title="Documentation">📖</a></td>
   </tr>
 </table>
 

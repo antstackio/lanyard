@@ -1,5 +1,4 @@
 import { css } from "@emotion/core"
-import swirl_bg from "../../images/swirl_bg.svg"
 import Variables from "./Variables"
 
 export const media = {
@@ -226,22 +225,17 @@ export const px_bg = css`
     position: relative;
     z-index: 999;
   }
-  &:before {
-    content: "";
+  .swirlbg {
     transition: all 0.25s;
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    background-image: url(${swirl_bg});
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: top -50px right;
     pointer-events: none;
   }
   &.inv {
-    &:before {
+    .swirlbg {
       transform: rotateX(180deg) rotateY(180deg) translateY(-62px);
     }
   }
@@ -251,8 +245,8 @@ export const px_bg = css`
     ${media.mn} {
       padding: 15px;
     }
-    &:before {
-      opacity: 0.25;
+    .swirlbg {
+      opacity: 0.5;
     }
   }
 `

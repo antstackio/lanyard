@@ -1,9 +1,11 @@
+import config from "../../data/BaseConfig.json"
+
 const Variables = {
   text_primary_color: `#333333`,
-  dark_base_color: `#FF9900`,
+  dark_base_color: config.eventSolidColor,
   light_bc: `#f5ddb9`,
-  dark_base_color_2: `#FFC400`,
-  black_bg: `#1E2A39`,
+  dark_base_color_2: LightenDarkenColor(config.eventSolidColor,50),
+  black_bg: config.eventDarkColor,
   border_color: `#ddd`,
   button_color: `#FF9900`,
   page_bg_color: `#eeeeee`,
@@ -28,6 +30,36 @@ const Variables = {
   gutter_width: `25px`,
   gutter_width_more: `50px`,
   gutter_width_xs: `15px`,
+}
+
+
+
+function LightenDarkenColor(col,amt) {
+    var usePound = false;
+	if (col[0] == "#") {
+		col = col.slice(1);
+		usePound = true;
+	}
+	var num = parseInt(col, 16);
+	var r = (num >> 16) + amt;
+	if (r > 255) {
+		r = 255;
+	} else if (r < 0) {
+		r = 0;
+	}
+	var b = ((num >> 8) & 0x00FF) + amt;
+	if (b > 255) {
+		b = 255;
+	} else if (b < 0) {
+		b = 0;
+	}
+	var g = (num & 0x0000FF) + amt;
+	if (g > 255) {
+		g = 255;
+	} else if (g < 0) {
+		g = 0;
+	}
+	return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16);
 }
 
 export default Variables

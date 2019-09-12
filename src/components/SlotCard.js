@@ -4,19 +4,21 @@ import _ from "lodash"
 
 import RatingStars from "./RatingStars"
 
-import check_in from "../images/check_in.svg"
-import tea_break from "../images/tea_break.svg"
-import lunch_break from "../images/lunch_break.svg"
-import networking from "../images/networking.svg"
-import def from "../images/default.svg"
-import welcome from "../images/welcome.svg"
-import end from "../images/end.svg"
+
+import CheckinSVG from "./ImageComponents/CheckinSVG"
+import TeabreakSVG from "./ImageComponents/TeabreakSVG"
+import LunchSVG from "./ImageComponents/LunchSVG"
+import NetworkingSVG from "./ImageComponents/NetworkingSVG"
+import DefaultSVG from "./ImageComponents/DefaultSVG"
+import WelcomeSVG from "./ImageComponents/WelcomeSVG"
+import EndSVG from "./ImageComponents/EndSVG"
 
 import Variables from "./jss/Variables"
 import { button, media } from "./jss/cvcss"
 import { timeFormat } from "../helpers/TimeStamp"
 
 const SlotCard = ({ eventData, selectTrack }) => {
+
   const slot_id = eventData.slotId
   const scrollDiv = React.createRef()
 
@@ -58,7 +60,15 @@ const SlotCard = ({ eventData, selectTrack }) => {
             ) : null}
 
             {eventData.img ? (
-              <div css={slot_illust} className={`${eventData.img}`}></div>
+              <div css={slot_illust} className={`${eventData.img}`}>
+                {eventData.img === 'check-in' && <CheckinSVG/>}
+                {eventData.img === 'tea_break' && <TeabreakSVG/>}
+                {eventData.img === 'lunch_break' && <LunchSVG/>}
+                {eventData.img === 'networking' && <NetworkingSVG/>}
+                {eventData.img === 'default' && <DefaultSVG/>}
+                {eventData.img === 'welcome' && <WelcomeSVG/>}
+                {eventData.img === 'closing' && <EndSVG/>}
+              </div>
             ) : null}
 
             <div css={slot_title}>{track.title}</div>
@@ -320,7 +330,7 @@ const slot_illust = css`
   bottom: 0;
   opacity: 0.5;
   overflow: hidden;
-  &:before {
+  svg {
     content: "";
     display: block;
     height: 75px;
@@ -329,36 +339,6 @@ const slot_illust = css`
       height: 65px;
       width: 65px;
     }
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  &.check-in:before {
-    background-image: url(${check_in});
   }
 
-  &.tea_break:before {
-    background-image: url(${tea_break});
-  }
-
-  &.lunch_break:before {
-    background-image: url(${lunch_break});
-  }
-
-  &.networking:before {
-    background-image: url(${networking});
-  }
-
-  &.default:before {
-    background-image: url(${def});
-  }
-
-  &.welcome:before {
-    background-image: url(${welcome});
-    transform: rotate(-20deg);
-  }
-
-  &.closing:before {
-    background-image: url(${end});
-  }
 `
