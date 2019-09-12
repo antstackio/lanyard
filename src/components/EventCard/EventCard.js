@@ -1,4 +1,14 @@
 import React, { Fragment, useState, useEffect } from "react"
+import config from "../../data/BaseConfig.json"
+import HomebgSVG from "../ImageComponents/HomebgSVG"
+
+import CheckinSVG from "../ImageComponents/CheckinSVG"
+import TeabreakSVG from "../ImageComponents/TeabreakSVG"
+import LunchSVG from "../ImageComponents/LunchSVG"
+import NetworkingSVG from "../ImageComponents/NetworkingSVG"
+import DefaultSVG from "../ImageComponents/DefaultSVG"
+import WelcomeSVG from "../ImageComponents/WelcomeSVG"
+import EndSVG from "../ImageComponents/EndSVG"
 
 import RatingStars from "../RatingStars"
 import _ from "lodash"
@@ -14,7 +24,6 @@ import {
   card_event_title,
   card_end_time,
   contentSwipe,
-  card_last_Row,
   car_speakers,
   card_profile,
   end_info,
@@ -87,18 +96,23 @@ const EventCard = () => {
       css={[eventCard, px_bg]}
       className={eventStarted !== "notStarted" ? "blurry" : " "}
     >
+      <div className="swirlbg"><HomebgSVG/></div>
       {eventStarted === "started" ? (
         <Fragment>
           <div css={logoHeader}>
             <div css={event_logo}>
               <img src={event_logo_img} alt="event_logo" />
             </div>
-            <div css={event_title}>
-              <p>
-                AWS Community Day <br />
-                <small>Bengaluru - 2019</small>
-              </p>
-            </div>
+            {config.eventName ?
+            (
+              <div css={event_title}>
+            <p>
+              {config.eventName} {config.eventSubName ? (
+              <Fragment><br />
+              <small>{config.eventSubName}</small></Fragment>) : null}
+            </p>
+          </div>
+            ): null}
           </div>
           {currentEvent ? (
             <Fragment>
@@ -138,7 +152,15 @@ const EventCard = () => {
                       </h2>
                     </div>
                     {currentEvent.eventType !== "talk" ? (
-                      <div className={`illust  ${currentEvent.img}`}></div>
+                      <div className={`illust  ${currentEvent.img}`}>
+                        {currentEvent.img === 'check-in' && <CheckinSVG/>}
+                        {currentEvent.img === 'tea_break' && <TeabreakSVG/>}
+                        {currentEvent.img === 'lunch_break' && <LunchSVG/>}
+                        {currentEvent.img === 'networking' && <NetworkingSVG/>}
+                        {currentEvent.img === 'default' && <DefaultSVG/>}
+                        {currentEvent.img === 'welcome' && <WelcomeSVG/>}
+                        {currentEvent.img === 'closing' && <EndSVG/>}
+                      </div>
                     ) : null}
                     {track.speakers && track.speakers.length && (
                       <div
@@ -191,12 +213,16 @@ const EventCard = () => {
           <div css={event_logo}>
             <img src={event_logo_img} alt="event_logo" />
           </div>
-          <div css={event_title}>
+          {config.eventName ?
+            (
+              <div css={event_title}>
             <p>
-              AWS Community Day <br />
-              <small>Bengaluru - 2019</small>
+              {config.eventName} {config.eventSubName ? (
+              <Fragment><br />
+              <small>{config.eventSubName}</small></Fragment>) : null}
             </p>
           </div>
+            ): null}
           <div css={event_timer}>
             <CountDown startingTime={eventTime} />
           </div>
@@ -206,12 +232,17 @@ const EventCard = () => {
           <div css={event_logo}>
             <img src={event_logo_img} alt="event_logo" />
           </div>
-          <div css={event_title}>
+          {config.eventName ?
+            (
+              <div css={event_title}>
             <p>
-              AWS Community Day <br />
-              <small>Bengaluru - 2019</small>
+              {config.eventName} {config.eventSubName ? (
+              <Fragment><br />
+              <small>{config.eventSubName}</small></Fragment>) : null}
             </p>
           </div>
+            ): null}
+
           <div css={end_info}>
             <label>
               Event has ended. Help us improve by providing feedback

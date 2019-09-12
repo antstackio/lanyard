@@ -3,8 +3,10 @@ import { css } from "@emotion/core"
 
 import { media } from "./jss/cvcss"
 
-import star_off from "../images/star-off.svg"
-import star_on from "../images/star-on.svg"
+// import star_off from "../images/star-off.svg"
+// import star_on from "../images/star-on.svg"
+import StaronSVG from "./ImageComponents/StaronSVG"
+import StaroffSVG from "./ImageComponents/StaroffSVG"
 import Feedback from "../components/Feedback";
 
 const RatingStars = ({ large, track, slot, overAllFeedback }) => {
@@ -62,12 +64,22 @@ const RatingStars = ({ large, track, slot, overAllFeedback }) => {
     <span css={[ratingCard, large ? largeRating : null]} className="stars">
       {feedbackProvided ? <p css={feedbacktext}>Your feedback</p> : null}
       {stars.map(star => (
-        <img
-          className={feedbackProvided ? "smallStar" : " "}
-          src={star <= selectedStar ? star_on : star_off}
-          key={star}
-          onClick={() => onClickStars(star)}
-        />
+        <Fragment>
+          {star <= selectedStar ? (
+            <span className={feedbackProvided ? "smallStar" : " "}
+                key={star}
+                onClick={() => onClickStars(star)}>
+              <StaronSVG/>
+            </span>
+            ) : (
+              <span className={feedbackProvided ? "smallStar" : " "}
+              key={star}
+              onClick={() => onClickStars(star)}>
+
+            <StaroffSVG/>
+            </span>
+            )}
+        </Fragment>
       ))}
     </span>
       {fdbk === 0 &&(<Feedback  state={{ selectedStar, track, selectedSlot: slot }}/>)}
@@ -79,31 +91,36 @@ const RatingStars = ({ large, track, slot, overAllFeedback }) => {
 export default RatingStars
 
 const ratingCard = css`
-  img {
-    height: 25px;
-    display: inline-block;
-    ~ img {
-      margin-left: 5px;
+  span{
+    svg {
+      width: 25px;
+      display: inline-block;
     }
-    &.smallStar {
-      height: 20px;
+        & ~ span svg {
+          margin-left: 10px;
+        }
+    &.smallStar svg {
+      width: 20px;
       filter: grayscale();
     }
   }
 `
 const largeRating = css`
-  img {
-    height: 50px;
+span{
+
+  svg {
+    width: 50px;
     ${media.mn} {
-      height: 35px;
-    }
-    ~ img {
-      margin-left: 10px;
-    }
-    &.smallStar {
-      height: 30px !important;
+      width: 35px;
     }
   }
+      & ~ span svg {
+        margin-left: 10px;
+      }
+  &.smallStar svg {
+    width: 30px !important;
+  }
+}
 `
 const feedbacktext = css`
   margin: 0;

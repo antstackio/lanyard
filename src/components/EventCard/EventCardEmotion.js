@@ -132,36 +132,10 @@ export const contentCard = css`
         }
       }
     }
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    &.check-in {
-      background-image: url(${check_in});
+    svg{
+      max-height: 100%;
     }
 
-    &.tea_break {
-      background-image: url(${tea_break});
-    }
-
-    &.lunch_break {
-      background-image: url(${lunch_break});
-    }
-
-    &.networking {
-      background-image: url(${networking});
-    }
-
-    &.default {
-      background-image: url(${def});
-    }
-
-    &.welcome {
-      background-image: url(${welcome});
-    }
-
-    &.closing {
-      background-image: url(${end});
-    }
   }
   &.selected {
     order: 1 !important;
@@ -206,12 +180,12 @@ export const card_event_title = css`
     padding: 7px;
     font-size: 14px;
   }
-  background: #ff9900;
+  background: ${Variables.dark_base_color};
   color: #fff;
   position: relative;
   margin: 0 -15px 10px;
   .break & {
-    color: #ff9900;
+    color: ${Variables.dark_base_color};
     background: #fff;
     margin: 10px 0 25px;
     small {

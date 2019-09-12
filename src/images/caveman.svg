@@ -1,10 +1,11 @@
 <svg width="202" height="284" viewBox="0 0 202 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M117 227H127V269C127 270.636 126.215 272.088 125 273H72.083C72.0283 272.675 72 272.341 72 272C72 268.686 74.6865 266 78 266C79.7549 266 81.3345 266.754 82.4316 267.955C84.2856 259.405 91.8945 253 101 253C107.718 253 113.622 256.486 117 261.749V227Z" fill="#A56532"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M140 227H150V269C150 270.636 149.215 272.088 148 273H95.083C95.0283 272.675 95 272.341 95 272C95 268.686 97.6865 266 101 266C102.755 266 104.334 266.754 105.432 267.955C107.286 259.405 114.895 253 124 253C130.718 253 136.622 256.486 140 261.749V227Z" fill="url(#paint0_linear)"/>
-<rect y="68.9879" width="47.7626" height="173" rx="23.8813" transform="rotate(-37.5306 0 68.9879)" fill="#DA8541"/>
-<rect y="68.9879" width="47.7626" height="173" rx="23.8813" transform="rotate(-37.5306 0 68.9879)" fill="#DA8541"/>
-<rect y="68.9879" width="112.058" height="40.3703" rx="20.1852" transform="rotate(-37.5306 0 68.9879)" fill="#DA8541"/>
-<rect y="68.9879" width="112.058" height="40.3703" rx="20.1852" transform="rotate(-37.5306 0 68.9879)" fill="#DA8541"/>
+<rect y="68.9878" width="47.7626" height="173" rx="23.8813" transform="rotate(-37.5306 0 68.9878)" fill="#DA8541"/>
+<rect y="68.9878" width="47.7626" height="173" rx="23.8813" transform="rotate(-37.5306 0 68.9878)" fill="#DA8541"/>
+<rect y="68.9878" width="112.058" height="40.3703" rx="20.1852" transform="rotate(-37.5306 0 68.9878)" fill="#DA8541"/>
+<rect y="68.9878" width="112.058" height="40.3703" rx="20.1852" transform="rotate(-37.5306 0 68.9878)" fill="#DA8541"/>
 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="70" y="101" width="132" height="132">
 <circle cx="136" cy="167" r="66" fill="#2E2E2E"/>
 </mask>
@@ -36,7 +37,7 @@
 <rect x="90.5278" y="151.766" width="3.77726" height="13.6139" rx="1.88863" transform="rotate(55.4711 90.5278 151.766)" fill="#1D1A19"/>
 <rect x="88.3169" y="152.618" width="3.77726" height="12.8004" rx="1.88863" transform="rotate(6.35945 88.3169 152.618)" fill="#1D1A19"/>
 <rect x="82.5459" y="116.011" width="3.77726" height="13.6139" rx="1.88863" transform="rotate(141.597 82.5459 116.011)" fill="#1D1A19"/>
-<rect x="81.5459" y="113.862" width="3.77726" height="12.8004" rx="1.88863" transform="rotate(92.4857 81.5459 113.862)" fill="#1D1A19"/>
+<rect x="81.5459" y="113.863" width="3.77726" height="12.8004" rx="1.88863" transform="rotate(92.4857 81.5459 113.863)" fill="#1D1A19"/>
 <rect x="79" y="38" width="69" height="131" rx="30" fill="#1D1A19"/>
 <rect x="83" y="103" width="20" height="46" rx="10" transform="rotate(-90 83 103)" fill="#DA8541"/>
 <rect x="98" y="86" width="13" height="28" rx="6.5" fill="#EAA166"/>
@@ -59,10 +60,14 @@
 <rect x="47.7324" y="32.3208" width="51.8675" height="50.7419" rx="25.371" transform="rotate(-37.5306 47.7324 32.3208)" fill="#DA8541"/>
 <rect x="154" y="111" width="48" height="173" rx="24" fill="#DA8541"/>
 <rect x="154" y="111" width="48" height="173" rx="24" fill="#DA8541"/>
+</g>
 <defs>
 <linearGradient id="paint0_linear" x1="103" y1="273" x2="150" y2="269.5" gradientUnits="userSpaceOnUse">
 <stop offset="0.777894" stop-color="#DA8541"/>
 <stop offset="1" stop-color="#B5713A"/>
 </linearGradient>
+<clipPath id="clip0">
+<rect width="202" height="284" fill="white"/>
+</clipPath>
 </defs>
 </svg>

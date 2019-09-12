@@ -8,8 +8,11 @@ import _ from "lodash"
 import { button, form_row, checkbox, close_icon } from "./jss/cvcss"
 import Variables from "./jss/Variables"
 
-import star_on from "../images/star-on.svg"
-import star_off from "../images/star-off.svg"
+// import star_on from "../images/star-on.svg"
+// import star_off from "../images/star-off.svg"
+
+import StaronSVG from "./ImageComponents/StaronSVG"
+import StaroffSVG from "./ImageComponents/StaroffSVG"
 
 const Feedback = ({ state, fromHomePage }) => {
   const [rating, setRating] = useState(null)
@@ -59,16 +62,14 @@ const Feedback = ({ state, fromHomePage }) => {
         {values.map((ratingNum, index) => {
           if (ratingNum <= rating) {
             return (
-              <img
-                src={star_on}
+              <StaronSVG
                 onClick={() => setRating(ratingNum)}
                 key={index}
               />
             )
           } else {
             return (
-              <img
-                src={star_off}
+              <StaroffSVG
                 onClick={() => setRating(ratingNum)}
                 key={index}
               />
@@ -210,7 +211,7 @@ const Feedback = ({ state, fromHomePage }) => {
                 <small>{track.title}</small>
               </div>
               <div css={form_row}>
-                <div>{ratingProvider()}</div>
+                <div css={starStyle}>{ratingProvider()}</div>
               </div>
               <div css={form_row}>
                 <input
@@ -363,6 +364,17 @@ const feedBack = css`
     }
   }
 `
+const starStyle =css`
+    svg {
+      width: 25px;
+      display: inline-block;
+      & ~ svg {
+        margin-left: 10px;
+      }
+    }
+
+`
+
 const error = css`
   font-size: 12px;
   text-transform: capitalize;
