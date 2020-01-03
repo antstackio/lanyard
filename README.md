@@ -90,7 +90,7 @@ Lanyard is configured with one-click deploy with AWS Amplify. All you need to do
 
 ### Hosted Solutions
 
-We will be launching our hosted solution on lanyard.app but in the meantime if you need us to get this up and running for your conference, get in touch at [connect@lanyard.app](mailto:connect@lanyard.app)
+We will be launching our hosted solution on lanyard.app but in the meantime if you need us to get this up and running for your conference, get in touch at [connect@antstack.io](mailto:connect@antstack.io)
 
 ### Contributing
 
