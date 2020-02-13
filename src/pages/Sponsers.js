@@ -5,6 +5,7 @@ import styled from "@emotion/styled"
 import SEO from "../components/seo"
 import Variables from "../components/jss/Variables"
 import { close_icon } from "../components/jss/cvcss"
+import "../css/site.css"
 
 import Image from "../components/Image"
 import { useStaticQuery, graphql } from "gatsby"
@@ -171,7 +172,8 @@ const SponserItem = styled.li`
 `
 const spoImage = css`
   padding: 0 10px;
-  margin: 25px 0;
+  margin: 10px 0;
+  width: 100%;
   img {
     max-width: 100%;
   }

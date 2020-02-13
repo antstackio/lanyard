@@ -1,14 +1,20 @@
 {
-    "dev": {
+    "devs": {
         "awscloudformation": {
-            "AuthRoleName": "lanyard-dev-20190821130933-authRole",
-            "UnauthRoleArn": "arn:aws:iam::701528175564:role/lanyard-dev-20190821130933-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::701528175564:role/lanyard-dev-20190821130933-authRole",
+            "AuthRoleName": "amplify-lanyard-devs-64258-authRole",
+            "UnauthRoleArn": "arn:aws:iam::873102235883:role/amplify-lanyard-devs-64258-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::873102235883:role/amplify-lanyard-devs-64258-authRole",
             "Region": "ap-south-1",
-            "DeploymentBucketName": "lanyard-dev-20190821130933-deployment",
-            "UnauthRoleName": "lanyard-dev-20190821130933-unauthRole",
-            "StackName": "lanyard-dev-20190821130933",
-            "StackId": "arn:aws:cloudformation:ap-south-1:701528175564:stack/lanyard-dev-20190821130933/d1b73510-c3e6-11e9-b32e-06ec0b1b970c"
+            "DeploymentBucketName": "amplify-lanyard-devs-64258-deployment",
+            "UnauthRoleName": "amplify-lanyard-devs-64258-unauthRole",
+            "StackName": "amplify-lanyard-devs-64258",
+            "StackId": "arn:aws:cloudformation:ap-south-1:873102235883:stack/amplify-lanyard-devs-64258/c099fe40-47e2-11ea-b78f-063f7331dcfe",
+            "AmplifyAppId": "drl4iqbcn180n"
+        },
+        "categories": {
+            "auth": {
+                "lanyardalexacommunityday496ea546": {}
+            }
         }
     }
 }

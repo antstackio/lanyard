@@ -64,11 +64,11 @@
 						"Arn"
 					]
 				},
-				"Runtime": "nodejs8.10",
+				"Runtime": "nodejs10.x",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "lanyard-dev-20190821130933-deployment",
-					"S3Key": "amplify-builds/lanyard-1566373512-latest-build.zip"
+					"S3Bucket": "amplify-lanyard-devs-64258-deployment",
+					"S3Key": "amplify-builds/lanyard-30444d76674b4135566e-build.zip"
 				}
 			}
 		},

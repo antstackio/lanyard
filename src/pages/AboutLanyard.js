@@ -1,4 +1,5 @@
 import React from "react"
+import "../css/site.css"
 
 const AboutLanyard = () => {
   return (

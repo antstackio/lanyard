@@ -61,6 +61,20 @@ app.post(path, function(req, res) {
   })
 })
 
+app.get(path, function(req, res) {
+  const params = {
+    TableName: tableName,
+  }
+  dynamodb.scan(params, (err, data) => {
+    if (err) {
+      res.statusCode = 500
+      res.json({ error: err })
+    } else {
+      res.json({ status: 200, data: data.Items })
+    }
+  })
+})
+
 // Export the app object. When executing the application local this does nothing. However,
 // to port it to AWS Lambda we will create a wrapper around that will load the app from
 // this file

@@ -5,6 +5,7 @@ import styled from "@emotion/styled"
 import SEO from "../components/seo"
 import Variables from "../components/jss/Variables"
 import { close_icon } from "../components/jss/cvcss"
+import "../css/site.css"
 
 import Image from "../components/Image"
 import { useStaticQuery, graphql } from "gatsby"

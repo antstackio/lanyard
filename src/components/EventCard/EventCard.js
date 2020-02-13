@@ -10,6 +10,8 @@ import DefaultSVG from "../ImageComponents/DefaultSVG"
 import WelcomeSVG from "../ImageComponents/WelcomeSVG"
 import EndSVG from "../ImageComponents/EndSVG"
 
+//import defDP from "../../images/vols/default.jpg"
+
 import RatingStars from "../RatingStars"
 import _ from "lodash"
 import Loader from "../Loader"
@@ -32,7 +34,7 @@ import {
 
 import { px_bg, form_row } from "../jss/cvcss"
 import CountDown from "./CountDown"
-import event_logo_img from "../../images/aws_logo.svg"
+import event_logo_img from "../../images/Alexa-Logo.png"
 import { timeFormat } from "../../helpers/TimeStamp"
 
 const EventCard = () => {
@@ -49,7 +51,7 @@ const EventCard = () => {
     return images;
   }
 
-  const images = importAll(require.context('../../images/speakers', false, /\.(png|jpe?g|svg)$/));
+  const images = importAll(require.context('../../images/speakers', false, /\.(png|jpg|svg)$/));
 
 
   useEffect(() => {
@@ -73,10 +75,10 @@ const EventCard = () => {
       }
       slots.map((slot, i) => {
         let tEnd;
-        if(slots[i + 1]){
+        if (slots[i + 1]) {
           tEnd = slots[i + 1].timeStart
         }
-        else{
+        else {
           tEnd = slot.timeEnd
         }
         if (slot.timeStart <= _.now() && tEnd >= _.now()) {
@@ -96,7 +98,7 @@ const EventCard = () => {
       css={[eventCard, px_bg]}
       className={eventStarted !== "notStarted" ? "blurry" : " "}
     >
-      <div className="swirlbg"><HomebgSVG/></div>
+      <div className="swirlbg"><HomebgSVG /></div>
       {eventStarted === "started" ? (
         <Fragment>
           <div css={logoHeader}>
@@ -104,15 +106,15 @@ const EventCard = () => {
               <img src={event_logo_img} alt="event_logo" />
             </div>
             {config.eventName ?
-            (
-              <div css={event_title}>
-            <p>
-              {config.eventName} {config.eventSubName ? (
-              <Fragment><br />
-              <small>{config.eventSubName}</small></Fragment>) : null}
-            </p>
-          </div>
-            ): null}
+              (
+                <div css={event_title}>
+                  <p>
+                    {config.eventName} {config.eventSubName ? (
+                      <Fragment><br />
+                        <small>{config.eventSubName}</small></Fragment>) : null}
+                  </p>
+                </div>
+              ) : null}
           </div>
           {currentEvent ? (
             <Fragment>
@@ -120,7 +122,7 @@ const EventCard = () => {
                 css={contentSwipe}
                 className={`${
                   currentEvent.eventType === "break" ? "break" : "def"
-                } ${currentEvent.tracks.length > 1 ? "multiple" : "single"}`}
+                  } ${currentEvent.tracks.length > 1 ? "multiple" : "single"}`}
               >
                 {currentEvent.tracks.map((track, index) => (
                   <div
@@ -135,7 +137,7 @@ const EventCard = () => {
                     <div>
                       {currentEvent.tracks.length > 1 ? (
                         <h4 css={card_now_text} className="card_now_text">
-                          <span>{`Track - ${index + 1}`}</span>{" "}
+                          <span>{`Track - ${index + 1}`} {index === 0 ? "(Audi)" : "(M-401)"}</span>{" "}
                           {track.selectedFlag === "selected" ? (
                             <small>This is in your schedule</small>
                           ) : null}
@@ -145,7 +147,7 @@ const EventCard = () => {
                         css={card_event_title}
                         className={`card_event_title ${
                           fullTitle ? "open" : "close"
-                        }`}
+                          }`}
                         onClick={() => setFullTitle(!fullTitle)}
                       >
                         <p>{track.title}</p>
@@ -153,13 +155,13 @@ const EventCard = () => {
                     </div>
                     {currentEvent.eventType !== "talk" ? (
                       <div className={`illust  ${currentEvent.img}`}>
-                        {currentEvent.img === 'check-in' && <CheckinSVG/>}
-                        {currentEvent.img === 'tea_break' && <TeabreakSVG/>}
-                        {currentEvent.img === 'lunch_break' && <LunchSVG/>}
-                        {currentEvent.img === 'networking' && <NetworkingSVG/>}
-                        {currentEvent.img === 'default' && <DefaultSVG/>}
-                        {currentEvent.img === 'welcome' && <WelcomeSVG/>}
-                        {currentEvent.img === 'closing' && <EndSVG/>}
+                        {currentEvent.img === 'check-in' && <CheckinSVG />}
+                        {currentEvent.img === 'tea_break' && <TeabreakSVG />}
+                        {currentEvent.img === 'lunch_break' && <LunchSVG />}
+                        {currentEvent.img === 'networking' && <NetworkingSVG />}
+                        {currentEvent.img === 'default' && <DefaultSVG />}
+                        {currentEvent.img === 'welcome' && <WelcomeSVG />}
+                        {currentEvent.img === 'closing' && <EndSVG />}
                       </div>
                     ) : null}
                     {track.speakers && track.speakers.length && (
@@ -175,6 +177,7 @@ const EventCard = () => {
                             key={idx}
                           >
                             <span className="profimg">
+                              { /*<img src={defDP} alt="image"/>*/}
                               <img src={images[speaker.profilePicture]} alt={speaker.profilePicture} />
                             </span>{" "}
                             <span>{speaker.firstName}</span>
@@ -216,13 +219,13 @@ const EventCard = () => {
           {config.eventName ?
             (
               <div css={event_title}>
-            <p>
-              {config.eventName} {config.eventSubName ? (
-              <Fragment><br />
-              <small>{config.eventSubName}</small></Fragment>) : null}
-            </p>
-          </div>
-            ): null}
+                <p>
+                  {config.eventName} {config.eventSubName ? (
+                    <Fragment><br />
+                      <small>{config.eventSubName}</small></Fragment>) : null}
+                </p>
+              </div>
+            ) : null}
           <div css={event_timer}>
             <CountDown startingTime={eventTime} />
           </div>
@@ -235,13 +238,13 @@ const EventCard = () => {
           {config.eventName ?
             (
               <div css={event_title}>
-            <p>
-              {config.eventName} {config.eventSubName ? (
-              <Fragment><br />
-              <small>{config.eventSubName}</small></Fragment>) : null}
-            </p>
-          </div>
-            ): null}
+                <p>
+                  {config.eventName} {config.eventSubName ? (
+                    <Fragment><br />
+                      <small>{config.eventSubName}</small></Fragment>) : null}
+                </p>
+              </div>
+            ) : null}
 
           <div css={end_info}>
             <label>
@@ -251,8 +254,8 @@ const EventCard = () => {
           </div>
         </Fragment>
       ) : (
-        <Loader />
-      )}
+              <Loader />
+            )}
     </div>
   )
 }

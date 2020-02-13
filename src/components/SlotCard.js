@@ -4,7 +4,6 @@ import _ from "lodash"
 
 import RatingStars from "./RatingStars"
 
-
 import CheckinSVG from "./ImageComponents/CheckinSVG"
 import TeabreakSVG from "./ImageComponents/TeabreakSVG"
 import LunchSVG from "./ImageComponents/LunchSVG"
@@ -18,7 +17,6 @@ import { button, media } from "./jss/cvcss"
 import { timeFormat } from "../helpers/TimeStamp"
 
 const SlotCard = ({ eventData, selectTrack }) => {
-
   const slot_id = eventData.slotId
   const scrollDiv = React.createRef()
 
@@ -56,18 +54,21 @@ const SlotCard = ({ eventData, selectTrack }) => {
             className={track.selectedFlag}
           >
             {eventData.tracks.length > 1 ? (
-              <div css={slot_track}> Track - {index + 1}</div>
+              <div css={slot_track}>
+                {" "}
+                Track - {index + 1} {index === 0 ? "(Audi)" : "(M-401)"}
+              </div>
             ) : null}
 
             {eventData.img ? (
               <div css={slot_illust} className={`${eventData.img}`}>
-                {eventData.img === 'check-in' && <CheckinSVG/>}
-                {eventData.img === 'tea_break' && <TeabreakSVG/>}
-                {eventData.img === 'lunch_break' && <LunchSVG/>}
-                {eventData.img === 'networking' && <NetworkingSVG/>}
-                {eventData.img === 'default' && <DefaultSVG/>}
-                {eventData.img === 'welcome' && <WelcomeSVG/>}
-                {eventData.img === 'closing' && <EndSVG/>}
+                {eventData.img === "check-in" && <CheckinSVG />}
+                {eventData.img === "tea_break" && <TeabreakSVG />}
+                {eventData.img === "lunch_break" && <LunchSVG />}
+                {eventData.img === "networking" && <NetworkingSVG />}
+                {eventData.img === "default" && <DefaultSVG />}
+                {eventData.img === "welcome" && <WelcomeSVG />}
+                {eventData.img === "closing" && <EndSVG />}
               </div>
             ) : null}
 
@@ -89,19 +90,18 @@ const SlotCard = ({ eventData, selectTrack }) => {
                         <br />
                         <RatingStars slot={eventData} track={track} />
                       </Fragment>
-                    ):null}
+                    ) : null}
                   </Fragment>
-                ):(
+                ) : (
                   <Fragment>
                     <br />
                     <RatingStars slot={eventData} track={track} />
                   </Fragment>
                 )}
-
               </Fragment>
             ) : null}
             <div css={slot_action}>
-              {eventData.eventType == "talk" && (
+              {eventData.eventType == "talk" && eventData.tracks.length > 1 && (
                 <button
                   css={button}
                   onClick={() => handleClick(track, slot_id)}
@@ -206,8 +206,8 @@ const slot_track_flex = css`
           padding-top: 10px;
         }
       }
-      > .stars{
-        >img{
+      > .stars {
+        > img {
           filter: brightness(0);
         }
       }
@@ -216,7 +216,7 @@ const slot_track_flex = css`
       }
     }
   }
-/*
+  /*
   &[track-select*="selected-2"] {
     > div:nth-of-type(1) {
       transform: translateX(calc(100% + 15px));
@@ -263,12 +263,13 @@ const slotSelected = css`
     border-right-color: ${Variables.dark_base_color};
   }
   > *:not(.form-container),
-  > *:not(.form-container) * {
+  > *:not(.form-container) *:not(button) {
     color: #fff !important;
+    fill: #fff !important;
   }
   button {
     background: #fff;
-    color: ${Variables.wb_red} !important;
+    color: ${Variables.dark_base_color} !important;
   }
 `
 
@@ -340,5 +341,4 @@ const slot_illust = css`
       width: 65px;
     }
   }
-
 `
