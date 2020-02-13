@@ -1,28 +1,30 @@
-import React from 'react';
+import React from "react"
 import { navigate } from "gatsby"
 import { css } from "@emotion/core"
-import {button} from "../components/jss/cvcss"
+import { button } from "../components/jss/cvcss"
+import "../css/site.css"
 
 const Thankyou = () => {
-    return (
-         <div css={successText}>
-          <div className="success-checkmark">
-            <div className="check-icon">
-              <span className="icon-line line-tip"></span>
-              <span className="icon-line line-long"></span>
-              <div className="icon-circle"></div>
-              <div className="icon-fix"></div>
-            </div>
-          </div>
-          <h1>Submitted</h1>
-
-            <span css={button} onClick={() => navigate("/")}>Return to Home</span>
+  return (
+    <div css={successText}>
+      <div className="success-checkmark">
+        <div className="check-icon">
+          <span className="icon-line line-tip"></span>
+          <span className="icon-line line-long"></span>
+          <div className="icon-circle"></div>
+          <div className="icon-fix"></div>
         </div>
-    );
-};
+      </div>
+      <h1>Submitted</h1>
 
-export default Thankyou;
+      <span css={button} onClick={() => navigate("/")}>
+        Return to Home
+      </span>
+    </div>
+  )
+}
 
+export default Thankyou
 
 const successText = css`
   position: absolute;

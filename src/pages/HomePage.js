@@ -5,6 +5,7 @@ import { media } from "../components/jss/cvcss"
 import EventCard from "../components/EventCard/EventCard"
 import SEO from "../components/seo"
 import Nav from "../components/Nav/Nav"
+import "../css/site.css"
 
 const HomePage = () => {
   return (

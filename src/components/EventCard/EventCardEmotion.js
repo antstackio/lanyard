@@ -26,6 +26,13 @@ export const eventCard = css`
   &.inv {
     justify-content: flex-start;
   }
+  .swirlbg svg#homebgsvg {
+    height: 100%;
+    transform: scaleX(2);
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+  }
   .speaker {
     p ~ p {
       line-height: 1;
@@ -118,6 +125,7 @@ export const contentCard = css`
     line-height: 0;
   }
   .illust {
+    text-align: center;
     .break & {
       flex-grow: 1;
     }
@@ -132,10 +140,10 @@ export const contentCard = css`
         }
       }
     }
-    svg{
+    svg {
       max-height: 100%;
+      max-width: 100%;
     }
-
   }
   &.selected {
     order: 1 !important;
@@ -216,7 +224,7 @@ export const card_event_title = css`
     min-height: 55px;
     position: relative;
     justify-content: center;
-    ${media.mn}{
+    ${media.mn} {
       min-height: 40px;
     }
   }
@@ -256,28 +264,28 @@ export const card_last_Row = css`
   display: flex;
   align-items: center;
   justify-content: center;
-      margin: 15px 0;
+  margin: 15px 0;
   .break & {
     justify-content: center;
   }
-  .stars{
-    img{
-        height: 35px;
+  .stars {
+    img {
+      height: 35px;
     }
   }
   > * {
     margin: 0 !important;
   }
 `
-export const next_list =css`
+export const next_list = css`
   margin: 20px 0;
   color: ${Variables.text_primary_color};
-  li{
+  li {
     margin-left: 20px;
-    b{
+    b {
       font-weight: 600;
     }
-    &:not(:first-of-type){
+    &:not(:first-of-type) {
       list-style-type: circle;
     }
   }
@@ -340,11 +348,14 @@ export const card_profile = css`
     border-radius: 50%;
     margin-bottom: 7px;
     img {
+
+    height: 60px;
+    width: 60px;
       border-radius: 50%;
+
     }
   }
 `
-
 
 export const end_info = css`
   text-align: center;
@@ -355,7 +366,7 @@ export const end_info = css`
     font-size: 18px;
     margin-top: 50px;
     margin-bottom: 50px;
-    ${media.mn}{
+    ${media.mn} {
       font-size: 16px;
       margin-top: 25px;
       margin-bottom: 25px;

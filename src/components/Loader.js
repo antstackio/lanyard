@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from "@emotion/core"
-import Variables from "../components/jss/Variables"
+import Variables from "./jss/Variables"
 
 
 const Loader = () => {

@@ -14,7 +14,7 @@ import Variables from "./jss/Variables"
 import StaronSVG from "./ImageComponents/StaronSVG"
 import StaroffSVG from "./ImageComponents/StaroffSVG"
 
-const Feedback = ({ state, fromHomePage }) => {
+const Feedback = ({ state, fromHomePage = false }) => {
   const [rating, setRating] = useState(null)
   const [contactMe, setContactMe] = useState(true)
   const [email, setEmail] = useState("")
@@ -24,11 +24,7 @@ const Feedback = ({ state, fromHomePage }) => {
   const [success, setSuccess] = useState(false)
   const [slots, setSlots] = useState([])
 
-  // if (!location.state) {
-  //   navigate("/")
-  //   return null
-  // }
-  console.log(state)
+  console.log(fromHomePage)
 
   const { track, selectedSlot, overAllFeedback } = state
 
@@ -49,9 +45,13 @@ const Feedback = ({ state, fromHomePage }) => {
       setEmailError("please enter correct email id")
     }
   }
-  function submitConfirmation(){
-    if(confirm("Do u want to continue? Submitted feedback cannot be edited. Check before proceeding.")) {
-      onsubmit();
+  function submitConfirmation() {
+    if (
+      confirm(
+        "Do u want to continue? Submitted feedback cannot be edited. Check before proceeding."
+      )
+    ) {
+      onsubmit()
     }
   }
 
@@ -62,17 +62,11 @@ const Feedback = ({ state, fromHomePage }) => {
         {values.map((ratingNum, index) => {
           if (ratingNum <= rating) {
             return (
-              <StaronSVG
-                onClick={() => setRating(ratingNum)}
-                key={index}
-              />
+              <StaronSVG onClick={() => setRating(ratingNum)} key={index} />
             )
           } else {
             return (
-              <StaroffSVG
-                onClick={() => setRating(ratingNum)}
-                key={index}
-              />
+              <StaroffSVG onClick={() => setRating(ratingNum)} key={index} />
             )
           }
         })}
@@ -83,6 +77,7 @@ const Feedback = ({ state, fromHomePage }) => {
   const onsubmit = async () => {
     let remarks = "no Remarks"
     if (remark !== "") remarks = remark
+    let speakers = [track.speakers]
 
     const data = {
       body: {
@@ -91,19 +86,19 @@ const Feedback = ({ state, fromHomePage }) => {
         remarks,
         rating,
         title: track.title,
-        speakers: track.speakers || "not applicable",
         user_email: email || "not provided",
         contact_me: contactMe,
+        ...(speakers[0] && { speakers: _.flatten(speakers) }),
       },
     }
 
-    // checkParentComponent(remarks)
     await API.post("lanyard", "/items", data)
-      .then(() => {
+      .then((resp) => {
         checkParentComponent(remarks)
       })
       .catch(error => {
         console.log(error)
+        checkParentComponent(remarks)
       })
   }
 
@@ -121,7 +116,6 @@ const Feedback = ({ state, fromHomePage }) => {
   }
 
   function checkParentComponent(remarks) {
-
     if (overAllFeedback) {
       const feedback = lsFeedBack
       lsFeedBack["eventFeedback"] = { rating, remarks, title: "Event Feedback" }
@@ -129,14 +123,12 @@ const Feedback = ({ state, fromHomePage }) => {
       localStorage.setItem("user", JSON.stringify({ email }))
       localStorage.setItem("feedback", JSON.stringify(feedback))
 
-
       setTimeout(() => {
-        nvgt()
+        navigate("/Thankyou")
       }, 1000)
 
       return null
-    }
-    else {
+    } else {
       updateLS(remarks)
     }
   }
@@ -155,24 +147,21 @@ const Feedback = ({ state, fromHomePage }) => {
     localStorage.setItem("user", JSON.stringify({ email }))
     localStorage.setItem("feedback", JSON.stringify(feedback))
 
-
-
     setTimeout(() => {
-      nvgt()
+      navigate("/Thankyou")
     }, 1000)
 
     return null
   }
-  function nvgt() {
 
-    // navigate("/Thankyou")
+  function nvgt() {
     if (fromHomePage) {
       navigate("/AgendaPage")
-    }
-    else {
+    } else {
       navigate("/")
     }
   }
+
   const renderButton = () => {
     if (!rating || !validateEmail(email)) {
       return (
@@ -191,76 +180,59 @@ const Feedback = ({ state, fromHomePage }) => {
 
   return (
     <Container className="form-container">
-          <form
-            css={Form}
-            onSubmit={e => {
-              e.preventDefault()
-            }}
-          >
-            <Header>
-              <Title>FeedBack</Title>
-              <span
-                onClick={() => nvgt()}
-                css={[close_icon, CloseIcon]}
-              >
-                close
-            </span>
-            </Header>
-            <div css={feedBack}>
-              <div css={eventTitle}>
-                <small>{track.title}</small>
-              </div>
-              <div css={form_row}>
-                <div css={starStyle}>{ratingProvider()}</div>
-              </div>
-              <div css={form_row}>
-                <input
-                  placeholder="Enter Email"
-                  type="text"
-                  value={email}
-                  onChange={e => {
-                    setEmail(e.target.value)
-                  }}
-                  onBlur={validateField}
-                  onFocus={() => {
-                    setEmailError("")
-                  }}
-                />
-                {emailError ? <span css={error}>{emailError}</span> : null}
-              </div>
-              <div css={form_row}>
-                <textarea
-                  placeholder="Remarks"
-                  value={remark}
-                  onChange={e => setRemark(e.target.value)}
-                />
-              </div>
-              <div css={form_row}>
-                <div css={checkbox}>
-                  <label>
-                    <input
-                      defaultChecked={contactMe}
-                      type="checkbox"
-                      onChange={() => setContactMe(!contactMe)}
-                    />
-                    <span>
-                      <small className="check"></small>Do you want AWS sales /
-                      experts to contact you?
-                  </span>
-                  </label>
-                </div>
-              </div>
-              <div css={form_row}>
-                <label className="key">
-                  <small>
-                    By clicking submit, you agree to our{" "}
-                    <Link to="/">Terms & conditions</Link>{" "}
-                  </small>
-                </label>
-                <div>{renderButton()}</div>
-              </div>
-            </div>
-          </form>
+      <form
+        css={Form}
+        onSubmit={e => {
+          e.preventDefault()
+        }}
+      >
+        <Header>
+          <Title>FeedBack</Title>
+          <span onClick={() => nvgt()} css={[close_icon, CloseIcon]}>
+            close
+          </span>
+        </Header>
+        <div css={feedBack}>
+          <div css={eventTitle}>
+            <small>{track.title}</small>
+          </div>
+          <div css={form_row}>
+            <div css={starStyle}>{ratingProvider()}</div>
+          </div>
+          <div css={form_row}>
+            <input
+              placeholder="Enter Email"
+              type="text"
+              value={email}
+              onChange={e => {
+                setEmail(e.target.value)
+              }}
+              onBlur={validateField}
+              onFocus={() => {
+                setEmailError("")
+              }}
+            />
+            {emailError ? <span css={error}>{emailError}</span> : null}
+          </div>
+          <div css={form_row}>
+            <textarea
+              placeholder="Remarks"
+              value={remark}
+              onChange={e => setRemark(e.target.value)}
+            />
+          </div>
+
+          <div css={form_row}>
+            <label className="key">
+              <small>
+                By clicking submit, you agree to our{" "}
+                <Link to="/">Terms & conditions</Link>{" "}
+              </small>
+            </label>
+            <div>{renderButton()}</div>
+          </div>
+        </div>
+      </form>
     </Container>
   )
 }
@@ -270,17 +242,17 @@ export default Feedback
 //Styling
 
 const Container = styled.div`
-    border: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    height: 100vh !important;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    border: 0;
-    z-index: 999999;
-    background: #1E2A39;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100vh !important;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  border: 0;
+  z-index: 999999;
+  background: #1e2a39;
 `
 
 const Header = styled.div`
@@ -323,8 +295,8 @@ const Form = css`
   height: 100%;
   display: flex;
   flex-direction: column;
-  .key + button{
-        position: fixed;
+  .key + button {
+    position: fixed;
     left: 10px;
     right: 10px;
     bottom: 10px;
@@ -344,8 +316,8 @@ const feedBack = css`
   padding-bottom: 80px;
   flex-direction: column;
   overflow: auto;
-  input[type="checkbox"]{
-    & +span{
+  input[type="checkbox"] {
+    & + span {
       color: #fff;
     }
   }
@@ -364,15 +336,14 @@ const feedBack = css`
     }
   }
 `
-const starStyle =css`
-    svg {
-      width: 25px;
-      display: inline-block;
-      & ~ svg {
-        margin-left: 10px;
-      }
+const starStyle = css`
+  svg {
+    width: 25px;
+    display: inline-block;
+    & ~ svg {
+      margin-left: 10px;
     }
-
+  }
 `
 
 const error = css`

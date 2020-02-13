@@ -5,6 +5,7 @@ import { css } from "@emotion/core"
 import SEO from "../components/seo"
 import SlotCard from "../components/SlotCard"
 import Variables from "../components/jss/Variables"
+import "../css/site.css"
 
 import { close_icon } from "../components/jss/cvcss"
 
@@ -165,7 +166,7 @@ const agenda_list = css`
   padding-right: ${Variables.gutter_width_xs};
   padding-left: 35px;
   position: relative;
-  margin: 0 ;
+  margin: 0;
   list-style-type: none;
   &:before {
     content: "";

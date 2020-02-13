@@ -6,8 +6,8 @@
         "img": "check-in",
         "room": null,
         "slotId": "slot-1",
-        "timeStart": 1564194600000,
-        "timeEnd": 1564197300000,
+        "timeStart": 1581131700000,
+        "timeEnd": 1581134400000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -15,7 +15,7 @@
             "selectedFlag": "default",
             "trackLength": 4,
             "feedBack": false,
-            "title": "Check-In and Networking"
+            "title": "Registration and Networking"
           }
         ]
       },
@@ -24,8 +24,8 @@
         "img": "welcome",
         "room": null,
         "slotId": "slot-2",
-        "timeStart": 1564197300000,
-        "timeEnd": 1564198200000,
+        "timeStart": 1581134400000,
+        "timeEnd": 1581135000000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -42,8 +42,8 @@
         "img": "default",
         "room": null,
         "slotId": "slot-3",
-        "timeStart": 1564198200000,
-        "timeEnd": 1564200000000,
+        "timeStart": 1581135300000,
+        "timeEnd": 1581138000000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -51,14 +51,14 @@
             "selectedFlag": "default",
             "trackLength": 4,
             "feedBack": false,
-            "title": "Keynote: Embracing Full-stack Serverless. A New Paradigm",
+            "title": "Keynote: Alexa, What Can I Do Now?",
             "speakers": [
               {
-                "firstName": "Gerard",
-                "lastName": "Sans",
-                "profilePicture": "gerard_sans.jpg",
-                "designation": "Developer Advocate, AWS",
-                "externalLink": "https://www.linkedin.com/in/gerard-sans/"
+                "firstName": "Jeff",
+                "lastName": " Blankenburg",
+                "profilePicture": "jeff.jpg",
+                "designation": "Alexa Evangelist at Amazon (USA)",
+                "externalLink": "https://www.linkedin.com/in/jeffblankenburg/"
               }
             ]
           }
@@ -69,8 +69,8 @@
         "img": "default",
         "room": null,
         "slotId": "slot-4",
-        "timeStart": 1564200000000,
-        "timeEnd": 1564201800000,
+        "timeStart": 1581138300000,
+        "timeEnd": 1581139800000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -78,20 +78,13 @@
             "selectedFlag": "default",
             "trackLength": 4,
             "feedBack": false,
-            "title": "Tips and Tricks for Running Your SaaS Business on AWS: Lessons Learned from JFrog",
+            "title": "3 words to address India by voice",
             "speakers": [
               {
-                "firstName": "Prasanna",
-                "lastName": "Raghavendra",
-                "profilePicture": "prasanna_raghavendra.jpg",
-                "designation": "R&D Director, JFrog India",
-                "externalLink": "https://www.linkedin.com/in/prasannaraghavendra/"
-              },
-              {
-                "firstName": "Seshu",
-                "lastName": "Reddy",
-                "profilePicture": "seshu_reddy.jpg",
-                "designation": "SRE, JFrog India",
+                "firstName": "Chris Sheldrick",
+                "lastName": " Sheldrick",
+                "profilePicture": "chris.JPG",
+                "designation": "Co-Founder & CEO of what3words",
                 "externalLink": "https://www.linkedin.com/in/seshu-reddy-01a5715/"
               }
             ]
@@ -103,8 +96,8 @@
         "img": "default",
         "room": null,
         "slotId": "slot-5",
-        "timeStart": 1564201800000,
-        "timeEnd": 1564203600000,
+        "timeStart": 1581140100000,
+        "timeEnd": 1581141600000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -112,41 +105,14 @@
             "selectedFlag": "default",
             "trackLength": 4,
             "feedBack": false,
-            "title": "Building Voice Enabled Experiences with Alexa",
+            "title": "Designing VoiceFirst Experiences for Social Good: How the American Red Cross leverages the power of voice to deliver its mission",
             "speakers": [
               {
-                "firstName": "Karthik",
-                "lastName": "Ragubathy",
-                "profilePicture": "karthik_ragubathy.jpg",
-                "designation": "Solutions Architect, Alexa Skills Kit",
-                "externalLink": "https://www.linkedin.com/in/pkarthikr/"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "eventType": "other",
-        "img": "default",
-        "room": null,
-        "slotId": "slot-6",
-        "timeStart": 1564203600000,
-        "timeEnd": 1564205400000,
-        "slotFeedBack": false,
-        "tracks": [
-          {
-            "trackId": "event6",
-            "selectedFlag": "default",
-            "trackLength": 4,
-            "feedBack": false,
-            "title": "How Freshworks reduced blast radius and improved uptime at 500k requests per minute",
-            "speakers": [
-              {
-                "firstName": "Kiran",
-                "lastName": "Darisi",
-                "profilePicture": "kiran_darisi.jpg",
-                "designation": "Co-Founder and Distinguished Engineer at Freshworks",
-                "externalLink": "https://www.linkedin.com/in/kirandarisi/"
+                "firstName": "Michelle",
+                "lastName": " Mullenax",
+                "profilePicture": "michelle.jpg",
+                "designation": "Product & UX Lead, Innovation Team, American Red Cross",
+                "externalLink": "https://www.linkedin.com/in/michellemullenax/"
               }
             ]
           }
@@ -156,25 +122,25 @@
         "eventType": "break",
         "img": "tea_break",
         "room": null,
-        "slotId": "slot-7",
-        "timeStart": 1564205400000,
-        "timeEnd": 1564207200000,
+        "slotId": "slot-6",
+        "timeStart": 1581141600000,
+        "timeEnd": 1581142800000,
         "slotFeedBack": false,
         "tracks": [
           {
             "trackId": "event7",
             "selectedFlag": "default",
             "trackLength": 4,
-            "title": "Tea Break"
+            "title": "Tea Break and Networking"
           }
         ]
       },
       {
         "eventType": "talk",
         "room": null,
-        "slotId": "slot-8",
-        "timeStart": 1564207200000,
-        "timeEnd": 1564208400000,
+        "slotId": "slot-7",
+        "timeStart": 1581142800000,
+        "timeEnd": 1581144600000,
         "slotFeedBack": false,
         "tracks": [
           {
@@ -182,14 +148,14 @@
             "selectedFlag": "notSelected",
             "trackLength": 1,
             "feedBack": false,
-            "title": "Serverless Architecture : The future of Cloud Computing",
+            "title": "Developer Tools for Alexa",
             "speakers": [
               {
-                "firstName": "Palanisamy",
-                "lastName": "Chellappan",
-                "profilePicture": "palani.jpg",
-                "designation": "Enterprise Architect, Brillio",
-                "externalLink": "https://www.linkedin.com/in/palanisamy/"
+                "firstName": "Greg",
+                "lastName": "Bulmash",
+                "profilePicture": "greg.jpg",
+                "designation": "Solutions Architect at Amazon (USA)",
+                "externalLink": "https://www.linkedin.com/in/gregbulmash/"
               }
             ]
           },
@@ -198,31 +164,49 @@
             "selectedFlag": "notSelected",
             "trackLength": 1,
             "feedBack": false,
-            "title": "Building a search experience live with App Search",
+            "title": "Making Alexa smarter and locally relevant with AI",
             "speakers": [
-              {
-                "firstName": "Aravind",
-                "lastName": "Putrevu",
-                "profilePicture": "aravind_autrevu.jpg",
-                "designation": "Developer Advocate, Elastic",
-                "externalLink": "https://www.linkedin.com/in/aravindputrevu/"
+              { 
+                "firstName": "Sohan",
+                "lastName": "Maheshwar",
+                "profilePicture": "sohan.jpg",
+                "designation": "Alexa Evangelist at Amazon",
+                "externalLink": "https://www.linkedin.com/in/sohanmaheshwar/"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "eventType": "talk",
+        "room": null,
+        "slotId": "slot-8",
+        "timeStart": 1581144900000,
+        "timeEnd":1581147300000,
+        "slotFeedBack": false,
+        "tracks": [
           {
             "trackId": "event10",
             "selectedFlag": "notSelected",
             "trackLength": 1,
             "feedBack": false,
-            "title": "From One to Many: Slack's transition away from a single AWS account",
+            "title": "How to Get your Skills Discovered and Drive Customer Engagement",
             "speakers": [
               {
-                "firstName": "Andrew",
-                "lastName": "Martin",
-                "profilePicture": "andrew_martin.jpg",
-                "designation": "Senior Cloud Engineer, Slack",
-                "externalLink": null
+                "firstName": "Prachi",
+                "lastName": "Mukhija",
+                "profilePicture": "prachi.jpg",
+                "designation": "Head of Marketing, Alexa, Amazon (IN)",
+                "externalLink": "https://www.linkedin.com/in/prachimukhija/"
+              },
+              {
+                "firstName": "Karthik",
+                "lastName": "Ragubathy",
+                "profilePicture": "karthik.jpg",
+                "designation": "Alexa Solutions Architect at Amazon",
+                "externalLink": "https://www.linkedin.com/in/pkarthikr/"
               }
+
             ]
           },
           {
@@ -230,183 +214,14 @@
             "selectedFlag": "notSelected",
             "trackLength": 1,
             "feedBack": false,
-            "title": "Diversity Program: Practical tactics for achieving full potential in your career",
+            "title": "Best practices of AWS Lambda for Alexa developers",
             "speakers": [
               {
-                "firstName": "Diana Cruz ",
-                "lastName": "Solash",
-                "profilePicture": "diana.jpg",
-                "designation": "VP Inclusion and Diversity, Infor",
-                "externalLink": "https://www.linkedin.com/in/diana-cruz-solash-4452336/"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "eventType": "talk",
-        "room": null,
-        "slotId": "slot-9",
-        "timeStart": 1564209000000,
-        "timeEnd": 1564210200000,
-        "slotFeedBack": false,
-        "tracks": [
-          {
-            "trackId": "event12",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Building voice-driven apps for Alexa",
-            "speakers": [
-              {
-                "firstName": "Saifur Rahman",
-                "lastName": "Mohsin",
-                "profilePicture": "saifur.jpg",
-                "designation": "Developer, Web, Mobile and Voice Driven Apps",
-                "externalLink": "https://www.linkedin.com/in/saifurrahmanmohsin/"
-              }
-            ]
-          },
-          {
-            "trackId": "event13",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "What's New - 'An AWS server-less backed platform for latest news on product releases.'",
-            "speakers": [
-              {
-                "firstName": "Krishna Chaitanya",
-                "lastName": "Sadhu",
-                "profilePicture": "krishna_chaitanya_sadhu.jpg",
-                "designation": "Architect, Infor India Pvt Ltd.",
-                "externalLink": "https://www.linkedin.com/in/krishna-chaitanya-sadhu-38487532/"
-              }
-            ]
-          },
-          {
-            "trackId": "event14",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Lot of learns from on-prem migration to AWS",
-            "speakers": [
-              {
-                "firstName": "Gangireddy",
-                "lastName": "D",
-                "profilePicture": "gangireddy.jpg",
-                "designation": "SRE, Knolskape",
-                "externalLink": "https://www.linkedin.com/in/gangireddy-danamreddy-465675148/"
-              }
-            ]
-          },
-          {
-            "trackId": "event15",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Diversity Program: Exploring opportunities with communities for a successful career",
-            "speakers": [
-              {
-                "firstName": "Shwetha ",
-                "lastName": "Lakshman Rao",
-                "profilePicture": "shwetha.jpg",
-                "designation": "Sr. MTS , VMware software India & City Director - Women Who Code Bangalore",
-                "externalLink": "https://www.linkedin.com/in/shwetha-lakshman-rao-a4a59015/"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "eventType": "talk",
-        "room": null,
-        "slotId": "slot-10",
-        "timeStart": 1564210800000,
-        "timeEnd": 1564213200000,
-        "slotFeedBack": false,
-        "tracks": [
-          {
-            "trackId": "event16",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Plant Monitoring & Automatically Water System using AWS IoT.",
-            "speakers": [
-              {
-                "firstName": "Sekhar",
-                "lastName": "Rangam",
-                "profilePicture": "sekhar_rangam.jpg",
-                "designation": "Manager - Sr. Technical Architect, BRIDGEi2i Analytics Solutions",
-                "externalLink": "https://www.linkedin.com/in/sekharrangam/"
-              }
-            ]
-          },
-          {
-            "trackId": "event17",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Refactoring to Serverless -- Translating common application architecture patterns to serverless on AWS.",
-            "speakers": [
-              {
-                "firstName": "Prashanth",
-                "lastName": "HN",
-                "profilePicture": "prashanth_hn.jpg",
-                "designation": "Co-Founder, WheelsBox.com",
-                "externalLink": "https://www.linkedin.com/in/hnprashanth/"
-              },
-              {
-                "firstName": "Aditya",
-                "lastName": "Reddy",
-                "profilePicture": "aditya_reddy.jpg",
-                "designation": "Software Developer, Branch Insurance",
-                "externalLink": "https://www.linkedin.com/in/adithyakreddy/"
-              }
-            ]
-          },
-          {
-            "trackId": "event18",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Lets Talk AI with the Avengers - Building a Conversational AI Assistant with AWS Lambda and Google Home.",
-            "speakers": [
-              {
-                "firstName": "Divya",
-                "lastName": "Krishnamurthi",
-                "profilePicture": "divya_krishnamurthi.jpg",
-                "designation": "Practice Manager, Akamai Technologies",
-                "externalLink": "https://www.linkedin.com/in/divyakrishnamurthi/"
-              }
-            ]
-          },
-          {
-            "trackId": "event19",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Building Efficient, Scalable and Resilient Front-end logging service with AWS.",
-            "speakers": [
-              {
-                "firstName": "Kokilavani",
-                "lastName": "Kathiresan",
-                "profilePicture": "kokilavani_kathiresan.jpg",
-                "designation": "Software Developer, Intuit",
-                "externalLink": "https://www.linkedin.com/in/kokilavani-kathiresan/"
-              },
-              {
-                "firstName": "Ravikumar",
-                "lastName": "Kota",
-                "profilePicture": "ravikumar_kota.jpg",
-                "designation": "Software Developer, Intuit",
-                "externalLink": null
-              },
-              {
-                "firstName": "Shailja",
-                "lastName": "Agarwala",
-                "profilePicture": "shailja_agarwala.jpg",
-                "designation": "Software Developer, Intuit",
-                "externalLink": "https://www.linkedin.com/in/shailja-agarwala-4a588185/"
+                "firstName": "Mani",
+                "lastName": "Chandrasekaran",
+                "profilePicture": "mani.jpg",
+                "designation": " Solutions Architect at AWS",
+                "externalLink": "https://www.linkedin.com/in/cmanikandan/"
               }
             ]
           }
@@ -416,13 +231,13 @@
         "eventType": "break",
         "img": "lunch_break",
         "room": null,
-        "slotId": "slot-11",
-        "timeStart": 1564213200000,
-        "timeEnd": 1564216800000,
+        "slotId": "slot-9",
+        "timeStart":1581147300000,
+        "timeEnd": 1581150600000,
         "slotFeedBack": false,
         "tracks": [
           {
-            "trackId": "event20",
+            "trackId": "event12",
             "selectedFlag": "default",
             "trackLength": 4,
             "title": "Lunch"
@@ -432,86 +247,40 @@
       {
         "eventType": "talk",
         "room": null,
-        "slotId": "slot-12",
-        "timeStart": 1564216800000,
-        "timeEnd": 1564219200000,
+        "slotId": "slot-10",
+        "timeStart":1581150600000,
+        "timeEnd": 1581152400000,
         "slotFeedBack": false,
         "tracks": [
           {
-            "trackId": "event21",
+            "trackId": "event13",
             "selectedFlag": "notSelected",
             "trackLength": 1,
             "feedBack": false,
-            "title": "Leveraging Machine Learning to Reduce Mean Time to Identify and Resolve Issues when handling Systems/Applications at Scale.",
+            "title": "Journey from E-Commerce to Voice Commerce",
             "speakers": [
               {
-                "firstName": "Paul",
-                "lastName": "Rajesh",
-                "profilePicture": "paul_rajesh.jpg",
-                "designation": "Director India Sales, Sumo Logic",
-                "externalLink": "https://www.linkedin.com/in/paulrajesh/"
-              },
-              {
-                "firstName": "Vikas",
-                "lastName": "Srivastava",
-                "profilePicture": "vikas_srivastava.jpg",
-                "designation": "Lead SRE, Sumo Logic",
-                "externalLink": "https://www.linkedin.com/in/vikas-srivastava-47a6482b/"
+                "firstName": "Ankit",
+                "lastName": "Sheth",
+                "profilePicture": "ankit.png",
+                "designation": " Founder & CEO at DataVizz",
+                "externalLink": "https://www.linkedin.com/in/ankitpsheth/"
               }
             ]
           },
           {
-            "trackId": "event22",
+            "trackId": "event14",
             "selectedFlag": "notSelected",
             "trackLength": 1,
             "feedBack": false,
-            "title": "Making Lambda simpler for data scientists.",
+            "title": "Making money with Alexa Skills",
             "speakers": [
               {
-                "firstName": "Nabarun",
-                "lastName": "Pal",
-                "profilePicture": "nabarun_pal.jpg",
-                "designation": "Platform Engineer, Rorodata",
-                "externalLink": "https://www.linkedin.com/in/palnabarun/"
-              }
-            ]
-          },
-          {
-            "trackId": "event23",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Complex architectures for authentication and authorization on AWS.",
-            "speakers": [
-              {
-                "firstName": "Boyan",
-                "lastName": "Dimitrov",
-                "profilePicture": "boyan_dimitrov.jpg",
-                "designation": "AWS Community Hero, Germany",
-                "externalLink": "https://aws.amazon.com/developer/community/heroes/boyan-dimitrov/"
-              }
-            ]
-          },
-          {
-            "trackId": "event24",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Our journey with AWS from 0(ZERO) orders to 6 digit mark.",
-            "speakers": [
-              {
-                "firstName": "Pranesh",
-                "lastName": "Vittal",
-                "profilePicture": "pranesh_vittal.jpg",
-                "designation": "Associate Director - Database & DevOps, Medlife.com",
-                "externalLink": "https://www.linkedin.com/in/praneshvittal/"
-              },
-              {
-                "firstName": "Prasanna",
-                "lastName": "Desai",
-                "profilePicture": "prasanna_desai.jpg",
-                "designation": "Senior Build And Release Engineer, Medlife.com",
-                "externalLink": "https://www.linkedin.com/in/prasanna-desai-6b785562/"
+                "firstName": "Ashish",
+                "lastName": "Jha",
+                "profilePicture": "ashish.png",
+                "designation": "Alexa Community Evangelist of The Year '18 & '19",
+                "externalLink": "https://www.linkedin.com/in/thedreamsaver/"
               }
             ]
           }
@@ -520,72 +289,89 @@
       {
         "eventType": "talk",
         "room": null,
-        "slotId": "slot-13",
-        "timeStart": 1564219800000,
-        "timeEnd": 1564222200000,
+        "slotId": "slot-11",
+        "timeStart": 1581152700000,
+        "timeEnd": 1581155100000,
+        "slotFeedBack": false,
+        "tracks": [
+          { 
+            "trackId": "event15",
+            "selectedFlag": "notSelected",
+            "trackLength": 1,
+            "feedBack": false,
+            "title": "Alexa in Enterprise",
+            "speakers": [
+              {
+                "firstName": "Vinu",
+                "lastName": "Sunder",
+                "profilePicture": "",
+                "designation": "Enterprise Cloud Architect, TietoEVRY",
+                "externalLink": "https://www.linkedin.com/in/vinu-sunder-b7468893/"
+              }
+            ]
+          },
+          {
+            "trackId": "event16",
+            "selectedFlag": "notSelected",
+            "trackLength": 1,
+            "feedBack": false,
+            "title": "Building a successful voice agency",
+            "speakers": [
+              {
+                "firstName": "Sreeraman",
+                "lastName": "Thiagarajan",
+                "profilePicture": "sreeram.png",
+                "designation": "Co-Founder - Agrahyah Technologies",
+                "externalLink": "https://www.linkedin.com/in/sreeraman/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "eventType": "talk",
+        "room": null,
+        "slotId": "slot-12",
+        "timeStart": 1581155400000,
+        "timeEnd": 1581157800000,
         "slotFeedBack": false,
         "tracks": [
           {
-            "trackId": "event25",
+            "trackId": "event17",
             "selectedFlag": "notSelected",
             "trackLength": 1,
             "feedBack": false,
-            "title": "Building Digital Human by using AWS Sumerian.",
+            "title": "10 Things Every Voice App Should Do",
             "speakers": [
               {
-                "firstName": "Ilanchezhian",
-                "lastName": "Ganesamurthy",
-                "profilePicture": "ilanchezhian.jpg",
-                "designation": "Enterprise Architect, EVRY",
-                "externalLink": "https://www.linkedin.com/in/ilanchezhian/"
+                "firstName": "Jeff",
+                "lastName": "Blankenburg",
+                "profilePicture": "jeff.jpg",
+                "designation": " Alexa Evangelist at Amazon (USA)",
+                "externalLink": "https://www.linkedin.com/in/jeffblankenburg/"
               }
             ]
           },
           {
-            "trackId": "event26",
+            "trackId": "event18",
             "selectedFlag": "notSelected",
             "trackLength": 1,
             "feedBack": false,
-            "title": "Kubernetes on AWS (using Amazon EKS).",
+            "title": "Building Engaging Voice-First Games for Alexa",
             "speakers": [
+              { 
+                "firstName": "Sohan",
+                "lastName": "Maheshwar",
+                "profilePicture": "sohan.jpg",
+                "designation": "Alexa Evangelist at Amazon",
+                "externalLink": "https://www.linkedin.com/in/sohanmaheshwar/"
+              },
               {
-                "firstName": "Akash",
-                "lastName": "Agrawal",
-                "profilePicture": "akash_agrawal.jpg",
-                "designation": "GDE in cloud",
-                "externalLink": "https://www.linkedin.com/in/akash-agrawal-58a97813/"
-              }
-            ]
-          },
-          {
-            "trackId": "event27",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Simplifying Real Time Data Analytics with Docker, IoT & AWS Rekognition Service.",
-            "speakers": [
-              {
-                "firstName": "Ajeet Singh",
-                "lastName": "Raina",
-                "profilePicture": "ajeet_singh_raina.jpg",
-                "designation": "Docker Captain and Docker Bangalore Community Leader",
-                "externalLink": "https://www.linkedin.com/in/ajeetsraina/"
-              }
-            ]
-          },
-          {
-            "trackId": "event28",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Lessons learnt building a Distributed Linked List on S3.",
-            "speakers": [
-              {
-                "firstName": "Manik",
-                "lastName": "Jindal",
-                "profilePicture": "manik_jindal.jpg",
-                "designation": "Computer Scientist, Adobe",
-                "externalLink": "https://www.linkedin.com/in/themanikjindal/"
+                  "firstName": "Karthik",
+                  "lastName": "Ragubathy",
+                  "profilePicture": "karthik.jpg",
+                  "designation": "Alexa Solutions Architect at Amazon",
+                  "externalLink": "https://www.linkedin.com/in/pkarthikr/"
               }
             ]
           }
@@ -595,205 +381,61 @@
         "eventType": "break",
         "img": "tea_break",
         "room": null,
-        "slotId": "slot-14",
-        "timeStart": 1564222200000,
-        "timeEnd": 1564222800000,
+        "slotId": "slot-13",
+        "timeStart": 1581157800000,
+        "timeEnd": 1581159000000,
         "slotFeedBack": false,
         "tracks": [
           {
-            "trackId": "event29",
+            "trackId": "event19",
             "selectedFlag": "default",
             "trackLength": 4,
-            "title": "Tea Break"
+            "title": "Tea Break and Networking"
           }
         ]
       },
       {
-        "eventType": "talk",
+        "eventType": "other",
+        "img": "default",
+        "room": null,
+        "slotId": "slot-14",
+        "timeStart": 1581159000000,
+        "timeEnd": 1581161400000,
+        "slotFeedBack": false,
+        "tracks": [
+          {
+            "trackId": "event20",
+            "selectedFlag": "default",
+            "trackLength": 4,
+            "feedBack": false,
+            "title": "Closing Keynote",
+            "speakers": [
+              {
+                "firstName": "Haja ",
+                "lastName": "Sheriff ",
+                "profilePicture": "haja.jpg",
+                "designation": " Lead-Business Development, Alexa Skills - Amazon (IN)",
+                "externalLink": "https://www.linkedin.com/in/hajas/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "eventType": "other",
+        "img": "default",
         "room": null,
         "slotId": "slot-15",
-        "timeStart": 1564222800000,
-        "timeEnd": 1564225200000,
+        "timeStart": 1581161700000,
+        "timeEnd": 1581162900000,
         "slotFeedBack": false,
         "tracks": [
           {
-            "trackId": "event30",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Leveraging Micronaut on AWS Lambda.",
-            "speakers": [
-              {
-                "firstName": "Naresha",
-                "lastName": "K",
-                "profilePicture": "naresha_1.jpg",
-                "designation": "Organiser, Bangalore Groovy User Group",
-                "externalLink": "https://www.linkedin.com/in/nareshak/"
-              }
-            ]
-          },
-          {
-            "trackId": "event31",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Security Best Practices for Kubernetes.",
-            "speakers": [
-              {
-                "firstName": "Neependra",
-                "lastName": "Khare",
-                "profilePicture": "neependra_khare.jpg",
-                "designation": "Founder and Principal Consultant, CloudYuga Technologies",
-                "externalLink": "https://www.linkedin.com/in/neependra/"
-              }
-            ]
-          },
-          {
-            "trackId": "event32",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Adopting Serverless Culture: Taking your team to v2.0 of your serverless product",
-            "speakers": [
-              {
-                "firstName": "Guruprasad",
-                "lastName": "Holla",
-                "profilePicture": "guruprasad_holla.jpg",
-                "designation": "Founder, Quiznext",
-                "externalLink": "https://www.linkedin.com/in/gprasadholla/"
-              }
-            ]
-          },
-          {
-            "trackId": "event33",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Cloud Security",
-            "speakers": [
-              {
-                "firstName": "Amar",
-                "lastName": "Prusty",
-                "profilePicture": "amar_prusty.jpg",
-                "designation": "Cloud-Data Center Consultant Architect, DXC Technology",
-                "externalLink": "https://www.linkedin.com/in/amar-prusty-07913028/"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "eventType": "talk",
-        "room": null,
-        "slotId": "slot-16",
-        "timeStart": 1564225800000,
-        "timeEnd": 1564228200000,
-        "slotFeedBack": false,
-        "tracks": [
-          {
-            "trackId": "event34",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Become Thanos of the LambdaLand: Wield all the Infinity Stones.",
-            "speakers": [
-              {
-                "firstName": "Srushith",
-                "lastName": "Repakula",
-                "profilePicture": "srushith.jpg",
-                "designation": "Head of Engineering, KonfHub",
-                "externalLink": "https://www.linkedin.com/in/srushith/"
-              }
-            ]
-          },
-          {
-            "trackId": "event35",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Infrastructure Provisioning and Automation for Large Enterprises.",
-            "speakers": [
-              {
-                "firstName": "Dilip",
-                "lastName": "Kola",
-                "profilePicture": "dilip_kola.jpg",
-                "designation": "Co-Founder & CTO, Tensult",
-                "externalLink": "https://www.linkedin.com/in/dilip-kola-904b1515/"
-              },
-              {
-                "firstName": "Anirudh",
-                "lastName": "Baskaran",
-                "profilePicture": "anirudh_baskaran.jpg",
-                "designation": "Co-Founder & CEO, Tensult",
-                "externalLink": "https://www.linkedin.com/in/anirudhbaskaran/"
-              }
-            ]
-          },
-          {
-            "trackId": "event36",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "Log Analytics with ELK Stack (Architecture for aggressive cost optimisation and infinite data scale).",
-            "speakers": [
-              {
-                "firstName": "Denis",
-                "lastName": "D'Souza",
-                "profilePicture": "denis.jpg",
-                "designation": "DevOps Engineer, Moonfrog Labs",
-                "externalLink": "https://www.linkedin.com/in/denis-dsouza/"
-              }
-            ]
-          },
-          {
-            "trackId": "event37",
-            "selectedFlag": "notSelected",
-            "trackLength": 1,
-            "feedBack": false,
-            "title": "AWS Secrets for Best Practices.",
-            "speakers": [
-              {
-                "firstName": "Vijaya Nirmala",
-                "lastName": "Gopal",
-                "profilePicture": "nirmala.jpg",
-                "designation": "Technical Lead - Cloud DevOps Solutions Engineering, Sonata Software",
-                "externalLink": "https://www.linkedin.com/in/vijayanirmalagopal-5a54159a/"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "eventType": "break",
-        "img": "networking",
-        "room": null,
-        "slotId": "slot-17",
-        "timeStart": 1564228200000,
-        "timeEnd": 1564229700000,
-        "slotFeedBack": false,
-        "tracks": [
-          {
-            "trackId": "event38",
+            "trackId": "event21",
             "selectedFlag": "default",
             "trackLength": 4,
-            "title": "Networking"
-          }
-        ]
-      },
-      {
-        "eventType": "break",
-        "img": "closing",
-        "room": null,
-        "slotId": "slot-18",
-        "timeStart": 1564229700000,
-        "timeEnd": 1564231200000,
-        "slotFeedBack": false,
-        "tracks": [
-          {
-            "trackId": "event39",
-            "selectedFlag": "default",
-            "trackLength": 4,
-            "title": "Closing Note"
+            "feedBack": false,
+            "title": "Closing Note - Alexa Community Bengaluru Team"
           }
         ]
       }

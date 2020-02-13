@@ -7,7 +7,7 @@ import { media } from "./jss/cvcss"
 // import star_on from "../images/star-on.svg"
 import StaronSVG from "./ImageComponents/StaronSVG"
 import StaroffSVG from "./ImageComponents/StaroffSVG"
-import Feedback from "../components/Feedback";
+import Feedback from "./Feedback"
 
 const RatingStars = ({ large, track, slot, overAllFeedback }) => {
   const [stars, setStars] = useState([1, 2, 3, 4, 5])
@@ -17,7 +17,6 @@ const RatingStars = ({ large, track, slot, overAllFeedback }) => {
   const [selectedStar, setSelectedStar] = useState(null)
   const [selectedSlot, setSelectedSlot] = useState(null)
   const [fdbk, setFdbk] = useState(null)
-
 
   useEffect(() => {
     const fdbk = JSON.parse(localStorage.getItem("feedback"))
@@ -54,36 +53,50 @@ const RatingStars = ({ large, track, slot, overAllFeedback }) => {
         setSelectedStar(star)
         setTimeout(() => {
           setFdbk(1)
-          }, 200)
+        }, 200)
       }
     }
   }
 
   return (
     <Fragment>
-    <span css={[ratingCard, large ? largeRating : null]} className="stars">
-      {feedbackProvided ? <p css={feedbacktext}>Your feedback</p> : null}
-      {stars.map(star => (
-        <Fragment>
-          {star <= selectedStar ? (
-            <span className={feedbackProvided ? "smallStar" : " "}
+      <span css={[ratingCard, large ? largeRating : null]} className="stars">
+        {feedbackProvided ? <p css={feedbacktext}>Your feedback</p> : null}
+        {stars.map(star => (
+          <Fragment>
+            {star <= selectedStar ? (
+              <span
+                className={feedbackProvided ? "smallStar" : " "}
                 key={star}
-                onClick={() => onClickStars(star)}>
-              <StaronSVG/>
-            </span>
+                onClick={() => onClickStars(star)}
+              >
+                <StaronSVG />
+              </span>
             ) : (
-              <span className={feedbackProvided ? "smallStar" : " "}
-              key={star}
-              onClick={() => onClickStars(star)}>
-
-            <StaroffSVG/>
-            </span>
+              <span
+                className={feedbackProvided ? "smallStar" : " "}
+                key={star}
+                onClick={() => onClickStars(star)}
+              >
+                <StaroffSVG />
+              </span>
             )}
-        </Fragment>
-      ))}
-    </span>
-      {fdbk === 0 &&(<Feedback  state={{ selectedStar, track, selectedSlot: slot }}/>)}
-      {fdbk === 1 &&(<Feedback fromHomePage  state={{ selectedStar, track : {title: "Event Feedback", trackId: "eventFeedback"}, overAllFeedback }}/>)}
+          </Fragment>
+        ))}
+      </span>
+      {fdbk === 0 && (
+        <Feedback state={{ selectedStar, track, selectedSlot: slot }} />
+      )}
+      {fdbk === 1 && (
+        <Feedback
+          fromHomePage={true}
+          state={{
+            selectedStar,
+            track: { title: "Event Feedback", trackId: "eventFeedback" },
+            overAllFeedback,
+          }}
+        />
+      )}
     </Fragment>
   )
 }
@@ -91,14 +104,14 @@ const RatingStars = ({ large, track, slot, overAllFeedback }) => {
 export default RatingStars
 
 const ratingCard = css`
-  span{
+  span {
     svg {
       width: 25px;
       display: inline-block;
     }
-        & ~ span svg {
-          margin-left: 10px;
-        }
+    & ~ span svg {
+      margin-left: 10px;
+    }
     &.smallStar svg {
       width: 20px;
       filter: grayscale();
@@ -106,21 +119,20 @@ const ratingCard = css`
   }
 `
 const largeRating = css`
-span{
-
-  svg {
-    width: 50px;
-    ${media.mn} {
-      width: 35px;
+  span {
+    svg {
+      width: 50px;
+      ${media.mn} {
+        width: 35px;
+      }
+    }
+    & ~ span svg {
+      margin-left: 10px;
+    }
+    &.smallStar svg {
+      width: 30px !important;
     }
   }
-      & ~ span svg {
-        margin-left: 10px;
-      }
-  &.smallStar svg {
-    width: 30px !important;
-  }
-}
 `
 const feedbacktext = css`
   margin: 0;
