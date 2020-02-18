@@ -1,0 +1,32 @@
+[
+    {
+      "Speakers": [
+        {
+          "firstName": "Suneet",
+          "lastName": "Patil",
+          "profileLink": "https://www.linkedin.com/in/suneet-patil/?originalSubdomain=in",
+          "profileImageFileName": "suneet.jpeg"
+        },
+        {
+          "firstName": "Ilanchezhian",
+          "lastName": "Ganesamurthy",
+          "profileLink": "https://www.linkedin.com/in/ilanchezhian/",
+          "profileImageFileName": "Ilanchezhian.jpeg"
+        },
+        {
+          "firstName": "Leslie",
+          "lastName": "Correa",
+          "profileLink": "https://www.linkedin.com/in/leslie-correa-543545a1/",
+          "profileImageFileName": "Leslie Correa.jpeg"
+        },
+        {
+          "firstName": "Anup",
+          "lastName": "Narayana",
+          "profileLink": "https://www.linkedin.com/in/anup-narayana-b8a559123/",
+          "profileImageFileName": "anup.jpeg"
+        }
+        
+      ]
+    }
+  ]
+  

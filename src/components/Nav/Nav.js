@@ -53,6 +53,9 @@ const Nav = () => {
           <li className="contact ico large">
             <Link to="/Sponsers">Sponsors</Link>
           </li>
+          <li className="faq ico large">
+            <Link to="/Speakers">Speakers</Link>
+          </li>
 
           {/* <hr></hr>
           <li className="about ico large">
